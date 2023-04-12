@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AnimatedBuilder.2",
+    "element": "AnimatedBuilder",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 1055,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following example implements a simple counter that utilizes an\n[AnimatedBuilder] to limit rebuilds to only the [Text] widget. The current count\nis stored in a [ValueNotifier], which rebuilds the [AnimatedBuilder]'s contents\nwhen its value is changed.",
+    "file": "cupertino.AnimatedBuilder.2.dart"
+}

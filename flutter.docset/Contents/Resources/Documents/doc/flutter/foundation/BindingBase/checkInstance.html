@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the checkInstance method from the BindingBase class, for the Dart programming language."/>
+  <title>checkInstance method - BindingBase class - foundation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li><a href="foundation/BindingBase-class.html">BindingBase</a></li>
+    <li class="self-crumb">checkInstance&lt;<wbr/><span class="type-parameter">T extends BindingBase</span>&gt; static method</li>
+  </ol>
+  <div class="self-name">checkInstance</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/foundation/binding.dart#L284"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-34550"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/checkInstance%3CT%20extends%20BindingBase%3E"></a><span class="kind-method">checkInstance&lt;<wbr/><span class="type-parameter">T extends BindingBase</span>&gt;</span> static method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="meta/protected-constant.html">protected</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">T</span>
+<span class="name ">checkInstance</span>&lt;<wbr/><span class="type-parameter">T extends BindingBase</span>&gt;(<wbr/><ol class="parameter-list"><li><span class="parameter" id="checkInstance-param-instance"><span class="type-annotation">T?</span> <span class="parameter-name">instance</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>A method that shows a useful error message if the given binding
+instance is not initialized.</p>
+<p>See <a href="foundation/BindingBase/initInstances.html">initInstances</a> for advice on using this method.</p>
+<p>This method either returns the argument or throws an exception.
+In release mode it always returns the argument.</p>
+<p>The type argument <code>T</code> should be the kind of binding mixin (e.g.
+<code>SchedulerBinding</code>) that is calling the method. It is used in
+error messages.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@protected
+static T checkInstance&lt;T extends BindingBase&gt;(T? instance) {
+  assert(() {
+    if (_debugInitializedType == null &amp;&amp; instance == null) {
+      throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+        ErrorSummary(&#39;Binding has not yet been initialized.&#39;),
+        ErrorDescription(&#39;The &#34;instance&#34; getter on the $T binding mixin is only available once that binding has been initialized.&#39;),
+        ErrorHint(
+          &#39;Typically, this is done by calling &#34;WidgetsFlutterBinding.ensureInitialized()&#34; or &#34;runApp()&#34; (the &#39;
+          &#39;latter calls the former). Typically this call is done in the &#34;void main()&#34; method. The &#34;ensureInitialized&#34; method &#39;
+          &#39;is idempotent; calling it multiple times is not harmful. After calling that method, the &#34;instance&#34; getter will &#39;
+          &#39;return the binding.&#39;,
+        ),
+        ErrorHint(
+          &#39;In a test, one can call &#34;TestWidgetsFlutterBinding.ensureInitialized()&#34; as the first line in the test\&#39;s &#34;main()&#34; method &#39;
+          &#39;to initialize the binding.&#39;,
+        ),
+        ErrorHint(
+          &#39;If $T is a custom binding mixin, there must also be a custom binding class, like WidgetsFlutterBinding, &#39;
+          &#39;but that mixes in the selected binding, and that is the class that must be constructed before using the &#34;instance&#34; getter.&#39;,
+        ),
+      ]);
+    }
+    if (instance == null) {
+      assert(_debugInitializedType == null);
+      throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+        ErrorSummary(&#39;Binding mixin instance is null but bindings are already initialized.&#39;),
+        ErrorDescription(
+          &#39;The &#34;instance&#34; property of the $T binding mixin was accessed, but that binding was not initialized when &#39;
+          &#39;the &#34;initInstances()&#34; method was called.&#39;,
+        ),
+        ErrorHint(
+          &#39;This probably indicates that the $T mixin was not mixed into the class that was used to initialize the binding. &#39;
+          &#39;If this is a custom binding mixin, there must also be a custom binding class, like WidgetsFlutterBinding, &#39;
+          &#39;but that mixes in the selected binding. If this is a test binding, check that the binding being initialized &#39;
+          &#39;is the same as the one into which the test binding is mixed.&#39;,
+        ),
+        ErrorHint(
+          &#39;It is also possible that $T does not implement &#34;initInstances()&#34; to assign a value to &#34;instance&#34;. See the &#39;
+          &#39;documentation of the BaseBinding class for more details.&#39;,
+        ),
+        ErrorHint(
+          &#39;The binding that was initialized was of the type &#34;$_debugInitializedType&#34;. &#39;
+        ),
+      ]);
+    }
+    try {
+      assert(instance != null);
+      if (instance._debugConstructed &amp;&amp; _debugInitializedType == null) {
+        throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+          ErrorSummary(&#39;Binding initialized without calling initInstances.&#39;),
+          ErrorDescription(&#39;An instance of $T is non-null, but BindingBase.initInstances() has not yet been called.&#39;),
+          ErrorHint(
+            &#39;This could happen because a binding mixin was somehow used outside of the normal binding mechanisms, or because &#39;
+            &#39;the binding\&#39;s initInstances() method did not call &#34;super.initInstances()&#34;.&#39;,
+          ),
+          ErrorHint(
+            &#39;This could also happen if some code was invoked that used the binding while the binding was initializing, &#39;
+            &#39;for example if the &#34;initInstances&#34; method invokes a callback. Bindings should not invoke callbacks before &#39;
+            &#39;&#34;initInstances&#34; has completed.&#39;,
+          ),
+        ]);
+      }
+      if (!instance._debugConstructed) {
+        // The state of _debugInitializedType doesn&#39;t matter in this failure mode.
+        throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+          ErrorSummary(&#39;Binding did not complete initialization.&#39;),
+          ErrorDescription(&#39;An instance of $T is non-null, but the BindingBase() constructor has not yet been called.&#39;),
+          ErrorHint(
+            &#39;This could also happen if some code was invoked that used the binding while the binding was initializing, &#39;
+            &#34;for example if the binding&#39;s constructor itself invokes a callback. Bindings should not invoke callbacks &#34;
+            &#39;before &#34;initInstances&#34; has completed.&#39;,
+          ),
+        ]);
+      }
+    } on NoSuchMethodError {
+      throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+        ErrorSummary(&#39;Binding does not extend BindingBase&#39;),
+        ErrorDescription(&#39;An instance of $T was created but the BindingBase constructor was not called.&#39;),
+        ErrorHint(
+          &#39;This could happen because the binding was implemented using &#34;implements&#34; rather than &#34;extends&#34; or &#34;with&#34;. &#39;
+          &#39;Concrete binding classes must extend or mix in BindingBase.&#39;,
+        ),
+      ]);
+    }
+    return true;
+  }());
+  return instance!;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="foundation/foundation-library.html">foundation</a></li>
+  <li><a href="foundation/BindingBase-class.html">BindingBase</a></li>
+  <li class="self-crumb">checkInstance&lt;<wbr/><span class="type-parameter">T extends BindingBase</span>&gt; static method</li>
+</ol>
+
+
+    <h5>BindingBase class</h5>
+    <ol>
+
+        <li class="section-title"><a href="foundation/BindingBase-class.html#constructors">Constructors</a></li>
+          <li><a href="foundation/BindingBase/BindingBase.html">BindingBase</a></li>
+
+
+        <li class="section-title">
+          <a href="foundation/BindingBase-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="foundation/BindingBase/locked.html">locked</a></li>
+          <li><a href="foundation/BindingBase/platformDispatcher.html">platformDispatcher</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="foundation/BindingBase/window.html">window</a></li>
+
+        <li class="section-title"><a href="foundation/BindingBase-class.html#instance-methods">Methods</a></li>
+          <li><a href="foundation/BindingBase/initInstances.html">initInstances</a></li>
+          <li><a href="foundation/BindingBase/initServiceExtensions.html">initServiceExtensions</a></li>
+          <li><a href="foundation/BindingBase/lockEvents.html">lockEvents</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="foundation/BindingBase/performReassemble.html">performReassemble</a></li>
+          <li><a href="foundation/BindingBase/postEvent.html">postEvent</a></li>
+          <li><a href="foundation/BindingBase/reassembleApplication.html">reassembleApplication</a></li>
+          <li><a href="foundation/BindingBase/registerBoolServiceExtension.html">registerBoolServiceExtension</a></li>
+          <li><a href="foundation/BindingBase/registerNumericServiceExtension.html">registerNumericServiceExtension</a></li>
+          <li><a href="foundation/BindingBase/registerServiceExtension.html">registerServiceExtension</a></li>
+          <li><a href="foundation/BindingBase/registerSignalServiceExtension.html">registerSignalServiceExtension</a></li>
+          <li><a href="foundation/BindingBase/registerStringServiceExtension.html">registerStringServiceExtension</a></li>
+          <li><a href="foundation/BindingBase/toString.html">toString</a></li>
+          <li><a href="foundation/BindingBase/unlocked.html">unlocked</a></li>
+
+        <li class="section-title inherited"><a href="foundation/BindingBase-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="foundation/BindingBase-class.html#static-properties">Static properties</a></li>
+          <li><a href="foundation/BindingBase/debugReassembleConfig.html">debugReassembleConfig</a></li>
+
+        <li class="section-title"><a href="foundation/BindingBase-class.html#static-methods">Static methods</a></li>
+          <li><a href="foundation/BindingBase/checkInstance.html">checkInstance</a></li>
+          <li><a href="foundation/BindingBase/debugBindingType.html">debugBindingType</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

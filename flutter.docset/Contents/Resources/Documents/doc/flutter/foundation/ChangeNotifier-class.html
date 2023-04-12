@@ -1,0 +1,615 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the ChangeNotifier class from the foundation library, for the Dart programming language."/>
+  <title>ChangeNotifier class - foundation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li class="self-crumb">ChangeNotifier class</li>
+  </ol>
+  <div class="self-name">ChangeNotifier</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/foundation/change_notifier.dart#L112"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-34606"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/ChangeNotifier"></a><span class="kind-class">ChangeNotifier</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A class that can be extended or mixed in that provides a change notification
+API using <a href="dart-ui/VoidCallback.html">VoidCallback</a> for notifications.</p>
+<p>It is O(1) for adding listeners and O(N) for removing listeners and dispatching
+notifications (where N is the number of listeners).</p>
+<h2 id="improve-rebuilds-performance-using-animatedbuilder">Improve rebuilds performance using AnimatedBuilder</h2>
+<p>Despite the name, <a href="widgets/AnimatedBuilder-class.html">AnimatedBuilder</a> is not limited to <a href="animation/Animation-class.html">Animation</a>s. Any subtype
+of <a href="foundation/Listenable-class.html">Listenable</a> (such as <a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a> and <a href="foundation/ValueNotifier-class.html">ValueNotifier</a>) can be used with
+an <a href="widgets/AnimatedBuilder-class.html">AnimatedBuilder</a> to rebuild only certain parts of a widget when the
+<a href="foundation/Listenable-class.html">Listenable</a> notifies its listeners. This technique is a performance improvement
+that allows rebuilding only specific widgets leaving others untouched.</p>
+<p>
+<a name="cupertino.AnimatedBuilder.2"></a>
+</p><div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+The following example implements a simple counter that utilizes an
+<a href="widgets/AnimatedBuilder-class.html">AnimatedBuilder</a> to limit rebuilds to only the <a href="widgets/Text-class.html">Text</a> widget. The current count
+is stored in a <a href="foundation/ValueNotifier-class.html">ValueNotifier</a>, which rebuilds the <a href="widgets/AnimatedBuilder-class.html">AnimatedBuilder</a>&#39;s contents
+when its value is changed.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard" onmouseenter="fixHref(this, &#39;cupertino.AnimatedBuilder.2&#39;);" onclick="fixHref(this, &#39;cupertino.AnimatedBuilder.2&#39;); copyStringToClipboard(this.href);" href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br/>
+            <span class="snippet-create-command">flutter create --sample=cupertino.AnimatedBuilder.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad" src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;null_safety=true&amp;sample_id=cupertino.AnimatedBuilder.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+<p></p>
+<p>See also:</p>
+<ul>
+<li><a href="foundation/ValueNotifier-class.html">ValueNotifier</a>, which is a <a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a> that wraps a single value.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="foundation/Listenable-class.html">Listenable</a></li>
+    </ul>
+  </dd>
+        
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="cupertino/CupertinoTabController-class.html">CupertinoTabController</a></li>
+          <li><a href="material/DataTableSource-class.html">DataTableSource</a></li>
+          <li><a href="widgets/DraggableScrollableController-class.html">DraggableScrollableController</a></li>
+          <li><a href="widgets/FocusManager-class.html">FocusManager</a></li>
+          <li><a href="widgets/FocusNode-class.html">FocusNode</a></li>
+          <li><a href="widgets/KeepAliveHandle-class.html">KeepAliveHandle</a></li>
+          <li><a href="rendering/MouseTracker-class.html">MouseTracker</a></li>
+          <li><a href="widgets/MultiSelectableSelectionContainerDelegate-class.html">MultiSelectableSelectionContainerDelegate</a></li>
+          <li><a href="widgets/PlatformRouteInformationProvider-class.html">PlatformRouteInformationProvider</a></li>
+          <li><a href="rendering/RenderEditablePainter-class.html">RenderEditablePainter</a></li>
+          <li><a href="widgets/RestorableProperty-class.html">RestorableProperty</a></li>
+          <li><a href="services/RestorationManager-class.html">RestorationManager</a></li>
+          <li><a href="widgets/ScrollbarPainter-class.html">ScrollbarPainter</a></li>
+          <li><a href="widgets/ScrollController-class.html">ScrollController</a></li>
+          <li><a href="semantics/SemanticsOwner-class.html">SemanticsOwner</a></li>
+          <li><a href="widgets/ShortcutManager-class.html">ShortcutManager</a></li>
+          <li><a href="widgets/ShortcutRegistry-class.html">ShortcutRegistry</a></li>
+          <li><a href="widgets/SliverOverlapAbsorberHandle-class.html">SliverOverlapAbsorberHandle</a></li>
+          <li><a href="widgets/SnapshotController-class.html">SnapshotController</a></li>
+          <li><a href="widgets/SnapshotPainter-class.html">SnapshotPainter</a></li>
+          <li><a href="material/TabController-class.html">TabController</a></li>
+          <li><a href="material/ToggleablePainter-class.html">ToggleablePainter</a></li>
+          <li><a href="foundation/ValueNotifier-class.html">ValueNotifier</a></li>
+          <li><a href="rendering/ViewportOffset-class.html">ViewportOffset</a></li>
+        </ul></dd>
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ChangeNotifier" class="callable">
+          <span class="name"><a href="foundation/ChangeNotifier/ChangeNotifier.html">ChangeNotifier</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hasListeners" class="property">
+  <span class="name"><a href="foundation/ChangeNotifier/hasListeners.html">hasListeners</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether any listeners are currently registered.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addListener" class="callable">
+  <span class="name"><a href="foundation/ChangeNotifier/addListener.html">addListener</a></span><span class="signature">(<wbr/><span class="parameter" id="addListener-param-listener"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Register a closure to be called when the object changes.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="foundation/ChangeNotifier/dispose.html">dispose</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Discards any resources used by the object. After this is called, the
+object is not in a usable state and should be discarded (calls to
+<a href="foundation/ChangeNotifier/addListener.html">addListener</a> will throw after the object is disposed).
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="notifyListeners" class="callable">
+  <span class="name"><a href="foundation/ChangeNotifier/notifyListeners.html">notifyListeners</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Call all the registered listeners.
+  
+
+</dd>
+
+        <dt id="removeListener" class="callable">
+  <span class="name"><a href="foundation/ChangeNotifier/removeListener.html">removeListener</a></span><span class="signature">(<wbr/><span class="parameter" id="removeListener-param-listener"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Remove a previously registered closure from the list of closures that are
+notified when the object changes.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-34605"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="debugAssertNotDisposed" class="callable">
+  <span class="name"><a href="foundation/ChangeNotifier/debugAssertNotDisposed.html">debugAssertNotDisposed</a></span><span class="signature">(<wbr/><span class="parameter" id="debugAssertNotDisposed-param-notifier"><span class="type-annotation"><a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a></span> <span class="parameter-name">notifier</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Used by subclasses to assert that the <a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a> has not yet been
+disposed.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="foundation/foundation-library.html">foundation</a></li>
+  <li class="self-crumb">ChangeNotifier class</li>
+</ol>
+
+
+    <h5>foundation library</h5>
+    <ol>
+      <li class="section-title"><a href="foundation/foundation-library.html#classes">Classes</a></li>
+        <li><a href="foundation/AbstractNode-class.html">AbstractNode</a></li>
+        <li><a href="foundation/BindingBase-class.html">BindingBase</a></li>
+        <li><a href="foundation/BitField-class.html">BitField</a></li>
+        <li><a href="dart-typed_data/ByteData-class.html">ByteData</a></li>
+        <li><a href="foundation/CachingIterable-class.html">CachingIterable</a></li>
+        <li><a href="foundation/Category-class.html">Category</a></li>
+        <li><a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a></li>
+        <li><a href="foundation/DebugReassembleConfig-class.html">DebugReassembleConfig</a></li>
+        <li><a href="foundation/DiagnosticableNode-class.html">DiagnosticableNode</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="foundation/DiagnosticableTreeNode-class.html">DiagnosticableTreeNode</a></li>
+        <li><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></li>
+        <li><a href="foundation/DiagnosticsBlock-class.html">DiagnosticsBlock</a></li>
+        <li><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></li>
+        <li><a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a></li>
+        <li><a href="foundation/DiagnosticsSerializationDelegate-class.html">DiagnosticsSerializationDelegate</a></li>
+        <li><a href="foundation/DiagnosticsStackTrace-class.html">DiagnosticsStackTrace</a></li>
+        <li><a href="foundation/DocumentationIcon-class.html">DocumentationIcon</a></li>
+        <li><a href="foundation/DoubleProperty-class.html">DoubleProperty</a></li>
+        <li><a href="dart-typed_data/Endian-class.html">Endian</a></li>
+        <li><a href="foundation/EnumProperty-class.html">EnumProperty</a></li>
+        <li><a href="foundation/ErrorDescription-class.html">ErrorDescription</a></li>
+        <li><a href="foundation/ErrorHint-class.html">ErrorHint</a></li>
+        <li><a href="foundation/ErrorSpacer-class.html">ErrorSpacer</a></li>
+        <li><a href="foundation/ErrorSummary-class.html">ErrorSummary</a></li>
+        <li><a href="foundation/Factory-class.html">Factory</a></li>
+        <li><a href="foundation/FlagProperty-class.html">FlagProperty</a></li>
+        <li><a href="foundation/FlagsSummary-class.html">FlagsSummary</a></li>
+        <li><a href="dart-typed_data/Float32List-class.html">Float32List</a></li>
+        <li><a href="dart-typed_data/Float64List-class.html">Float64List</a></li>
+        <li><a href="foundation/FlutterErrorDetails-class.html">FlutterErrorDetails</a></li>
+        <li><a href="foundation/HashedObserverList-class.html">HashedObserverList</a></li>
+        <li><a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a></li>
+        <li><a href="dart-typed_data/Int32List-class.html">Int32List</a></li>
+        <li><a href="dart-typed_data/Int64List-class.html">Int64List</a></li>
+        <li><a href="foundation/IntProperty-class.html">IntProperty</a></li>
+        <li><a href="foundation/IterableProperty-class.html">IterableProperty</a></li>
+        <li><a href="foundation/Key-class.html">Key</a></li>
+        <li><a href="foundation/LicenseEntry-class.html">LicenseEntry</a></li>
+        <li><a href="foundation/LicenseEntryWithLineBreaks-class.html">LicenseEntryWithLineBreaks</a></li>
+        <li><a href="foundation/LicenseParagraph-class.html">LicenseParagraph</a></li>
+        <li><a href="foundation/LicenseRegistry-class.html">LicenseRegistry</a></li>
+        <li><a href="foundation/Listenable-class.html">Listenable</a></li>
+        <li><a href="foundation/LocalKey-class.html">LocalKey</a></li>
+        <li><a href="foundation/MemoryAllocations-class.html">MemoryAllocations</a></li>
+        <li><a href="foundation/MessageProperty-class.html">MessageProperty</a></li>
+        <li><a href="foundation/ObjectCreated-class.html">ObjectCreated</a></li>
+        <li><a href="foundation/ObjectDisposed-class.html">ObjectDisposed</a></li>
+        <li><a href="foundation/ObjectEvent-class.html">ObjectEvent</a></li>
+        <li><a href="foundation/ObjectFlagProperty-class.html">ObjectFlagProperty</a></li>
+        <li><a href="foundation/ObserverList-class.html">ObserverList</a></li>
+        <li><a href="foundation/PartialStackFrame-class.html">PartialStackFrame</a></li>
+        <li><a href="foundation/PercentProperty-class.html">PercentProperty</a></li>
+        <li><a href="foundation/PersistentHashMap-class.html">PersistentHashMap</a></li>
+        <li><a href="dart-ui/PlatformDispatcher-class.html">PlatformDispatcher</a></li>
+        <li><a href="foundation/ReadBuffer-class.html">ReadBuffer</a></li>
+        <li><a href="foundation/RepetitiveStackFrameFilter-class.html">RepetitiveStackFrameFilter</a></li>
+        <li><a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a></li>
+        <li><a href="foundation/StackFilter-class.html">StackFilter</a></li>
+        <li><a href="foundation/StackFrame-class.html">StackFrame</a></li>
+        <li><a href="foundation/StringProperty-class.html">StringProperty</a></li>
+        <li><a href="foundation/Summary-class.html">Summary</a></li>
+        <li><a href="foundation/SynchronousFuture-class.html">SynchronousFuture</a></li>
+        <li><a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></li>
+        <li><a href="foundation/TextTreeRenderer-class.html">TextTreeRenderer</a></li>
+        <li><a href="dart-typed_data/Uint8List-class.html">Uint8List</a></li>
+        <li><a href="foundation/Unicode-class.html">Unicode</a></li>
+        <li><a href="foundation/UniqueKey-class.html">UniqueKey</a></li>
+        <li><a href="foundation/ValueKey-class.html">ValueKey</a></li>
+        <li><a href="foundation/ValueListenable-class.html">ValueListenable</a></li>
+        <li><a href="foundation/ValueNotifier-class.html">ValueNotifier</a></li>
+        <li><a href="foundation/WriteBuffer-class.html">WriteBuffer</a></li>
+
+
+      <li class="section-title"><a href="foundation/foundation-library.html#mixins">Mixins</a></li>
+        <li><a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a></li>
+        <li><a href="foundation/DiagnosticableTreeMixin-mixin.html">DiagnosticableTreeMixin</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#constants">Constants</a></li>
+        <li><a href="foundation/compute-constant.html">compute</a></li>
+        <li><a href="meta/factory-constant.html">factory</a></li>
+        <li><a href="meta/immutable-constant.html">immutable</a></li>
+        <li><a href="foundation/isCanvasKit-constant.html">isCanvasKit</a></li>
+        <li><a href="foundation/kDebugMode-constant.html">kDebugMode</a></li>
+        <li><a href="foundation/kFlutterMemoryAllocationsEnabled-constant.html">kFlutterMemoryAllocationsEnabled</a></li>
+        <li><a href="foundation/kIsWeb-constant.html">kIsWeb</a></li>
+        <li><a href="foundation/kMaxUnsignedSMI-constant.html">kMaxUnsignedSMI</a></li>
+        <li><a href="foundation/kNoDefaultValue-constant.html">kNoDefaultValue</a></li>
+        <li><a href="foundation/kProfileMode-constant.html">kProfileMode</a></li>
+        <li><a href="foundation/kReleaseMode-constant.html">kReleaseMode</a></li>
+        <li><a href="meta/mustCallSuper-constant.html">mustCallSuper</a></li>
+        <li><a href="meta/nonVirtual-constant.html">nonVirtual</a></li>
+        <li><a href="meta/optionalTypeArgs-constant.html">optionalTypeArgs</a></li>
+        <li><a href="foundation/precisionErrorTolerance-constant.html">precisionErrorTolerance</a></li>
+        <li><a href="meta/protected-constant.html">protected</a></li>
+        <li><a href="meta/required-constant.html">required</a></li>
+        <li><a href="meta/visibleForTesting-constant.html">visibleForTesting</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#properties">Properties</a></li>
+        <li><a href="foundation/activeDevToolsServerAddress.html">activeDevToolsServerAddress</a></li>
+        <li><a href="foundation/connectedVmServiceUri.html">connectedVmServiceUri</a></li>
+        <li><a href="foundation/dashedTextConfiguration.html">dashedTextConfiguration</a></li>
+        <li><a href="foundation/debugBrightnessOverride.html">debugBrightnessOverride</a></li>
+        <li><a href="foundation/debugDefaultTargetPlatformOverride.html">debugDefaultTargetPlatformOverride</a></li>
+        <li><a href="foundation/debugDoublePrecision.html">debugDoublePrecision</a></li>
+        <li><a href="foundation/debugInstrumentationEnabled.html">debugInstrumentationEnabled</a></li>
+        <li><a href="foundation/debugPrint.html">debugPrint</a></li>
+        <li><a href="foundation/debugPrintDone.html">debugPrintDone</a></li>
+        <li><a href="foundation/defaultTargetPlatform.html">defaultTargetPlatform</a></li>
+        <li><a href="foundation/denseTextConfiguration.html">denseTextConfiguration</a></li>
+        <li><a href="foundation/errorPropertyTextConfiguration.html">errorPropertyTextConfiguration</a></li>
+        <li><a href="foundation/errorTextConfiguration.html">errorTextConfiguration</a></li>
+        <li><a href="foundation/flatTextConfiguration.html">flatTextConfiguration</a></li>
+        <li><a href="foundation/shallowTextConfiguration.html">shallowTextConfiguration</a></li>
+        <li><a href="foundation/singleLineTextConfiguration.html">singleLineTextConfiguration</a></li>
+        <li><a href="foundation/sparseTextConfiguration.html">sparseTextConfiguration</a></li>
+        <li><a href="foundation/transitionTextConfiguration.html">transitionTextConfiguration</a></li>
+        <li><a href="foundation/whitespaceTextConfiguration.html">whitespaceTextConfiguration</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#functions">Functions</a></li>
+        <li><a href="foundation/binarySearch.html">binarySearch</a></li>
+        <li><a href="foundation/clampDouble.html">clampDouble</a></li>
+        <li><a href="foundation/consolidateHttpClientResponseBytes.html">consolidateHttpClientResponseBytes</a></li>
+        <li><a href="foundation/debugAssertAllFoundationVarsUnset.html">debugAssertAllFoundationVarsUnset</a></li>
+        <li><a href="foundation/debugFormatDouble.html">debugFormatDouble</a></li>
+        <li><a href="foundation/debugInstrumentAction.html">debugInstrumentAction</a></li>
+        <li><a href="foundation/debugPrintStack.html">debugPrintStack</a></li>
+        <li><a href="foundation/debugPrintSynchronously.html">debugPrintSynchronously</a></li>
+        <li><a href="foundation/debugPrintThrottled.html">debugPrintThrottled</a></li>
+        <li><a href="foundation/debugWordWrap.html">debugWordWrap</a></li>
+        <li><a href="foundation/describeEnum.html">describeEnum</a></li>
+        <li><a href="foundation/describeIdentity.html">describeIdentity</a></li>
+        <li><a href="foundation/lerpDuration.html">lerpDuration</a></li>
+        <li><a href="foundation/listEquals.html">listEquals</a></li>
+        <li><a href="foundation/mapEquals.html">mapEquals</a></li>
+        <li><a href="foundation/mergeSort.html">mergeSort</a></li>
+        <li><a href="foundation/objectRuntimeType.html">objectRuntimeType</a></li>
+        <li><a href="foundation/setEquals.html">setEquals</a></li>
+        <li><a href="foundation/shortHash.html">shortHash</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#enums">Enums</a></li>
+        <li><a href="dart-ui/Brightness.html">Brightness</a></li>
+        <li><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></li>
+        <li><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a></li>
+        <li><a href="foundation/FoundationServiceExtensions.html">FoundationServiceExtensions</a></li>
+        <li><a href="foundation/TargetPlatform.html">TargetPlatform</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#typedefs">Typedefs</a></li>
+        <li><a href="foundation/AsyncCallback.html">AsyncCallback</a></li>
+        <li><a href="foundation/AsyncValueGetter.html">AsyncValueGetter</a></li>
+        <li><a href="foundation/AsyncValueSetter.html">AsyncValueSetter</a></li>
+        <li><a href="foundation/BytesReceivedCallback.html">BytesReceivedCallback</a></li>
+        <li><a href="foundation/ComputeCallback.html">ComputeCallback</a></li>
+        <li><a href="foundation/ComputeImpl.html">ComputeImpl</a></li>
+        <li><a href="foundation/ComputePropertyValueCallback.html">ComputePropertyValueCallback</a></li>
+        <li><a href="foundation/DebugPrintCallback.html">DebugPrintCallback</a></li>
+        <li><a href="foundation/DiagnosticPropertiesTransformer.html">DiagnosticPropertiesTransformer</a></li>
+        <li><a href="foundation/FlutterExceptionHandler.html">FlutterExceptionHandler</a></li>
+        <li><a href="foundation/InformationCollector.html">InformationCollector</a></li>
+        <li><a href="foundation/IterableFilter.html">IterableFilter</a></li>
+        <li><a href="foundation/LicenseEntryCollector.html">LicenseEntryCollector</a></li>
+        <li><a href="foundation/ObjectEventListener.html">ObjectEventListener</a></li>
+        <li><a href="foundation/ServiceExtensionCallback.html">ServiceExtensionCallback</a></li>
+        <li><a href="foundation/StackTraceDemangler.html">StackTraceDemangler</a></li>
+        <li><a href="foundation/ValueChanged.html">ValueChanged</a></li>
+        <li><a href="foundation/ValueGetter.html">ValueGetter</a></li>
+        <li><a href="foundation/ValueSetter.html">ValueSetter</a></li>
+        <li><a href="dart-ui/VoidCallback.html">VoidCallback</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#exceptions">Exceptions</a></li>
+        <li><a href="foundation/FlutterError-class.html">FlutterError</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="foundation/ChangeNotifier-class.html#constructors">Constructors</a></li>
+          <li><a href="foundation/ChangeNotifier/ChangeNotifier.html">ChangeNotifier</a></li>
+
+
+        <li class="section-title">
+          <a href="foundation/ChangeNotifier-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="foundation/ChangeNotifier/hasListeners.html">hasListeners</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="foundation/ChangeNotifier-class.html#instance-methods">Methods</a></li>
+          <li><a href="foundation/ChangeNotifier/addListener.html">addListener</a></li>
+          <li><a href="foundation/ChangeNotifier/dispose.html">dispose</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="foundation/ChangeNotifier/notifyListeners.html">notifyListeners</a></li>
+          <li><a href="foundation/ChangeNotifier/removeListener.html">removeListener</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="foundation/ChangeNotifier-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="foundation/ChangeNotifier-class.html#static-methods">Static methods</a></li>
+          <li><a href="foundation/ChangeNotifier/debugAssertNotDisposed.html">debugAssertNotDisposed</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

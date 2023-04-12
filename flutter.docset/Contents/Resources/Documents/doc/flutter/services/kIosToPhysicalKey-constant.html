@@ -1,0 +1,541 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the kIosToPhysicalKey constant from the services library, for the Dart programming language."/>
+  <title>kIosToPhysicalKey constant - services library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">kIosToPhysicalKey constant</li>
+  </ol>
+  <div class="self-name">kIosToPhysicalKey</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/services/keyboard_maps.g.dart#L1309"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-59442"></a><a class="dashAnchor" name="//apple_ref/cpp/Property/kIosToPhysicalKey"></a><span class="kind-top-level-property">kIosToPhysicalKey</span> top-level constant 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>, <span class="type-parameter"><a href="services/PhysicalKeyboardKey-class.html">PhysicalKeyboardKey</a></span>&gt;</span>
+          const <span class="name ">kIosToPhysicalKey</span>
+          
+
+        </section>
+        
+<section class="desc markdown">
+  <p>Maps iOS-specific key code values representing <code>PhysicalKeyboardKey</code>.</p>
+<p>iOS doesn&#39;t provide a scan code, but a virtual keycode to represent a physical key.</p>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">const Map&lt;int, PhysicalKeyboardKey&gt; kIosToPhysicalKey = &lt;int, PhysicalKeyboardKey&gt;{
+  0x00000000: PhysicalKeyboardKey.usbReserved,
+  0x00000001: PhysicalKeyboardKey.usbErrorRollOver,
+  0x00000002: PhysicalKeyboardKey.usbPostFail,
+  0x00000003: PhysicalKeyboardKey.usbErrorUndefined,
+  0x00000004: PhysicalKeyboardKey.keyA,
+  0x00000005: PhysicalKeyboardKey.keyB,
+  0x00000006: PhysicalKeyboardKey.keyC,
+  0x00000007: PhysicalKeyboardKey.keyD,
+  0x00000008: PhysicalKeyboardKey.keyE,
+  0x00000009: PhysicalKeyboardKey.keyF,
+  0x0000000a: PhysicalKeyboardKey.keyG,
+  0x0000000b: PhysicalKeyboardKey.keyH,
+  0x0000000c: PhysicalKeyboardKey.keyI,
+  0x0000000d: PhysicalKeyboardKey.keyJ,
+  0x0000000e: PhysicalKeyboardKey.keyK,
+  0x0000000f: PhysicalKeyboardKey.keyL,
+  0x00000010: PhysicalKeyboardKey.keyM,
+  0x00000011: PhysicalKeyboardKey.keyN,
+  0x00000012: PhysicalKeyboardKey.keyO,
+  0x00000013: PhysicalKeyboardKey.keyP,
+  0x00000014: PhysicalKeyboardKey.keyQ,
+  0x00000015: PhysicalKeyboardKey.keyR,
+  0x00000016: PhysicalKeyboardKey.keyS,
+  0x00000017: PhysicalKeyboardKey.keyT,
+  0x00000018: PhysicalKeyboardKey.keyU,
+  0x00000019: PhysicalKeyboardKey.keyV,
+  0x0000001a: PhysicalKeyboardKey.keyW,
+  0x0000001b: PhysicalKeyboardKey.keyX,
+  0x0000001c: PhysicalKeyboardKey.keyY,
+  0x0000001d: PhysicalKeyboardKey.keyZ,
+  0x0000001e: PhysicalKeyboardKey.digit1,
+  0x0000001f: PhysicalKeyboardKey.digit2,
+  0x00000020: PhysicalKeyboardKey.digit3,
+  0x00000021: PhysicalKeyboardKey.digit4,
+  0x00000022: PhysicalKeyboardKey.digit5,
+  0x00000023: PhysicalKeyboardKey.digit6,
+  0x00000024: PhysicalKeyboardKey.digit7,
+  0x00000025: PhysicalKeyboardKey.digit8,
+  0x00000026: PhysicalKeyboardKey.digit9,
+  0x00000027: PhysicalKeyboardKey.digit0,
+  0x00000028: PhysicalKeyboardKey.enter,
+  0x00000029: PhysicalKeyboardKey.escape,
+  0x0000002a: PhysicalKeyboardKey.backspace,
+  0x0000002b: PhysicalKeyboardKey.tab,
+  0x0000002c: PhysicalKeyboardKey.space,
+  0x0000002d: PhysicalKeyboardKey.minus,
+  0x0000002e: PhysicalKeyboardKey.equal,
+  0x0000002f: PhysicalKeyboardKey.bracketLeft,
+  0x00000030: PhysicalKeyboardKey.bracketRight,
+  0x00000031: PhysicalKeyboardKey.backslash,
+  0x00000033: PhysicalKeyboardKey.semicolon,
+  0x00000034: PhysicalKeyboardKey.quote,
+  0x00000035: PhysicalKeyboardKey.backquote,
+  0x00000036: PhysicalKeyboardKey.comma,
+  0x00000037: PhysicalKeyboardKey.period,
+  0x00000038: PhysicalKeyboardKey.slash,
+  0x00000039: PhysicalKeyboardKey.capsLock,
+  0x0000003a: PhysicalKeyboardKey.f1,
+  0x0000003b: PhysicalKeyboardKey.f2,
+  0x0000003c: PhysicalKeyboardKey.f3,
+  0x0000003d: PhysicalKeyboardKey.f4,
+  0x0000003e: PhysicalKeyboardKey.f5,
+  0x0000003f: PhysicalKeyboardKey.f6,
+  0x00000040: PhysicalKeyboardKey.f7,
+  0x00000041: PhysicalKeyboardKey.f8,
+  0x00000042: PhysicalKeyboardKey.f9,
+  0x00000043: PhysicalKeyboardKey.f10,
+  0x00000044: PhysicalKeyboardKey.f11,
+  0x00000045: PhysicalKeyboardKey.f12,
+  0x00000046: PhysicalKeyboardKey.printScreen,
+  0x00000047: PhysicalKeyboardKey.scrollLock,
+  0x00000048: PhysicalKeyboardKey.pause,
+  0x00000049: PhysicalKeyboardKey.insert,
+  0x0000004a: PhysicalKeyboardKey.home,
+  0x0000004b: PhysicalKeyboardKey.pageUp,
+  0x0000004c: PhysicalKeyboardKey.delete,
+  0x0000004d: PhysicalKeyboardKey.end,
+  0x0000004e: PhysicalKeyboardKey.pageDown,
+  0x0000004f: PhysicalKeyboardKey.arrowRight,
+  0x00000050: PhysicalKeyboardKey.arrowLeft,
+  0x00000051: PhysicalKeyboardKey.arrowDown,
+  0x00000052: PhysicalKeyboardKey.arrowUp,
+  0x00000053: PhysicalKeyboardKey.numLock,
+  0x00000054: PhysicalKeyboardKey.numpadDivide,
+  0x00000055: PhysicalKeyboardKey.numpadMultiply,
+  0x00000056: PhysicalKeyboardKey.numpadSubtract,
+  0x00000057: PhysicalKeyboardKey.numpadAdd,
+  0x00000058: PhysicalKeyboardKey.numpadEnter,
+  0x00000059: PhysicalKeyboardKey.numpad1,
+  0x0000005a: PhysicalKeyboardKey.numpad2,
+  0x0000005b: PhysicalKeyboardKey.numpad3,
+  0x0000005c: PhysicalKeyboardKey.numpad4,
+  0x0000005d: PhysicalKeyboardKey.numpad5,
+  0x0000005e: PhysicalKeyboardKey.numpad6,
+  0x0000005f: PhysicalKeyboardKey.numpad7,
+  0x00000060: PhysicalKeyboardKey.numpad8,
+  0x00000061: PhysicalKeyboardKey.numpad9,
+  0x00000062: PhysicalKeyboardKey.numpad0,
+  0x00000063: PhysicalKeyboardKey.numpadDecimal,
+  0x00000064: PhysicalKeyboardKey.intlBackslash,
+  0x00000065: PhysicalKeyboardKey.contextMenu,
+  0x00000066: PhysicalKeyboardKey.power,
+  0x00000067: PhysicalKeyboardKey.numpadEqual,
+  0x00000068: PhysicalKeyboardKey.f13,
+  0x00000069: PhysicalKeyboardKey.f14,
+  0x0000006a: PhysicalKeyboardKey.f15,
+  0x0000006b: PhysicalKeyboardKey.f16,
+  0x0000006c: PhysicalKeyboardKey.f17,
+  0x0000006d: PhysicalKeyboardKey.f18,
+  0x0000006e: PhysicalKeyboardKey.f19,
+  0x0000006f: PhysicalKeyboardKey.f20,
+  0x00000070: PhysicalKeyboardKey.f21,
+  0x00000071: PhysicalKeyboardKey.f22,
+  0x00000072: PhysicalKeyboardKey.f23,
+  0x00000073: PhysicalKeyboardKey.f24,
+  0x00000074: PhysicalKeyboardKey.open,
+  0x00000075: PhysicalKeyboardKey.help,
+  0x00000077: PhysicalKeyboardKey.select,
+  0x00000079: PhysicalKeyboardKey.again,
+  0x0000007a: PhysicalKeyboardKey.undo,
+  0x0000007b: PhysicalKeyboardKey.cut,
+  0x0000007c: PhysicalKeyboardKey.copy,
+  0x0000007d: PhysicalKeyboardKey.paste,
+  0x0000007e: PhysicalKeyboardKey.find,
+  0x0000007f: PhysicalKeyboardKey.audioVolumeMute,
+  0x00000080: PhysicalKeyboardKey.audioVolumeUp,
+  0x00000081: PhysicalKeyboardKey.audioVolumeDown,
+  0x00000085: PhysicalKeyboardKey.numpadComma,
+  0x00000087: PhysicalKeyboardKey.intlRo,
+  0x00000088: PhysicalKeyboardKey.kanaMode,
+  0x00000089: PhysicalKeyboardKey.intlYen,
+  0x0000008a: PhysicalKeyboardKey.convert,
+  0x0000008b: PhysicalKeyboardKey.nonConvert,
+  0x00000090: PhysicalKeyboardKey.lang1,
+  0x00000091: PhysicalKeyboardKey.lang2,
+  0x00000092: PhysicalKeyboardKey.lang3,
+  0x00000093: PhysicalKeyboardKey.lang4,
+  0x00000094: PhysicalKeyboardKey.lang5,
+  0x0000009b: PhysicalKeyboardKey.abort,
+  0x000000a3: PhysicalKeyboardKey.props,
+  0x000000b6: PhysicalKeyboardKey.numpadParenLeft,
+  0x000000b7: PhysicalKeyboardKey.numpadParenRight,
+  0x000000bb: PhysicalKeyboardKey.numpadBackspace,
+  0x000000d0: PhysicalKeyboardKey.numpadMemoryStore,
+  0x000000d1: PhysicalKeyboardKey.numpadMemoryRecall,
+  0x000000d2: PhysicalKeyboardKey.numpadMemoryClear,
+  0x000000d3: PhysicalKeyboardKey.numpadMemoryAdd,
+  0x000000d4: PhysicalKeyboardKey.numpadMemorySubtract,
+  0x000000d7: PhysicalKeyboardKey.numpadSignChange,
+  0x000000d8: PhysicalKeyboardKey.numpadClear,
+  0x000000d9: PhysicalKeyboardKey.numpadClearEntry,
+  0x000000e0: PhysicalKeyboardKey.controlLeft,
+  0x000000e1: PhysicalKeyboardKey.shiftLeft,
+  0x000000e2: PhysicalKeyboardKey.altLeft,
+  0x000000e3: PhysicalKeyboardKey.metaLeft,
+  0x000000e4: PhysicalKeyboardKey.controlRight,
+  0x000000e5: PhysicalKeyboardKey.shiftRight,
+  0x000000e6: PhysicalKeyboardKey.altRight,
+  0x000000e7: PhysicalKeyboardKey.metaRight,
+};</code></pre>
+</section>
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="services/services-library.html">services</a></li>
+  <li class="self-crumb">kIosToPhysicalKey constant</li>
+</ol>
+
+
+    <h5>services library</h5>
+    <ol>
+      <li class="section-title"><a href="services/services-library.html#classes">Classes</a></li>
+        <li><a href="services/AndroidMotionEvent-class.html">AndroidMotionEvent</a></li>
+        <li><a href="services/AndroidPointerCoords-class.html">AndroidPointerCoords</a></li>
+        <li><a href="services/AndroidPointerProperties-class.html">AndroidPointerProperties</a></li>
+        <li><a href="services/AndroidViewController-class.html">AndroidViewController</a></li>
+        <li><a href="services/ApplicationSwitcherDescription-class.html">ApplicationSwitcherDescription</a></li>
+        <li><a href="services/AssetBundle-class.html">AssetBundle</a></li>
+        <li><a href="services/AutofillClient-class.html">AutofillClient</a></li>
+        <li><a href="services/AutofillConfiguration-class.html">AutofillConfiguration</a></li>
+        <li><a href="services/AutofillHints-class.html">AutofillHints</a></li>
+        <li><a href="services/AutofillScope-class.html">AutofillScope</a></li>
+        <li><a href="services/BackgroundIsolateBinaryMessenger-class.html">BackgroundIsolateBinaryMessenger</a></li>
+        <li><a href="services/BasicMessageChannel-class.html">BasicMessageChannel</a></li>
+        <li><a href="services/BinaryCodec-class.html">BinaryCodec</a></li>
+        <li><a href="services/BinaryMessenger-class.html">BinaryMessenger</a></li>
+        <li><a href="dart-typed_data/ByteData-class.html">ByteData</a></li>
+        <li><a href="services/CachingAssetBundle-class.html">CachingAssetBundle</a></li>
+        <li><a href="dart-ui/ChannelBuffers-class.html">ChannelBuffers</a></li>
+        <li><a href="services/CharacterBoundary-class.html">CharacterBoundary</a></li>
+        <li><a href="services/Clipboard-class.html">Clipboard</a></li>
+        <li><a href="services/ClipboardData-class.html">ClipboardData</a></li>
+        <li><a href="dart-ui/Color-class.html">Color</a></li>
+        <li><a href="services/DefaultSpellCheckService-class.html">DefaultSpellCheckService</a></li>
+        <li><a href="services/DeferredComponent-class.html">DeferredComponent</a></li>
+        <li><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></li>
+        <li><a href="services/DocumentBoundary-class.html">DocumentBoundary</a></li>
+        <li><a href="services/EventChannel-class.html">EventChannel</a></li>
+        <li><a href="services/ExpensiveAndroidViewController-class.html">ExpensiveAndroidViewController</a></li>
+        <li><a href="services/FilteringTextInputFormatter-class.html">FilteringTextInputFormatter</a></li>
+        <li><a href="services/FontLoader-class.html">FontLoader</a></li>
+        <li><a href="dart-ui/FontWeight-class.html">FontWeight</a></li>
+        <li><a href="services/GLFWKeyHelper-class.html">GLFWKeyHelper</a></li>
+        <li><a href="services/GtkKeyHelper-class.html">GtkKeyHelper</a></li>
+        <li><a href="services/HapticFeedback-class.html">HapticFeedback</a></li>
+        <li><a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a></li>
+        <li><a href="dart-ui/ImmutableBuffer-class.html">ImmutableBuffer</a></li>
+        <li><a href="services/JSONMessageCodec-class.html">JSONMessageCodec</a></li>
+        <li><a href="services/JSONMethodCodec-class.html">JSONMethodCodec</a></li>
+        <li><a href="services/KeyboardKey-class.html">KeyboardKey</a></li>
+        <li><a href="services/KeyboardLockMode-class.html">KeyboardLockMode</a></li>
+        <li><a href="dart-ui/KeyData-class.html">KeyData</a></li>
+        <li><a href="services/KeyDownEvent-class.html">KeyDownEvent</a></li>
+        <li><a href="services/KeyEvent-class.html">KeyEvent</a></li>
+        <li><a href="services/KeyEventManager-class.html">KeyEventManager</a></li>
+        <li><a href="services/KeyHelper-class.html">KeyHelper</a></li>
+        <li><a href="services/KeyMessage-class.html">KeyMessage</a></li>
+        <li><a href="services/KeyRepeatEvent-class.html">KeyRepeatEvent</a></li>
+        <li><a href="services/KeyUpEvent-class.html">KeyUpEvent</a></li>
+        <li><a href="services/LengthLimitingTextInputFormatter-class.html">LengthLimitingTextInputFormatter</a></li>
+        <li><a href="services/LineBreak-class.html">LineBreak</a></li>
+        <li><a href="services/LogicalKeyboardKey-class.html">LogicalKeyboardKey</a></li>
+        <li><a href="vector_math_64/Matrix4-class.html">Matrix4</a></li>
+        <li><a href="services/MessageCodec-class.html">MessageCodec</a></li>
+        <li><a href="services/MethodCall-class.html">MethodCall</a></li>
+        <li><a href="services/MethodChannel-class.html">MethodChannel</a></li>
+        <li><a href="services/MethodCodec-class.html">MethodCodec</a></li>
+        <li><a href="services/MouseCursor-class.html">MouseCursor</a></li>
+        <li><a href="services/MouseCursorManager-class.html">MouseCursorManager</a></li>
+        <li><a href="services/MouseCursorSession-class.html">MouseCursorSession</a></li>
+        <li><a href="services/MouseTrackerAnnotation-class.html">MouseTrackerAnnotation</a></li>
+        <li><a href="services/NetworkAssetBundle-class.html">NetworkAssetBundle</a></li>
+        <li><a href="dart-ui/Offset-class.html">Offset</a></li>
+        <li><a href="services/OptionalMethodChannel-class.html">OptionalMethodChannel</a></li>
+        <li><a href="services/PhysicalKeyboardKey-class.html">PhysicalKeyboardKey</a></li>
+        <li><a href="services/PlatformAssetBundle-class.html">PlatformAssetBundle</a></li>
+        <li><a href="services/PlatformViewController-class.html">PlatformViewController</a></li>
+        <li><a href="services/PlatformViewsRegistry-class.html">PlatformViewsRegistry</a></li>
+        <li><a href="services/PlatformViewsService-class.html">PlatformViewsService</a></li>
+        <li><a href="gestures/PointerEnterEvent-class.html">PointerEnterEvent</a></li>
+        <li><a href="gestures/PointerEvent-class.html">PointerEvent</a></li>
+        <li><a href="gestures/PointerExitEvent-class.html">PointerExitEvent</a></li>
+        <li><a href="gestures/PointerHoverEvent-class.html">PointerHoverEvent</a></li>
+        <li><a href="services/PushTextPosition-class.html">PushTextPosition</a></li>
+        <li><a href="services/RawFloatingCursorPoint-class.html">RawFloatingCursorPoint</a></li>
+        <li><a href="services/RawKeyboard-class.html">RawKeyboard</a></li>
+        <li><a href="services/RawKeyDownEvent-class.html">RawKeyDownEvent</a></li>
+        <li><a href="services/RawKeyEvent-class.html">RawKeyEvent</a></li>
+        <li><a href="services/RawKeyEventData-class.html">RawKeyEventData</a></li>
+        <li><a href="services/RawKeyEventDataAndroid-class.html">RawKeyEventDataAndroid</a></li>
+        <li><a href="services/RawKeyEventDataFuchsia-class.html">RawKeyEventDataFuchsia</a></li>
+        <li><a href="services/RawKeyEventDataIos-class.html">RawKeyEventDataIos</a></li>
+        <li><a href="services/RawKeyEventDataLinux-class.html">RawKeyEventDataLinux</a></li>
+        <li><a href="services/RawKeyEventDataMacOs-class.html">RawKeyEventDataMacOs</a></li>
+        <li><a href="services/RawKeyEventDataWeb-class.html">RawKeyEventDataWeb</a></li>
+        <li><a href="services/RawKeyEventDataWindows-class.html">RawKeyEventDataWindows</a></li>
+        <li><a href="services/RawKeyUpEvent-class.html">RawKeyUpEvent</a></li>
+        <li><a href="foundation/ReadBuffer-class.html">ReadBuffer</a></li>
+        <li><a href="dart-ui/Rect-class.html">Rect</a></li>
+        <li><a href="services/RestorationBucket-class.html">RestorationBucket</a></li>
+        <li><a href="services/RestorationManager-class.html">RestorationManager</a></li>
+        <li><a href="dart-ui/RootIsolateToken-class.html">RootIsolateToken</a></li>
+        <li><a href="services/ScribbleClient-class.html">ScribbleClient</a></li>
+        <li><a href="services/SelectionRect-class.html">SelectionRect</a></li>
+        <li><a href="dart-ui/Size-class.html">Size</a></li>
+        <li><a href="services/SpellCheckResults-class.html">SpellCheckResults</a></li>
+        <li><a href="services/SpellCheckService-class.html">SpellCheckService</a></li>
+        <li><a href="services/StandardMessageCodec-class.html">StandardMessageCodec</a></li>
+        <li><a href="services/StandardMethodCodec-class.html">StandardMethodCodec</a></li>
+        <li><a href="services/StringCodec-class.html">StringCodec</a></li>
+        <li><a href="services/SuggestionSpan-class.html">SuggestionSpan</a></li>
+        <li><a href="services/SurfaceAndroidViewController-class.html">SurfaceAndroidViewController</a></li>
+        <li><a href="services/SystemChannels-class.html">SystemChannels</a></li>
+        <li><a href="services/SystemChrome-class.html">SystemChrome</a></li>
+        <li><a href="services/SystemMouseCursor-class.html">SystemMouseCursor</a></li>
+        <li><a href="services/SystemMouseCursors-class.html">SystemMouseCursors</a></li>
+        <li><a href="services/SystemNavigator-class.html">SystemNavigator</a></li>
+        <li><a href="services/SystemSound-class.html">SystemSound</a></li>
+        <li><a href="services/SystemUiOverlayStyle-class.html">SystemUiOverlayStyle</a></li>
+        <li><a href="services/TextBoundary-class.html">TextBoundary</a></li>
+        <li><a href="services/TextEditingDelta-class.html">TextEditingDelta</a></li>
+        <li><a href="services/TextEditingDeltaDeletion-class.html">TextEditingDeltaDeletion</a></li>
+        <li><a href="services/TextEditingDeltaInsertion-class.html">TextEditingDeltaInsertion</a></li>
+        <li><a href="services/TextEditingDeltaNonTextUpdate-class.html">TextEditingDeltaNonTextUpdate</a></li>
+        <li><a href="services/TextEditingDeltaReplacement-class.html">TextEditingDeltaReplacement</a></li>
+        <li><a href="services/TextEditingValue-class.html">TextEditingValue</a></li>
+        <li><a href="services/TextInput-class.html">TextInput</a></li>
+        <li><a href="services/TextInputConfiguration-class.html">TextInputConfiguration</a></li>
+        <li><a href="services/TextInputConnection-class.html">TextInputConnection</a></li>
+        <li><a href="services/TextInputFormatter-class.html">TextInputFormatter</a></li>
+        <li><a href="services/TextInputType-class.html">TextInputType</a></li>
+        <li><a href="services/TextLayoutMetrics-class.html">TextLayoutMetrics</a></li>
+        <li><a href="dart-ui/TextPosition-class.html">TextPosition</a></li>
+        <li><a href="dart-ui/TextRange-class.html">TextRange</a></li>
+        <li><a href="services/TextSelection-class.html">TextSelection</a></li>
+        <li><a href="services/TextureAndroidViewController-class.html">TextureAndroidViewController</a></li>
+        <li><a href="services/UiKitViewController-class.html">UiKitViewController</a></li>
+        <li><a href="dart-typed_data/Uint8List-class.html">Uint8List</a></li>
+        <li><a href="services/WhitespaceBoundary-class.html">WhitespaceBoundary</a></li>
+        <li><a href="services/WordBoundary-class.html">WordBoundary</a></li>
+        <li><a href="foundation/WriteBuffer-class.html">WriteBuffer</a></li>
+
+
+      <li class="section-title"><a href="services/services-library.html#mixins">Mixins</a></li>
+        <li><a href="services/AutofillScopeMixin-mixin.html">AutofillScopeMixin</a></li>
+        <li><a href="services/DeltaTextInputClient-mixin.html">DeltaTextInputClient</a></li>
+        <li><a href="services/ServicesBinding-mixin.html">ServicesBinding</a></li>
+        <li><a href="services/TextInputClient-mixin.html">TextInputClient</a></li>
+        <li><a href="services/TextInputControl-mixin.html">TextInputControl</a></li>
+        <li><a href="services/TextSelectionDelegate-mixin.html">TextSelectionDelegate</a></li>
+
+      <li class="section-title"><a href="services/services-library.html#constants">Constants</a></li>
+        <li><a href="services/kAndroidNumPadMap-constant.html">kAndroidNumPadMap</a></li>
+        <li><a href="services/kAndroidToLogicalKey-constant.html">kAndroidToLogicalKey</a></li>
+        <li><a href="services/kAndroidToPhysicalKey-constant.html">kAndroidToPhysicalKey</a></li>
+        <li><a href="services/kFuchsiaToLogicalKey-constant.html">kFuchsiaToLogicalKey</a></li>
+        <li><a href="services/kFuchsiaToPhysicalKey-constant.html">kFuchsiaToPhysicalKey</a></li>
+        <li><a href="services/kGlfwNumpadMap-constant.html">kGlfwNumpadMap</a></li>
+        <li><a href="services/kGlfwToLogicalKey-constant.html">kGlfwToLogicalKey</a></li>
+        <li><a href="services/kGtkNumpadMap-constant.html">kGtkNumpadMap</a></li>
+        <li><a href="services/kGtkToLogicalKey-constant.html">kGtkToLogicalKey</a></li>
+        <li><a href="services/kIosNumPadMap-constant.html">kIosNumPadMap</a></li>
+        <li><a href="services/kIosSpecialLogicalMap-constant.html">kIosSpecialLogicalMap</a></li>
+        <li><a href="services/kIosToLogicalKey-constant.html">kIosToLogicalKey</a></li>
+        <li><a href="services/kIosToPhysicalKey-constant.html">kIosToPhysicalKey</a></li>
+        <li><a href="services/kLinuxToPhysicalKey-constant.html">kLinuxToPhysicalKey</a></li>
+        <li><a href="services/kMacOsFunctionKeyMap-constant.html">kMacOsFunctionKeyMap</a></li>
+        <li><a href="services/kMacOsNumPadMap-constant.html">kMacOsNumPadMap</a></li>
+        <li><a href="services/kMacOsToLogicalKey-constant.html">kMacOsToLogicalKey</a></li>
+        <li><a href="services/kMacOsToPhysicalKey-constant.html">kMacOsToPhysicalKey</a></li>
+        <li><a href="services/kWebLocationMap-constant.html">kWebLocationMap</a></li>
+        <li><a href="services/kWebNumPadMap-constant.html">kWebNumPadMap</a></li>
+        <li><a href="services/kWebToLogicalKey-constant.html">kWebToLogicalKey</a></li>
+        <li><a href="services/kWebToPhysicalKey-constant.html">kWebToPhysicalKey</a></li>
+        <li><a href="services/kWindowsNumPadMap-constant.html">kWindowsNumPadMap</a></li>
+        <li><a href="services/kWindowsToLogicalKey-constant.html">kWindowsToLogicalKey</a></li>
+        <li><a href="services/kWindowsToPhysicalKey-constant.html">kWindowsToPhysicalKey</a></li>
+
+      <li class="section-title"><a href="services/services-library.html#properties">Properties</a></li>
+        <li><a href="services/debugKeyEventSimulatorTransitModeOverride.html">debugKeyEventSimulatorTransitModeOverride</a></li>
+        <li><a href="services/debugProfilePlatformChannels.html">debugProfilePlatformChannels</a></li>
+        <li><a href="services/platformViewsRegistry.html">platformViewsRegistry</a></li>
+        <li><a href="services/rootBundle.html">rootBundle</a></li>
+
+      <li class="section-title"><a href="services/services-library.html#functions">Functions</a></li>
+        <li><a href="services/debugAssertAllServicesVarsUnset.html">debugAssertAllServicesVarsUnset</a></li>
+        <li><a href="services/debugIsSerializableForRestoration.html">debugIsSerializableForRestoration</a></li>
+        <li><a href="services/runeToLowerCase.html">runeToLowerCase</a></li>
+
+      <li class="section-title"><a href="services/services-library.html#enums">Enums</a></li>
+        <li><a href="dart-ui/Brightness.html">Brightness</a></li>
+        <li><a href="services/DeviceOrientation.html">DeviceOrientation</a></li>
+        <li><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></li>
+        <li><a href="services/FloatingCursorDragState.html">FloatingCursorDragState</a></li>
+        <li><a href="services/KeyboardSide.html">KeyboardSide</a></li>
+        <li><a href="services/KeyDataTransitMode.html">KeyDataTransitMode</a></li>
+        <li><a href="services/MaxLengthEnforcement.html">MaxLengthEnforcement</a></li>
+        <li><a href="services/ModifierKey.html">ModifierKey</a></li>
+        <li><a href="services/SelectionChangedCause.html">SelectionChangedCause</a></li>
+        <li><a href="services/ServicesServiceExtensions.html">ServicesServiceExtensions</a></li>
+        <li><a href="services/SmartDashesType.html">SmartDashesType</a></li>
+        <li><a href="services/SmartQuotesType.html">SmartQuotesType</a></li>
+        <li><a href="services/SystemSoundType.html">SystemSoundType</a></li>
+        <li><a href="services/SystemUiMode.html">SystemUiMode</a></li>
+        <li><a href="services/SystemUiOverlay.html">SystemUiOverlay</a></li>
+        <li><a href="foundation/TargetPlatform.html">TargetPlatform</a></li>
+        <li><a href="dart-ui/TextAffinity.html">TextAffinity</a></li>
+        <li><a href="dart-ui/TextAlign.html">TextAlign</a></li>
+        <li><a href="services/TextCapitalization.html">TextCapitalization</a></li>
+        <li><a href="dart-ui/TextDirection.html">TextDirection</a></li>
+        <li><a href="services/TextInputAction.html">TextInputAction</a></li>
+
+      <li class="section-title"><a href="services/services-library.html#typedefs">Typedefs</a></li>
+        <li><a href="services/KeyEventCallback.html">KeyEventCallback</a></li>
+        <li><a href="services/KeyMessageHandler.html">KeyMessageHandler</a></li>
+        <li><a href="services/MessageHandler.html">MessageHandler</a></li>
+        <li><a href="dart-ui/PlatformMessageResponseCallback.html">PlatformMessageResponseCallback</a></li>
+        <li><a href="services/PlatformViewCreatedCallback.html">PlatformViewCreatedCallback</a></li>
+        <li><a href="services/PointerEnterEventListener.html">PointerEnterEventListener</a></li>
+        <li><a href="services/PointerExitEventListener.html">PointerExitEventListener</a></li>
+        <li><a href="services/PointerHoverEventListener.html">PointerHoverEventListener</a></li>
+        <li><a href="services/PointTransformer.html">PointTransformer</a></li>
+        <li><a href="services/RawKeyEventHandler.html">RawKeyEventHandler</a></li>
+        <li><a href="services/SystemUiChangeCallback.html">SystemUiChangeCallback</a></li>
+        <li><a href="services/TextInputFormatFunction.html">TextInputFormatFunction</a></li>
+        <li><a href="foundation/ValueChanged.html">ValueChanged</a></li>
+        <li><a href="dart-ui/VoidCallback.html">VoidCallback</a></li>
+
+      <li class="section-title"><a href="services/services-library.html#exceptions">Exceptions</a></li>
+        <li><a href="services/MissingPluginException-class.html">MissingPluginException</a></li>
+        <li><a href="services/PlatformException-class.html">PlatformException</a></li>
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

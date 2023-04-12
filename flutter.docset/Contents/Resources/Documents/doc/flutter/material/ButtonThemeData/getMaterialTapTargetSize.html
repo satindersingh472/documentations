@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the getMaterialTapTargetSize method from the ButtonThemeData class, for the Dart programming language."/>
+  <title>getMaterialTapTargetSize method - ButtonThemeData class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ButtonThemeData-class.html">ButtonThemeData</a></li>
+    <li class="self-crumb">getMaterialTapTargetSize method</li>
+  </ol>
+  <div class="self-name">getMaterialTapTargetSize</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/button_theme.dart#L697"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-36762"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/getMaterialTapTargetSize"></a><span class="kind-method">getMaterialTapTargetSize</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize</a></span>
+<span class="name ">getMaterialTapTargetSize</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="getMaterialTapTargetSize-param-button"><span class="type-annotation"><a href="material/MaterialButton-class.html">MaterialButton</a></span> <span class="parameter-name">button</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>The minimum size of the <code>button</code>&#39;s tap target.</p>
+<p>Returns the button&#39;s <a href="material/MaterialButton/materialTapTargetSize.html">MaterialButton.materialTapTargetSize</a> if it is non-null.</p>
+<p>Otherwise the value of the <code>materialTapTargetSize</code> constructor
+parameter is returned if that&#39;s non-null.</p>
+<p>Otherwise <a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize.padded</a> is returned.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">MaterialTapTargetSize getMaterialTapTargetSize(MaterialButton button) {
+  return button.materialTapTargetSize ?? _materialTapTargetSize ?? MaterialTapTargetSize.padded;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="material/material-library.html">material</a></li>
+  <li><a href="material/ButtonThemeData-class.html">ButtonThemeData</a></li>
+  <li class="self-crumb">getMaterialTapTargetSize method</li>
+</ol>
+
+
+    <h5>ButtonThemeData class</h5>
+    <ol>
+
+        <li class="section-title"><a href="material/ButtonThemeData-class.html#constructors">Constructors</a></li>
+          <li><a href="material/ButtonThemeData/ButtonThemeData.html">ButtonThemeData</a></li>
+
+
+        <li class="section-title">
+          <a href="material/ButtonThemeData-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="material/ButtonThemeData/alignedDropdown.html">alignedDropdown</a></li>
+          <li><a href="material/ButtonThemeData/colorScheme.html">colorScheme</a></li>
+          <li><a href="material/ButtonThemeData/constraints.html">constraints</a></li>
+          <li><a href="material/ButtonThemeData/hashCode.html">hashCode</a></li>
+          <li><a href="material/ButtonThemeData/height.html">height</a></li>
+          <li><a href="material/ButtonThemeData/layoutBehavior.html">layoutBehavior</a></li>
+          <li><a href="material/ButtonThemeData/minWidth.html">minWidth</a></li>
+          <li><a href="material/ButtonThemeData/padding.html">padding</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="material/ButtonThemeData/shape.html">shape</a></li>
+          <li><a href="material/ButtonThemeData/textTheme.html">textTheme</a></li>
+
+        <li class="section-title"><a href="material/ButtonThemeData-class.html#instance-methods">Methods</a></li>
+          <li><a href="material/ButtonThemeData/copyWith.html">copyWith</a></li>
+          <li><a href="material/ButtonThemeData/debugFillProperties.html">debugFillProperties</a></li>
+          <li><a href="material/ButtonThemeData/getAnimationDuration.html">getAnimationDuration</a></li>
+          <li><a href="material/ButtonThemeData/getBrightness.html">getBrightness</a></li>
+          <li><a href="material/ButtonThemeData/getConstraints.html">getConstraints</a></li>
+          <li><a href="material/ButtonThemeData/getDisabledElevation.html">getDisabledElevation</a></li>
+          <li><a href="material/ButtonThemeData/getDisabledFillColor.html">getDisabledFillColor</a></li>
+          <li><a href="material/ButtonThemeData/getDisabledTextColor.html">getDisabledTextColor</a></li>
+          <li><a href="material/ButtonThemeData/getElevation.html">getElevation</a></li>
+          <li><a href="material/ButtonThemeData/getFillColor.html">getFillColor</a></li>
+          <li><a href="material/ButtonThemeData/getFocusColor.html">getFocusColor</a></li>
+          <li><a href="material/ButtonThemeData/getFocusElevation.html">getFocusElevation</a></li>
+          <li><a href="material/ButtonThemeData/getHighlightColor.html">getHighlightColor</a></li>
+          <li><a href="material/ButtonThemeData/getHighlightElevation.html">getHighlightElevation</a></li>
+          <li><a href="material/ButtonThemeData/getHoverColor.html">getHoverColor</a></li>
+          <li><a href="material/ButtonThemeData/getHoverElevation.html">getHoverElevation</a></li>
+          <li><a href="material/ButtonThemeData/getMaterialTapTargetSize.html">getMaterialTapTargetSize</a></li>
+          <li><a href="material/ButtonThemeData/getPadding.html">getPadding</a></li>
+          <li><a href="material/ButtonThemeData/getShape.html">getShape</a></li>
+          <li><a href="material/ButtonThemeData/getSplashColor.html">getSplashColor</a></li>
+          <li><a href="material/ButtonThemeData/getTextColor.html">getTextColor</a></li>
+          <li><a href="material/ButtonThemeData/getTextTheme.html">getTextTheme</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title"><a href="material/ButtonThemeData-class.html#operators">Operators</a></li>
+          <li><a href="material/ButtonThemeData/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

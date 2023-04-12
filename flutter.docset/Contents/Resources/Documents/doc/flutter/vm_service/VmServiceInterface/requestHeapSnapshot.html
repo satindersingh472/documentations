@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the requestHeapSnapshot method from the VmServiceInterface class, for the Dart programming language."/>
+  <title>requestHeapSnapshot method - VmServiceInterface class - vm_service library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="vm_service/vm_service-library.html">vm_service</a></li>
+    <li><a href="vm_service/VmServiceInterface-class.html">VmServiceInterface</a></li>
+    <li class="self-crumb">requestHeapSnapshot abstract method</li>
+  </ol>
+  <div class="self-name">requestHeapSnapshot</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-66741"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/requestHeapSnapshot"></a><span class="kind-method">requestHeapSnapshot</span> abstract method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="vm_service/Success-class.html">Success</a></span>&gt;</span></span>
+<span class="name ">requestHeapSnapshot</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="requestHeapSnapshot-param-isolateId"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">isolateId</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Requests a dump of the Dart heap of the given isolate.</p>
+<p>This method immediately returns success. The VM will then begin delivering
+binary events on the <code>HeapSnapshot</code> event stream. The binary data in these
+events, when concatenated together, conforms to the <code>SnapshotGraph</code> type.
+The splitting of the SnapshotGraph into events can happen at any byte
+offset.</p>
+<p>If <code>isolateId</code> refers to an isolate which has exited, then the <code>Collected</code>
+<a href="vm_service/Sentinel-class.html">Sentinel</a> is returned.</p>
+<p>This method will throw a <a href="vm_service/SentinelException-class.html">SentinelException</a> in the case a <a href="vm_service/Sentinel-class.html">Sentinel</a> is
+returned.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;Success&gt; requestHeapSnapshot(String isolateId);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="vm_service/vm_service-library.html">vm_service</a></li>
+  <li><a href="vm_service/VmServiceInterface-class.html">VmServiceInterface</a></li>
+  <li class="self-crumb">requestHeapSnapshot abstract method</li>
+</ol>
+
+
+    <h5>VmServiceInterface class</h5>
+    <ol>
+
+        <li class="section-title"><a href="vm_service/VmServiceInterface-class.html#constructors">Constructors</a></li>
+          <li><a href="vm_service/VmServiceInterface/VmServiceInterface.html">VmServiceInterface</a></li>
+
+
+        <li class="section-title inherited">
+          <a href="vm_service/VmServiceInterface-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="vm_service/VmServiceInterface-class.html#instance-methods">Methods</a></li>
+          <li><a href="vm_service/VmServiceInterface/addBreakpoint.html">addBreakpoint</a></li>
+          <li><a href="vm_service/VmServiceInterface/addBreakpointAtEntry.html">addBreakpointAtEntry</a></li>
+          <li><a href="vm_service/VmServiceInterface/addBreakpointWithScriptUri.html">addBreakpointWithScriptUri</a></li>
+          <li><a href="vm_service/VmServiceInterface/callServiceExtension.html">callServiceExtension</a></li>
+          <li><a href="vm_service/VmServiceInterface/clearCpuSamples.html">clearCpuSamples</a></li>
+          <li><a href="vm_service/VmServiceInterface/clearVMTimeline.html">clearVMTimeline</a></li>
+          <li><a href="vm_service/VmServiceInterface/evaluate.html">evaluate</a></li>
+          <li><a href="vm_service/VmServiceInterface/evaluateInFrame.html">evaluateInFrame</a></li>
+          <li><a href="vm_service/VmServiceInterface/getAllocationProfile.html">getAllocationProfile</a></li>
+          <li><a href="vm_service/VmServiceInterface/getAllocationTraces.html">getAllocationTraces</a></li>
+          <li><a href="vm_service/VmServiceInterface/getClassList.html">getClassList</a></li>
+          <li><a href="vm_service/VmServiceInterface/getCpuSamples.html">getCpuSamples</a></li>
+          <li><a href="vm_service/VmServiceInterface/getFlagList.html">getFlagList</a></li>
+          <li><a href="vm_service/VmServiceInterface/getInboundReferences.html">getInboundReferences</a></li>
+          <li><a href="vm_service/VmServiceInterface/getInstances.html">getInstances</a></li>
+          <li><a href="vm_service/VmServiceInterface/getIsolate.html">getIsolate</a></li>
+          <li><a href="vm_service/VmServiceInterface/getIsolateGroup.html">getIsolateGroup</a></li>
+          <li><a href="vm_service/VmServiceInterface/getIsolateGroupMemoryUsage.html">getIsolateGroupMemoryUsage</a></li>
+          <li><a href="vm_service/VmServiceInterface/getMemoryUsage.html">getMemoryUsage</a></li>
+          <li><a href="vm_service/VmServiceInterface/getObject.html">getObject</a></li>
+          <li><a href="vm_service/VmServiceInterface/getPorts.html">getPorts</a></li>
+          <li><a href="vm_service/VmServiceInterface/getProcessMemoryUsage.html">getProcessMemoryUsage</a></li>
+          <li><a href="vm_service/VmServiceInterface/getRetainingPath.html">getRetainingPath</a></li>
+          <li><a href="vm_service/VmServiceInterface/getScripts.html">getScripts</a></li>
+          <li><a href="vm_service/VmServiceInterface/getSourceReport.html">getSourceReport</a></li>
+          <li><a href="vm_service/VmServiceInterface/getStack.html">getStack</a></li>
+          <li><a href="vm_service/VmServiceInterface/getSupportedProtocols.html">getSupportedProtocols</a></li>
+          <li><a href="vm_service/VmServiceInterface/getVersion.html">getVersion</a></li>
+          <li><a href="vm_service/VmServiceInterface/getVM.html">getVM</a></li>
+          <li><a href="vm_service/VmServiceInterface/getVMTimeline.html">getVMTimeline</a></li>
+          <li><a href="vm_service/VmServiceInterface/getVMTimelineFlags.html">getVMTimelineFlags</a></li>
+          <li><a href="vm_service/VmServiceInterface/getVMTimelineMicros.html">getVMTimelineMicros</a></li>
+          <li><a href="vm_service/VmServiceInterface/invoke.html">invoke</a></li>
+          <li><a href="vm_service/VmServiceInterface/kill.html">kill</a></li>
+          <li><a href="vm_service/VmServiceInterface/lookupPackageUris.html">lookupPackageUris</a></li>
+          <li><a href="vm_service/VmServiceInterface/lookupResolvedPackageUris.html">lookupResolvedPackageUris</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="vm_service/VmServiceInterface/onEvent.html">onEvent</a></li>
+          <li><a href="vm_service/VmServiceInterface/pause.html">pause</a></li>
+          <li><a href="vm_service/VmServiceInterface/registerService.html">registerService</a></li>
+          <li><a href="vm_service/VmServiceInterface/reloadSources.html">reloadSources</a></li>
+          <li><a href="vm_service/VmServiceInterface/removeBreakpoint.html">removeBreakpoint</a></li>
+          <li><a href="vm_service/VmServiceInterface/requestHeapSnapshot.html">requestHeapSnapshot</a></li>
+          <li><a href="vm_service/VmServiceInterface/resume.html">resume</a></li>
+          <li><a href="vm_service/VmServiceInterface/setBreakpointState.html">setBreakpointState</a></li>
+          <li><a class="deprecated" href="vm_service/VmServiceInterface/setExceptionPauseMode.html">setExceptionPauseMode</a></li>
+          <li><a href="vm_service/VmServiceInterface/setFlag.html">setFlag</a></li>
+          <li><a href="vm_service/VmServiceInterface/setIsolatePauseMode.html">setIsolatePauseMode</a></li>
+          <li><a href="vm_service/VmServiceInterface/setLibraryDebuggable.html">setLibraryDebuggable</a></li>
+          <li><a href="vm_service/VmServiceInterface/setName.html">setName</a></li>
+          <li><a href="vm_service/VmServiceInterface/setTraceClassAllocation.html">setTraceClassAllocation</a></li>
+          <li><a href="vm_service/VmServiceInterface/setVMName.html">setVMName</a></li>
+          <li><a href="vm_service/VmServiceInterface/setVMTimelineFlags.html">setVMTimelineFlags</a></li>
+          <li><a href="vm_service/VmServiceInterface/streamCancel.html">streamCancel</a></li>
+          <li><a href="vm_service/VmServiceInterface/streamCpuSamplesWithUserTag.html">streamCpuSamplesWithUserTag</a></li>
+          <li><a href="vm_service/VmServiceInterface/streamListen.html">streamListen</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="vm_service/VmServiceInterface-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the CupertinoSearchTextField constructor from Class CupertinoSearchTextField from the cupertino library, for the Dart programming language."/>
+  <title>CupertinoSearchTextField constructor - CupertinoSearchTextField - cupertino library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li><a href="cupertino/CupertinoSearchTextField-class.html">CupertinoSearchTextField</a></li>
+    <li class="self-crumb">CupertinoSearchTextField const constructor</li>
+  </ol>
+  <div class="self-name">CupertinoSearchTextField</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/cupertino/search_field.dart#L100"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-3180"></a><a class="dashAnchor" name="//apple_ref/cpp/Constructor/CupertinoSearchTextField"></a><span class="kind-constructor">CupertinoSearchTextField</span> constructor 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      const
+      <span class="name ">CupertinoSearchTextField</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
+<li><span class="parameter" id="-param-controller"><span class="type-annotation"><a href="widgets/TextEditingController-class.html">TextEditingController</a>?</span> <span class="parameter-name">controller</span>, </span></li>
+<li><span class="parameter" id="-param-onChanged"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">onChanged</span>, </span></li>
+<li><span class="parameter" id="-param-onSubmitted"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">onSubmitted</span>, </span></li>
+<li><span class="parameter" id="-param-style"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">style</span>, </span></li>
+<li><span class="parameter" id="-param-placeholder"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">placeholder</span>, </span></li>
+<li><span class="parameter" id="-param-placeholderStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">placeholderStyle</span>, </span></li>
+<li><span class="parameter" id="-param-decoration"><span class="type-annotation"><a href="painting/BoxDecoration-class.html">BoxDecoration</a>?</span> <span class="parameter-name">decoration</span>, </span></li>
+<li><span class="parameter" id="-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span></li>
+<li><span class="parameter" id="-param-borderRadius"><span class="type-annotation"><a href="painting/BorderRadius-class.html">BorderRadius</a>?</span> <span class="parameter-name">borderRadius</span>, </span></li>
+<li><span class="parameter" id="-param-keyboardType"><span class="type-annotation"><a href="services/TextInputType-class.html">TextInputType</a>?</span> <span class="parameter-name">keyboardType</span> = <span class="default-value">TextInputType.text</span>, </span></li>
+<li><span class="parameter" id="-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> <span class="parameter-name">padding</span> = <span class="default-value">const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8)</span>, </span></li>
+<li><span class="parameter" id="-param-itemColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">itemColor</span> = <span class="default-value">CupertinoColors.secondaryLabel</span>, </span></li>
+<li><span class="parameter" id="-param-itemSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">itemSize</span> = <span class="default-value">20.0</span>, </span></li>
+<li><span class="parameter" id="-param-prefixInsets"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> <span class="parameter-name">prefixInsets</span> = <span class="default-value">const EdgeInsetsDirectional.fromSTEB(6, 0, 0, 3)</span>, </span></li>
+<li><span class="parameter" id="-param-prefixIcon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">prefixIcon</span> = <span class="default-value">const Icon(CupertinoIcons.search)</span>, </span></li>
+<li><span class="parameter" id="-param-suffixInsets"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> <span class="parameter-name">suffixInsets</span> = <span class="default-value">const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 2)</span>, </span></li>
+<li><span class="parameter" id="-param-suffixIcon"><span class="type-annotation"><a href="widgets/Icon-class.html">Icon</a></span> <span class="parameter-name">suffixIcon</span> = <span class="default-value">const Icon(CupertinoIcons.xmark_circle_fill)</span>, </span></li>
+<li><span class="parameter" id="-param-suffixMode"><span class="type-annotation"><a href="cupertino/OverlayVisibilityMode.html">OverlayVisibilityMode</a></span> <span class="parameter-name">suffixMode</span> = <span class="default-value">OverlayVisibilityMode.editing</span>, </span></li>
+<li><span class="parameter" id="-param-onSuffixTap"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onSuffixTap</span>, </span></li>
+<li><span class="parameter" id="-param-restorationId"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restorationId</span>, </span></li>
+<li><span class="parameter" id="-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span></li>
+<li><span class="parameter" id="-param-smartQuotesType"><span class="type-annotation"><a href="services/SmartQuotesType.html">SmartQuotesType</a>?</span> <span class="parameter-name">smartQuotesType</span>, </span></li>
+<li><span class="parameter" id="-param-smartDashesType"><span class="type-annotation"><a href="services/SmartDashesType.html">SmartDashesType</a>?</span> <span class="parameter-name">smartDashesType</span>, </span></li>
+<li><span class="parameter" id="-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="-param-onTap"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onTap</span>, </span></li>
+<li><span class="parameter" id="-param-autocorrect"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autocorrect</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="-param-enabled"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enabled</span>}</span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates a <a href="cupertino/CupertinoTextField-class.html">CupertinoTextField</a> that mimics the look and behavior of
+UIKit&#39;s <code>UISearchTextField</code>.</p>
+<p>Similar to <a href="cupertino/CupertinoTextField-class.html">CupertinoTextField</a>, to provide a prefilled text entry, pass
+in a <a href="widgets/TextEditingController-class.html">TextEditingController</a> with an initial value to the <a href="cupertino/CupertinoSearchTextField/controller.html">controller</a>
+parameter.</p>
+<p>The <a href="cupertino/CupertinoSearchTextField/onChanged.html">onChanged</a> parameter takes a <a href="foundation/ValueChanged.html">ValueChanged&lt;String&gt;</a> which is invoked
+upon a change in the text field&#39;s value.</p>
+<p>The <a href="cupertino/CupertinoSearchTextField/onSubmitted.html">onSubmitted</a> parameter takes a <a href="foundation/ValueChanged.html">ValueChanged&lt;String&gt;</a> which is
+invoked when the keyboard submits.</p>
+<p>To provide a hint placeholder text that appears when the text entry is
+empty, pass a <a href="dart-core/String-class.html">String</a> to the <a href="cupertino/CupertinoSearchTextField/placeholder.html">placeholder</a> parameter. This defaults to
+&#39;Search&#39;.</p>
+<p>The <a href="cupertino/CupertinoSearchTextField/style.html">style</a> and <a href="cupertino/CupertinoSearchTextField/placeholderStyle.html">placeholderStyle</a> properties allow changing the style of
+the text and placeholder of the text field. <a href="cupertino/CupertinoSearchTextField/placeholderStyle.html">placeholderStyle</a> defaults
+to the gray <a href="cupertino/CupertinoColors/secondaryLabel-constant.html">CupertinoColors.secondaryLabel</a> iOS color.</p>
+<p>To set the text field&#39;s background color and border radius, pass a
+<a href="painting/BoxDecoration-class.html">BoxDecoration</a> to the <a href="cupertino/CupertinoSearchTextField/decoration.html">decoration</a> parameter. This defaults to the
+default translucent tertiarySystemFill iOS color and 9 px corner radius.</p>
+<p>The <a href="cupertino/CupertinoSearchTextField/itemColor.html">itemColor</a> and <a href="cupertino/CupertinoSearchTextField/itemSize.html">itemSize</a> properties allow changing the icon color
+and icon size of the search icon (prefix) and X-Mark (suffix).
+They default to <a href="cupertino/CupertinoColors/secondaryLabel-constant.html">CupertinoColors.secondaryLabel</a> and <code>20.0</code>.</p>
+<p>The <a href="cupertino/CupertinoSearchTextField/padding.html">padding</a>, <a href="cupertino/CupertinoSearchTextField/prefixInsets.html">prefixInsets</a>, and <a href="cupertino/CupertinoSearchTextField/suffixInsets.html">suffixInsets</a> let you set the padding
+insets for text, the search icon (prefix), and the X-Mark icon (suffix).
+They default to values that replicate the <code>UISearchTextField</code> look. These
+default fields were determined using the comparison tool in
+<a href="https://github.com/flutter/platform_tests/">https://github.com/flutter/platform_tests/</a>.</p>
+<p>To customize the prefix icon, pass a <a href="widgets/Widget-class.html">Widget</a> to <a href="cupertino/CupertinoSearchTextField/prefixIcon.html">prefixIcon</a>. This
+defaults to the search icon.</p>
+<p>To customize the suffix icon, pass an <a href="widgets/Icon-class.html">Icon</a> to <a href="cupertino/CupertinoSearchTextField/suffixIcon.html">suffixIcon</a>. This
+defaults to the X-Mark.</p>
+<p>To dictate when the X-Mark (suffix) should be visible, a.k.a. only on when
+editing, not editing, on always, or on never, pass a
+<a href="cupertino/OverlayVisibilityMode.html">OverlayVisibilityMode</a> to <a href="cupertino/CupertinoSearchTextField/suffixMode.html">suffixMode</a>. This defaults to only on when
+editing.</p>
+<p>To customize the X-Mark (suffix) action, pass a <a href="dart-ui/VoidCallback.html">VoidCallback</a> to
+<a href="cupertino/CupertinoSearchTextField/onSuffixTap.html">onSuffixTap</a>. This defaults to clearing the text.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">// TODO(DanielEdrisian): Localize the &#39;Search&#39; placeholder.
+///
+/// The [style] and [placeholderStyle] properties allow changing the style of
+/// the text and placeholder of the text field. [placeholderStyle] defaults
+/// to the gray [CupertinoColors.secondaryLabel] iOS color.
+///
+/// To set the text field&#39;s background color and border radius, pass a
+/// [BoxDecoration] to the [decoration] parameter. This defaults to the
+/// default translucent tertiarySystemFill iOS color and 9 px corner radius.
+// TODO(DanielEdrisian): Must make border radius continuous, see
+// https://github.com/flutter/flutter/issues/13914.
+///
+/// The [itemColor] and [itemSize] properties allow changing the icon color
+/// and icon size of the search icon (prefix) and X-Mark (suffix).
+/// They default to [CupertinoColors.secondaryLabel] and `20.0`.
+///
+/// The [padding], [prefixInsets], and [suffixInsets] let you set the padding
+/// insets for text, the search icon (prefix), and the X-Mark icon (suffix).
+/// They default to values that replicate the `UISearchTextField` look. These
+/// default fields were determined using the comparison tool in
+/// https://github.com/flutter/platform_tests/.
+///
+/// To customize the prefix icon, pass a [Widget] to [prefixIcon]. This
+/// defaults to the search icon.
+///
+/// To customize the suffix icon, pass an [Icon] to [suffixIcon]. This
+/// defaults to the X-Mark.
+///
+/// To dictate when the X-Mark (suffix) should be visible, a.k.a. only on when
+/// editing, not editing, on always, or on never, pass a
+/// [OverlayVisibilityMode] to [suffixMode]. This defaults to only on when
+/// editing.
+///
+/// To customize the X-Mark (suffix) action, pass a [VoidCallback] to
+/// [onSuffixTap]. This defaults to clearing the text.
+const CupertinoSearchTextField({
+  super.key,
+  this.controller,
+  this.onChanged,
+  this.onSubmitted,
+  this.style,
+  this.placeholder,
+  this.placeholderStyle,
+  this.decoration,
+  this.backgroundColor,
+  this.borderRadius,
+  this.keyboardType = TextInputType.text,
+  this.padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8),
+  this.itemColor = CupertinoColors.secondaryLabel,
+  this.itemSize = 20.0,
+  this.prefixInsets = const EdgeInsetsDirectional.fromSTEB(6, 0, 0, 3),
+  this.prefixIcon = const Icon(CupertinoIcons.search),
+  this.suffixInsets = const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 2),
+  this.suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill),
+  this.suffixMode = OverlayVisibilityMode.editing,
+  this.onSuffixTap,
+  this.restorationId,
+  this.focusNode,
+  this.smartQuotesType,
+  this.smartDashesType,
+  this.autofocus = false,
+  this.onTap,
+  this.autocorrect = true,
+  this.enabled,
+})  : assert(padding != null),
+      assert(itemColor != null),
+      assert(itemSize != null),
+      assert(prefixInsets != null),
+      assert(suffixInsets != null),
+      assert(suffixIcon != null),
+      assert(suffixMode != null),
+      assert(
+        !((decoration != null) &amp;&amp; (backgroundColor != null)),
+        &#39;Cannot provide both a background color and a decoration\n&#39;
+        &#39;To provide both, use &#34;decoration: BoxDecoration(color: &#39;
+        &#39;backgroundColor)&#34;&#39;,
+      ),
+      assert(
+        !((decoration != null) &amp;&amp; (borderRadius != null)),
+        &#39;Cannot provide both a border radius and a decoration\n&#39;
+        &#39;To provide both, use &#34;decoration: BoxDecoration(borderRadius: &#39;
+        &#39;borderRadius)&#34;&#39;,
+      );</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+  <li><a href="cupertino/CupertinoSearchTextField-class.html">CupertinoSearchTextField</a></li>
+  <li class="self-crumb">CupertinoSearchTextField const constructor</li>
+</ol>
+
+
+    <h5>CupertinoSearchTextField class</h5>
+    <ol>
+
+        <li class="section-title"><a href="cupertino/CupertinoSearchTextField-class.html#constructors">Constructors</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/CupertinoSearchTextField.html">CupertinoSearchTextField</a></li>
+
+
+        <li class="section-title">
+          <a href="cupertino/CupertinoSearchTextField-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="cupertino/CupertinoSearchTextField/autocorrect.html">autocorrect</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/autofocus.html">autofocus</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/backgroundColor.html">backgroundColor</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/borderRadius.html">borderRadius</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/controller.html">controller</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/decoration.html">decoration</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/enabled.html">enabled</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/focusNode.html">focusNode</a></li>
+          <li class="inherited"><a href="widgets/Widget/hashCode.html">hashCode</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/itemColor.html">itemColor</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/itemSize.html">itemSize</a></li>
+          <li class="inherited"><a href="widgets/Widget/key.html">key</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/keyboardType.html">keyboardType</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/onChanged.html">onChanged</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/onSubmitted.html">onSubmitted</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/onSuffixTap.html">onSuffixTap</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/onTap.html">onTap</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/padding.html">padding</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/placeholder.html">placeholder</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/placeholderStyle.html">placeholderStyle</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/prefixIcon.html">prefixIcon</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/prefixInsets.html">prefixInsets</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/restorationId.html">restorationId</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/smartDashesType.html">smartDashesType</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/smartQuotesType.html">smartQuotesType</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/style.html">style</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/suffixIcon.html">suffixIcon</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/suffixInsets.html">suffixInsets</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/suffixMode.html">suffixMode</a></li>
+
+        <li class="section-title"><a href="cupertino/CupertinoSearchTextField-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="widgets/StatefulWidget/createElement.html">createElement</a></li>
+          <li><a href="cupertino/CupertinoSearchTextField/createState.html">createState</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="widgets/Widget/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="cupertino/CupertinoSearchTextField-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="widgets/Widget/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

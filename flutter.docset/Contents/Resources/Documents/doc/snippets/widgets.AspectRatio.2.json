@@ -1,0 +1,13 @@
+{
+    "id": "widgets.AspectRatio.2",
+    "element": "AspectRatio",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 3335,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "",
+    "file": "widgets.AspectRatio.2.dart"
+}

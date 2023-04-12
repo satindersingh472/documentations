@@ -1,0 +1,1358 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the Cubic class from the animation library, for the Dart programming language."/>
+  <title>Cubic class - animation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="animation/animation-library.html">animation</a></li>
+    <li class="self-crumb">Cubic class</li>
+  </ol>
+  <div class="self-name">Cubic</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/animation/curves.dart#L303"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-154"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/Cubic"></a><span class="kind-class">Cubic</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A cubic polynomial mapping of the unit interval.</p>
+<p>The <a href="animation/Curves-class.html">Curves</a> class contains some commonly used cubic curves:</p>
+<ul>
+<li><a href="animation/Curves/fastLinearToSlowEaseIn-constant.html">Curves.fastLinearToSlowEaseIn</a></li>
+<li><a href="animation/Curves/ease-constant.html">Curves.ease</a></li>
+<li><a href="animation/Curves/easeIn-constant.html">Curves.easeIn</a></li>
+<li><a href="animation/Curves/easeInToLinear-constant.html">Curves.easeInToLinear</a></li>
+<li><a href="animation/Curves/easeInSine-constant.html">Curves.easeInSine</a></li>
+<li><a href="animation/Curves/easeInQuad-constant.html">Curves.easeInQuad</a></li>
+<li><a href="animation/Curves/easeInCubic-constant.html">Curves.easeInCubic</a></li>
+<li><a href="animation/Curves/easeInQuart-constant.html">Curves.easeInQuart</a></li>
+<li><a href="animation/Curves/easeInQuint-constant.html">Curves.easeInQuint</a></li>
+<li><a href="animation/Curves/easeInExpo-constant.html">Curves.easeInExpo</a></li>
+<li><a href="animation/Curves/easeInCirc-constant.html">Curves.easeInCirc</a></li>
+<li><a href="animation/Curves/easeInBack-constant.html">Curves.easeInBack</a></li>
+<li><a href="animation/Curves/easeOut-constant.html">Curves.easeOut</a></li>
+<li><a href="animation/Curves/linearToEaseOut-constant.html">Curves.linearToEaseOut</a></li>
+<li><a href="animation/Curves/easeOutSine-constant.html">Curves.easeOutSine</a></li>
+<li><a href="animation/Curves/easeOutQuad-constant.html">Curves.easeOutQuad</a></li>
+<li><a href="animation/Curves/easeOutCubic-constant.html">Curves.easeOutCubic</a></li>
+<li><a href="animation/Curves/easeOutQuart-constant.html">Curves.easeOutQuart</a></li>
+<li><a href="animation/Curves/easeOutQuint-constant.html">Curves.easeOutQuint</a></li>
+<li><a href="animation/Curves/easeOutExpo-constant.html">Curves.easeOutExpo</a></li>
+<li><a href="animation/Curves/easeOutCirc-constant.html">Curves.easeOutCirc</a></li>
+<li><a href="animation/Curves/easeOutBack-constant.html">Curves.easeOutBack</a></li>
+<li><a href="animation/Curves/easeInOut-constant.html">Curves.easeInOut</a></li>
+<li><a href="animation/Curves/easeInOutSine-constant.html">Curves.easeInOutSine</a></li>
+<li><a href="animation/Curves/easeInOutQuad-constant.html">Curves.easeInOutQuad</a></li>
+<li><a href="animation/Curves/easeInOutCubic-constant.html">Curves.easeInOutCubic</a></li>
+<li><a href="animation/Curves/easeInOutQuart-constant.html">Curves.easeInOutQuart</a></li>
+<li><a href="animation/Curves/easeInOutQuint-constant.html">Curves.easeInOutQuint</a></li>
+<li><a href="animation/Curves/easeInOutExpo-constant.html">Curves.easeInOutExpo</a></li>
+<li><a href="animation/Curves/easeInOutCirc-constant.html">Curves.easeInOutCirc</a></li>
+<li><a href="animation/Curves/easeInOutBack-constant.html">Curves.easeInOutBack</a></li>
+<li><a href="animation/Curves/fastOutSlowIn-constant.html">Curves.fastOutSlowIn</a></li>
+<li><a href="animation/Curves/slowMiddle-constant.html">Curves.slowMiddle</a></li>
+</ul><div style="position: relative;">
+  <div id="animation_1_play_button_" onclick="var animation_1 = document.getElementById(&#39;animation_1&#39;);
+                if (animation_1.paused) {
+                  animation_1.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_1.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_1" style="width:464px; height:192px;" onclick="var animation_1_play_button_ = document.getElementById(&#39;animation_1_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_1_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_1_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_fast_linear_to_slow_ease_in.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_2_play_button_" onclick="var animation_2 = document.getElementById(&#39;animation_2&#39;);
+                if (animation_2.paused) {
+                  animation_2.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_2.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_2" style="width:464px; height:192px;" onclick="var animation_2_play_button_ = document.getElementById(&#39;animation_2_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_2_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_2_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_3_play_button_" onclick="var animation_3 = document.getElementById(&#39;animation_3&#39;);
+                if (animation_3.paused) {
+                  animation_3.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_3.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_3" style="width:464px; height:192px;" onclick="var animation_3_play_button_ = document.getElementById(&#39;animation_3_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_3_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_3_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_4_play_button_" onclick="var animation_4 = document.getElementById(&#39;animation_4&#39;);
+                if (animation_4.paused) {
+                  animation_4.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_4.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_4" style="width:464px; height:192px;" onclick="var animation_4_play_button_ = document.getElementById(&#39;animation_4_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_4_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_4_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_to_linear.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_5_play_button_" onclick="var animation_5 = document.getElementById(&#39;animation_5&#39;);
+                if (animation_5.paused) {
+                  animation_5.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_5.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_5" style="width:464px; height:192px;" onclick="var animation_5_play_button_ = document.getElementById(&#39;animation_5_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_5_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_5_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_sine.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_6_play_button_" onclick="var animation_6 = document.getElementById(&#39;animation_6&#39;);
+                if (animation_6.paused) {
+                  animation_6.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_6.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_6" style="width:464px; height:192px;" onclick="var animation_6_play_button_ = document.getElementById(&#39;animation_6_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_6_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_6_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_quad.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_7_play_button_" onclick="var animation_7 = document.getElementById(&#39;animation_7&#39;);
+                if (animation_7.paused) {
+                  animation_7.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_7.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_7" style="width:464px; height:192px;" onclick="var animation_7_play_button_ = document.getElementById(&#39;animation_7_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_7_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_7_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_cubic.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_8_play_button_" onclick="var animation_8 = document.getElementById(&#39;animation_8&#39;);
+                if (animation_8.paused) {
+                  animation_8.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_8.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_8" style="width:464px; height:192px;" onclick="var animation_8_play_button_ = document.getElementById(&#39;animation_8_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_8_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_8_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_quart.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_9_play_button_" onclick="var animation_9 = document.getElementById(&#39;animation_9&#39;);
+                if (animation_9.paused) {
+                  animation_9.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_9.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_9" style="width:464px; height:192px;" onclick="var animation_9_play_button_ = document.getElementById(&#39;animation_9_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_9_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_9_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_quint.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_10_play_button_" onclick="var animation_10 = document.getElementById(&#39;animation_10&#39;);
+                if (animation_10.paused) {
+                  animation_10.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_10.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_10" style="width:464px; height:192px;" onclick="var animation_10_play_button_ = document.getElementById(&#39;animation_10_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_10_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_10_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_expo.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_11_play_button_" onclick="var animation_11 = document.getElementById(&#39;animation_11&#39;);
+                if (animation_11.paused) {
+                  animation_11.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_11.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_11" style="width:464px; height:192px;" onclick="var animation_11_play_button_ = document.getElementById(&#39;animation_11_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_11_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_11_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_circ.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_12_play_button_" onclick="var animation_12 = document.getElementById(&#39;animation_12&#39;);
+                if (animation_12.paused) {
+                  animation_12.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_12.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_12" style="width:464px; height:192px;" onclick="var animation_12_play_button_ = document.getElementById(&#39;animation_12_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_12_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_12_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_back.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_13_play_button_" onclick="var animation_13 = document.getElementById(&#39;animation_13&#39;);
+                if (animation_13.paused) {
+                  animation_13.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_13.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_13" style="width:464px; height:192px;" onclick="var animation_13_play_button_ = document.getElementById(&#39;animation_13_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_13_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_13_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_14_play_button_" onclick="var animation_14 = document.getElementById(&#39;animation_14&#39;);
+                if (animation_14.paused) {
+                  animation_14.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_14.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_14" style="width:464px; height:192px;" onclick="var animation_14_play_button_ = document.getElementById(&#39;animation_14_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_14_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_14_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_linear_to_ease_out.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_15_play_button_" onclick="var animation_15 = document.getElementById(&#39;animation_15&#39;);
+                if (animation_15.paused) {
+                  animation_15.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_15.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_15" style="width:464px; height:192px;" onclick="var animation_15_play_button_ = document.getElementById(&#39;animation_15_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_15_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_15_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_sine.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_16_play_button_" onclick="var animation_16 = document.getElementById(&#39;animation_16&#39;);
+                if (animation_16.paused) {
+                  animation_16.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_16.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_16" style="width:464px; height:192px;" onclick="var animation_16_play_button_ = document.getElementById(&#39;animation_16_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_16_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_16_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_quad.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_17_play_button_" onclick="var animation_17 = document.getElementById(&#39;animation_17&#39;);
+                if (animation_17.paused) {
+                  animation_17.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_17.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_17" style="width:464px; height:192px;" onclick="var animation_17_play_button_ = document.getElementById(&#39;animation_17_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_17_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_17_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_cubic.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_18_play_button_" onclick="var animation_18 = document.getElementById(&#39;animation_18&#39;);
+                if (animation_18.paused) {
+                  animation_18.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_18.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_18" style="width:464px; height:192px;" onclick="var animation_18_play_button_ = document.getElementById(&#39;animation_18_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_18_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_18_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_quart.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_19_play_button_" onclick="var animation_19 = document.getElementById(&#39;animation_19&#39;);
+                if (animation_19.paused) {
+                  animation_19.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_19.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_19" style="width:464px; height:192px;" onclick="var animation_19_play_button_ = document.getElementById(&#39;animation_19_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_19_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_19_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_quint.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_20_play_button_" onclick="var animation_20 = document.getElementById(&#39;animation_20&#39;);
+                if (animation_20.paused) {
+                  animation_20.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_20.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_20" style="width:464px; height:192px;" onclick="var animation_20_play_button_ = document.getElementById(&#39;animation_20_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_20_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_20_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_expo.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_21_play_button_" onclick="var animation_21 = document.getElementById(&#39;animation_21&#39;);
+                if (animation_21.paused) {
+                  animation_21.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_21.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_21" style="width:464px; height:192px;" onclick="var animation_21_play_button_ = document.getElementById(&#39;animation_21_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_21_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_21_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_circ.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_22_play_button_" onclick="var animation_22 = document.getElementById(&#39;animation_22&#39;);
+                if (animation_22.paused) {
+                  animation_22.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_22.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_22" style="width:464px; height:192px;" onclick="var animation_22_play_button_ = document.getElementById(&#39;animation_22_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_22_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_22_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_out_back.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_23_play_button_" onclick="var animation_23 = document.getElementById(&#39;animation_23&#39;);
+                if (animation_23.paused) {
+                  animation_23.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_23.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_23" style="width:464px; height:192px;" onclick="var animation_23_play_button_ = document.getElementById(&#39;animation_23_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_23_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_23_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_24_play_button_" onclick="var animation_24 = document.getElementById(&#39;animation_24&#39;);
+                if (animation_24.paused) {
+                  animation_24.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_24.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_24" style="width:464px; height:192px;" onclick="var animation_24_play_button_ = document.getElementById(&#39;animation_24_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_24_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_24_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_sine.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_25_play_button_" onclick="var animation_25 = document.getElementById(&#39;animation_25&#39;);
+                if (animation_25.paused) {
+                  animation_25.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_25.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_25" style="width:464px; height:192px;" onclick="var animation_25_play_button_ = document.getElementById(&#39;animation_25_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_25_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_25_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_quad.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_26_play_button_" onclick="var animation_26 = document.getElementById(&#39;animation_26&#39;);
+                if (animation_26.paused) {
+                  animation_26.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_26.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_26" style="width:464px; height:192px;" onclick="var animation_26_play_button_ = document.getElementById(&#39;animation_26_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_26_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_26_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_cubic.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_27_play_button_" onclick="var animation_27 = document.getElementById(&#39;animation_27&#39;);
+                if (animation_27.paused) {
+                  animation_27.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_27.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_27" style="width:464px; height:192px;" onclick="var animation_27_play_button_ = document.getElementById(&#39;animation_27_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_27_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_27_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_quart.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_28_play_button_" onclick="var animation_28 = document.getElementById(&#39;animation_28&#39;);
+                if (animation_28.paused) {
+                  animation_28.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_28.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_28" style="width:464px; height:192px;" onclick="var animation_28_play_button_ = document.getElementById(&#39;animation_28_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_28_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_28_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_quint.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_29_play_button_" onclick="var animation_29 = document.getElementById(&#39;animation_29&#39;);
+                if (animation_29.paused) {
+                  animation_29.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_29.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_29" style="width:464px; height:192px;" onclick="var animation_29_play_button_ = document.getElementById(&#39;animation_29_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_29_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_29_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_expo.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_30_play_button_" onclick="var animation_30 = document.getElementById(&#39;animation_30&#39;);
+                if (animation_30.paused) {
+                  animation_30.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_30.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_30" style="width:464px; height:192px;" onclick="var animation_30_play_button_ = document.getElementById(&#39;animation_30_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_30_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_30_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_circ.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_31_play_button_" onclick="var animation_31 = document.getElementById(&#39;animation_31&#39;);
+                if (animation_31.paused) {
+                  animation_31.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_31.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_31" style="width:464px; height:192px;" onclick="var animation_31_play_button_ = document.getElementById(&#39;animation_31_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_31_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_31_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_ease_in_out_back.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_32_play_button_" onclick="var animation_32 = document.getElementById(&#39;animation_32&#39;);
+                if (animation_32.paused) {
+                  animation_32.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_32.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_32" style="width:464px; height:192px;" onclick="var animation_32_play_button_ = document.getElementById(&#39;animation_32_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_32_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_32_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_fast_out_slow_in.mp4" type="video/mp4"/>
+  </video>
+</div><div style="position: relative;">
+  <div id="animation_33_play_button_" onclick="var animation_33 = document.getElementById(&#39;animation_33&#39;);
+                if (animation_33.paused) {
+                  animation_33.play();
+                  this.style.display = &#39;none&#39;;
+                } else {
+                  animation_33.pause();
+                  this.style.display = &#39;block&#39;;
+                }" style="position:absolute;
+              width:464px;
+              height:192px;
+              z-index:100000;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url(static-assets/play_button.svg);">
+  </div>
+  <video id="animation_33" style="width:464px; height:192px;" onclick="var animation_33_play_button_ = document.getElementById(&#39;animation_33_play_button_&#39;);
+                  if (this.paused) {
+                    this.play();
+                    animation_33_play_button_.style.display = &#39;none&#39;;
+                  } else {
+                    this.pause();
+                    animation_33_play_button_.style.display = &#39;block&#39;;
+                  }" loop="">
+    <source src="https://flutter.github.io/assets-for-api-docs/assets/animation/curve_slow_middle.mp4" type="video/mp4"/>
+  </video>
+</div>
+<p>The <a href="animation/Cubic-class.html">Cubic</a> class implements third-order B&eacute;zier curves.</p>
+<p>See also:</p>
+<ul>
+<li><a href="animation/Curves-class.html">Curves</a>, where many more predefined curves are available.</li>
+<li><a href="animation/CatmullRomCurve-class.html">CatmullRomCurve</a>, a curve which passes through specific values.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="animation/ParametricCurve-class.html">ParametricCurve</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span></li>
+        <li><a href="animation/Curve-class.html">Curve</a></li>
+      <li>Cubic</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Cubic" class="callable">
+          <span class="name"><a href="animation/Cubic/Cubic.html">Cubic</a></span><span class="signature">(<span class="parameter" id="-param-a"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">a</span>, </span><span class="parameter" id="-param-b"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">b</span>, </span><span class="parameter" id="-param-c"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">c</span>, </span><span class="parameter" id="-param-d"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">d</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a cubic curve.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="a" class="property">
+  <span class="name"><a href="animation/Cubic/a.html">a</a></span>
+  <span class="signature">&rarr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The x coordinate of the first control point.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="b" class="property">
+  <span class="name"><a href="animation/Cubic/b.html">b</a></span>
+  <span class="signature">&rarr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The y coordinate of the first control point.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="c" class="property">
+  <span class="name"><a href="animation/Cubic/c.html">c</a></span>
+  <span class="signature">&rarr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The x coordinate of the second control point.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="d" class="property">
+  <span class="name"><a href="animation/Cubic/d.html">d</a></span>
+  <span class="signature">&rarr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The y coordinate of the second control point.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="flipped" class="property inherited">
+  <span class="name"><a href="animation/Curve/flipped.html">flipped</a></span>
+  <span class="signature">&rarr; <a href="animation/Curve-class.html">Curve</a></span> 
+
+</dt>
+<dd class="inherited">
+  Returns a new curve that is the reversed inversion of this one.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="animation/Cubic/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="transform" class="callable inherited">
+  <span class="name"><a href="animation/Curve/transform.html">transform</a></span><span class="signature">(<wbr/><span class="parameter" id="transform-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns the value of the curve at point <code>t</code>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="transformInternal" class="callable">
+  <span class="name"><a href="animation/Cubic/transformInternal.html">transformInternal</a></span><span class="signature">(<wbr/><span class="parameter" id="transformInternal-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the value of the curve at point <code>t</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-155"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="animation/animation-library.html">animation</a></li>
+  <li class="self-crumb">Cubic class</li>
+</ol>
+
+
+    <h5>animation library</h5>
+    <ol>
+      <li class="section-title"><a href="animation/animation-library.html#classes">Classes</a></li>
+        <li><a href="animation/AlwaysStoppedAnimation-class.html">AlwaysStoppedAnimation</a></li>
+        <li><a href="animation/Animatable-class.html">Animatable</a></li>
+        <li><a href="animation/Animation-class.html">Animation</a></li>
+        <li><a href="animation/AnimationController-class.html">AnimationController</a></li>
+        <li><a href="animation/AnimationMax-class.html">AnimationMax</a></li>
+        <li><a href="animation/AnimationMean-class.html">AnimationMean</a></li>
+        <li><a href="animation/AnimationMin-class.html">AnimationMin</a></li>
+        <li><a href="animation/CatmullRomCurve-class.html">CatmullRomCurve</a></li>
+        <li><a href="animation/CatmullRomSpline-class.html">CatmullRomSpline</a></li>
+        <li><a href="dart-ui/Color-class.html">Color</a></li>
+        <li><a href="animation/ColorTween-class.html">ColorTween</a></li>
+        <li><a href="animation/CompoundAnimation-class.html">CompoundAnimation</a></li>
+        <li><a href="animation/ConstantTween-class.html">ConstantTween</a></li>
+        <li><a href="animation/Cubic-class.html">Cubic</a></li>
+        <li><a href="animation/Curve-class.html">Curve</a></li>
+        <li><a href="animation/Curve2D-class.html">Curve2D</a></li>
+        <li><a href="animation/Curve2DSample-class.html">Curve2DSample</a></li>
+        <li><a href="animation/CurvedAnimation-class.html">CurvedAnimation</a></li>
+        <li><a href="animation/Curves-class.html">Curves</a></li>
+        <li><a href="animation/CurveTween-class.html">CurveTween</a></li>
+        <li><a href="animation/ElasticInCurve-class.html">ElasticInCurve</a></li>
+        <li><a href="animation/ElasticInOutCurve-class.html">ElasticInOutCurve</a></li>
+        <li><a href="animation/ElasticOutCurve-class.html">ElasticOutCurve</a></li>
+        <li><a href="animation/FlippedCurve-class.html">FlippedCurve</a></li>
+        <li><a href="animation/FlippedTweenSequence-class.html">FlippedTweenSequence</a></li>
+        <li><a href="animation/Interval-class.html">Interval</a></li>
+        <li><a href="animation/IntTween-class.html">IntTween</a></li>
+        <li><a href="dart-ui/Offset-class.html">Offset</a></li>
+        <li><a href="animation/ParametricCurve-class.html">ParametricCurve</a></li>
+        <li><a href="animation/ProxyAnimation-class.html">ProxyAnimation</a></li>
+        <li><a href="dart-ui/Rect-class.html">Rect</a></li>
+        <li><a href="animation/RectTween-class.html">RectTween</a></li>
+        <li><a href="animation/ReverseAnimation-class.html">ReverseAnimation</a></li>
+        <li><a href="animation/ReverseTween-class.html">ReverseTween</a></li>
+        <li><a href="animation/SawTooth-class.html">SawTooth</a></li>
+        <li><a href="physics/Simulation-class.html">Simulation</a></li>
+        <li><a href="dart-ui/Size-class.html">Size</a></li>
+        <li><a href="animation/SizeTween-class.html">SizeTween</a></li>
+        <li><a href="physics/SpringDescription-class.html">SpringDescription</a></li>
+        <li><a href="animation/StepTween-class.html">StepTween</a></li>
+        <li><a href="animation/ThreePointCubic-class.html">ThreePointCubic</a></li>
+        <li><a href="animation/Threshold-class.html">Threshold</a></li>
+        <li><a href="scheduler/TickerFuture-class.html">TickerFuture</a></li>
+        <li><a href="scheduler/TickerProvider-class.html">TickerProvider</a></li>
+        <li><a href="animation/TrainHoppingAnimation-class.html">TrainHoppingAnimation</a></li>
+        <li><a href="animation/Tween-class.html">Tween</a></li>
+        <li><a href="animation/TweenSequence-class.html">TweenSequence</a></li>
+        <li><a href="animation/TweenSequenceItem-class.html">TweenSequenceItem</a></li>
+
+
+      <li class="section-title"><a href="animation/animation-library.html#mixins">Mixins</a></li>
+        <li><a href="animation/AnimationEagerListenerMixin-mixin.html">AnimationEagerListenerMixin</a></li>
+        <li><a href="animation/AnimationLazyListenerMixin-mixin.html">AnimationLazyListenerMixin</a></li>
+        <li><a href="animation/AnimationLocalListenersMixin-mixin.html">AnimationLocalListenersMixin</a></li>
+        <li><a href="animation/AnimationLocalStatusListenersMixin-mixin.html">AnimationLocalStatusListenersMixin</a></li>
+        <li><a href="animation/AnimationWithParentMixin-mixin.html">AnimationWithParentMixin</a></li>
+
+      <li class="section-title"><a href="animation/animation-library.html#constants">Constants</a></li>
+        <li><a href="animation/kAlwaysCompleteAnimation-constant.html">kAlwaysCompleteAnimation</a></li>
+        <li><a href="animation/kAlwaysDismissedAnimation-constant.html">kAlwaysDismissedAnimation</a></li>
+
+
+
+      <li class="section-title"><a href="animation/animation-library.html#enums">Enums</a></li>
+        <li><a href="animation/AnimationBehavior.html">AnimationBehavior</a></li>
+        <li><a href="animation/AnimationStatus.html">AnimationStatus</a></li>
+
+      <li class="section-title"><a href="animation/animation-library.html#typedefs">Typedefs</a></li>
+        <li><a href="animation/AnimatableCallback.html">AnimatableCallback</a></li>
+        <li><a href="animation/AnimationStatusListener.html">AnimationStatusListener</a></li>
+        <li><a href="animation/ValueListenableTransformer.html">ValueListenableTransformer</a></li>
+        <li><a href="dart-ui/VoidCallback.html">VoidCallback</a></li>
+
+      <li class="section-title"><a href="animation/animation-library.html#exceptions">Exceptions</a></li>
+        <li><a href="scheduler/TickerCanceled-class.html">TickerCanceled</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="animation/Cubic-class.html#constructors">Constructors</a></li>
+          <li><a href="animation/Cubic/Cubic.html">Cubic</a></li>
+
+
+        <li class="section-title">
+          <a href="animation/Cubic-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="animation/Cubic/a.html">a</a></li>
+          <li><a href="animation/Cubic/b.html">b</a></li>
+          <li><a href="animation/Cubic/c.html">c</a></li>
+          <li><a href="animation/Cubic/d.html">d</a></li>
+          <li class="inherited"><a href="animation/Curve/flipped.html">flipped</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="animation/Cubic-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="animation/Cubic/toString.html">toString</a></li>
+          <li class="inherited"><a href="animation/Curve/transform.html">transform</a></li>
+          <li><a href="animation/Cubic/transformInternal.html">transformInternal</a></li>
+
+        <li class="section-title inherited"><a href="animation/Cubic-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

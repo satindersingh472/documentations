@@ -1,0 +1,567 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the IOSinkBase class from the async library, for the Dart programming language."/>
+  <title>IOSinkBase class - async library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="async/async-library.html">async</a></li>
+    <li class="self-crumb"><span class="deprecated">IOSinkBase</span> abstract class</li>
+  </ol>
+  <div class="self-name">IOSinkBase</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-1107"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/IOSinkBase"></a><span class="kind-class">IOSinkBase</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An abstract class that implements <code>dart:io</code>&#39;s <code>IOSink</code>&#39;s API in terms of
+<a href="async/EventSinkBase/onAdd.html">onAdd</a>, <a href="async/EventSinkBase/onError.html">onError</a>, <a href="async/EventSinkBase/onClose.html">onClose</a>, and <a href="async/IOSinkBase/onFlush.html">onFlush</a> methods.</p>
+<p>Because <code>IOSink</code> is defined in <code>dart:io</code>, this can&#39;t officially implement
+it. However, it&#39;s designed to match its API exactly so that subclasses can
+implement <code>IOSink</code> without any additional modifications.</p>
+<p>This takes care of ensuring that events can&#39;t be added after <a href="async/StreamSinkBase/close.html">close</a> is
+called or during a call to <a href="async/StreamSinkBase/addStream.html">addStream</a>.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a class="deprecated" href="async/EventSinkBase-class.html">EventSinkBase</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></li>
+        <li><a class="deprecated" href="async/StreamSinkBase-class.html">StreamSinkBase</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></li>
+      <li>IOSinkBase</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+        <dt>Available Extensions</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="async/StreamSinkExtensions.html">StreamSinkExtensions</a></li>
+        </ul></dd>
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Will be removed in the next major release&#39;)</li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="IOSinkBase" class="callable">
+          <span class="name"><a href="async/IOSinkBase/IOSinkBase.html">IOSinkBase</a></span><span class="signature">(<span class="parameter" id="-param-encoding">[<span class="type-annotation"><a href="dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>]</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="done" class="property inherited">
+  <span class="name"><a href="async/StreamSinkBase/done.html">done</a></span>
+  <span class="signature">&rarr; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter">void</span>&gt;</span></span> 
+
+</dt>
+<dd class="inherited">
+  Return a future which is completed when the <a href="dart-async/StreamSink-class.html">StreamSink</a> is finished.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="encoding" class="property">
+  <span class="name"><a href="async/IOSinkBase/encoding.html">encoding</a></span>
+  <span class="signature">&harr; <a href="dart-convert/Encoding-class.html">Encoding</a></span> 
+
+</dt>
+<dd>
+  See <code>IOSink.encoding</code> from <code>dart:io</code>.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="add" class="callable inherited">
+  <span class="name"><a href="async/EventSinkBase/add.html">add</a></span><span class="signature">(<wbr/><span class="parameter" id="add-param-data"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">data</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Adds a data <code>event</code> to the sink.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addError" class="callable inherited">
+  <span class="name"><a href="async/EventSinkBase/addError.html">addError</a></span><span class="signature">(<wbr/><span class="parameter" id="addError-param-error"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">error</span>, </span><span class="parameter" id="addError-param-stackTrace">[<span class="type-annotation"><a href="dart-core/StackTrace-class.html">StackTrace</a>?</span> <span class="parameter-name">stackTrace</span>]</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Adds an <code>error</code> to the sink.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addStream" class="callable inherited">
+  <span class="name"><a href="async/StreamSinkBase/addStream.html">addStream</a></span><span class="signature">(<wbr/><span class="parameter" id="addStream-param-stream"><span class="type-annotation"><a href="dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">stream</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Consumes the elements of <code>stream</code>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="close" class="callable inherited">
+  <span class="name"><a href="async/StreamSinkBase/close.html">close</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Closes the sink.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="flush" class="callable">
+  <span class="name"><a href="async/IOSinkBase/flush.html">flush</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  See <code>IOSink.flush</code> from <code>dart:io</code>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onAdd" class="callable inherited">
+  <span class="name"><a href="async/EventSinkBase/onAdd.html">onAdd</a></span><span class="signature">(<wbr/><span class="parameter" id="onAdd-param-data"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">data</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A method that handles data events that are passed to the sink.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onClose" class="callable inherited">
+  <span class="name"><a href="async/EventSinkBase/onClose.html">onClose</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr/><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A method that handles the sink being closed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onError" class="callable inherited">
+  <span class="name"><a href="async/EventSinkBase/onError.html">onError</a></span><span class="signature">(<wbr/><span class="parameter" id="onError-param-error"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">error</span>, </span><span class="parameter" id="onError-param-stackTrace">[<span class="type-annotation"><a href="dart-core/StackTrace-class.html">StackTrace</a>?</span> <span class="parameter-name">stackTrace</span>]</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A method that handles error events that are passed to the sink.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onFlush" class="callable">
+  <span class="name"><a href="async/IOSinkBase/onFlush.html">onFlush</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Flushes any buffered data to the underlying consumer, and returns a future
+that completes once the consumer has accepted all data.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="write" class="callable">
+  <span class="name"><a href="async/IOSinkBase/write.html">write</a></span><span class="signature">(<wbr/><span class="parameter" id="write-param-object"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  See <a href="dart-core/StringSink/write.html">StringSink.write</a>.
+  
+
+</dd>
+
+        <dt id="writeAll" class="callable">
+  <span class="name"><a href="async/IOSinkBase/writeAll.html">writeAll</a></span><span class="signature">(<wbr/><span class="parameter" id="writeAll-param-objects"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span></span> <span class="parameter-name">objects</span>, </span><span class="parameter" id="writeAll-param-separator">[<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">separator</span> = <span class="default-value">&#39;&#39;</span>]</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  See <a href="dart-core/StringSink/writeAll.html">StringSink.writeAll</a>.
+  
+
+</dd>
+
+        <dt id="writeCharCode" class="callable">
+  <span class="name"><a href="async/IOSinkBase/writeCharCode.html">writeCharCode</a></span><span class="signature">(<wbr/><span class="parameter" id="writeCharCode-param-charCode"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">charCode</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  See <a href="dart-core/StringSink/writeCharCode.html">StringSink.writeCharCode</a>.
+  
+
+</dd>
+
+        <dt id="writeln" class="callable">
+  <span class="name"><a href="async/IOSinkBase/writeln.html">writeln</a></span><span class="signature">(<wbr/><span class="parameter" id="writeln-param-object">[<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span> = <span class="default-value">&#39;&#39;</span>]</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  See <a href="dart-core/StringSink/writeln.html">StringSink.writeln</a>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-1108"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="async/async-library.html">async</a></li>
+  <li class="self-crumb"><span class="deprecated">IOSinkBase</span> abstract class</li>
+</ol>
+
+
+    <h5>async library</h5>
+    <ol>
+      <li class="section-title"><a href="async/async-library.html#classes">Classes</a></li>
+        <li><a href="async/AsyncCache-class.html">AsyncCache</a></li>
+        <li><a href="async/AsyncMemoizer-class.html">AsyncMemoizer</a></li>
+        <li><a href="async/CancelableCompleter-class.html">CancelableCompleter</a></li>
+        <li><a href="async/CancelableOperation-class.html">CancelableOperation</a></li>
+        <li><a href="async/ChunkedStreamReader-class.html">ChunkedStreamReader</a></li>
+        <li><a href="async/DelegatingEventSink-class.html">DelegatingEventSink</a></li>
+        <li><a href="async/DelegatingFuture-class.html">DelegatingFuture</a></li>
+        <li><a href="async/DelegatingSink-class.html">DelegatingSink</a></li>
+        <li><a href="async/DelegatingStream-class.html">DelegatingStream</a></li>
+        <li><a href="async/DelegatingStreamConsumer-class.html">DelegatingStreamConsumer</a></li>
+        <li><a href="async/DelegatingStreamSink-class.html">DelegatingStreamSink</a></li>
+        <li><a href="async/DelegatingStreamSubscription-class.html">DelegatingStreamSubscription</a></li>
+        <li><a href="async/ErrorResult-class.html">ErrorResult</a></li>
+        <li><a class="deprecated" href="async/EventSinkBase-class.html">EventSinkBase</a></li>
+        <li><a href="async/FutureGroup-class.html">FutureGroup</a></li>
+        <li><a class="deprecated" href="async/IOSinkBase-class.html">IOSinkBase</a></li>
+        <li><a href="async/LazyStream-class.html">LazyStream</a></li>
+        <li><a href="async/NullStreamSink-class.html">NullStreamSink</a></li>
+        <li><a href="async/RestartableTimer-class.html">RestartableTimer</a></li>
+        <li><a href="async/Result-class.html">Result</a></li>
+        <li><a href="async/ResultFuture-class.html">ResultFuture</a></li>
+        <li><a href="async/SingleSubscriptionTransformer-class.html">SingleSubscriptionTransformer</a></li>
+        <li><a href="async/StreamCloser-class.html">StreamCloser</a></li>
+        <li><a href="async/StreamCompleter-class.html">StreamCompleter</a></li>
+        <li><a href="async/StreamGroup-class.html">StreamGroup</a></li>
+        <li><a href="async/StreamQueue-class.html">StreamQueue</a></li>
+        <li><a href="async/StreamQueueTransaction-class.html">StreamQueueTransaction</a></li>
+        <li><a class="deprecated" href="async/StreamSinkBase-class.html">StreamSinkBase</a></li>
+        <li><a href="async/StreamSinkCompleter-class.html">StreamSinkCompleter</a></li>
+        <li><a href="async/StreamSinkTransformer-class.html">StreamSinkTransformer</a></li>
+        <li><a href="async/StreamSplitter-class.html">StreamSplitter</a></li>
+        <li><a href="async/StreamZip-class.html">StreamZip</a></li>
+        <li><a href="async/SubscriptionStream-class.html">SubscriptionStream</a></li>
+        <li><a href="async/ValueResult-class.html">ValueResult</a></li>
+
+      <li class="section-title"><a href="async/async-library.html#extensions">Extensions</a></li>
+        <li><a href="async/ChunkedStreamReaderByteStreamExt.html">ChunkedStreamReaderByteStreamExt</a></li>
+        <li><a href="async/StreamExtensions.html">StreamExtensions</a></li>
+        <li><a href="async/StreamSinkExtensions.html">StreamSinkExtensions</a></li>
+
+
+
+
+      <li class="section-title"><a href="async/async-library.html#functions">Functions</a></li>
+        <li><a href="async/collectBytes.html">collectBytes</a></li>
+        <li><a href="async/collectBytesCancelable.html">collectBytesCancelable</a></li>
+        <li><a href="async/subscriptionTransformer.html">subscriptionTransformer</a></li>
+        <li><a class="deprecated" href="async/typedStreamTransformer.html">typedStreamTransformer</a></li>
+
+
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="async/IOSinkBase-class.html#constructors">Constructors</a></li>
+          <li><a href="async/IOSinkBase/IOSinkBase.html">IOSinkBase</a></li>
+
+
+        <li class="section-title">
+          <a href="async/IOSinkBase-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="async/StreamSinkBase/done.html">done</a></li>
+          <li><a href="async/IOSinkBase/encoding.html">encoding</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="async/IOSinkBase-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="async/EventSinkBase/add.html">add</a></li>
+          <li class="inherited"><a href="async/EventSinkBase/addError.html">addError</a></li>
+          <li class="inherited"><a href="async/StreamSinkBase/addStream.html">addStream</a></li>
+          <li class="inherited"><a href="async/StreamSinkBase/close.html">close</a></li>
+          <li><a href="async/IOSinkBase/flush.html">flush</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="async/EventSinkBase/onAdd.html">onAdd</a></li>
+          <li class="inherited"><a href="async/EventSinkBase/onClose.html">onClose</a></li>
+          <li class="inherited"><a href="async/EventSinkBase/onError.html">onError</a></li>
+          <li><a href="async/IOSinkBase/onFlush.html">onFlush</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+          <li><a href="async/IOSinkBase/write.html">write</a></li>
+          <li><a href="async/IOSinkBase/writeAll.html">writeAll</a></li>
+          <li><a href="async/IOSinkBase/writeCharCode.html">writeCharCode</a></li>
+          <li><a href="async/IOSinkBase/writeln.html">writeln</a></li>
+
+        <li class="section-title inherited"><a href="async/IOSinkBase-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

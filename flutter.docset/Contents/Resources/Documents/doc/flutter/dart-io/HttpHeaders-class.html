@@ -1,0 +1,1637 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the HttpHeaders class from the dart:io library, for the Dart programming language."/>
+  <title>HttpHeaders class - dart:io library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-io/dart-io-library.html">dart:io</a></li>
+    <li class="self-crumb">HttpHeaders abstract class</li>
+  </ol>
+  <div class="self-name">HttpHeaders</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-13027"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/HttpHeaders"></a><span class="kind-class">HttpHeaders</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Headers for HTTP requests and responses.</p>
+<p>In some situations, headers are immutable:</p>
+<ul>
+<li>
+<p><a href="dart-io/HttpRequest-class.html">HttpRequest</a> and <a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a> always have immutable headers.</p>
+</li>
+<li>
+<p><a href="dart-io/HttpResponse-class.html">HttpResponse</a> and <a href="dart-io/HttpClientRequest-class.html">HttpClientRequest</a> have immutable headers
+from the moment the body is written to.</p>
+</li>
+</ul>
+<p>In these situations, the mutating methods throw exceptions.</p>
+<p>For all operations on HTTP headers the header name is
+case-insensitive.</p>
+<p>To set the value of a header use the <code>set()</code> method:</p>
+<pre class="language-dart"><code>request.headers.set(HttpHeaders.cacheControlHeader,
+                    &#39;max-age=3600, must-revalidate&#39;);
+</code></pre>
+<p>To retrieve the value of a header use the <code>value()</code> method:</p>
+<pre class="language-dart"><code>print(request.headers.value(HttpHeaders.userAgentHeader));
+</code></pre>
+<p>An <code>HttpHeaders</code> object holds a list of values for each name
+as the standard allows. In most cases a name holds only a single value,
+The most common mode of operation is to use <code>set()</code> for setting a value,
+and <code>value()</code> for retrieving a value.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="HttpHeaders" class="callable">
+          <span class="name"><a href="dart-io/HttpHeaders/HttpHeaders.html">HttpHeaders</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="chunkedTransferEncoding" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/chunkedTransferEncoding.html">chunkedTransferEncoding</a></span>
+  <span class="signature">&harr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the connection uses chunked transfer encoding.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="contentLength" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/contentLength.html">contentLength</a></span>
+  <span class="signature">&harr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The value of the <a href="dart-io/HttpHeaders/contentLengthHeader-constant.html">contentLengthHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="contentType" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/contentType.html">contentType</a></span>
+  <span class="signature">&harr; <a href="dart-io/ContentType-class.html">ContentType</a>?</span> 
+
+</dt>
+<dd>
+  The <a href="dart-io/ContentType-class.html">ContentType</a> of the <a href="dart-io/HttpHeaders/contentTypeHeader-constant.html">contentTypeHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="date" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/date.html">date</a></span>
+  <span class="signature">&harr; <a href="dart-core/DateTime-class.html">DateTime</a>?</span> 
+
+</dt>
+<dd>
+  The date specified by the <a href="dart-io/HttpHeaders/dateHeader-constant.html">dateHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="expires" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/expires.html">expires</a></span>
+  <span class="signature">&harr; <a href="dart-core/DateTime-class.html">DateTime</a>?</span> 
+
+</dt>
+<dd>
+  The date and time specified by the <a href="dart-io/HttpHeaders/expiresHeader-constant.html">expiresHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="host" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/host.html">host</a></span>
+  <span class="signature">&harr; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  The value of the <a href="dart-io/HttpHeaders/hostHeader-constant.html">hostHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="ifModifiedSince" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/ifModifiedSince.html">ifModifiedSince</a></span>
+  <span class="signature">&harr; <a href="dart-core/DateTime-class.html">DateTime</a>?</span> 
+
+</dt>
+<dd>
+  The date and time specified by the <a href="dart-io/HttpHeaders/ifModifiedSinceHeader-constant.html">ifModifiedSinceHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="persistentConnection" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/persistentConnection.html">persistentConnection</a></span>
+  <span class="signature">&harr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the connection is persistent (keep-alive).
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="port" class="property">
+  <span class="name"><a href="dart-io/HttpHeaders/port.html">port</a></span>
+  <span class="signature">&harr; <a href="dart-core/int-class.html">int</a>?</span> 
+
+</dt>
+<dd>
+  The value of the port part of the <a href="dart-io/HttpHeaders/hostHeader-constant.html">hostHeader</a> header, if any.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="add" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/add.html">add</a></span><span class="signature">(<wbr/><span class="parameter" id="add-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="add-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span>, </span><span class="parameter" id="add-param-preserveHeaderCase">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">preserveHeaderCase</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Adds a header value.
+  
+
+</dd>
+
+        <dt id="clear" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/clear.html">clear</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all headers.
+  
+
+</dd>
+
+        <dt id="forEach" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/forEach.html">forEach</a></span><span class="signature">(<wbr/><span class="parameter" id="forEach-param-action"><span class="type-annotation">void</span> <span class="parameter-name">action</span>(<span class="parameter" id="param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="param-values"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">values</span></span>)</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Performs the <code>action</code> on each header.
+  
+
+</dd>
+
+        <dt id="noFolding" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/noFolding.html">noFolding</a></span><span class="signature">(<wbr/><span class="parameter" id="noFolding-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Disables folding for the header named <code>name</code> when sending the HTTP header.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="remove" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/remove.html">remove</a></span><span class="signature">(<wbr/><span class="parameter" id="remove-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="remove-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes a specific value for a header name.
+  
+
+</dd>
+
+        <dt id="removeAll" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/removeAll.html">removeAll</a></span><span class="signature">(<wbr/><span class="parameter" id="removeAll-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all values for the specified header name.
+  
+
+</dd>
+
+        <dt id="set" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/set.html">set</a></span><span class="signature">(<wbr/><span class="parameter" id="set-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="set-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span>, </span><span class="parameter" id="set-param-preserveHeaderCase">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">preserveHeaderCase</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the header <code>name</code> to <code>value</code>.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="value" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/value.html">value</a></span><span class="signature">(<wbr/><span class="parameter" id="value-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Convenience method for the value for a single valued header.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-13025"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <a class="dashingAutolink" name="autolink-13026"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%5B%5D%28String%20name%29%0A%20%20%20%20%E2%86%92%20List%3CString%3E%3F"></a><dt id="operator []" class="callable">
+  <span class="name"><a href="dart-io/HttpHeaders/operator_get.html">operator []</a></span><span class="signature">(<wbr/><span class="parameter" id="[]-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The values for the header named <code>name</code>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="acceptCharsetHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/acceptCharsetHeader-constant.html">acceptCharsetHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;accept-charset&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="acceptEncodingHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/acceptEncodingHeader-constant.html">acceptEncodingHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;accept-encoding&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="acceptHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/acceptHeader-constant.html">acceptHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;accept&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="acceptLanguageHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/acceptLanguageHeader-constant.html">acceptLanguageHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;accept-language&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="acceptRangesHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/acceptRangesHeader-constant.html">acceptRangesHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;accept-ranges&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlAllowCredentialsHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlAllowCredentialsHeader-constant.html">accessControlAllowCredentialsHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-allow-credentials&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlAllowHeadersHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlAllowHeadersHeader-constant.html">accessControlAllowHeadersHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-allow-headers&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlAllowMethodsHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlAllowMethodsHeader-constant.html">accessControlAllowMethodsHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-allow-methods&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlAllowOriginHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlAllowOriginHeader-constant.html">accessControlAllowOriginHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-allow-origin&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlExposeHeadersHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlExposeHeadersHeader-constant.html">accessControlExposeHeadersHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-expose-headers&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlMaxAgeHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlMaxAgeHeader-constant.html">accessControlMaxAgeHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-max-age&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlRequestHeadersHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlRequestHeadersHeader-constant.html">accessControlRequestHeadersHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-request-headers&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="accessControlRequestMethodHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/accessControlRequestMethodHeader-constant.html">accessControlRequestMethodHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#39;access-control-request-method&#39;</code></span>
+    </div>
+</dd>
+
+        <dt id="ageHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/ageHeader-constant.html">ageHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;age&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="allowHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/allowHeader-constant.html">allowHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;allow&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="authorizationHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/authorizationHeader-constant.html">authorizationHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;authorization&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="cacheControlHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/cacheControlHeader-constant.html">cacheControlHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;cache-control&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="connectionHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/connectionHeader-constant.html">connectionHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;connection&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentEncodingHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentEncodingHeader-constant.html">contentEncodingHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-encoding&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentLanguageHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentLanguageHeader-constant.html">contentLanguageHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-language&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentLengthHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentLengthHeader-constant.html">contentLengthHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-length&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentLocationHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentLocationHeader-constant.html">contentLocationHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-location&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentMD5Header" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentMD5Header-constant.html">contentMD5Header</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-md5&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentRangeHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentRangeHeader-constant.html">contentRangeHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-range&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="contentTypeHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/contentTypeHeader-constant.html">contentTypeHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;content-type&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="cookieHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/cookieHeader-constant.html">cookieHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;cookie&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="dateHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/dateHeader-constant.html">dateHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;date&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="entityHeaders" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/entityHeaders-constant.html">entityHeaders</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>[allowHeader, contentEncodingHeader, contentLanguageHeader, contentLengthHeader, contentLocationHeader, contentMD5Header, contentRangeHeader, contentTypeHeader, expiresHeader, lastModifiedHeader]</code></span>
+    </div>
+</dd>
+
+        <dt id="etagHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/etagHeader-constant.html">etagHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;etag&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="expectHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/expectHeader-constant.html">expectHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;expect&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="expiresHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/expiresHeader-constant.html">expiresHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;expires&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="fromHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/fromHeader-constant.html">fromHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;from&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="generalHeaders" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/generalHeaders-constant.html">generalHeaders</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>[cacheControlHeader, connectionHeader, dateHeader, pragmaHeader, trailerHeader, transferEncodingHeader, upgradeHeader, viaHeader, warningHeader]</code></span>
+    </div>
+</dd>
+
+        <dt id="hostHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/hostHeader-constant.html">hostHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;host&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="ifMatchHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/ifMatchHeader-constant.html">ifMatchHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;if-match&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="ifModifiedSinceHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/ifModifiedSinceHeader-constant.html">ifModifiedSinceHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;if-modified-since&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="ifNoneMatchHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/ifNoneMatchHeader-constant.html">ifNoneMatchHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;if-none-match&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="ifRangeHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/ifRangeHeader-constant.html">ifRangeHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;if-range&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="ifUnmodifiedSinceHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/ifUnmodifiedSinceHeader-constant.html">ifUnmodifiedSinceHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;if-unmodified-since&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="lastModifiedHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/lastModifiedHeader-constant.html">lastModifiedHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;last-modified&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="locationHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/locationHeader-constant.html">locationHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;location&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="maxForwardsHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/maxForwardsHeader-constant.html">maxForwardsHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;max-forwards&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="pragmaHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/pragmaHeader-constant.html">pragmaHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;pragma&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="proxyAuthenticateHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/proxyAuthenticateHeader-constant.html">proxyAuthenticateHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;proxy-authenticate&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="proxyAuthorizationHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/proxyAuthorizationHeader-constant.html">proxyAuthorizationHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;proxy-authorization&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="rangeHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/rangeHeader-constant.html">rangeHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;range&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="refererHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/refererHeader-constant.html">refererHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;referer&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="requestHeaders" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/requestHeaders-constant.html">requestHeaders</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>[acceptHeader, acceptCharsetHeader, acceptEncodingHeader, acceptLanguageHeader, authorizationHeader, expectHeader, fromHeader, hostHeader, ifMatchHeader, ifModifiedSinceHeader, ifNoneMatchHeader, ifRa&hellip;</code></span>
+    </div>
+</dd>
+
+        <dt id="responseHeaders" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/responseHeaders-constant.html">responseHeaders</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>[acceptRangesHeader, ageHeader, etagHeader, locationHeader, proxyAuthenticateHeader, retryAfterHeader, serverHeader, varyHeader, wwwAuthenticateHeader]</code></span>
+    </div>
+</dd>
+
+        <dt id="retryAfterHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/retryAfterHeader-constant.html">retryAfterHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;retry-after&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="serverHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/serverHeader-constant.html">serverHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;server&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="setCookieHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/setCookieHeader-constant.html">setCookieHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;set-cookie&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="teHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/teHeader-constant.html">teHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;te&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="trailerHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/trailerHeader-constant.html">trailerHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;trailer&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="transferEncodingHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/transferEncodingHeader-constant.html">transferEncodingHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;transfer-encoding&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="upgradeHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/upgradeHeader-constant.html">upgradeHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;upgrade&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="userAgentHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/userAgentHeader-constant.html">userAgentHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;user-agent&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="varyHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/varyHeader-constant.html">varyHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;vary&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="viaHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/viaHeader-constant.html">viaHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;via&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="warningHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/warningHeader-constant.html">warningHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;warning&#34;</code></span>
+    </div>
+</dd>
+
+        <dt id="wwwAuthenticateHeader" class="constant">
+    <span class="name "><a href="dart-io/HttpHeaders/wwwAuthenticateHeader-constant.html">wwwAuthenticateHeader</a></span>
+  <span class="signature">&rarr; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>&#34;www-authenticate&#34;</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="dart-io/dart-io-library.html">dart:io</a></li>
+  <li class="self-crumb">HttpHeaders abstract class</li>
+</ol>
+
+
+    <h5>dart:io library</h5>
+    <ol>
+      <li class="section-title"><a href="dart-io/dart-io-library.html#classes">Classes</a></li>
+        <li><a href="dart-typed_data/BytesBuilder-class.html">BytesBuilder</a></li>
+        <li><a href="dart-io/CompressionOptions-class.html">CompressionOptions</a></li>
+        <li><a href="dart-io/ConnectionTask-class.html">ConnectionTask</a></li>
+        <li><a href="dart-io/ContentType-class.html">ContentType</a></li>
+        <li><a href="dart-io/Cookie-class.html">Cookie</a></li>
+        <li><a href="dart-io/Datagram-class.html">Datagram</a></li>
+        <li><a href="dart-io/Directory-class.html">Directory</a></li>
+        <li><a href="dart-io/File-class.html">File</a></li>
+        <li><a href="dart-io/FileLock-class.html">FileLock</a></li>
+        <li><a href="dart-io/FileMode-class.html">FileMode</a></li>
+        <li><a href="dart-io/FileStat-class.html">FileStat</a></li>
+        <li><a href="dart-io/FileSystemCreateEvent-class.html">FileSystemCreateEvent</a></li>
+        <li><a href="dart-io/FileSystemDeleteEvent-class.html">FileSystemDeleteEvent</a></li>
+        <li><a href="dart-io/FileSystemEntity-class.html">FileSystemEntity</a></li>
+        <li><a href="dart-io/FileSystemEntityType-class.html">FileSystemEntityType</a></li>
+        <li><a href="dart-io/FileSystemEvent-class.html">FileSystemEvent</a></li>
+        <li><a href="dart-io/FileSystemModifyEvent-class.html">FileSystemModifyEvent</a></li>
+        <li><a href="dart-io/FileSystemMoveEvent-class.html">FileSystemMoveEvent</a></li>
+        <li><a href="dart-io/GZipCodec-class.html">GZipCodec</a></li>
+        <li><a href="dart-io/HeaderValue-class.html">HeaderValue</a></li>
+        <li><a href="dart-io/HttpClient-class.html">HttpClient</a></li>
+        <li><a href="dart-io/HttpClientBasicCredentials-class.html">HttpClientBasicCredentials</a></li>
+        <li><a href="dart-io/HttpClientCredentials-class.html">HttpClientCredentials</a></li>
+        <li><a href="dart-io/HttpClientDigestCredentials-class.html">HttpClientDigestCredentials</a></li>
+        <li><a href="dart-io/HttpClientRequest-class.html">HttpClientRequest</a></li>
+        <li><a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a></li>
+        <li><a href="dart-io/HttpConnectionInfo-class.html">HttpConnectionInfo</a></li>
+        <li><a href="dart-io/HttpConnectionsInfo-class.html">HttpConnectionsInfo</a></li>
+        <li><a href="dart-io/HttpDate-class.html">HttpDate</a></li>
+        <li><a href="dart-io/HttpHeaders-class.html">HttpHeaders</a></li>
+        <li><a href="dart-io/HttpOverrides-class.html">HttpOverrides</a></li>
+        <li><a href="dart-io/HttpRequest-class.html">HttpRequest</a></li>
+        <li><a href="dart-io/HttpResponse-class.html">HttpResponse</a></li>
+        <li><a href="dart-io/HttpServer-class.html">HttpServer</a></li>
+        <li><a href="dart-io/HttpSession-class.html">HttpSession</a></li>
+        <li><a href="dart-html/HttpStatus-class.html">HttpStatus</a></li>
+        <li><a href="dart-io/InternetAddress-class.html">InternetAddress</a></li>
+        <li><a href="dart-io/InternetAddressType-class.html">InternetAddressType</a></li>
+        <li><a href="dart-io/IOOverrides-class.html">IOOverrides</a></li>
+        <li><a href="dart-io/IOSink-class.html">IOSink</a></li>
+        <li><a href="dart-io/Link-class.html">Link</a></li>
+        <li><a href="dart-io/NetworkInterface-class.html">NetworkInterface</a></li>
+        <li><a href="dart-io/Pipe-class.html">Pipe</a></li>
+        <li><a href="dart-io/Platform-class.html">Platform</a></li>
+        <li><a href="dart-io/Process-class.html">Process</a></li>
+        <li><a href="dart-io/ProcessInfo-class.html">ProcessInfo</a></li>
+        <li><a href="dart-io/ProcessResult-class.html">ProcessResult</a></li>
+        <li><a href="dart-io/ProcessSignal-class.html">ProcessSignal</a></li>
+        <li><a href="dart-io/ProcessStartMode-class.html">ProcessStartMode</a></li>
+        <li><a href="dart-io/RandomAccessFile-class.html">RandomAccessFile</a></li>
+        <li><a href="dart-io/RawDatagramSocket-class.html">RawDatagramSocket</a></li>
+        <li><a href="dart-io/RawSecureServerSocket-class.html">RawSecureServerSocket</a></li>
+        <li><a href="dart-io/RawSecureSocket-class.html">RawSecureSocket</a></li>
+        <li><a href="dart-io/RawServerSocket-class.html">RawServerSocket</a></li>
+        <li><a href="dart-io/RawSocket-class.html">RawSocket</a></li>
+        <li><a href="dart-io/RawSocketEvent-class.html">RawSocketEvent</a></li>
+        <li><a href="dart-io/RawSocketOption-class.html">RawSocketOption</a></li>
+        <li><a href="dart-io/RawSynchronousSocket-class.html">RawSynchronousSocket</a></li>
+        <li><a href="dart-io/RawZLibFilter-class.html">RawZLibFilter</a></li>
+        <li><a href="dart-io/ReadPipe-class.html">ReadPipe</a></li>
+        <li><a href="dart-io/RedirectInfo-class.html">RedirectInfo</a></li>
+        <li><a href="dart-io/ResourceHandle-class.html">ResourceHandle</a></li>
+        <li><a href="dart-io/SecureServerSocket-class.html">SecureServerSocket</a></li>
+        <li><a href="dart-io/SecureSocket-class.html">SecureSocket</a></li>
+        <li><a href="dart-io/SecurityContext-class.html">SecurityContext</a></li>
+        <li><a href="dart-io/ServerSocket-class.html">ServerSocket</a></li>
+        <li><a href="dart-io/Socket-class.html">Socket</a></li>
+        <li><a href="dart-io/SocketControlMessage-class.html">SocketControlMessage</a></li>
+        <li><a href="dart-io/SocketDirection-class.html">SocketDirection</a></li>
+        <li><a href="dart-io/SocketMessage-class.html">SocketMessage</a></li>
+        <li><a href="dart-io/SocketOption-class.html">SocketOption</a></li>
+        <li><a href="dart-io/Stdin-class.html">Stdin</a></li>
+        <li><a href="dart-io/StdioType-class.html">StdioType</a></li>
+        <li><a href="dart-io/Stdout-class.html">Stdout</a></li>
+        <li><a href="dart-io/SystemEncoding-class.html">SystemEncoding</a></li>
+        <li><a href="dart-io/WebSocket-class.html">WebSocket</a></li>
+        <li><a href="dart-io/WebSocketStatus-class.html">WebSocketStatus</a></li>
+        <li><a href="dart-io/WebSocketTransformer-class.html">WebSocketTransformer</a></li>
+        <li><a href="dart-io/WritePipe-class.html">WritePipe</a></li>
+        <li><a href="dart-io/X509Certificate-class.html">X509Certificate</a></li>
+        <li><a href="dart-io/ZLibCodec-class.html">ZLibCodec</a></li>
+        <li><a href="dart-io/ZLibDecoder-class.html">ZLibDecoder</a></li>
+        <li><a href="dart-io/ZLibEncoder-class.html">ZLibEncoder</a></li>
+        <li><a href="dart-io/ZLibOption-class.html">ZLibOption</a></li>
+
+
+
+      <li class="section-title"><a href="dart-io/dart-io-library.html#constants">Constants</a></li>
+        <li><a href="dart-io/gzip-constant.html">gzip</a></li>
+        <li><a href="dart-io/systemEncoding-constant.html">systemEncoding</a></li>
+        <li><a href="dart-io/zlib-constant.html">zlib</a></li>
+
+      <li class="section-title"><a href="dart-io/dart-io-library.html#properties">Properties</a></li>
+        <li><a href="dart-io/exitCode.html">exitCode</a></li>
+        <li><a href="dart-io/pid.html">pid</a></li>
+        <li><a href="dart-io/stderr.html">stderr</a></li>
+        <li><a href="dart-io/stdin.html">stdin</a></li>
+        <li><a href="dart-io/stdout.html">stdout</a></li>
+
+      <li class="section-title"><a href="dart-io/dart-io-library.html#functions">Functions</a></li>
+        <li><a href="dart-io/exit.html">exit</a></li>
+        <li><a href="dart-io/sleep.html">sleep</a></li>
+        <li><a href="dart-io/stdioType.html">stdioType</a></li>
+
+      <li class="section-title"><a href="dart-io/dart-io-library.html#enums">Enums</a></li>
+        <li><a href="dart-io/HttpClientResponseCompressionState.html">HttpClientResponseCompressionState</a></li>
+
+      <li class="section-title"><a href="dart-io/dart-io-library.html#typedefs">Typedefs</a></li>
+        <li><a href="dart-io/BadCertificateCallback.html">BadCertificateCallback</a></li>
+
+      <li class="section-title"><a href="dart-io/dart-io-library.html#exceptions">Exceptions</a></li>
+        <li><a href="dart-io/CertificateException-class.html">CertificateException</a></li>
+        <li><a href="dart-io/FileSystemException-class.html">FileSystemException</a></li>
+        <li><a href="dart-io/HandshakeException-class.html">HandshakeException</a></li>
+        <li><a href="dart-io/HttpException-class.html">HttpException</a></li>
+        <li><a href="dart-io/IOException-class.html">IOException</a></li>
+        <li><a href="dart-io/OSError-class.html">OSError</a></li>
+        <li><a href="dart-io/PathNotFoundException-class.html">PathNotFoundException</a></li>
+        <li><a href="dart-io/ProcessException-class.html">ProcessException</a></li>
+        <li><a href="dart-io/RedirectException-class.html">RedirectException</a></li>
+        <li><a href="dart-io/SignalException-class.html">SignalException</a></li>
+        <li><a href="dart-io/SocketException-class.html">SocketException</a></li>
+        <li><a href="dart-io/StdinException-class.html">StdinException</a></li>
+        <li><a href="dart-io/StdoutException-class.html">StdoutException</a></li>
+        <li><a href="dart-io/TlsException-class.html">TlsException</a></li>
+        <li><a href="dart-io/WebSocketException-class.html">WebSocketException</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="dart-io/HttpHeaders-class.html#constructors">Constructors</a></li>
+          <li><a href="dart-io/HttpHeaders/HttpHeaders.html">HttpHeaders</a></li>
+
+
+        <li class="section-title">
+          <a href="dart-io/HttpHeaders-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="dart-io/HttpHeaders/chunkedTransferEncoding.html">chunkedTransferEncoding</a></li>
+          <li><a href="dart-io/HttpHeaders/contentLength.html">contentLength</a></li>
+          <li><a href="dart-io/HttpHeaders/contentType.html">contentType</a></li>
+          <li><a href="dart-io/HttpHeaders/date.html">date</a></li>
+          <li><a href="dart-io/HttpHeaders/expires.html">expires</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="dart-io/HttpHeaders/host.html">host</a></li>
+          <li><a href="dart-io/HttpHeaders/ifModifiedSince.html">ifModifiedSince</a></li>
+          <li><a href="dart-io/HttpHeaders/persistentConnection.html">persistentConnection</a></li>
+          <li><a href="dart-io/HttpHeaders/port.html">port</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="dart-io/HttpHeaders-class.html#instance-methods">Methods</a></li>
+          <li><a href="dart-io/HttpHeaders/add.html">add</a></li>
+          <li><a href="dart-io/HttpHeaders/clear.html">clear</a></li>
+          <li><a href="dart-io/HttpHeaders/forEach.html">forEach</a></li>
+          <li><a href="dart-io/HttpHeaders/noFolding.html">noFolding</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="dart-io/HttpHeaders/remove.html">remove</a></li>
+          <li><a href="dart-io/HttpHeaders/removeAll.html">removeAll</a></li>
+          <li><a href="dart-io/HttpHeaders/set.html">set</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+          <li><a href="dart-io/HttpHeaders/value.html">value</a></li>
+
+        <li class="section-title"><a href="dart-io/HttpHeaders-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+          <li><a href="dart-io/HttpHeaders/operator_get.html">operator []</a></li>
+
+
+
+
+        <li class="section-title"><a href="dart-io/HttpHeaders-class.html#constants">Constants</a></li>
+          <li><a href="dart-io/HttpHeaders/acceptCharsetHeader-constant.html">acceptCharsetHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/acceptEncodingHeader-constant.html">acceptEncodingHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/acceptHeader-constant.html">acceptHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/acceptLanguageHeader-constant.html">acceptLanguageHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/acceptRangesHeader-constant.html">acceptRangesHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlAllowCredentialsHeader-constant.html">accessControlAllowCredentialsHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlAllowHeadersHeader-constant.html">accessControlAllowHeadersHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlAllowMethodsHeader-constant.html">accessControlAllowMethodsHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlAllowOriginHeader-constant.html">accessControlAllowOriginHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlExposeHeadersHeader-constant.html">accessControlExposeHeadersHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlMaxAgeHeader-constant.html">accessControlMaxAgeHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlRequestHeadersHeader-constant.html">accessControlRequestHeadersHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/accessControlRequestMethodHeader-constant.html">accessControlRequestMethodHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/ageHeader-constant.html">ageHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/allowHeader-constant.html">allowHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/authorizationHeader-constant.html">authorizationHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/cacheControlHeader-constant.html">cacheControlHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/connectionHeader-constant.html">connectionHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/contentEncodingHeader-constant.html">contentEncodingHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/contentLanguageHeader-constant.html">contentLanguageHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/contentLengthHeader-constant.html">contentLengthHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/contentLocationHeader-constant.html">contentLocationHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/contentMD5Header-constant.html">contentMD5Header</a></li>
+          <li><a href="dart-io/HttpHeaders/contentRangeHeader-constant.html">contentRangeHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/contentTypeHeader-constant.html">contentTypeHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/cookieHeader-constant.html">cookieHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/dateHeader-constant.html">dateHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/entityHeaders-constant.html">entityHeaders</a></li>
+          <li><a href="dart-io/HttpHeaders/etagHeader-constant.html">etagHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/expectHeader-constant.html">expectHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/expiresHeader-constant.html">expiresHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/fromHeader-constant.html">fromHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/generalHeaders-constant.html">generalHeaders</a></li>
+          <li><a href="dart-io/HttpHeaders/hostHeader-constant.html">hostHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/ifMatchHeader-constant.html">ifMatchHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/ifModifiedSinceHeader-constant.html">ifModifiedSinceHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/ifNoneMatchHeader-constant.html">ifNoneMatchHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/ifRangeHeader-constant.html">ifRangeHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/ifUnmodifiedSinceHeader-constant.html">ifUnmodifiedSinceHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/lastModifiedHeader-constant.html">lastModifiedHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/locationHeader-constant.html">locationHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/maxForwardsHeader-constant.html">maxForwardsHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/pragmaHeader-constant.html">pragmaHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/proxyAuthenticateHeader-constant.html">proxyAuthenticateHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/proxyAuthorizationHeader-constant.html">proxyAuthorizationHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/rangeHeader-constant.html">rangeHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/refererHeader-constant.html">refererHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/requestHeaders-constant.html">requestHeaders</a></li>
+          <li><a href="dart-io/HttpHeaders/responseHeaders-constant.html">responseHeaders</a></li>
+          <li><a href="dart-io/HttpHeaders/retryAfterHeader-constant.html">retryAfterHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/serverHeader-constant.html">serverHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/setCookieHeader-constant.html">setCookieHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/teHeader-constant.html">teHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/trailerHeader-constant.html">trailerHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/transferEncodingHeader-constant.html">transferEncodingHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/upgradeHeader-constant.html">upgradeHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/userAgentHeader-constant.html">userAgentHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/varyHeader-constant.html">varyHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/viaHeader-constant.html">viaHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/warningHeader-constant.html">warningHeader</a></li>
+          <li><a href="dart-io/HttpHeaders/wwwAuthenticateHeader-constant.html">wwwAuthenticateHeader</a></li>
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

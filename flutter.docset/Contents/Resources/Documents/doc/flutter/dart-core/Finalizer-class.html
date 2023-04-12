@@ -1,0 +1,480 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the Finalizer class from the dart:core library, for the Dart programming language."/>
+  <title>Finalizer class - dart:core library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+    <li class="self-crumb">Finalizer<span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span> abstract class</li>
+  </ol>
+  <div class="self-name">Finalizer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-4884"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/Finalizer%3CT%3E"></a><span class="kind-class">Finalizer&lt;<wbr/><span class="type-parameter">T</span>&gt;</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A finalizer which can be attached to Dart objects.</p>
+<p>A finalizer can create attachments between
+the finalizer and any number of Dart values,
+by calling <a href="dart-core/Finalizer/attach.html">attach</a> with the value, along with a
+<em>finalization token</em> and an optional <em>attach key</em>,
+which are part of the attachment.</p>
+<p>When a Dart value becomes inaccessible to the program,
+any finalizer that currently has an attachment to
+the value <em>may</em> have its callback function called
+with the attachment&#39;s finalization token.</p>
+<p>Example:</p>
+<pre class="language-dart"><code class="language-dart">class Database {
+  // Keeps the finalizer itself reachable, otherwise it might be disposed
+  // before the finalizer callback gets a chance to run.
+  static final Finalizer&lt;DBConnection&gt; _finalizer =
+      Finalizer((connection) =&gt; connection.close());
+
+  final DBConnection _connection;
+
+  Database._fromConnection(this._connection);
+
+  factory Database.connect() {
+    // Wraps the connection in a nice user API,
+    // *and* closes connection if the user forgets to.
+    final connection = DBConnection.connect();
+    final wrapper = Database._fromConnection(connection);
+    // Get finalizer callback when `wrapper` is no longer reachable.
+    _finalizer.attach(wrapper, connection, detach: wrapper);
+    return wrapper;
+  }
+
+  void close() {
+    // User requested close.
+    _connection.close();
+    // Detach from finalizer, no longer needed.
+    _finalizer.detach(this);
+  }
+
+  // Some useful methods.
+}
+</code></pre>
+<p>This example has an example of an external resource that needs clean-up.
+The finalizer is used to clean up an external connection when the
+user of the API no longer has access to that connection.
+The example uses the same object as attached object and detach key,
+which is a useful approach when each attached object can be detached
+individually. Being a detachment key doesn&#39;t keep an object alive.</p>
+<p>No promises are made that the callback will ever be called.
+The only thing that is guaranteed is that if a finalizer&#39;s callback
+is called with a specific finalization token as argument,
+then at least one value with an attachment to the finalizer
+that has that finalization token,
+is no longer accessible to the program.</p>
+<p>If the finalizer <em>itself</em> becomes unreachable,
+it&#39;s allowed to be garbage collected
+and then it won&#39;t trigger any further callbacks.
+Always make sure to keep the finalizer itself reachable while it&#39;s needed.</p>
+<p>If multiple finalizers are attached to a single object,
+or the same finalizer is attached multiple times to an object,
+and that object becomes inaccessible to the program,
+then any number (including zero) of those attachments may trigger
+their associated finalizer&#39;s callback.
+It will not necessarily be all or none of them.</p>
+<p>Finalization callbacks will happen as <em>events</em>.
+They will not happen during execution of other code,
+and not as a microtask,
+but as high-level events similar to timer events.</p>
+<p>Finalization callbacks must not throw.</p>
+<p>When running on the Dart native runtime, and the callback is a native
+function rather than a Dart function, use <code>dart:ffi</code>&#39;s <a href="dart-ffi/NativeFinalizer-class.html">NativeFinalizer</a>
+instead.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@Since(&#34;2.17&#34;)</li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Finalizer" class="callable">
+          <span class="name"><a href="dart-core/Finalizer/Finalizer.html">Finalizer</a></span><span class="signature">(<span class="parameter" id="-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="param-"><span class="type-annotation">T</span></span>)</span>)</span>
+        </dt>
+        <dd>
+          Creates a finalizer with the given finalization callback.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="attach" class="callable">
+  <span class="name"><a href="dart-core/Finalizer/attach.html">attach</a></span><span class="signature">(<wbr/><span class="parameter" id="attach-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span>, </span><span class="parameter" id="attach-param-finalizationToken"><span class="type-annotation">T</span> <span class="parameter-name">finalizationToken</span>, </span><span class="parameter" id="attach-param-detach">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">detach</span>}</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Attaches this finalizer to <code>value</code>.
+  
+
+</dd>
+
+        <dt id="detach" class="callable">
+  <span class="name"><a href="dart-core/Finalizer/detach.html">detach</a></span><span class="signature">(<wbr/><span class="parameter" id="detach-param-detach"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">detach</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Detaches this finalizer from values attached with <a href="dart-core/Finalizer/detach.html">detach</a>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-4885"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+  <li class="self-crumb">Finalizer<span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span> abstract class</li>
+</ol>
+
+
+    <h5>dart:core library</h5>
+    <ol>
+      <li class="section-title"><a href="dart-core/dart-core-library.html#classes">Classes</a></li>
+        <li><a class="deprecated" href="dart-core/BidirectionalIterator-class.html">BidirectionalIterator</a></li>
+        <li><a href="dart-core/BigInt-class.html">BigInt</a></li>
+        <li><a href="dart-core/bool-class.html">bool</a></li>
+        <li><a href="dart-core/Comparable-class.html">Comparable</a></li>
+        <li><a href="dart-core/DateTime-class.html">DateTime</a></li>
+        <li><a href="dart-core/Deprecated-class.html">Deprecated</a></li>
+        <li><a href="dart-core/double-class.html">double</a></li>
+        <li><a href="dart-core/Duration-class.html">Duration</a></li>
+        <li><a href="dart-core/Enum-class.html">Enum</a></li>
+        <li><a href="dart-core/Expando-class.html">Expando</a></li>
+        <li><a href="dart-core/Finalizer-class.html">Finalizer</a></li>
+        <li><a href="dart-core/Function-class.html">Function</a></li>
+        <li><a href="dart-async/Future-class.html">Future</a></li>
+        <li><a href="dart-core/int-class.html">int</a></li>
+        <li><a href="dart-core/Invocation-class.html">Invocation</a></li>
+        <li><a href="dart-core/Iterable-class.html">Iterable</a></li>
+        <li><a href="dart-core/Iterator-class.html">Iterator</a></li>
+        <li><a href="dart-core/List-class.html">List</a></li>
+        <li><a href="dart-core/Map-class.html">Map</a></li>
+        <li><a href="dart-core/MapEntry-class.html">MapEntry</a></li>
+        <li><a href="dart-core/Match-class.html">Match</a></li>
+        <li><a href="dart-core/Null-class.html">Null</a></li>
+        <li><a href="dart-core/num-class.html">num</a></li>
+        <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="dart-core/Pattern-class.html">Pattern</a></li>
+        <li><a href="dart-core/pragma-class.html">pragma</a></li>
+        <li><a class="deprecated" href="dart-core/Provisional-class.html">Provisional</a></li>
+        <li><a href="dart-core/Record-class.html">Record</a></li>
+        <li><a href="dart-core/RegExp-class.html">RegExp</a></li>
+        <li><a href="dart-core/RegExpMatch-class.html">RegExpMatch</a></li>
+        <li><a href="dart-core/RuneIterator-class.html">RuneIterator</a></li>
+        <li><a href="dart-core/Runes-class.html">Runes</a></li>
+        <li><a href="dart-core/Set-class.html">Set</a></li>
+        <li><a href="dart-core/Sink-class.html">Sink</a></li>
+        <li><a href="dart-core/StackTrace-class.html">StackTrace</a></li>
+        <li><a href="dart-core/Stopwatch-class.html">Stopwatch</a></li>
+        <li><a href="dart-async/Stream-class.html">Stream</a></li>
+        <li><a href="dart-core/String-class.html">String</a></li>
+        <li><a href="dart-core/StringBuffer-class.html">StringBuffer</a></li>
+        <li><a href="dart-core/StringSink-class.html">StringSink</a></li>
+        <li><a href="dart-core/Symbol-class.html">Symbol</a></li>
+        <li><a href="dart-core/Type-class.html">Type</a></li>
+        <li><a href="dart-core/Uri-class.html">Uri</a></li>
+        <li><a href="dart-core/UriData-class.html">UriData</a></li>
+        <li><a href="dart-core/WeakReference-class.html">WeakReference</a></li>
+
+      <li class="section-title"><a href="dart-core/dart-core-library.html#extensions">Extensions</a></li>
+        <li><a href="dart-core/DateTimeCopyWith.html">DateTimeCopyWith</a></li>
+        <li><a href="dart-core/EnumByName.html">EnumByName</a></li>
+        <li><a href="dart-core/EnumName.html">EnumName</a></li>
+        <li><a href="dart-async/FutureExtensions.html">FutureExtensions</a></li>
+
+
+      <li class="section-title"><a href="dart-core/dart-core-library.html#constants">Constants</a></li>
+        <li><a href="dart-core/deprecated-constant.html">deprecated</a></li>
+        <li><a href="dart-core/override-constant.html">override</a></li>
+        <li><a class="deprecated" href="dart-core/provisional-constant.html">provisional</a></li>
+        <li><a class="deprecated" href="dart-core/proxy-constant.html">proxy</a></li>
+
+
+      <li class="section-title"><a href="dart-core/dart-core-library.html#functions">Functions</a></li>
+        <li><a href="dart-core/identical.html">identical</a></li>
+        <li><a href="dart-core/identityHashCode.html">identityHashCode</a></li>
+        <li><a href="dart-core/print.html">print</a></li>
+
+
+      <li class="section-title"><a href="dart-core/dart-core-library.html#typedefs">Typedefs</a></li>
+        <li><a href="dart-core/Comparator.html">Comparator</a></li>
+
+      <li class="section-title"><a href="dart-core/dart-core-library.html#exceptions">Exceptions</a></li>
+        <li><a class="deprecated" href="dart-core/AbstractClassInstantiationError-class.html">AbstractClassInstantiationError</a></li>
+        <li><a href="dart-core/ArgumentError-class.html">ArgumentError</a></li>
+        <li><a href="dart-core/AssertionError-class.html">AssertionError</a></li>
+        <li><a class="deprecated" href="dart-core/CastError-class.html">CastError</a></li>
+        <li><a href="dart-core/ConcurrentModificationError-class.html">ConcurrentModificationError</a></li>
+        <li><a class="deprecated" href="dart-core/CyclicInitializationError-class.html">CyclicInitializationError</a></li>
+        <li><a href="dart-core/Error-class.html">Error</a></li>
+        <li><a href="dart-core/Exception-class.html">Exception</a></li>
+        <li><a class="deprecated" href="dart-core/FallThroughError-class.html">FallThroughError</a></li>
+        <li><a href="dart-core/FormatException-class.html">FormatException</a></li>
+        <li><a href="dart-core/IndexError-class.html">IndexError</a></li>
+        <li><a class="deprecated" href="dart-core/IntegerDivisionByZeroException-class.html">IntegerDivisionByZeroException</a></li>
+        <li><a href="dart-core/NoSuchMethodError-class.html">NoSuchMethodError</a></li>
+        <li><a class="deprecated" href="dart-core/NullThrownError-class.html">NullThrownError</a></li>
+        <li><a href="dart-core/OutOfMemoryError-class.html">OutOfMemoryError</a></li>
+        <li><a href="dart-core/RangeError-class.html">RangeError</a></li>
+        <li><a href="dart-core/StackOverflowError-class.html">StackOverflowError</a></li>
+        <li><a href="dart-core/StateError-class.html">StateError</a></li>
+        <li><a href="dart-core/TypeError-class.html">TypeError</a></li>
+        <li><a href="dart-core/UnimplementedError-class.html">UnimplementedError</a></li>
+        <li><a href="dart-core/UnsupportedError-class.html">UnsupportedError</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="dart-core/Finalizer-class.html#constructors">Constructors</a></li>
+          <li><a href="dart-core/Finalizer/Finalizer.html">Finalizer</a></li>
+
+
+        <li class="section-title inherited">
+          <a href="dart-core/Finalizer-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="dart-core/Finalizer-class.html#instance-methods">Methods</a></li>
+          <li><a href="dart-core/Finalizer/attach.html">attach</a></li>
+          <li><a href="dart-core/Finalizer/detach.html">detach</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="dart-core/Finalizer-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

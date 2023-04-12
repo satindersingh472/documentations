@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the dispatchEvent method from the RendererBinding mixin, for the Dart programming language."/>
+  <title>dispatchEvent method - RendererBinding mixin - rendering library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="rendering/rendering-library.html">rendering</a></li>
+    <li><a href="rendering/RendererBinding-mixin.html">RendererBinding</a></li>
+    <li class="self-crumb">dispatchEvent method</li>
+  </ol>
+  <div class="self-name">dispatchEvent</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/rendering/binding.dart#L327"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-56461"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/dispatchEvent"></a><span class="kind-method">dispatchEvent</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">dispatchEvent</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="dispatchEvent-param-event"><span class="type-annotation"><a href="gestures/PointerEvent-class.html">PointerEvent</a></span> <span class="parameter-name">event</span>, </span></li>
+<li><span class="parameter" id="dispatchEvent-param-hitTestResult"><span class="type-annotation"><a href="gestures/HitTestResult-class.html">HitTestResult</a>?</span> <span class="parameter-name">hitTestResult</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Dispatch an event to <a href="gestures/GestureBinding/pointerRouter.html">pointerRouter</a> and the path of a hit test result.</p>
+<p>The <code>event</code> is routed to <a href="gestures/GestureBinding/pointerRouter.html">pointerRouter</a>. If the <code>hitTestResult</code> is not
+null, the event is also sent to every <a href="gestures/HitTestTarget-class.html">HitTestTarget</a> in the entries of the
+given <a href="gestures/HitTestResult-class.html">HitTestResult</a>. Any exceptions from the handlers are caught.</p>
+<p>The <code>hitTestResult</code> argument may only be null for <a href="gestures/PointerAddedEvent-class.html">PointerAddedEvent</a>s or
+<a href="gestures/PointerRemovedEvent-class.html">PointerRemovedEvent</a>s.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override // from GestureBinding
+void dispatchEvent(PointerEvent event, HitTestResult? hitTestResult) {
+  _mouseTracker!.updateWithEvent(
+    event,
+    // Enter and exit events should be triggered with or without buttons
+    // pressed. When the button is pressed, normal hit test uses a cached
+    // result, but MouseTracker requires that the hit test is re-executed to
+    // update the hovering events.
+    () =&gt; (hitTestResult == null || event is PointerMoveEvent) ? renderView.hitTestMouseTrackers(event.position) : hitTestResult,
+  );
+  super.dispatchEvent(event, hitTestResult);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="rendering/rendering-library.html">rendering</a></li>
+  <li><a href="rendering/RendererBinding-mixin.html">RendererBinding</a></li>
+  <li class="self-crumb">dispatchEvent method</li>
+</ol>
+
+
+    <h5>RendererBinding mixin</h5>
+    <ol>
+
+
+
+        <li class="section-title">
+          <a href="rendering/RendererBinding-mixin.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="semantics/SemanticsBinding/accessibilityFeatures.html">accessibilityFeatures</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/channelBuffers.html">channelBuffers</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/currentFrameTimeStamp.html">currentFrameTimeStamp</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/currentSystemFrameTimeStamp.html">currentSystemFrameTimeStamp</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/debugSamplingClock.html">debugSamplingClock</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/defaultBinaryMessenger.html">defaultBinaryMessenger</a></li>
+          <li class="inherited"><a href="semantics/SemanticsBinding/disableAnimations.html">disableAnimations</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/endOfFrame.html">endOfFrame</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/framesEnabled.html">framesEnabled</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/gestureArena.html">gestureArena</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/hasScheduledFrame.html">hasScheduledFrame</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/keyboard.html">keyboard</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/keyEventManager.html">keyEventManager</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/lifecycleState.html">lifecycleState</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/locked.html">locked</a></li>
+          <li><a href="rendering/RendererBinding/mouseTracker.html">mouseTracker</a></li>
+          <li><a href="rendering/RendererBinding/pipelineOwner.html">pipelineOwner</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/platformDispatcher.html">platformDispatcher</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/pointerRouter.html">pointerRouter</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/pointerSignalResolver.html">pointerSignalResolver</a></li>
+          <li><a href="rendering/RendererBinding/renderView.html">renderView</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/resamplingEnabled.html">resamplingEnabled</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/restorationManager.html">restorationManager</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/samplingOffset.html">samplingOffset</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/schedulerPhase.html">schedulerPhase</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/schedulingStrategy.html">schedulingStrategy</a></li>
+          <li><a href="rendering/RendererBinding/sendFramesToEngine.html">sendFramesToEngine</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/transientCallbackCount.html">transientCallbackCount</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/window.html">window</a></li>
+
+        <li class="section-title"><a href="rendering/RendererBinding-mixin.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/addPersistentFrameCallback.html">addPersistentFrameCallback</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/addPostFrameCallback.html">addPostFrameCallback</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/addTimingsCallback.html">addTimingsCallback</a></li>
+          <li><a href="rendering/RendererBinding/allowFirstFrame.html">allowFirstFrame</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/cancelFrameCallbackWithId.html">cancelFrameCallbackWithId</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/cancelPointer.html">cancelPointer</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/createBinaryMessenger.html">createBinaryMessenger</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/createRestorationManager.html">createRestorationManager</a></li>
+          <li class="inherited"><a href="semantics/SemanticsBinding/createSemanticsUpdateBuilder.html">createSemanticsUpdateBuilder</a></li>
+          <li><a href="rendering/RendererBinding/createViewConfiguration.html">createViewConfiguration</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/debugAssertNoPendingPerformanceModeRequests.html">debugAssertNoPendingPerformanceModeRequests</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/debugAssertNoTimeDilation.html">debugAssertNoTimeDilation</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/debugAssertNoTransientCallbacks.html">debugAssertNoTransientCallbacks</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/debugGetRequestedPerformanceMode.html">debugGetRequestedPerformanceMode</a></li>
+          <li><a href="rendering/RendererBinding/deferFirstFrame.html">deferFirstFrame</a></li>
+          <li><a href="rendering/RendererBinding/dispatchEvent.html">dispatchEvent</a></li>
+          <li><a href="rendering/RendererBinding/drawFrame.html">drawFrame</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/ensureFrameCallbacksRegistered.html">ensureFrameCallbacksRegistered</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/ensureVisualUpdate.html">ensureVisualUpdate</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/evict.html">evict</a></li>
+          <li class="inherited"><a href="semantics/SemanticsBinding/handleAccessibilityFeaturesChanged.html">handleAccessibilityFeaturesChanged</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/handleAppLifecycleStateChanged.html">handleAppLifecycleStateChanged</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/handleBeginFrame.html">handleBeginFrame</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/handleDrawFrame.html">handleDrawFrame</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/handleEvent.html">handleEvent</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/handleEventLoopCallback.html">handleEventLoopCallback</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/handleMemoryPressure.html">handleMemoryPressure</a></li>
+          <li><a href="rendering/RendererBinding/handleMetricsChanged.html">handleMetricsChanged</a></li>
+          <li><a href="rendering/RendererBinding/handlePlatformBrightnessChanged.html">handlePlatformBrightnessChanged</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/handlePointerEvent.html">handlePointerEvent</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/handleSystemMessage.html">handleSystemMessage</a></li>
+          <li><a href="rendering/RendererBinding/handleTextScaleFactorChanged.html">handleTextScaleFactorChanged</a></li>
+          <li><a href="rendering/RendererBinding/hitTest.html">hitTest</a></li>
+          <li><a href="rendering/RendererBinding/initInstances.html">initInstances</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/initLicenses.html">initLicenses</a></li>
+          <li><a href="rendering/RendererBinding/initMouseTracker.html">initMouseTracker</a></li>
+          <li><a href="rendering/RendererBinding/initRenderView.html">initRenderView</a></li>
+          <li><a href="rendering/RendererBinding/initServiceExtensions.html">initServiceExtensions</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/lockEvents.html">lockEvents</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="rendering/RendererBinding/performReassemble.html">performReassemble</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/postEvent.html">postEvent</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/readInitialLifecycleStateFromNativeWindow.html">readInitialLifecycleStateFromNativeWindow</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/reassembleApplication.html">reassembleApplication</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/registerBoolServiceExtension.html">registerBoolServiceExtension</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/registerNumericServiceExtension.html">registerNumericServiceExtension</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/registerServiceExtension.html">registerServiceExtension</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/registerSignalServiceExtension.html">registerSignalServiceExtension</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/registerStringServiceExtension.html">registerStringServiceExtension</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/removeTimingsCallback.html">removeTimingsCallback</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/requestPerformanceMode.html">requestPerformanceMode</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/resetEpoch.html">resetEpoch</a></li>
+          <li><a href="rendering/RendererBinding/resetFirstFrameSent.html">resetFirstFrameSent</a></li>
+          <li class="inherited"><a href="gestures/GestureBinding/resetGestureBinding.html">resetGestureBinding</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/scheduleForcedFrame.html">scheduleForcedFrame</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/scheduleFrame.html">scheduleFrame</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/scheduleFrameCallback.html">scheduleFrameCallback</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/scheduleTask.html">scheduleTask</a></li>
+          <li class="inherited"><a href="scheduler/SchedulerBinding/scheduleWarmUpFrame.html">scheduleWarmUpFrame</a></li>
+          <li><a href="rendering/RendererBinding/setSemanticsEnabled.html">setSemanticsEnabled</a></li>
+          <li class="inherited"><a href="services/ServicesBinding/setSystemUiChangeCallback.html">setSystemUiChangeCallback</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/BindingBase/unlocked.html">unlocked</a></li>
+
+        <li class="section-title inherited"><a href="rendering/RendererBinding-mixin.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="rendering/RendererBinding-mixin.html#static-properties">Static properties</a></li>
+          <li><a href="rendering/RendererBinding/instance.html">instance</a></li>
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the performLayout method from the RenderFlex class, for the Dart programming language."/>
+  <title>performLayout method - RenderFlex class - rendering library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="rendering/rendering-library.html">rendering</a></li>
+    <li><a href="rendering/RenderFlex-class.html">RenderFlex</a></li>
+    <li class="self-crumb">performLayout method</li>
+  </ol>
+  <div class="self-name">performLayout</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/rendering/flex.dart#L924"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-55405"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/performLayout"></a><span class="kind-method">performLayout</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">performLayout</span>(<wbr/>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Do the work of computing the layout for this render object.</p>
+<p>Do not call this function directly: call <a href="rendering/RenderBox/layout.html">layout</a> instead. This function
+is called by <a href="rendering/RenderBox/layout.html">layout</a> when there is actually work to be done by this
+render object during layout. The layout constraints provided by your
+parent are available via the <a href="rendering/RenderBox/constraints.html">constraints</a> getter.</p>
+<p>If <a href="rendering/RenderObject/sizedByParent.html">sizedByParent</a> is true, then this function should not actually change
+the dimensions of this render object. Instead, that work should be done by
+<a href="rendering/RenderBox/performResize.html">performResize</a>. If <a href="rendering/RenderObject/sizedByParent.html">sizedByParent</a> is false, then this function should
+both change the dimensions of this render object and instruct its children
+to layout.</p>
+<p>In implementing this function, you must call <a href="rendering/RenderBox/layout.html">layout</a> on each of your
+children, passing true for parentUsesSize if your layout information is
+dependent on your child&#39;s layout information. Passing true for
+parentUsesSize ensures that this render object will undergo layout if the
+child undergoes layout. Otherwise, the child can change its layout
+information without informing this render object.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+void performLayout() {
+  assert(_debugHasNecessaryDirections);
+  final BoxConstraints constraints = this.constraints;
+  assert(() {
+    final FlutterError? constraintsError = _debugCheckConstraints(
+      constraints: constraints,
+      reportParentConstraints: true,
+    );
+    if (constraintsError != null) {
+      throw constraintsError;
+    }
+    return true;
+  }());
+
+  final _LayoutSizes sizes = _computeSizes(
+    layoutChild: ChildLayoutHelper.layoutChild,
+    constraints: constraints,
+  );
+
+  final double allocatedSize = sizes.allocatedSize;
+  double actualSize = sizes.mainSize;
+  double crossSize = sizes.crossSize;
+  double maxBaselineDistance = 0.0;
+  if (crossAxisAlignment == CrossAxisAlignment.baseline) {
+    RenderBox? child = firstChild;
+    double maxSizeAboveBaseline = 0;
+    double maxSizeBelowBaseline = 0;
+    while (child != null) {
+      assert(() {
+        if (textBaseline == null) {
+          throw FlutterError(&#39;To use FlexAlignItems.baseline, you must also specify which baseline to use using the &#34;baseline&#34; argument.&#39;);
+        }
+        return true;
+      }());
+      final double? distance = child.getDistanceToBaseline(textBaseline!, onlyReal: true);
+      if (distance != null) {
+        maxBaselineDistance = math.max(maxBaselineDistance, distance);
+        maxSizeAboveBaseline = math.max(
+          distance,
+          maxSizeAboveBaseline,
+        );
+        maxSizeBelowBaseline = math.max(
+          child.size.height - distance,
+          maxSizeBelowBaseline,
+        );
+        crossSize = math.max(maxSizeAboveBaseline + maxSizeBelowBaseline, crossSize);
+      }
+      final FlexParentData childParentData = child.parentData! as FlexParentData;
+      child = childParentData.nextSibling;
+    }
+  }
+
+  // Align items along the main axis.
+  switch (_direction) {
+    case Axis.horizontal:
+      size = constraints.constrain(Size(actualSize, crossSize));
+      actualSize = size.width;
+      crossSize = size.height;
+      break;
+    case Axis.vertical:
+      size = constraints.constrain(Size(crossSize, actualSize));
+      actualSize = size.height;
+      crossSize = size.width;
+      break;
+  }
+  final double actualSizeDelta = actualSize - allocatedSize;
+  _overflow = math.max(0.0, -actualSizeDelta);
+  final double remainingSpace = math.max(0.0, actualSizeDelta);
+  late final double leadingSpace;
+  late final double betweenSpace;
+  // flipMainAxis is used to decide whether to lay out
+  // left-to-right/top-to-bottom (false), or right-to-left/bottom-to-top
+  // (true). The _startIsTopLeft will return null if there&#39;s only one child
+  // and the relevant direction is null, in which case we arbitrarily decide
+  // to flip, but that doesn&#39;t have any detectable effect.
+  final bool flipMainAxis = !(_startIsTopLeft(direction, textDirection, verticalDirection) ?? true);
+  switch (_mainAxisAlignment) {
+    case MainAxisAlignment.start:
+      leadingSpace = 0.0;
+      betweenSpace = 0.0;
+      break;
+    case MainAxisAlignment.end:
+      leadingSpace = remainingSpace;
+      betweenSpace = 0.0;
+      break;
+    case MainAxisAlignment.center:
+      leadingSpace = remainingSpace / 2.0;
+      betweenSpace = 0.0;
+      break;
+    case MainAxisAlignment.spaceBetween:
+      leadingSpace = 0.0;
+      betweenSpace = childCount &gt; 1 ? remainingSpace / (childCount - 1) : 0.0;
+      break;
+    case MainAxisAlignment.spaceAround:
+      betweenSpace = childCount &gt; 0 ? remainingSpace / childCount : 0.0;
+      leadingSpace = betweenSpace / 2.0;
+      break;
+    case MainAxisAlignment.spaceEvenly:
+      betweenSpace = childCount &gt; 0 ? remainingSpace / (childCount + 1) : 0.0;
+      leadingSpace = betweenSpace;
+      break;
+  }
+
+  // Position elements
+  double childMainPosition = flipMainAxis ? actualSize - leadingSpace : leadingSpace;
+  RenderBox? child = firstChild;
+  while (child != null) {
+    final FlexParentData childParentData = child.parentData! as FlexParentData;
+    final double childCrossPosition;
+    switch (_crossAxisAlignment) {
+      case CrossAxisAlignment.start:
+      case CrossAxisAlignment.end:
+        childCrossPosition = _startIsTopLeft(flipAxis(direction), textDirection, verticalDirection)
+                             == (_crossAxisAlignment == CrossAxisAlignment.start)
+                           ? 0.0
+                           : crossSize - _getCrossSize(child.size);
+        break;
+      case CrossAxisAlignment.center:
+        childCrossPosition = crossSize / 2.0 - _getCrossSize(child.size) / 2.0;
+        break;
+      case CrossAxisAlignment.stretch:
+        childCrossPosition = 0.0;
+        break;
+      case CrossAxisAlignment.baseline:
+        if (_direction == Axis.horizontal) {
+          assert(textBaseline != null);
+          final double? distance = child.getDistanceToBaseline(textBaseline!, onlyReal: true);
+          if (distance != null) {
+            childCrossPosition = maxBaselineDistance - distance;
+          } else {
+            childCrossPosition = 0.0;
+          }
+        } else {
+          childCrossPosition = 0.0;
+        }
+        break;
+    }
+    if (flipMainAxis) {
+      childMainPosition -= _getMainSize(child.size);
+    }
+    switch (_direction) {
+      case Axis.horizontal:
+        childParentData.offset = Offset(childMainPosition, childCrossPosition);
+        break;
+      case Axis.vertical:
+        childParentData.offset = Offset(childCrossPosition, childMainPosition);
+        break;
+    }
+    if (flipMainAxis) {
+      childMainPosition -= betweenSpace;
+    } else {
+      childMainPosition += _getMainSize(child.size) + betweenSpace;
+    }
+    child = childParentData.nextSibling;
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="rendering/rendering-library.html">rendering</a></li>
+  <li><a href="rendering/RenderFlex-class.html">RenderFlex</a></li>
+  <li class="self-crumb">performLayout method</li>
+</ol>
+
+
+    <h5>RenderFlex class</h5>
+    <ol>
+
+        <li class="section-title"><a href="rendering/RenderFlex-class.html#constructors">Constructors</a></li>
+          <li><a href="rendering/RenderFlex/RenderFlex.html">RenderFlex</a></li>
+
+
+        <li class="section-title">
+          <a href="rendering/RenderFlex-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="rendering/RenderObject/alwaysNeedsCompositing.html">alwaysNeedsCompositing</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/attached.html">attached</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/childCount.html">childCount</a></li>
+          <li><a href="rendering/RenderFlex/clipBehavior.html">clipBehavior</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/constraints.html">constraints</a></li>
+          <li><a href="rendering/RenderFlex/crossAxisAlignment.html">crossAxisAlignment</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugCanParentUseSize.html">debugCanParentUseSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugCreator.html">debugCreator</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDisposed.html">debugDisposed</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisLayout.html">debugDoingThisLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisLayoutWithCallback.html">debugDoingThisLayoutWithCallback</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisPaint.html">debugDoingThisPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisResize.html">debugDoingThisResize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugLayer.html">debugLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsCompositedLayerUpdate.html">debugNeedsCompositedLayerUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsLayout.html">debugNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsPaint.html">debugNeedsPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugSemantics.html">debugSemantics</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/depth.html">depth</a></li>
+          <li><a href="rendering/RenderFlex/direction.html">direction</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/firstChild.html">firstChild</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hasSize.html">hasSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/isRepaintBoundary.html">isRepaintBoundary</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/lastChild.html">lastChild</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/layer.html">layer</a></li>
+          <li><a href="rendering/RenderFlex/mainAxisAlignment.html">mainAxisAlignment</a></li>
+          <li><a href="rendering/RenderFlex/mainAxisSize.html">mainAxisSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/needsCompositing.html">needsCompositing</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/owner.html">owner</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/paintBounds.html">paintBounds</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/parent.html">parent</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/parentData.html">parentData</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/semanticBounds.html">semanticBounds</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/size.html">size</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/sizedByParent.html">sizedByParent</a></li>
+          <li><a href="rendering/RenderFlex/textBaseline.html">textBaseline</a></li>
+          <li><a href="rendering/RenderFlex/textDirection.html">textDirection</a></li>
+          <li><a href="rendering/RenderFlex/verticalDirection.html">verticalDirection</a></li>
+
+        <li class="section-title"><a href="rendering/RenderFlex-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/add.html">add</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/addAll.html">addAll</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/adoptChild.html">adoptChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/applyPaintTransform.html">applyPaintTransform</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/assembleSemanticsNode.html">assembleSemanticsNode</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/attach.html">attach</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/childAfter.html">childAfter</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/childBefore.html">childBefore</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/clearSemantics.html">clearSemantics</a></li>
+          <li><a href="rendering/RenderFlex/computeDistanceToActualBaseline.html">computeDistanceToActualBaseline</a></li>
+          <li><a href="rendering/RenderFlex/computeDryLayout.html">computeDryLayout</a></li>
+          <li><a href="rendering/RenderFlex/computeMaxIntrinsicHeight.html">computeMaxIntrinsicHeight</a></li>
+          <li><a href="rendering/RenderFlex/computeMaxIntrinsicWidth.html">computeMaxIntrinsicWidth</a></li>
+          <li><a href="rendering/RenderFlex/computeMinIntrinsicHeight.html">computeMinIntrinsicHeight</a></li>
+          <li><a href="rendering/RenderFlex/computeMinIntrinsicWidth.html">computeMinIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugAdoptSize.html">debugAdoptSize</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugAssertDoesMeetConstraints.html">debugAssertDoesMeetConstraints</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugCannotComputeDryLayout.html">debugCannotComputeDryLayout</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li><a href="rendering/RenderFlex/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugHandleEvent.html">debugHandleEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaint.html">debugPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintBaselines.html">debugPaintBaselines</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintPointers.html">debugPaintPointers</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintSize.html">debugPaintSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugRegisterRepaintBoundaryPaint.html">debugRegisterRepaintBoundaryPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugResetSize.html">debugResetSize</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/debugValidateChild.html">debugValidateChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBoxContainerDefaultsMixin/defaultComputeDistanceToFirstActualBaseline.html">defaultComputeDistanceToFirstActualBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBoxContainerDefaultsMixin/defaultComputeDistanceToHighestActualBaseline.html">defaultComputeDistanceToHighestActualBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBoxContainerDefaultsMixin/defaultHitTestChildren.html">defaultHitTestChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderBoxContainerDefaultsMixin/defaultPaint.html">defaultPaint</a></li>
+          <li><a href="rendering/RenderFlex/describeApproximatePaintClip.html">describeApproximatePaintClip</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeForError.html">describeForError</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeSemanticsClip.html">describeSemanticsClip</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeSemanticsConfiguration.html">describeSemanticsConfiguration</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/detach.html">detach</a></li>
+          <li><a href="rendering/RenderFlex/dispose.html">dispose</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/dropChild.html">dropChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBoxContainerDefaultsMixin/getChildrenAsList.html">getChildrenAsList</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDistanceToActualBaseline.html">getDistanceToActualBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDistanceToBaseline.html">getDistanceToBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDryLayout.html">getDryLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMaxIntrinsicHeight.html">getMaxIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMaxIntrinsicWidth.html">getMaxIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMinIntrinsicHeight.html">getMinIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMinIntrinsicWidth.html">getMinIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/getTransformTo.html">getTransformTo</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/globalToLocal.html">globalToLocal</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/handleEvent.html">handleEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hitTest.html">hitTest</a></li>
+          <li><a href="rendering/RenderFlex/hitTestChildren.html">hitTestChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hitTestSelf.html">hitTestSelf</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/insert.html">insert</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/invokeLayoutCallback.html">invokeLayoutCallback</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/layout.html">layout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/localToGlobal.html">localToGlobal</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsCompositedLayerUpdate.html">markNeedsCompositedLayerUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsCompositingBitsUpdate.html">markNeedsCompositingBitsUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/markNeedsLayout.html">markNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsLayoutForSizedByParentChange.html">markNeedsLayoutForSizedByParentChange</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsPaint.html">markNeedsPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsSemanticsUpdate.html">markNeedsSemanticsUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markParentNeedsLayout.html">markParentNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/move.html">move</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="rendering/RenderFlex/paint.html">paint</a></li>
+          <li class="inherited"><a href="rendering/DebugOverflowIndicatorMixin/paintOverflowIndicator.html">paintOverflowIndicator</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/paintsChild.html">paintsChild</a></li>
+          <li><a href="rendering/RenderFlex/performLayout.html">performLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/performResize.html">performResize</a></li>
+          <li class="inherited"><a href="rendering/DebugOverflowIndicatorMixin/reassemble.html">reassemble</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/redepthChild.html">redepthChild</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/redepthChildren.html">redepthChildren</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/remove.html">remove</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/removeAll.html">removeAll</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/replaceRootLayer.html">replaceRootLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialLayout.html">scheduleInitialLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialPaint.html">scheduleInitialPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialSemantics.html">scheduleInitialSemantics</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/sendSemanticsEvent.html">sendSemanticsEvent</a></li>
+          <li><a href="rendering/RenderFlex/setupParentData.html">setupParentData</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/showOnScreen.html">showOnScreen</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toString.html">toString</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringShallow.html">toStringShallow</a></li>
+          <li><a href="rendering/RenderFlex/toStringShort.html">toStringShort</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/updateCompositedLayer.html">updateCompositedLayer</a></li>
+          <li class="inherited"><a href="rendering/ContainerRenderObjectMixin/visitChildren.html">visitChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/visitChildrenForSemantics.html">visitChildrenForSemantics</a></li>
+
+        <li class="section-title inherited"><a href="rendering/RenderFlex-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

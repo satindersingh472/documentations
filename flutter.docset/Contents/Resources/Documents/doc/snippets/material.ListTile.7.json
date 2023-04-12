@@ -1,0 +1,13 @@
+{
+    "id": "material.ListTile.7",
+    "element": "ListTile",
+    "sourcePath": "lib/src/material/list_tile.dart",
+    "sourceLine": 262,
+    "channel": "stable",
+    "serial": "7",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "Here is an example of a custom list item that resembles a YouTube-related\nvideo list item created with [Expanded] and [Container] widgets.\n\n![Custom list item a](https://flutter.github.io/assets-for-api-docs/assets/widgets/custom_list_item_a.png)",
+    "file": "material.ListTile.7.dart"
+}

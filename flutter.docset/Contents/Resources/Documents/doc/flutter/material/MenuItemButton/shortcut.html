@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the shortcut property from the MenuItemButton class, for the Dart programming language."/>
+  <title>shortcut property - MenuItemButton class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/MenuItemButton-class.html">MenuItemButton</a></li>
+    <li class="self-crumb">shortcut property</li>
+  </ol>
+  <div class="self-name">shortcut</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/menu_anchor.dart#L848"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-47996"></a><a class="dashAnchor" name="//apple_ref/cpp/Property/shortcut"></a><span class="kind-property">shortcut</span> property 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="widgets/MenuSerializableShortcut-mixin.html">MenuSerializableShortcut</a>?
+          <span class="name ">shortcut</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>The optional shortcut that selects this <a href="material/MenuItemButton-class.html">MenuItemButton</a>.</p>
+<p>Menus using <a href="material/MenuItemButton-class.html">MenuItemButton</a> can have a <a href="widgets/SingleActivator-class.html">SingleActivator</a> or
+<a href="widgets/CharacterActivator-class.html">CharacterActivator</a> assigned to them as their <a href="material/MenuItemButton/shortcut.html">MenuItemButton.shortcut</a>,
+which will display an appropriate shortcut hint. Even though the shortcut
+labels are displayed in the menu, shortcuts are not automatically handled.
+They must be available in whatever context they are appropriate, and handled
+via another mechanism.</p>
+<p>If shortcuts should be generally enabled, but are not easily defined in a
+context surrounding the menu bar, consider registering them with a
+<a href="widgets/ShortcutRegistry-class.html">ShortcutRegistry</a> (one is already included in the <a href="widgets/WidgetsApp-class.html">WidgetsApp</a>, and thus
+also <a href="material/MaterialApp-class.html">MaterialApp</a> and <a href="cupertino/CupertinoApp-class.html">CupertinoApp</a>), as shown in the example below. To be
+sure that selecting a menu item and triggering the shortcut do the same
+thing, it is recommended that they call the same callback.</p>
+<p>
+<a name="material.MenuBar.1"></a>
+</p><div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example shows a <a href="material/MenuBar-class.html">MenuBar</a> that contains a single top
+level menu, containing three items: &#34;About&#34;, a checkbox menu item for
+showing a message, and &#34;Quit&#34;. The items are identified with an enum value,
+and the shortcuts are registered globally with the <a href="widgets/ShortcutRegistry-class.html">ShortcutRegistry</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard" onmouseenter="fixHref(this, &#39;material.MenuBar.1&#39;);" onclick="fixHref(this, &#39;material.MenuBar.1&#39;); copyStringToClipboard(this.href);" href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br/>
+            <span class="snippet-create-command">flutter create --sample=material.MenuBar.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad" src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;null_safety=true&amp;sample_id=material.MenuBar.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+<p></p>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final MenuSerializableShortcut? shortcut;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="material/material-library.html">material</a></li>
+  <li><a href="material/MenuItemButton-class.html">MenuItemButton</a></li>
+  <li class="self-crumb">shortcut property</li>
+</ol>
+
+
+    <h5>MenuItemButton class</h5>
+    <ol>
+
+        <li class="section-title"><a href="material/MenuItemButton-class.html#constructors">Constructors</a></li>
+          <li><a href="material/MenuItemButton/MenuItemButton.html">MenuItemButton</a></li>
+
+
+        <li class="section-title">
+          <a href="material/MenuItemButton-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="material/MenuItemButton/child.html">child</a></li>
+          <li><a href="material/MenuItemButton/clipBehavior.html">clipBehavior</a></li>
+          <li><a href="material/MenuItemButton/enabled.html">enabled</a></li>
+          <li><a href="material/MenuItemButton/focusNode.html">focusNode</a></li>
+          <li class="inherited"><a href="widgets/Widget/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="widgets/Widget/key.html">key</a></li>
+          <li><a href="material/MenuItemButton/leadingIcon.html">leadingIcon</a></li>
+          <li><a href="material/MenuItemButton/onFocusChange.html">onFocusChange</a></li>
+          <li><a href="material/MenuItemButton/onHover.html">onHover</a></li>
+          <li><a href="material/MenuItemButton/onPressed.html">onPressed</a></li>
+          <li><a href="material/MenuItemButton/requestFocusOnHover.html">requestFocusOnHover</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="material/MenuItemButton/shortcut.html">shortcut</a></li>
+          <li><a href="material/MenuItemButton/statesController.html">statesController</a></li>
+          <li><a href="material/MenuItemButton/style.html">style</a></li>
+          <li><a href="material/MenuItemButton/trailingIcon.html">trailingIcon</a></li>
+
+        <li class="section-title"><a href="material/MenuItemButton-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="widgets/StatefulWidget/createElement.html">createElement</a></li>
+          <li><a href="material/MenuItemButton/createState.html">createState</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li><a href="material/MenuItemButton/debugFillProperties.html">debugFillProperties</a></li>
+          <li><a href="material/MenuItemButton/defaultStyleOf.html">defaultStyleOf</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="material/MenuItemButton/themeStyleOf.html">themeStyleOf</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="widgets/Widget/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="material/MenuItemButton-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="widgets/Widget/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="material/MenuItemButton-class.html#static-methods">Static methods</a></li>
+          <li><a href="material/MenuItemButton/styleFrom.html">styleFrom</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the dartify function from the dart:js_util library, for the Dart programming language."/>
+  <title>dartify function - dart:js_util library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-js_util/dart-js_util-library.html">dart:js_util</a></li>
+    <li class="self-crumb">dartify function</li>
+  </ol>
+  <div class="self-name">dartify</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-13876"></a><a class="dashAnchor" name="//apple_ref/cpp/Function/dartify"></a><span class="kind-function">dartify</span> function 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="dart-core/Object-class.html">Object</a>?</span>
+<span class="name ">dartify</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="dartify-param-o"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">o</span></span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Effectively the inverse of <a href="dart-js_util/jsify.html">jsify</a>, <a href="dart-js_util/dartify.html">dartify</a> Takes a JavaScript object, and
+converts it to a Dart based object. Only JS primitives, arrays, or &#39;map&#39;
+like JS objects are supported.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">external Object? dartify(Object? o);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="dart-js_util/dart-js_util-library.html">dart:js_util</a></li>
+  <li class="self-crumb">dartify function</li>
+</ol>
+
+
+    <h5>dart:js_util library</h5>
+    <ol>
+
+
+
+
+      <li class="section-title"><a href="dart-js_util/dart-js_util-library.html#properties">Properties</a></li>
+        <li><a href="dart-js_util/globalThis.html">globalThis</a></li>
+        <li><a href="dart-js_util/objectPrototype.html">objectPrototype</a></li>
+
+      <li class="section-title"><a href="dart-js_util/dart-js_util-library.html#functions">Functions</a></li>
+        <li><a href="dart-js_util/add.html">add</a></li>
+        <li><a href="dart-js_util/callConstructor.html">callConstructor</a></li>
+        <li><a href="dart-js_util/callMethod.html">callMethod</a></li>
+        <li><a href="dart-js_util/createDartExport.html">createDartExport</a></li>
+        <li><a href="dart-js_util/createStaticInteropMock.html">createStaticInteropMock</a></li>
+        <li><a href="dart-js_util/dartify.html">dartify</a></li>
+        <li><a href="dart-js_util/divide.html">divide</a></li>
+        <li><a href="dart-js_util/equal.html">equal</a></li>
+        <li><a href="dart-js_util/exponentiate.html">exponentiate</a></li>
+        <li><a href="dart-js_util/getProperty.html">getProperty</a></li>
+        <li><a href="dart-js_util/greaterThan.html">greaterThan</a></li>
+        <li><a href="dart-js_util/greaterThanOrEqual.html">greaterThanOrEqual</a></li>
+        <li><a href="dart-js_util/hasProperty.html">hasProperty</a></li>
+        <li><a href="dart-js_util/instanceof.html">instanceof</a></li>
+        <li><a href="dart-js_util/instanceOfString.html">instanceOfString</a></li>
+        <li><a href="dart-js_util/isJavaScriptArray.html">isJavaScriptArray</a></li>
+        <li><a href="dart-js_util/isJavaScriptSimpleObject.html">isJavaScriptSimpleObject</a></li>
+        <li><a href="dart-js_util/jsify.html">jsify</a></li>
+        <li><a href="dart-js_util/lessThan.html">lessThan</a></li>
+        <li><a href="dart-js_util/lessThanOrEqual.html">lessThanOrEqual</a></li>
+        <li><a href="dart-js_util/modulo.html">modulo</a></li>
+        <li><a href="dart-js_util/multiply.html">multiply</a></li>
+        <li><a href="dart-js_util/newObject.html">newObject</a></li>
+        <li><a href="dart-js_util/notEqual.html">notEqual</a></li>
+        <li><a href="dart-js_util/objectGetPrototypeOf.html">objectGetPrototypeOf</a></li>
+        <li><a href="dart-js_util/objectKeys.html">objectKeys</a></li>
+        <li><a href="dart-js_util/promiseToFuture.html">promiseToFuture</a></li>
+        <li><a href="dart-js_util/setProperty.html">setProperty</a></li>
+        <li><a href="dart-js_util/strictEqual.html">strictEqual</a></li>
+        <li><a href="dart-js_util/strictNotEqual.html">strictNotEqual</a></li>
+        <li><a href="dart-js_util/subtract.html">subtract</a></li>
+
+
+
+      <li class="section-title"><a href="dart-js_util/dart-js_util-library.html#exceptions">Exceptions</a></li>
+        <li><a href="dart-js_util/NullRejectionException-class.html">NullRejectionException</a></li>
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterPlugin Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/FlutterPlugin" class="dashAnchor"></a>
+    <a title="FlutterPlugin Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterPlugin Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterPlugin</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">FlutterPlugin</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n"><a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a></span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FlutterPlugin</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Implemented by the iOS part of a Flutter plugin.</p>
+
+<p>Defines a set of optional callback methods and a method to set up the plugin
+ and register it to be called by other application components.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterPlugin(cm)registerWithRegistrar:"></a>
+                    <a name="//apple_ref/objc/Method/+registerWithRegistrar:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterPlugin(cm)registerWithRegistrar:">+registerWithRegistrar:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers this plugin using the context information and callback registration
+ methods exposed by the given registrar.</p>
+
+<p>The registrar is obtained from a <code><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></code> which keeps track of
+ the identity of registered plugins and provides basic support for cross-plugin
+ coordination.</p>
+
+<p>The caller of this method, a plugin registrant, is usually autogenerated by
+ Flutter tooling based on declared plugin dependencies. The generated registrant
+ asks the registry for a registrar for each plugin, and calls this method to
+ allow the plugin to initialize itself and register callbacks with application
+ objects available through the registrar protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">registerWithRegistrar</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">registrar</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">(</span><span class="n">with</span> <span class="nv">registrar</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>registrar</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A helper providing application context and methods for
+ registering callbacks.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterPlugin(cm)setPluginRegistrantCallback:"></a>
+                    <a name="//apple_ref/objc/Method/+setPluginRegistrantCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterPlugin(cm)setPluginRegistrantCallback:">+setPluginRegistrantCallback:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set a callback for registering plugins to an additional <code><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></code>,
+ including headless <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> instances.</p>
+
+<p>This method is typically called from within an application&rsquo;s <code>AppDelegate</code> at
+ startup to allow for plugins which create additional <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> instances
+ to register the application&rsquo;s plugins.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPluginRegistrantCallback</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setPluginRegistrantCallback</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A callback for registering some set of plugins with a
+ <code><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterPlugin(im)handleMethodCall:result:"></a>
+                    <a name="//apple_ref/objc/Method/-handleMethodCall:result:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterPlugin(im)handleMethodCall:result:">-handleMethodCall:<wbr/>result:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this plugin has been registered to receive <code><a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a></code>s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">handleMethodCall</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">call</span>
+                  <span class="nf">result</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a></span><span class="p">)</span><span class="nv">result</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">handle</span><span class="p">(</span><span class="n">_</span> <span class="nv">call</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a></span><span class="p">,</span> <span class="nv">result</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>call</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The method call command object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A callback for submitting the result of the call.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterPlugin(im)detachFromEngineForRegistrar:"></a>
+                    <a name="//apple_ref/objc/Method/-detachFromEngineForRegistrar:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterPlugin(im)detachFromEngineForRegistrar:">-detachFromEngineForRegistrar:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when a plugin is being removed from a <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code>, which is
+ usually the result of the <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> being deallocated.  This method
+ provides the opportunity to do necessary cleanup.</p>
+
+<p>You will only receive this method if you registered your plugin instance with
+ the <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> via <code>-[FlutterPluginRegistry publish:]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">detachFromEngineForRegistrar</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">registrar</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">detachFromEngine</span><span class="p">(</span><span class="k">for</span> <span class="nv">registrar</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>registrar</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The registrar that was used to publish the plugin.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

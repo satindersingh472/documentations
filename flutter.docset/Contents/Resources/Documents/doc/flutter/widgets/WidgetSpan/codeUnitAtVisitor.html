@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the codeUnitAtVisitor method from the WidgetSpan class, for the Dart programming language."/>
+  <title>codeUnitAtVisitor method - WidgetSpan class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/WidgetSpan-class.html">WidgetSpan</a></li>
+    <li class="self-crumb">codeUnitAtVisitor method</li>
+  </ol>
+  <div class="self-name">codeUnitAtVisitor</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/widget_span.dart#L139"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-73472"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/codeUnitAtVisitor"></a><span class="kind-method">codeUnitAtVisitor</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="dart-core/int-class.html">int</a>?</span>
+<span class="name ">codeUnitAtVisitor</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="codeUnitAtVisitor-param-index"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">index</span>, </span></li>
+<li><span class="parameter" id="codeUnitAtVisitor-param-offset"><span class="type-annotation"><a href="painting/Accumulator-class.html">Accumulator</a></span> <span class="parameter-name">offset</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Performs the check at each <a href="painting/InlineSpan-class.html">InlineSpan</a> for if the <code>index</code> falls within the range
+of the span and returns the corresponding code unit. Returns null otherwise.</p>
+<p>The <code>offset</code> parameter tracks the current index offset in the text buffer formed
+if the contents of the <a href="painting/InlineSpan-class.html">InlineSpan</a> tree were concatenated together starting
+from the root <a href="painting/InlineSpan-class.html">InlineSpan</a>.</p>
+<p>This method should not be directly called. Use <a href="painting/InlineSpan/codeUnitAt.html">codeUnitAt</a> instead.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+int? codeUnitAtVisitor(int index, Accumulator offset) {
+  offset.increment(1);
+  return PlaceholderSpan.placeholderCodeUnit;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="widgets/widgets-library.html">widgets</a></li>
+  <li><a href="widgets/WidgetSpan-class.html">WidgetSpan</a></li>
+  <li class="self-crumb">codeUnitAtVisitor method</li>
+</ol>
+
+
+    <h5>WidgetSpan class</h5>
+    <ol>
+
+        <li class="section-title"><a href="widgets/WidgetSpan-class.html#constructors">Constructors</a></li>
+          <li><a href="widgets/WidgetSpan/WidgetSpan.html">WidgetSpan</a></li>
+
+
+        <li class="section-title">
+          <a href="widgets/WidgetSpan-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="painting/PlaceholderSpan/alignment.html">alignment</a></li>
+          <li class="inherited"><a href="painting/PlaceholderSpan/baseline.html">baseline</a></li>
+          <li><a href="widgets/WidgetSpan/child.html">child</a></li>
+          <li><a href="widgets/WidgetSpan/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="painting/InlineSpan/style.html">style</a></li>
+
+        <li class="section-title"><a href="widgets/WidgetSpan-class.html#instance-methods">Methods</a></li>
+          <li><a href="widgets/WidgetSpan/build.html">build</a></li>
+          <li class="inherited"><a href="painting/InlineSpan/codeUnitAt.html">codeUnitAt</a></li>
+          <li><a href="widgets/WidgetSpan/codeUnitAtVisitor.html">codeUnitAtVisitor</a></li>
+          <li><a href="widgets/WidgetSpan/compareTo.html">compareTo</a></li>
+          <li class="inherited"><a href="painting/PlaceholderSpan/computeSemanticsInformation.html">computeSemanticsInformation</a></li>
+          <li class="inherited"><a href="painting/PlaceholderSpan/computeToPlainText.html">computeToPlainText</a></li>
+          <li><a href="widgets/WidgetSpan/debugAssertIsValid.html">debugAssertIsValid</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="painting/PlaceholderSpan/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="painting/PlaceholderSpan/describeSemantics.html">describeSemantics</a></li>
+          <li class="inherited"><a href="painting/InlineSpan/getSemanticsInformation.html">getSemanticsInformation</a></li>
+          <li><a href="widgets/WidgetSpan/getSpanForPosition.html">getSpanForPosition</a></li>
+          <li><a href="widgets/WidgetSpan/getSpanForPositionVisitor.html">getSpanForPositionVisitor</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="painting/InlineSpan/toPlainText.html">toPlainText</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShort.html">toStringShort</a></li>
+          <li><a href="widgets/WidgetSpan/visitChildren.html">visitChildren</a></li>
+
+        <li class="section-title"><a href="widgets/WidgetSpan-class.html#operators">Operators</a></li>
+          <li><a href="widgets/WidgetSpan/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

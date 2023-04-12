@@ -1,0 +1,600 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterStandardReader Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/FlutterStandardReader" class="dashAnchor"></a>
+    <a title="FlutterStandardReader Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterStandardReader Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterStandardReader</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">FlutterStandardReader</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">FlutterStandardReader</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A reader of the Flutter standard binary encoding.</p>
+
+<p>See <code><a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a></code> for details on the encoding.</p>
+
+<p>The encoding is extensible via subclasses overriding <code>readValueOfType</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)initWithData:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)initWithData:">-initWithData:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new <code>FlutterStandardReader</code> who reads from \p data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)hasMore"></a>
+                    <a name="//apple_ref/objc/Method/-hasMore" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)hasMore">-hasMore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns YES when the reader hasn&rsquo;t reached the end of its data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasMore</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hasMore</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readByte"></a>
+                    <a name="//apple_ref/objc/Method/-readByte" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readByte">-readByte</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads a byte value and increments the position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">UInt8</span><span class="p">)</span><span class="n">readByte</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readByte</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readBytes:length:"></a>
+                    <a name="//apple_ref/objc/Method/-readBytes:length:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readBytes:length:">-readBytes:<wbr/>length:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads a sequence of byte values of \p length and increments the position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readBytes</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="nv">destination</span> <span class="nf">length</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">length</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readBytes</span><span class="p">(</span><span class="n">_</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">,</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readData:"></a>
+                    <a name="//apple_ref/objc/Method/-readData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readData:">-readData:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads a sequence of byte values of \p length and increments the position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">readData</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">length</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readData</span><span class="p">(</span><span class="n">_</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readSize"></a>
+                    <a name="//apple_ref/objc/Method/-readSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readSize">-readSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads a 32-bit unsigned integer representing a collection size and increments the position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">UInt32</span><span class="p">)</span><span class="n">readSize</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readAlignment:"></a>
+                    <a name="//apple_ref/objc/Method/-readAlignment:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readAlignment:">-readAlignment:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advances the read position until it is aligned with \p alignment.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readAlignment</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">alignment</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readAlignment</span><span class="p">(</span><span class="n">_</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readUTF8"></a>
+                    <a name="//apple_ref/objc/Method/-readUTF8" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readUTF8">-readUTF8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Read a null terminated string encoded with UTF-8/</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">readUTF8</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readUTF8</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readValue"></a>
+                    <a name="//apple_ref/objc/Method/-readValue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readValue">-readValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reads a byte for <code>FlutterStandardField</code> the decodes a value matching that type.</p>
+
+<p>See also: -[FlutterStandardWriter writeValue]</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="n">readValue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterStandardReader(im)readValueOfType:"></a>
+                    <a name="//apple_ref/objc/Method/-readValueOfType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterStandardReader(im)readValueOfType:">-readValueOfType:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes a value matching the \p type specified.</p>
+
+<p>See also:</p>
+
+<ul>
+<li><code>FlutterStandardField</code></li>
+<li><code>-[FlutterStandardWriter writeValue]</code></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nf">readValueOfType</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readValue</span><span class="p">(</span><span class="n">ofType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the useMaterial3 property from the ThemeData class, for the Dart programming language."/>
+  <title>useMaterial3 property - ThemeData class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ThemeData-class.html">ThemeData</a></li>
+    <li class="self-crumb">useMaterial3 property</li>
+  </ol>
+  <div class="self-name">useMaterial3</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/theme_data.dart#L1356"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-49868"></a><a class="dashAnchor" name="//apple_ref/cpp/Property/useMaterial3"></a><span class="kind-property">useMaterial3</span> property 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="dart-core/bool-class.html">bool</a>
+          <span class="name ">useMaterial3</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>A temporary flag used to opt-in to Material 3 features.</p>
+<p>If true, then widgets that have been migrated to Material 3 will
+use new colors, typography and other features of Material 3. If false,
+they will use the Material 2 look and feel.</p>
+<p>During the migration to Material 3, turning this on may yield
+inconsistent look and feel in your app as some widgets are migrated
+while others have yet to be.</p>
+<p>Defaults to false. When the Material 3 specification is complete
+and all widgets are migrated on stable, we will change this flag to be
+true by default. After that change has landed on stable, we will deprecate
+this flag and remove all uses of it. At that point, the <code>material</code> library
+will aim to only support Material 3.</p>
+<h2 id="defaults">Defaults</h2>
+<p>If a <a href="material/ThemeData-class.html">ThemeData</a> is constructed with <a href="material/ThemeData/useMaterial3.html">useMaterial3</a> set to true, then
+some properties will get updated defaults. Please note that
+<a href="material/ThemeData/copyWith.html">ThemeData.copyWith</a> with <a href="material/ThemeData/useMaterial3.html">useMaterial3</a> set to true will
+not change any of these properties in the resulting <a href="material/ThemeData-class.html">ThemeData</a>.</p><style>table,td,th { border-collapse: collapse; padding: 0.45em; } td { border: 1px solid }</style>
+<table><thead><tr><th style="text-align: left;">Property</th><th style="text-align: left;">Material 3 default</th><th style="text-align: left;">Material 2 default</th></tr></thead><tbody><tr><td style="text-align: left;"><a href="material/ThemeData/colorScheme.html">colorScheme</a></td><td style="text-align: left;">M3 baseline light color scheme</td><td style="text-align: left;">M2 baseline light color scheme</td></tr><tr><td style="text-align: left;"><a href="material/ThemeData/typography.html">typography</a></td><td style="text-align: left;"><a href="material/Typography/Typography.material2021.html">Typography.material2021</a></td><td style="text-align: left;"><a href="material/Typography/Typography.material2014.html">Typography.material2014</a></td></tr><tr><td style="text-align: left;"><a href="material/ThemeData/splashFactory.html">splashFactory</a></td><td style="text-align: left;"><a href="material/InkSparkle-class.html">InkSparkle</a>* or <a href="material/InkRipple-class.html">InkRipple</a></td><td style="text-align: left;"><a href="material/InkSplash-class.html">InkSplash</a></td></tr></tbody></table>
+<p>* if the target platform is Android and the app is not
+running on the web, otherwise it will fallback to <a href="material/InkRipple-class.html">InkRipple</a>.</p>
+<p>If <a href="material/ThemeData/brightness.html">brightness</a> is <a href="dart-ui/Brightness.html">Brightness.dark</a> then the default color scheme will
+be either the M3 baseline dark color scheme or the M2 baseline dark color
+scheme depending on <a href="material/ThemeData/useMaterial3.html">useMaterial3</a>.</p>
+<h2 id="affected-widgets">Affected widgets</h2>
+<p>This flag affects styles and components.</p>
+<h3 id="styles">Styles</h3>
+<ul>
+<li>Color: <a href="material/ColorScheme-class.html">ColorScheme</a>, <a href="material/Material-class.html">Material</a> (see table above)</li>
+<li>Shape: (see components below)</li>
+<li>Typography: <a href="material/Typography-class.html">Typography</a> (see table above)</li>
+</ul>
+<h3 id="components">Components</h3>
+<ul>
+<li>Badges: <a href="material/Badge-class.html">Badge</a></li>
+<li>Bottom app bar: <a href="material/BottomAppBar-class.html">BottomAppBar</a></li>
+<li>Bottom sheets: <a href="material/BottomSheet-class.html">BottomSheet</a></li>
+<li>Buttons
+<ul>
+<li>Common buttons: <a href="material/ElevatedButton-class.html">ElevatedButton</a>, <a href="material/FilledButton-class.html">FilledButton</a>, <a href="material/OutlinedButton-class.html">OutlinedButton</a>, <a href="material/TextButton-class.html">TextButton</a></li>
+<li>FAB: <a href="material/FloatingActionButton-class.html">FloatingActionButton</a>, <a href="material/FloatingActionButton/FloatingActionButton.extended.html">FloatingActionButton.extended</a></li>
+<li>Icon buttons: <a href="material/IconButton-class.html">IconButton</a></li>
+<li>Segmented buttons: <a href="material/SegmentedButton-class.html">SegmentedButton</a></li>
+</ul>
+</li>
+<li>Cards: <a href="material/Card-class.html">Card</a></li>
+<li>Checkbox: <a href="material/Checkbox-class.html">Checkbox</a></li>
+<li>Chips:
+<ul>
+<li><a href="material/ActionChip-class.html">ActionChip</a> (used for Assist and Suggestion chips),</li>
+<li><a href="material/FilterChip-class.html">FilterChip</a>, <a href="material/ChoiceChip-class.html">ChoiceChip</a> (used for single selection filter chips),</li>
+<li><a href="material/InputChip-class.html">InputChip</a></li>
+</ul>
+</li>
+<li>Dialogs: <a href="material/Dialog-class.html">Dialog</a>, <a href="material/AlertDialog-class.html">AlertDialog</a></li>
+<li>Divider: <a href="material/Divider-class.html">Divider</a></li>
+<li>Lists: <a href="material/ListTile-class.html">ListTile</a></li>
+<li>Menus: <a href="material/MenuBar-class.html">MenuBar</a>, <a href="material/DropdownMenu-class.html">DropdownMenu</a></li>
+<li>Navigation bar: <a href="material/NavigationBar-class.html">NavigationBar</a> (new, replacing <a href="material/BottomNavigationBar-class.html">BottomNavigationBar</a>)</li>
+<li>Navigation drawer: <a href="material/NavigationDrawer-class.html">NavigationDrawer</a></li>
+<li>Navigation rail: <a href="material/NavigationRail-class.html">NavigationRail</a></li>
+<li>Progress indicators: <a href="material/CircularProgressIndicator-class.html">CircularProgressIndicator</a>, <a href="material/LinearProgressIndicator-class.html">LinearProgressIndicator</a></li>
+<li>Radio button: <a href="material/Radio-class.html">Radio</a></li>
+<li>Snack bar: <a href="material/SnackBar-class.html">SnackBar</a></li>
+<li>Slider: <a href="material/Slider-class.html">Slider</a></li>
+<li>Switch: <a href="material/Switch-class.html">Switch</a></li>
+<li>Tabs: <a href="material/TabBar-class.html">TabBar</a></li>
+<li>TextFields: <a href="material/TextField-class.html">TextField</a> together with its <a href="material/InputDecoration-class.html">InputDecoration</a></li>
+<li>Top app bar: <a href="material/AppBar-class.html">AppBar</a></li>
+</ul>
+<p>In addition, this flag enables features introduced in Android 12.</p>
+<ul>
+<li>Stretch overscroll: <a href="material/MaterialScrollBehavior-class.html">MaterialScrollBehavior</a></li>
+<li>Ripple: <code>splashFactory</code> (see table above)</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="https://m3.material.io/">Material 3 specification</a>.</li>
+</ul>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final bool useMaterial3;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="material/material-library.html">material</a></li>
+  <li><a href="material/ThemeData-class.html">ThemeData</a></li>
+  <li class="self-crumb">useMaterial3 property</li>
+</ol>
+
+
+    <h5>ThemeData class</h5>
+    <ol>
+
+        <li class="section-title"><a href="material/ThemeData-class.html#constructors">Constructors</a></li>
+          <li><a href="material/ThemeData/ThemeData.html">ThemeData</a></li>
+          <li><a href="material/ThemeData/ThemeData.dark.html">dark</a></li>
+          <li><a href="material/ThemeData/ThemeData.fallback.html">fallback</a></li>
+          <li><a href="material/ThemeData/ThemeData.from.html">from</a></li>
+          <li><a href="material/ThemeData/ThemeData.light.html">light</a></li>
+          <li><a href="material/ThemeData/ThemeData.raw.html">raw</a></li>
+
+
+        <li class="section-title">
+          <a href="material/ThemeData-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a class="deprecated" href="material/ThemeData/accentColor.html">accentColor</a></li>
+          <li><a class="deprecated" href="material/ThemeData/accentColorBrightness.html">accentColorBrightness</a></li>
+          <li><a class="deprecated" href="material/ThemeData/accentIconTheme.html">accentIconTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/accentTextTheme.html">accentTextTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/androidOverscrollIndicator.html">androidOverscrollIndicator</a></li>
+          <li><a href="material/ThemeData/appBarTheme.html">appBarTheme</a></li>
+          <li><a href="material/ThemeData/applyElevationOverlayColor.html">applyElevationOverlayColor</a></li>
+          <li><a class="deprecated" href="material/ThemeData/backgroundColor.html">backgroundColor</a></li>
+          <li><a href="material/ThemeData/badgeTheme.html">badgeTheme</a></li>
+          <li><a href="material/ThemeData/bannerTheme.html">bannerTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/bottomAppBarColor.html">bottomAppBarColor</a></li>
+          <li><a href="material/ThemeData/bottomAppBarTheme.html">bottomAppBarTheme</a></li>
+          <li><a href="material/ThemeData/bottomNavigationBarTheme.html">bottomNavigationBarTheme</a></li>
+          <li><a href="material/ThemeData/bottomSheetTheme.html">bottomSheetTheme</a></li>
+          <li><a href="material/ThemeData/brightness.html">brightness</a></li>
+          <li><a href="material/ThemeData/buttonBarTheme.html">buttonBarTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/buttonColor.html">buttonColor</a></li>
+          <li><a href="material/ThemeData/buttonTheme.html">buttonTheme</a></li>
+          <li><a href="material/ThemeData/canvasColor.html">canvasColor</a></li>
+          <li><a href="material/ThemeData/cardColor.html">cardColor</a></li>
+          <li><a href="material/ThemeData/cardTheme.html">cardTheme</a></li>
+          <li><a href="material/ThemeData/checkboxTheme.html">checkboxTheme</a></li>
+          <li><a href="material/ThemeData/chipTheme.html">chipTheme</a></li>
+          <li><a href="material/ThemeData/colorScheme.html">colorScheme</a></li>
+          <li><a href="material/ThemeData/cupertinoOverrideTheme.html">cupertinoOverrideTheme</a></li>
+          <li><a href="material/ThemeData/dataTableTheme.html">dataTableTheme</a></li>
+          <li><a href="material/ThemeData/dialogBackgroundColor.html">dialogBackgroundColor</a></li>
+          <li><a href="material/ThemeData/dialogTheme.html">dialogTheme</a></li>
+          <li><a href="material/ThemeData/disabledColor.html">disabledColor</a></li>
+          <li><a href="material/ThemeData/dividerColor.html">dividerColor</a></li>
+          <li><a href="material/ThemeData/dividerTheme.html">dividerTheme</a></li>
+          <li><a href="material/ThemeData/drawerTheme.html">drawerTheme</a></li>
+          <li><a href="material/ThemeData/dropdownMenuTheme.html">dropdownMenuTheme</a></li>
+          <li><a href="material/ThemeData/elevatedButtonTheme.html">elevatedButtonTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/errorColor.html">errorColor</a></li>
+          <li><a href="material/ThemeData/expansionTileTheme.html">expansionTileTheme</a></li>
+          <li><a href="material/ThemeData/extensions.html">extensions</a></li>
+          <li><a href="material/ThemeData/filledButtonTheme.html">filledButtonTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/fixTextFieldOutlineLabel.html">fixTextFieldOutlineLabel</a></li>
+          <li><a href="material/ThemeData/floatingActionButtonTheme.html">floatingActionButtonTheme</a></li>
+          <li><a href="material/ThemeData/focusColor.html">focusColor</a></li>
+          <li><a href="material/ThemeData/hashCode.html">hashCode</a></li>
+          <li><a href="material/ThemeData/highlightColor.html">highlightColor</a></li>
+          <li><a href="material/ThemeData/hintColor.html">hintColor</a></li>
+          <li><a href="material/ThemeData/hoverColor.html">hoverColor</a></li>
+          <li><a href="material/ThemeData/iconButtonTheme.html">iconButtonTheme</a></li>
+          <li><a href="material/ThemeData/iconTheme.html">iconTheme</a></li>
+          <li><a href="material/ThemeData/indicatorColor.html">indicatorColor</a></li>
+          <li><a href="material/ThemeData/inputDecorationTheme.html">inputDecorationTheme</a></li>
+          <li><a href="material/ThemeData/listTileTheme.html">listTileTheme</a></li>
+          <li><a href="material/ThemeData/materialTapTargetSize.html">materialTapTargetSize</a></li>
+          <li><a href="material/ThemeData/menuBarTheme.html">menuBarTheme</a></li>
+          <li><a href="material/ThemeData/menuButtonTheme.html">menuButtonTheme</a></li>
+          <li><a href="material/ThemeData/menuTheme.html">menuTheme</a></li>
+          <li><a href="material/ThemeData/navigationBarTheme.html">navigationBarTheme</a></li>
+          <li><a href="material/ThemeData/navigationDrawerTheme.html">navigationDrawerTheme</a></li>
+          <li><a href="material/ThemeData/navigationRailTheme.html">navigationRailTheme</a></li>
+          <li><a href="material/ThemeData/outlinedButtonTheme.html">outlinedButtonTheme</a></li>
+          <li><a href="material/ThemeData/pageTransitionsTheme.html">pageTransitionsTheme</a></li>
+          <li><a href="material/ThemeData/platform.html">platform</a></li>
+          <li><a href="material/ThemeData/popupMenuTheme.html">popupMenuTheme</a></li>
+          <li><a href="material/ThemeData/primaryColor.html">primaryColor</a></li>
+          <li><a class="deprecated" href="material/ThemeData/primaryColorBrightness.html">primaryColorBrightness</a></li>
+          <li><a href="material/ThemeData/primaryColorDark.html">primaryColorDark</a></li>
+          <li><a href="material/ThemeData/primaryColorLight.html">primaryColorLight</a></li>
+          <li><a href="material/ThemeData/primaryIconTheme.html">primaryIconTheme</a></li>
+          <li><a href="material/ThemeData/primaryTextTheme.html">primaryTextTheme</a></li>
+          <li><a href="material/ThemeData/progressIndicatorTheme.html">progressIndicatorTheme</a></li>
+          <li><a href="material/ThemeData/radioTheme.html">radioTheme</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="material/ThemeData/scaffoldBackgroundColor.html">scaffoldBackgroundColor</a></li>
+          <li><a href="material/ThemeData/scrollbarTheme.html">scrollbarTheme</a></li>
+          <li><a href="material/ThemeData/secondaryHeaderColor.html">secondaryHeaderColor</a></li>
+          <li><a href="material/ThemeData/segmentedButtonTheme.html">segmentedButtonTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/selectedRowColor.html">selectedRowColor</a></li>
+          <li><a href="material/ThemeData/shadowColor.html">shadowColor</a></li>
+          <li><a href="material/ThemeData/sliderTheme.html">sliderTheme</a></li>
+          <li><a href="material/ThemeData/snackBarTheme.html">snackBarTheme</a></li>
+          <li><a href="material/ThemeData/splashColor.html">splashColor</a></li>
+          <li><a href="material/ThemeData/splashFactory.html">splashFactory</a></li>
+          <li><a href="material/ThemeData/switchTheme.html">switchTheme</a></li>
+          <li><a href="material/ThemeData/tabBarTheme.html">tabBarTheme</a></li>
+          <li><a href="material/ThemeData/textButtonTheme.html">textButtonTheme</a></li>
+          <li><a href="material/ThemeData/textSelectionTheme.html">textSelectionTheme</a></li>
+          <li><a href="material/ThemeData/textTheme.html">textTheme</a></li>
+          <li><a href="material/ThemeData/timePickerTheme.html">timePickerTheme</a></li>
+          <li><a class="deprecated" href="material/ThemeData/toggleableActiveColor.html">toggleableActiveColor</a></li>
+          <li><a href="material/ThemeData/toggleButtonsTheme.html">toggleButtonsTheme</a></li>
+          <li><a href="material/ThemeData/tooltipTheme.html">tooltipTheme</a></li>
+          <li><a href="material/ThemeData/typography.html">typography</a></li>
+          <li><a href="material/ThemeData/unselectedWidgetColor.html">unselectedWidgetColor</a></li>
+          <li><a href="material/ThemeData/useMaterial3.html">useMaterial3</a></li>
+          <li><a href="material/ThemeData/visualDensity.html">visualDensity</a></li>
+
+        <li class="section-title"><a href="material/ThemeData-class.html#instance-methods">Methods</a></li>
+          <li><a href="material/ThemeData/copyWith.html">copyWith</a></li>
+          <li><a href="material/ThemeData/debugFillProperties.html">debugFillProperties</a></li>
+          <li><a href="material/ThemeData/extension.html">extension</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title"><a href="material/ThemeData-class.html#operators">Operators</a></li>
+          <li><a href="material/ThemeData/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="material/ThemeData-class.html#static-methods">Static methods</a></li>
+          <li><a href="material/ThemeData/estimateBrightnessForColor.html">estimateBrightnessForColor</a></li>
+          <li><a href="material/ThemeData/lerp.html">lerp</a></li>
+          <li><a href="material/ThemeData/localize.html">localize</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the StackFrame class from the foundation library, for the Dart programming language."/>
+  <title>StackFrame class - foundation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li class="self-crumb">StackFrame class</li>
+  </ol>
+  <div class="self-name">StackFrame</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/foundation/stack_frame.dart#L22"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-35011"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/StackFrame"></a><span class="kind-class">StackFrame</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A object representation of a frame from a stack trace.</p>
+<p>
+<a name="foundation.StackFrame.1"></a>
+</p><div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+This example creates a traversable list of parsed <a href="foundation/StackFrame-class.html">StackFrame</a> objects from
+the current <a href="dart-core/StackTrace-class.html">StackTrace</a>.
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard" onmouseenter="fixHref(this, &#39;foundation.StackFrame.1&#39;);" onclick="fixHref(this, &#39;foundation.StackFrame.1&#39;); copyStringToClipboard(this.href);" href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard" onclick="copyTextToClipboard(findSiblingWithId(this, &#39;sample-code&#39;));">
+      <i class="material-icons copy-image">assignment</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">final List&lt;StackFrame&gt; currentFrames = StackFrame.fromStackTrace(StackTrace.current);</code></pre>
+  </div>
+</div>
+<p></p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="meta/immutable-constant.html">immutable</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="StackFrame" class="callable">
+          <span class="name"><a href="foundation/StackFrame/StackFrame.html">StackFrame</a></span><span class="signature">(<span class="parameter" id="-param-number">{<span>required</span> <span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span>, </span><span class="parameter" id="-param-column"><span>required</span> <span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">column</span>, </span><span class="parameter" id="-param-line"><span>required</span> <span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">line</span>, </span><span class="parameter" id="-param-packageScheme"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">packageScheme</span>, </span><span class="parameter" id="-param-package"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">package</span>, </span><span class="parameter" id="-param-packagePath"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">packagePath</span>, </span><span class="parameter" id="-param-className"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">className</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-method"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">method</span>, </span><span class="parameter" id="-param-isConstructor"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isConstructor</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-source"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">source</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a new StackFrame instance.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="className" class="property">
+  <span class="name"><a href="foundation/StackFrame/className.html">className</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The class name, if any, for this frame.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="column" class="property">
+  <span class="name"><a href="foundation/StackFrame/column.html">column</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The source column number.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="foundation/StackFrame/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="isConstructor" class="property">
+  <span class="name"><a href="foundation/StackFrame/isConstructor.html">isConstructor</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether or not this was thrown from a constructor.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="line" class="property">
+  <span class="name"><a href="foundation/StackFrame/line.html">line</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The source line number.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="method" class="property">
+  <span class="name"><a href="foundation/StackFrame/method.html">method</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The method name for this frame.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="number" class="property">
+  <span class="name"><a href="foundation/StackFrame/number.html">number</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The zero-indexed frame number.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="package" class="property">
+  <span class="name"><a href="foundation/StackFrame/package.html">package</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The package for this frame, e.g. &#34;core&#34; for
+dart:core/errors_patch.dart or &#34;flutter&#34; for
+package:flutter/src/widgets/text.dart.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="packagePath" class="property">
+  <span class="name"><a href="foundation/StackFrame/packagePath.html">packagePath</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The path of the file for this frame, e.g. &#34;errors_patch.dart&#34; for
+dart:core/errors_patch.dart or &#34;src/widgets/text.dart&#34; for
+package:flutter/src/widgets/text.dart.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="packageScheme" class="property">
+  <span class="name"><a href="foundation/StackFrame/packageScheme.html">packageScheme</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The scheme of the package for this frame, e.g. &#34;dart&#34; for
+dart:core/errors_patch.dart or &#34;package&#34; for
+package:flutter/src/widgets/text.dart.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="source" class="property">
+  <span class="name"><a href="foundation/StackFrame/source.html">source</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The original source of this stack frame.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="foundation/StackFrame/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-35012"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable">
+  <span class="name"><a href="foundation/StackFrame/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="fromStackString" class="callable">
+  <span class="name"><a href="foundation/StackFrame/fromStackString.html">fromStackString</a></span><span class="signature">(<wbr/><span class="parameter" id="fromStackString-param-stack"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">stack</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="foundation/StackFrame-class.html">StackFrame</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Parses a list of <code>StackFrame</code>s from the <a href="dart-core/StackTrace/toString.html">StackTrace.toString</a> method.
+  
+
+</dd>
+
+        <dt id="fromStackTrace" class="callable">
+  <span class="name"><a href="foundation/StackFrame/fromStackTrace.html">fromStackTrace</a></span><span class="signature">(<wbr/><span class="parameter" id="fromStackTrace-param-stack"><span class="type-annotation"><a href="dart-core/StackTrace-class.html">StackTrace</a></span> <span class="parameter-name">stack</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="foundation/StackFrame-class.html">StackFrame</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Parses a list of <code>StackFrame</code>s from a <a href="dart-core/StackTrace-class.html">StackTrace</a> object.
+  
+
+</dd>
+
+        <dt id="fromStackTraceLine" class="callable">
+  <span class="name"><a href="foundation/StackFrame/fromStackTraceLine.html">fromStackTraceLine</a></span><span class="signature">(<wbr/><span class="parameter" id="fromStackTraceLine-param-line"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">line</span></span>)
+    <span class="returntype parameter">&rarr; <a href="foundation/StackFrame-class.html">StackFrame</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Parses a single <a href="foundation/StackFrame-class.html">StackFrame</a> from a single line of a <a href="dart-core/StackTrace-class.html">StackTrace</a>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="asynchronousSuspension" class="constant">
+    <span class="name "><a href="foundation/StackFrame/asynchronousSuspension-constant.html">asynchronousSuspension</a></span>
+  <span class="signature">&rarr; const <a href="foundation/StackFrame-class.html">StackFrame</a></span>
+  
+
+</dt>
+<dd>
+  A stack frame representing an asynchronous suspension.
+  
+
+    <div>
+      <span class="signature"><code><a href="foundation/StackFrame/StackFrame.html">StackFrame</a>(number: -1, column: -1, line: -1, method: &#39;asynchronous suspension&#39;, packageScheme: &#39;&#39;, package: &#39;&#39;, packagePath: &#39;&#39;, source: &#39;&lt;asynchronous suspensio&hellip;</code></span>
+    </div>
+</dd>
+
+        <dt id="stackOverFlowElision" class="constant">
+    <span class="name "><a href="foundation/StackFrame/stackOverFlowElision-constant.html">stackOverFlowElision</a></span>
+  <span class="signature">&rarr; const <a href="foundation/StackFrame-class.html">StackFrame</a></span>
+  
+
+</dt>
+<dd>
+  A stack frame representing a Dart elided stack overflow frame.
+  
+
+    <div>
+      <span class="signature"><code><a href="foundation/StackFrame/StackFrame.html">StackFrame</a>(number: -1, column: -1, line: -1, method: &#39;...&#39;, packageScheme: &#39;&#39;, package: &#39;&#39;, packagePath: &#39;&#39;, source: &#39;...&#39;)</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="foundation/foundation-library.html">foundation</a></li>
+  <li class="self-crumb">StackFrame class</li>
+</ol>
+
+
+    <h5>foundation library</h5>
+    <ol>
+      <li class="section-title"><a href="foundation/foundation-library.html#classes">Classes</a></li>
+        <li><a href="foundation/AbstractNode-class.html">AbstractNode</a></li>
+        <li><a href="foundation/BindingBase-class.html">BindingBase</a></li>
+        <li><a href="foundation/BitField-class.html">BitField</a></li>
+        <li><a href="dart-typed_data/ByteData-class.html">ByteData</a></li>
+        <li><a href="foundation/CachingIterable-class.html">CachingIterable</a></li>
+        <li><a href="foundation/Category-class.html">Category</a></li>
+        <li><a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a></li>
+        <li><a href="foundation/DebugReassembleConfig-class.html">DebugReassembleConfig</a></li>
+        <li><a href="foundation/DiagnosticableNode-class.html">DiagnosticableNode</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="foundation/DiagnosticableTreeNode-class.html">DiagnosticableTreeNode</a></li>
+        <li><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></li>
+        <li><a href="foundation/DiagnosticsBlock-class.html">DiagnosticsBlock</a></li>
+        <li><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></li>
+        <li><a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a></li>
+        <li><a href="foundation/DiagnosticsSerializationDelegate-class.html">DiagnosticsSerializationDelegate</a></li>
+        <li><a href="foundation/DiagnosticsStackTrace-class.html">DiagnosticsStackTrace</a></li>
+        <li><a href="foundation/DocumentationIcon-class.html">DocumentationIcon</a></li>
+        <li><a href="foundation/DoubleProperty-class.html">DoubleProperty</a></li>
+        <li><a href="dart-typed_data/Endian-class.html">Endian</a></li>
+        <li><a href="foundation/EnumProperty-class.html">EnumProperty</a></li>
+        <li><a href="foundation/ErrorDescription-class.html">ErrorDescription</a></li>
+        <li><a href="foundation/ErrorHint-class.html">ErrorHint</a></li>
+        <li><a href="foundation/ErrorSpacer-class.html">ErrorSpacer</a></li>
+        <li><a href="foundation/ErrorSummary-class.html">ErrorSummary</a></li>
+        <li><a href="foundation/Factory-class.html">Factory</a></li>
+        <li><a href="foundation/FlagProperty-class.html">FlagProperty</a></li>
+        <li><a href="foundation/FlagsSummary-class.html">FlagsSummary</a></li>
+        <li><a href="dart-typed_data/Float32List-class.html">Float32List</a></li>
+        <li><a href="dart-typed_data/Float64List-class.html">Float64List</a></li>
+        <li><a href="foundation/FlutterErrorDetails-class.html">FlutterErrorDetails</a></li>
+        <li><a href="foundation/HashedObserverList-class.html">HashedObserverList</a></li>
+        <li><a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a></li>
+        <li><a href="dart-typed_data/Int32List-class.html">Int32List</a></li>
+        <li><a href="dart-typed_data/Int64List-class.html">Int64List</a></li>
+        <li><a href="foundation/IntProperty-class.html">IntProperty</a></li>
+        <li><a href="foundation/IterableProperty-class.html">IterableProperty</a></li>
+        <li><a href="foundation/Key-class.html">Key</a></li>
+        <li><a href="foundation/LicenseEntry-class.html">LicenseEntry</a></li>
+        <li><a href="foundation/LicenseEntryWithLineBreaks-class.html">LicenseEntryWithLineBreaks</a></li>
+        <li><a href="foundation/LicenseParagraph-class.html">LicenseParagraph</a></li>
+        <li><a href="foundation/LicenseRegistry-class.html">LicenseRegistry</a></li>
+        <li><a href="foundation/Listenable-class.html">Listenable</a></li>
+        <li><a href="foundation/LocalKey-class.html">LocalKey</a></li>
+        <li><a href="foundation/MemoryAllocations-class.html">MemoryAllocations</a></li>
+        <li><a href="foundation/MessageProperty-class.html">MessageProperty</a></li>
+        <li><a href="foundation/ObjectCreated-class.html">ObjectCreated</a></li>
+        <li><a href="foundation/ObjectDisposed-class.html">ObjectDisposed</a></li>
+        <li><a href="foundation/ObjectEvent-class.html">ObjectEvent</a></li>
+        <li><a href="foundation/ObjectFlagProperty-class.html">ObjectFlagProperty</a></li>
+        <li><a href="foundation/ObserverList-class.html">ObserverList</a></li>
+        <li><a href="foundation/PartialStackFrame-class.html">PartialStackFrame</a></li>
+        <li><a href="foundation/PercentProperty-class.html">PercentProperty</a></li>
+        <li><a href="foundation/PersistentHashMap-class.html">PersistentHashMap</a></li>
+        <li><a href="dart-ui/PlatformDispatcher-class.html">PlatformDispatcher</a></li>
+        <li><a href="foundation/ReadBuffer-class.html">ReadBuffer</a></li>
+        <li><a href="foundation/RepetitiveStackFrameFilter-class.html">RepetitiveStackFrameFilter</a></li>
+        <li><a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a></li>
+        <li><a href="foundation/StackFilter-class.html">StackFilter</a></li>
+        <li><a href="foundation/StackFrame-class.html">StackFrame</a></li>
+        <li><a href="foundation/StringProperty-class.html">StringProperty</a></li>
+        <li><a href="foundation/Summary-class.html">Summary</a></li>
+        <li><a href="foundation/SynchronousFuture-class.html">SynchronousFuture</a></li>
+        <li><a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></li>
+        <li><a href="foundation/TextTreeRenderer-class.html">TextTreeRenderer</a></li>
+        <li><a href="dart-typed_data/Uint8List-class.html">Uint8List</a></li>
+        <li><a href="foundation/Unicode-class.html">Unicode</a></li>
+        <li><a href="foundation/UniqueKey-class.html">UniqueKey</a></li>
+        <li><a href="foundation/ValueKey-class.html">ValueKey</a></li>
+        <li><a href="foundation/ValueListenable-class.html">ValueListenable</a></li>
+        <li><a href="foundation/ValueNotifier-class.html">ValueNotifier</a></li>
+        <li><a href="foundation/WriteBuffer-class.html">WriteBuffer</a></li>
+
+
+      <li class="section-title"><a href="foundation/foundation-library.html#mixins">Mixins</a></li>
+        <li><a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a></li>
+        <li><a href="foundation/DiagnosticableTreeMixin-mixin.html">DiagnosticableTreeMixin</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#constants">Constants</a></li>
+        <li><a href="foundation/compute-constant.html">compute</a></li>
+        <li><a href="meta/factory-constant.html">factory</a></li>
+        <li><a href="meta/immutable-constant.html">immutable</a></li>
+        <li><a href="foundation/isCanvasKit-constant.html">isCanvasKit</a></li>
+        <li><a href="foundation/kDebugMode-constant.html">kDebugMode</a></li>
+        <li><a href="foundation/kFlutterMemoryAllocationsEnabled-constant.html">kFlutterMemoryAllocationsEnabled</a></li>
+        <li><a href="foundation/kIsWeb-constant.html">kIsWeb</a></li>
+        <li><a href="foundation/kMaxUnsignedSMI-constant.html">kMaxUnsignedSMI</a></li>
+        <li><a href="foundation/kNoDefaultValue-constant.html">kNoDefaultValue</a></li>
+        <li><a href="foundation/kProfileMode-constant.html">kProfileMode</a></li>
+        <li><a href="foundation/kReleaseMode-constant.html">kReleaseMode</a></li>
+        <li><a href="meta/mustCallSuper-constant.html">mustCallSuper</a></li>
+        <li><a href="meta/nonVirtual-constant.html">nonVirtual</a></li>
+        <li><a href="meta/optionalTypeArgs-constant.html">optionalTypeArgs</a></li>
+        <li><a href="foundation/precisionErrorTolerance-constant.html">precisionErrorTolerance</a></li>
+        <li><a href="meta/protected-constant.html">protected</a></li>
+        <li><a href="meta/required-constant.html">required</a></li>
+        <li><a href="meta/visibleForTesting-constant.html">visibleForTesting</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#properties">Properties</a></li>
+        <li><a href="foundation/activeDevToolsServerAddress.html">activeDevToolsServerAddress</a></li>
+        <li><a href="foundation/connectedVmServiceUri.html">connectedVmServiceUri</a></li>
+        <li><a href="foundation/dashedTextConfiguration.html">dashedTextConfiguration</a></li>
+        <li><a href="foundation/debugBrightnessOverride.html">debugBrightnessOverride</a></li>
+        <li><a href="foundation/debugDefaultTargetPlatformOverride.html">debugDefaultTargetPlatformOverride</a></li>
+        <li><a href="foundation/debugDoublePrecision.html">debugDoublePrecision</a></li>
+        <li><a href="foundation/debugInstrumentationEnabled.html">debugInstrumentationEnabled</a></li>
+        <li><a href="foundation/debugPrint.html">debugPrint</a></li>
+        <li><a href="foundation/debugPrintDone.html">debugPrintDone</a></li>
+        <li><a href="foundation/defaultTargetPlatform.html">defaultTargetPlatform</a></li>
+        <li><a href="foundation/denseTextConfiguration.html">denseTextConfiguration</a></li>
+        <li><a href="foundation/errorPropertyTextConfiguration.html">errorPropertyTextConfiguration</a></li>
+        <li><a href="foundation/errorTextConfiguration.html">errorTextConfiguration</a></li>
+        <li><a href="foundation/flatTextConfiguration.html">flatTextConfiguration</a></li>
+        <li><a href="foundation/shallowTextConfiguration.html">shallowTextConfiguration</a></li>
+        <li><a href="foundation/singleLineTextConfiguration.html">singleLineTextConfiguration</a></li>
+        <li><a href="foundation/sparseTextConfiguration.html">sparseTextConfiguration</a></li>
+        <li><a href="foundation/transitionTextConfiguration.html">transitionTextConfiguration</a></li>
+        <li><a href="foundation/whitespaceTextConfiguration.html">whitespaceTextConfiguration</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#functions">Functions</a></li>
+        <li><a href="foundation/binarySearch.html">binarySearch</a></li>
+        <li><a href="foundation/clampDouble.html">clampDouble</a></li>
+        <li><a href="foundation/consolidateHttpClientResponseBytes.html">consolidateHttpClientResponseBytes</a></li>
+        <li><a href="foundation/debugAssertAllFoundationVarsUnset.html">debugAssertAllFoundationVarsUnset</a></li>
+        <li><a href="foundation/debugFormatDouble.html">debugFormatDouble</a></li>
+        <li><a href="foundation/debugInstrumentAction.html">debugInstrumentAction</a></li>
+        <li><a href="foundation/debugPrintStack.html">debugPrintStack</a></li>
+        <li><a href="foundation/debugPrintSynchronously.html">debugPrintSynchronously</a></li>
+        <li><a href="foundation/debugPrintThrottled.html">debugPrintThrottled</a></li>
+        <li><a href="foundation/debugWordWrap.html">debugWordWrap</a></li>
+        <li><a href="foundation/describeEnum.html">describeEnum</a></li>
+        <li><a href="foundation/describeIdentity.html">describeIdentity</a></li>
+        <li><a href="foundation/lerpDuration.html">lerpDuration</a></li>
+        <li><a href="foundation/listEquals.html">listEquals</a></li>
+        <li><a href="foundation/mapEquals.html">mapEquals</a></li>
+        <li><a href="foundation/mergeSort.html">mergeSort</a></li>
+        <li><a href="foundation/objectRuntimeType.html">objectRuntimeType</a></li>
+        <li><a href="foundation/setEquals.html">setEquals</a></li>
+        <li><a href="foundation/shortHash.html">shortHash</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#enums">Enums</a></li>
+        <li><a href="dart-ui/Brightness.html">Brightness</a></li>
+        <li><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></li>
+        <li><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a></li>
+        <li><a href="foundation/FoundationServiceExtensions.html">FoundationServiceExtensions</a></li>
+        <li><a href="foundation/TargetPlatform.html">TargetPlatform</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#typedefs">Typedefs</a></li>
+        <li><a href="foundation/AsyncCallback.html">AsyncCallback</a></li>
+        <li><a href="foundation/AsyncValueGetter.html">AsyncValueGetter</a></li>
+        <li><a href="foundation/AsyncValueSetter.html">AsyncValueSetter</a></li>
+        <li><a href="foundation/BytesReceivedCallback.html">BytesReceivedCallback</a></li>
+        <li><a href="foundation/ComputeCallback.html">ComputeCallback</a></li>
+        <li><a href="foundation/ComputeImpl.html">ComputeImpl</a></li>
+        <li><a href="foundation/ComputePropertyValueCallback.html">ComputePropertyValueCallback</a></li>
+        <li><a href="foundation/DebugPrintCallback.html">DebugPrintCallback</a></li>
+        <li><a href="foundation/DiagnosticPropertiesTransformer.html">DiagnosticPropertiesTransformer</a></li>
+        <li><a href="foundation/FlutterExceptionHandler.html">FlutterExceptionHandler</a></li>
+        <li><a href="foundation/InformationCollector.html">InformationCollector</a></li>
+        <li><a href="foundation/IterableFilter.html">IterableFilter</a></li>
+        <li><a href="foundation/LicenseEntryCollector.html">LicenseEntryCollector</a></li>
+        <li><a href="foundation/ObjectEventListener.html">ObjectEventListener</a></li>
+        <li><a href="foundation/ServiceExtensionCallback.html">ServiceExtensionCallback</a></li>
+        <li><a href="foundation/StackTraceDemangler.html">StackTraceDemangler</a></li>
+        <li><a href="foundation/ValueChanged.html">ValueChanged</a></li>
+        <li><a href="foundation/ValueGetter.html">ValueGetter</a></li>
+        <li><a href="foundation/ValueSetter.html">ValueSetter</a></li>
+        <li><a href="dart-ui/VoidCallback.html">VoidCallback</a></li>
+
+      <li class="section-title"><a href="foundation/foundation-library.html#exceptions">Exceptions</a></li>
+        <li><a href="foundation/FlutterError-class.html">FlutterError</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="foundation/StackFrame-class.html#constructors">Constructors</a></li>
+          <li><a href="foundation/StackFrame/StackFrame.html">StackFrame</a></li>
+
+
+        <li class="section-title">
+          <a href="foundation/StackFrame-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="foundation/StackFrame/className.html">className</a></li>
+          <li><a href="foundation/StackFrame/column.html">column</a></li>
+          <li><a href="foundation/StackFrame/hashCode.html">hashCode</a></li>
+          <li><a href="foundation/StackFrame/isConstructor.html">isConstructor</a></li>
+          <li><a href="foundation/StackFrame/line.html">line</a></li>
+          <li><a href="foundation/StackFrame/method.html">method</a></li>
+          <li><a href="foundation/StackFrame/number.html">number</a></li>
+          <li><a href="foundation/StackFrame/package.html">package</a></li>
+          <li><a href="foundation/StackFrame/packagePath.html">packagePath</a></li>
+          <li><a href="foundation/StackFrame/packageScheme.html">packageScheme</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="foundation/StackFrame/source.html">source</a></li>
+
+        <li class="section-title"><a href="foundation/StackFrame-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="foundation/StackFrame/toString.html">toString</a></li>
+
+        <li class="section-title"><a href="foundation/StackFrame-class.html#operators">Operators</a></li>
+          <li><a href="foundation/StackFrame/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="foundation/StackFrame-class.html#static-methods">Static methods</a></li>
+          <li><a href="foundation/StackFrame/fromStackString.html">fromStackString</a></li>
+          <li><a href="foundation/StackFrame/fromStackTrace.html">fromStackTrace</a></li>
+          <li><a href="foundation/StackFrame/fromStackTraceLine.html">fromStackTraceLine</a></li>
+
+        <li class="section-title"><a href="foundation/StackFrame-class.html#constants">Constants</a></li>
+          <li><a href="foundation/StackFrame/asynchronousSuspension-constant.html">asynchronousSuspension</a></li>
+          <li><a href="foundation/StackFrame/stackOverFlowElision-constant.html">stackOverFlowElision</a></li>
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

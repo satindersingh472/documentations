@@ -1,0 +1,913 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the EagerGestureRecognizer class from the gestures library, for the Dart programming language."/>
+  <title>EagerGestureRecognizer class - gestures library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="gestures/gestures-library.html">gestures</a></li>
+    <li class="self-crumb">EagerGestureRecognizer class</li>
+  </ol>
+  <div class="self-name">EagerGestureRecognizer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/gestures/eager.dart#L16"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-35281"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/EagerGestureRecognizer"></a><span class="kind-class">EagerGestureRecognizer</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A gesture recognizer that eagerly claims victory in all gesture arenas.</p>
+<p>This is typically passed in <a href="widgets/AndroidView/gestureRecognizers.html">AndroidView.gestureRecognizers</a> in order to immediately dispatch
+all touch events inside the view bounds to the embedded Android view.
+See <a href="widgets/AndroidView/gestureRecognizers.html">AndroidView.gestureRecognizers</a> for more details.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="gestures/GestureArenaMember-class.html">GestureArenaMember</a></li>
+        <li><a href="gestures/GestureRecognizer-class.html">GestureRecognizer</a></li>
+        <li><a href="gestures/OneSequenceGestureRecognizer-class.html">OneSequenceGestureRecognizer</a></li>
+      <li>EagerGestureRecognizer</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="EagerGestureRecognizer" class="callable">
+          <span class="name"><a href="gestures/EagerGestureRecognizer/EagerGestureRecognizer.html">EagerGestureRecognizer</a></span><span class="signature">(<span class="parameter" id="-param-kind">{<span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Migrate to supportedDevices. &#39; &#39;This feature was deprecated after v2.3.0-1.0.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/PointerDeviceKind.html">PointerDeviceKind</a>?</span> <span class="parameter-name">kind</span>, </span><span class="parameter" id="-param-supportedDevices"><span class="type-annotation"><a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-ui/PointerDeviceKind.html">PointerDeviceKind</a></span>&gt;</span>?</span> <span class="parameter-name">supportedDevices</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create an eager gesture recognizer.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="debugDescription" class="property">
+  <span class="name"><a href="gestures/EagerGestureRecognizer/debugDescription.html">debugDescription</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Returns a very short pretty description of the gesture that the
+recognizer looks for, like &#39;tap&#39; or &#39;horizontal drag&#39;.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugOwner" class="property inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/debugOwner.html">debugOwner</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Object-class.html">Object</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The recognizer&#39;s owner.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="gestureSettings" class="property inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/gestureSettings.html">gestureSettings</a></span>
+  <span class="signature">&harr; <a href="gestures/DeviceGestureSettings-class.html">DeviceGestureSettings</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Optional device specific configuration for device gestures that will
+take precedence over framework defaults.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="team" class="property inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/team.html">team</a></span>
+  <span class="signature">&harr; <a href="gestures/GestureArenaTeam-class.html">GestureArenaTeam</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The team that this recognizer belongs to, if any.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="acceptGesture" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/acceptGesture.html">acceptGesture</a></span><span class="signature">(<wbr/><span class="parameter" id="acceptGesture-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Called when this member wins the arena for the given pointer id.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addAllowedPointer" class="callable">
+  <span class="name"><a href="gestures/EagerGestureRecognizer/addAllowedPointer.html">addAllowedPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="addAllowedPointer-param-event"><span class="type-annotation"><a href="gestures/PointerDownEvent-class.html">PointerDownEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Registers a new pointer that&#39;s been checked to be allowed by this gesture
+recognizer.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="addAllowedPointerPanZoom" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/addAllowedPointerPanZoom.html">addAllowedPointerPanZoom</a></span><span class="signature">(<wbr/><span class="parameter" id="addAllowedPointerPanZoom-param-event"><span class="type-annotation"><a href="gestures/PointerPanZoomStartEvent-class.html">PointerPanZoomStartEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Registers a new pointer pan/zoom that&#39;s been checked to be allowed by this
+gesture recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addPointer" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/addPointer.html">addPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="addPointer-param-event"><span class="type-annotation"><a href="gestures/PointerDownEvent-class.html">PointerDownEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Registers a new pointer that might be relevant to this gesture
+detector.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addPointerPanZoom" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/addPointerPanZoom.html">addPointerPanZoom</a></span><span class="signature">(<wbr/><span class="parameter" id="addPointerPanZoom-param-event"><span class="type-annotation"><a href="gestures/PointerPanZoomStartEvent-class.html">PointerPanZoomStartEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Registers a new pointer pan/zoom that might be relevant to this gesture
+detector.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node&#39;s
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr/><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="didStopTrackingLastPointer" class="callable">
+  <span class="name"><a href="gestures/EagerGestureRecognizer/didStopTrackingLastPointer.html">didStopTrackingLastPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="didStopTrackingLastPointer-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called when the number of pointers this recognizer is tracking changes from one to zero.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="dispose" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/dispose.html">dispose</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Releases any resources used by the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getKindForPointer" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/getKindForPointer.html">getKindForPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="getKindForPointer-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-ui/PointerDeviceKind.html">PointerDeviceKind</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  For a given pointer ID, returns the device kind associated with it.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="handleEvent" class="callable">
+  <span class="name"><a href="gestures/EagerGestureRecognizer/handleEvent.html">handleEvent</a></span><span class="signature">(<wbr/><span class="parameter" id="handleEvent-param-event"><span class="type-annotation"><a href="gestures/PointerEvent-class.html">PointerEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called when a pointer event is routed to this recognizer.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="handleNonAllowedPointer" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/handleNonAllowedPointer.html">handleNonAllowedPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="handleNonAllowedPointer-param-event"><span class="type-annotation"><a href="gestures/PointerDownEvent-class.html">PointerDownEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Handles a pointer being added that&#39;s not allowed by this recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="handleNonAllowedPointerPanZoom" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/handleNonAllowedPointerPanZoom.html">handleNonAllowedPointerPanZoom</a></span><span class="signature">(<wbr/><span class="parameter" id="handleNonAllowedPointerPanZoom-param-event"><span class="type-annotation"><a href="gestures/PointerPanZoomStartEvent-class.html">PointerPanZoomStartEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Handles a pointer pan/zoom being added that&#39;s not allowed by this recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="invokeCallback" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/invokeCallback.html">invokeCallback</a></span><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr/><span class="parameter" id="invokeCallback-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="invokeCallback-param-callback"><span class="type-annotation"><a href="gestures/RecognizerCallback.html">RecognizerCallback</a><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="invokeCallback-param-debugReport">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">debugReport</span>()?}</span>)
+    <span class="returntype parameter">&rarr; T?</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoke a callback provided by the application, catching and logging any
+exceptions.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isPointerAllowed" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/isPointerAllowed.html">isPointerAllowed</a></span><span class="signature">(<wbr/><span class="parameter" id="isPointerAllowed-param-event"><span class="type-annotation"><a href="gestures/PointerDownEvent-class.html">PointerDownEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Checks whether or not a pointer is allowed to be tracked by this recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isPointerPanZoomAllowed" class="callable inherited">
+  <span class="name"><a href="gestures/GestureRecognizer/isPointerPanZoomAllowed.html">isPointerPanZoomAllowed</a></span><span class="signature">(<wbr/><span class="parameter" id="isPointerPanZoomAllowed-param-event"><span class="type-annotation"><a href="gestures/PointerPanZoomStartEvent-class.html">PointerPanZoomStartEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Checks whether or not a pointer pan/zoom is allowed to be tracked by this recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="rejectGesture" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/rejectGesture.html">rejectGesture</a></span><span class="signature">(<wbr/><span class="parameter" id="rejectGesture-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Called when this member loses the arena for the given pointer id.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="resolve" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/resolve.html">resolve</a></span><span class="signature">(<wbr/><span class="parameter" id="resolve-param-disposition"><span class="type-annotation"><a href="gestures/GestureDisposition.html">GestureDisposition</a></span> <span class="parameter-name">disposition</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Resolves this recognizer&#39;s participation in each gesture arena with the
+given disposition.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="resolvePointer" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/resolvePointer.html">resolvePointer</a></span><span class="signature">(<wbr/><span class="parameter" id="resolvePointer-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span>, </span><span class="parameter" id="resolvePointer-param-disposition"><span class="type-annotation"><a href="gestures/GestureDisposition.html">GestureDisposition</a></span> <span class="parameter-name">disposition</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Resolves this recognizer&#39;s participation in the given gesture arena with
+the given disposition.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="startTrackingPointer" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/startTrackingPointer.html">startTrackingPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="startTrackingPointer-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span>, </span><span class="parameter" id="startTrackingPointer-param-transform">[<span class="type-annotation"><a href="vector_math_64/Matrix4-class.html">Matrix4</a>?</span> <span class="parameter-name">transform</span>]</span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Causes events related to the given pointer ID to be routed to this recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stopTrackingIfPointerNoLongerDown" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/stopTrackingIfPointerNoLongerDown.html">stopTrackingIfPointerNoLongerDown</a></span><span class="signature">(<wbr/><span class="parameter" id="stopTrackingIfPointerNoLongerDown-param-event"><span class="type-annotation"><a href="gestures/PointerEvent-class.html">PointerEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Stops tracking the pointer associated with the given event if the event is
+a <a href="gestures/PointerUpEvent-class.html">PointerUpEvent</a> or a <a href="gestures/PointerCancelEvent-class.html">PointerCancelEvent</a> event.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stopTrackingPointer" class="callable inherited">
+  <span class="name"><a href="gestures/OneSequenceGestureRecognizer/stopTrackingPointer.html">stopTrackingPointer</a></span><span class="signature">(<wbr/><span class="parameter" id="stopTrackingPointer-param-pointer"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">pointer</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Stops events related to the given pointer ID from being routed to this recognizer.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr/><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&rarr; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toString.html">toString</a></span><span class="signature">(<wbr/><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr/><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr/><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A brief description of this object, usually just the <a href="dart-core/Object/runtimeType.html">runtimeType</a> and the
+<a href="dart-core/Object/hashCode.html">hashCode</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-35280"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="gestures/gestures-library.html">gestures</a></li>
+  <li class="self-crumb">EagerGestureRecognizer class</li>
+</ol>
+
+
+    <h5>gestures library</h5>
+    <ol>
+      <li class="section-title"><a href="gestures/gestures-library.html#classes">Classes</a></li>
+        <li><a href="gestures/BaseTapGestureRecognizer-class.html">BaseTapGestureRecognizer</a></li>
+        <li><a href="gestures/DelayedMultiDragGestureRecognizer-class.html">DelayedMultiDragGestureRecognizer</a></li>
+        <li><a href="gestures/DeviceGestureSettings-class.html">DeviceGestureSettings</a></li>
+        <li><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></li>
+        <li><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></li>
+        <li><a href="gestures/DoubleTapGestureRecognizer-class.html">DoubleTapGestureRecognizer</a></li>
+        <li><a href="gestures/Drag-class.html">Drag</a></li>
+        <li><a href="gestures/DragDownDetails-class.html">DragDownDetails</a></li>
+        <li><a href="gestures/DragEndDetails-class.html">DragEndDetails</a></li>
+        <li><a href="gestures/DragGestureRecognizer-class.html">DragGestureRecognizer</a></li>
+        <li><a href="gestures/DragStartDetails-class.html">DragStartDetails</a></li>
+        <li><a href="gestures/DragUpdateDetails-class.html">DragUpdateDetails</a></li>
+        <li><a href="gestures/EagerGestureRecognizer-class.html">EagerGestureRecognizer</a></li>
+        <li><a href="gestures/FlutterErrorDetailsForPointerEventDispatcher-class.html">FlutterErrorDetailsForPointerEventDispatcher</a></li>
+        <li><a href="dart-ui/FlutterView-class.html">FlutterView</a></li>
+        <li><a href="gestures/ForcePressDetails-class.html">ForcePressDetails</a></li>
+        <li><a href="gestures/ForcePressGestureRecognizer-class.html">ForcePressGestureRecognizer</a></li>
+        <li><a href="gestures/GestureArenaEntry-class.html">GestureArenaEntry</a></li>
+        <li><a href="gestures/GestureArenaManager-class.html">GestureArenaManager</a></li>
+        <li><a href="gestures/GestureArenaMember-class.html">GestureArenaMember</a></li>
+        <li><a href="gestures/GestureArenaTeam-class.html">GestureArenaTeam</a></li>
+        <li><a href="gestures/GestureRecognizer-class.html">GestureRecognizer</a></li>
+        <li><a href="gestures/HitTestable-class.html">HitTestable</a></li>
+        <li><a href="gestures/HitTestDispatcher-class.html">HitTestDispatcher</a></li>
+        <li><a href="gestures/HitTestEntry-class.html">HitTestEntry</a></li>
+        <li><a href="gestures/HitTestResult-class.html">HitTestResult</a></li>
+        <li><a href="gestures/HitTestTarget-class.html">HitTestTarget</a></li>
+        <li><a href="gestures/HorizontalDragGestureRecognizer-class.html">HorizontalDragGestureRecognizer</a></li>
+        <li><a href="gestures/HorizontalMultiDragGestureRecognizer-class.html">HorizontalMultiDragGestureRecognizer</a></li>
+        <li><a href="gestures/ImmediateMultiDragGestureRecognizer-class.html">ImmediateMultiDragGestureRecognizer</a></li>
+        <li><a href="gestures/IOSScrollViewFlingVelocityTracker-class.html">IOSScrollViewFlingVelocityTracker</a></li>
+        <li><a href="gestures/LeastSquaresSolver-class.html">LeastSquaresSolver</a></li>
+        <li><a href="gestures/LongPressDownDetails-class.html">LongPressDownDetails</a></li>
+        <li><a href="gestures/LongPressEndDetails-class.html">LongPressEndDetails</a></li>
+        <li><a href="gestures/LongPressGestureRecognizer-class.html">LongPressGestureRecognizer</a></li>
+        <li><a href="gestures/LongPressMoveUpdateDetails-class.html">LongPressMoveUpdateDetails</a></li>
+        <li><a href="gestures/LongPressStartDetails-class.html">LongPressStartDetails</a></li>
+        <li><a href="gestures/MacOSScrollViewFlingVelocityTracker-class.html">MacOSScrollViewFlingVelocityTracker</a></li>
+        <li><a href="vector_math_64/Matrix4-class.html">Matrix4</a></li>
+        <li><a href="gestures/MultiDragGestureRecognizer-class.html">MultiDragGestureRecognizer</a></li>
+        <li><a href="gestures/MultiDragPointerState-class.html">MultiDragPointerState</a></li>
+        <li><a href="gestures/MultiTapGestureRecognizer-class.html">MultiTapGestureRecognizer</a></li>
+        <li><a href="dart-ui/Offset-class.html">Offset</a></li>
+        <li><a href="gestures/OffsetPair-class.html">OffsetPair</a></li>
+        <li><a href="gestures/OneSequenceGestureRecognizer-class.html">OneSequenceGestureRecognizer</a></li>
+        <li><a href="gestures/PanGestureRecognizer-class.html">PanGestureRecognizer</a></li>
+        <li><a href="gestures/PointerAddedEvent-class.html">PointerAddedEvent</a></li>
+        <li><a href="gestures/PointerCancelEvent-class.html">PointerCancelEvent</a></li>
+        <li><a href="dart-ui/PointerData-class.html">PointerData</a></li>
+        <li><a href="gestures/PointerDownEvent-class.html">PointerDownEvent</a></li>
+        <li><a href="gestures/PointerEnterEvent-class.html">PointerEnterEvent</a></li>
+        <li><a href="gestures/PointerEvent-class.html">PointerEvent</a></li>
+        <li><a href="gestures/PointerEventConverter-class.html">PointerEventConverter</a></li>
+        <li><a href="gestures/PointerEventResampler-class.html">PointerEventResampler</a></li>
+        <li><a href="gestures/PointerExitEvent-class.html">PointerExitEvent</a></li>
+        <li><a href="gestures/PointerHoverEvent-class.html">PointerHoverEvent</a></li>
+        <li><a href="gestures/PointerMoveEvent-class.html">PointerMoveEvent</a></li>
+        <li><a href="gestures/PointerPanZoomEndEvent-class.html">PointerPanZoomEndEvent</a></li>
+        <li><a href="gestures/PointerPanZoomStartEvent-class.html">PointerPanZoomStartEvent</a></li>
+        <li><a href="gestures/PointerPanZoomUpdateEvent-class.html">PointerPanZoomUpdateEvent</a></li>
+        <li><a href="gestures/PointerRemovedEvent-class.html">PointerRemovedEvent</a></li>
+        <li><a href="gestures/PointerRouter-class.html">PointerRouter</a></li>
+        <li><a href="gestures/PointerScaleEvent-class.html">PointerScaleEvent</a></li>
+        <li><a href="gestures/PointerScrollEvent-class.html">PointerScrollEvent</a></li>
+        <li><a href="gestures/PointerScrollInertiaCancelEvent-class.html">PointerScrollInertiaCancelEvent</a></li>
+        <li><a href="gestures/PointerSignalEvent-class.html">PointerSignalEvent</a></li>
+        <li><a href="gestures/PointerSignalResolver-class.html">PointerSignalResolver</a></li>
+        <li><a href="gestures/PointerUpEvent-class.html">PointerUpEvent</a></li>
+        <li><a href="gestures/PolynomialFit-class.html">PolynomialFit</a></li>
+        <li><a href="gestures/PrimaryPointerGestureRecognizer-class.html">PrimaryPointerGestureRecognizer</a></li>
+        <li><a href="gestures/SamplingClock-class.html">SamplingClock</a></li>
+        <li><a href="gestures/ScaleEndDetails-class.html">ScaleEndDetails</a></li>
+        <li><a href="gestures/ScaleGestureRecognizer-class.html">ScaleGestureRecognizer</a></li>
+        <li><a href="gestures/ScaleStartDetails-class.html">ScaleStartDetails</a></li>
+        <li><a href="gestures/ScaleUpdateDetails-class.html">ScaleUpdateDetails</a></li>
+        <li><a href="gestures/SerialTapCancelDetails-class.html">SerialTapCancelDetails</a></li>
+        <li><a href="gestures/SerialTapDownDetails-class.html">SerialTapDownDetails</a></li>
+        <li><a href="gestures/SerialTapGestureRecognizer-class.html">SerialTapGestureRecognizer</a></li>
+        <li><a href="gestures/SerialTapUpDetails-class.html">SerialTapUpDetails</a></li>
+        <li><a href="gestures/TapDownDetails-class.html">TapDownDetails</a></li>
+        <li><a href="gestures/TapGestureRecognizer-class.html">TapGestureRecognizer</a></li>
+        <li><a href="gestures/TapUpDetails-class.html">TapUpDetails</a></li>
+        <li><a href="gestures/Velocity-class.html">Velocity</a></li>
+        <li><a href="gestures/VelocityEstimate-class.html">VelocityEstimate</a></li>
+        <li><a href="gestures/VelocityTracker-class.html">VelocityTracker</a></li>
+        <li><a href="gestures/VerticalDragGestureRecognizer-class.html">VerticalDragGestureRecognizer</a></li>
+        <li><a href="gestures/VerticalMultiDragGestureRecognizer-class.html">VerticalMultiDragGestureRecognizer</a></li>
+
+
+      <li class="section-title"><a href="gestures/gestures-library.html#mixins">Mixins</a></li>
+        <li><a href="gestures/GestureBinding-mixin.html">GestureBinding</a></li>
+
+      <li class="section-title"><a href="gestures/gestures-library.html#constants">Constants</a></li>
+        <li><a href="gestures/kBackMouseButton-constant.html">kBackMouseButton</a></li>
+        <li><a href="gestures/kDoubleTapMinTime-constant.html">kDoubleTapMinTime</a></li>
+        <li><a href="gestures/kDoubleTapSlop-constant.html">kDoubleTapSlop</a></li>
+        <li><a href="gestures/kDoubleTapTimeout-constant.html">kDoubleTapTimeout</a></li>
+        <li><a href="gestures/kDoubleTapTouchSlop-constant.html">kDoubleTapTouchSlop</a></li>
+        <li><a href="gestures/kForwardMouseButton-constant.html">kForwardMouseButton</a></li>
+        <li><a href="gestures/kHoverTapSlop-constant.html">kHoverTapSlop</a></li>
+        <li><a href="gestures/kHoverTapTimeout-constant.html">kHoverTapTimeout</a></li>
+        <li><a href="gestures/kJumpTapTimeout-constant.html">kJumpTapTimeout</a></li>
+        <li><a href="gestures/kLongPressTimeout-constant.html">kLongPressTimeout</a></li>
+        <li><a href="gestures/kMaxFlingVelocity-constant.html">kMaxFlingVelocity</a></li>
+        <li><a href="gestures/kMiddleMouseButton-constant.html">kMiddleMouseButton</a></li>
+        <li><a href="gestures/kMinFlingVelocity-constant.html">kMinFlingVelocity</a></li>
+        <li><a href="gestures/kPagingTouchSlop-constant.html">kPagingTouchSlop</a></li>
+        <li><a href="gestures/kPanSlop-constant.html">kPanSlop</a></li>
+        <li><a href="gestures/kPrecisePointerHitSlop-constant.html">kPrecisePointerHitSlop</a></li>
+        <li><a href="gestures/kPrecisePointerPanSlop-constant.html">kPrecisePointerPanSlop</a></li>
+        <li><a href="gestures/kPrecisePointerScaleSlop-constant.html">kPrecisePointerScaleSlop</a></li>
+        <li><a href="gestures/kPressTimeout-constant.html">kPressTimeout</a></li>
+        <li><a href="gestures/kPrimaryButton-constant.html">kPrimaryButton</a></li>
+        <li><a href="gestures/kPrimaryMouseButton-constant.html">kPrimaryMouseButton</a></li>
+        <li><a href="gestures/kPrimaryStylusButton-constant.html">kPrimaryStylusButton</a></li>
+        <li><a href="gestures/kScaleSlop-constant.html">kScaleSlop</a></li>
+        <li><a href="gestures/kSecondaryButton-constant.html">kSecondaryButton</a></li>
+        <li><a href="gestures/kSecondaryMouseButton-constant.html">kSecondaryMouseButton</a></li>
+        <li><a href="gestures/kSecondaryStylusButton-constant.html">kSecondaryStylusButton</a></li>
+        <li><a href="gestures/kStylusContact-constant.html">kStylusContact</a></li>
+        <li><a href="gestures/kTertiaryButton-constant.html">kTertiaryButton</a></li>
+        <li><a href="gestures/kTouchContact-constant.html">kTouchContact</a></li>
+        <li><a href="gestures/kTouchSlop-constant.html">kTouchSlop</a></li>
+        <li><a href="gestures/kWindowTouchSlop-constant.html">kWindowTouchSlop</a></li>
+        <li><a href="gestures/kZoomControlsTimeout-constant.html">kZoomControlsTimeout</a></li>
+
+      <li class="section-title"><a href="gestures/gestures-library.html#properties">Properties</a></li>
+        <li><a href="gestures/debugPrintGestureArenaDiagnostics.html">debugPrintGestureArenaDiagnostics</a></li>
+        <li><a href="gestures/debugPrintHitTestResults.html">debugPrintHitTestResults</a></li>
+        <li><a href="gestures/debugPrintMouseHoverEvents.html">debugPrintMouseHoverEvents</a></li>
+        <li><a href="gestures/debugPrintRecognizerCallbacksTrace.html">debugPrintRecognizerCallbacksTrace</a></li>
+        <li><a href="gestures/debugPrintResamplingMargin.html">debugPrintResamplingMargin</a></li>
+
+      <li class="section-title"><a href="gestures/gestures-library.html#functions">Functions</a></li>
+        <li><a href="gestures/computeHitSlop.html">computeHitSlop</a></li>
+        <li><a href="gestures/computePanSlop.html">computePanSlop</a></li>
+        <li><a href="gestures/computeScaleSlop.html">computeScaleSlop</a></li>
+        <li><a href="gestures/debugAssertAllGesturesVarsUnset.html">debugAssertAllGesturesVarsUnset</a></li>
+        <li><a href="gestures/isSingleButton.html">isSingleButton</a></li>
+        <li><a href="gestures/nthMouseButton.html">nthMouseButton</a></li>
+        <li><a href="gestures/nthStylusButton.html">nthStylusButton</a></li>
+        <li><a href="gestures/smallestButton.html">smallestButton</a></li>
+
+      <li class="section-title"><a href="gestures/gestures-library.html#enums">Enums</a></li>
+        <li><a href="gestures/DragStartBehavior.html">DragStartBehavior</a></li>
+        <li><a href="gestures/GestureDisposition.html">GestureDisposition</a></li>
+        <li><a href="gestures/GestureRecognizerState.html">GestureRecognizerState</a></li>
+        <li><a href="dart-ui/PointerDeviceKind.html">PointerDeviceKind</a></li>
+
+      <li class="section-title"><a href="gestures/gestures-library.html#typedefs">Typedefs</a></li>
+        <li><a href="gestures/GestureDoubleTapCallback.html">GestureDoubleTapCallback</a></li>
+        <li><a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a></li>
+        <li><a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a></li>
+        <li><a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a></li>
+        <li><a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a></li>
+        <li><a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a></li>
+        <li><a href="gestures/GestureForceInterpolation.html">GestureForceInterpolation</a></li>
+        <li><a href="gestures/GestureForcePressEndCallback.html">GestureForcePressEndCallback</a></li>
+        <li><a href="gestures/GestureForcePressPeakCallback.html">GestureForcePressPeakCallback</a></li>
+        <li><a href="gestures/GestureForcePressStartCallback.html">GestureForcePressStartCallback</a></li>
+        <li><a href="gestures/GestureForcePressUpdateCallback.html">GestureForcePressUpdateCallback</a></li>
+        <li><a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a></li>
+        <li><a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a></li>
+        <li><a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a></li>
+        <li><a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a></li>
+        <li><a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a></li>
+        <li><a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a></li>
+        <li><a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a></li>
+        <li><a href="gestures/GestureMultiDragStartCallback.html">GestureMultiDragStartCallback</a></li>
+        <li><a href="gestures/GestureMultiTapCallback.html">GestureMultiTapCallback</a></li>
+        <li><a href="gestures/GestureMultiTapCancelCallback.html">GestureMultiTapCancelCallback</a></li>
+        <li><a href="gestures/GestureMultiTapDownCallback.html">GestureMultiTapDownCallback</a></li>
+        <li><a href="gestures/GestureMultiTapUpCallback.html">GestureMultiTapUpCallback</a></li>
+        <li><a href="gestures/GestureScaleEndCallback.html">GestureScaleEndCallback</a></li>
+        <li><a href="gestures/GestureScaleStartCallback.html">GestureScaleStartCallback</a></li>
+        <li><a href="gestures/GestureScaleUpdateCallback.html">GestureScaleUpdateCallback</a></li>
+        <li><a href="gestures/GestureSerialTapCancelCallback.html">GestureSerialTapCancelCallback</a></li>
+        <li><a href="gestures/GestureSerialTapDownCallback.html">GestureSerialTapDownCallback</a></li>
+        <li><a href="gestures/GestureSerialTapUpCallback.html">GestureSerialTapUpCallback</a></li>
+        <li><a href="gestures/GestureTapCallback.html">GestureTapCallback</a></li>
+        <li><a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a></li>
+        <li><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a></li>
+        <li><a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a></li>
+        <li><a href="gestures/GestureVelocityTrackerBuilder.html">GestureVelocityTrackerBuilder</a></li>
+        <li><a href="gestures/HandleEventCallback.html">HandleEventCallback</a></li>
+        <li><a href="foundation/InformationCollector.html">InformationCollector</a></li>
+        <li><a href="gestures/PointerRoute.html">PointerRoute</a></li>
+        <li><a href="gestures/PointerSignalResolvedCallback.html">PointerSignalResolvedCallback</a></li>
+        <li><a href="gestures/RecognizerCallback.html">RecognizerCallback</a></li>
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="gestures/EagerGestureRecognizer-class.html#constructors">Constructors</a></li>
+          <li><a href="gestures/EagerGestureRecognizer/EagerGestureRecognizer.html">EagerGestureRecognizer</a></li>
+
+
+        <li class="section-title">
+          <a href="gestures/EagerGestureRecognizer-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="gestures/EagerGestureRecognizer/debugDescription.html">debugDescription</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/debugOwner.html">debugOwner</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/gestureSettings.html">gestureSettings</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/team.html">team</a></li>
+
+        <li class="section-title"><a href="gestures/EagerGestureRecognizer-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/acceptGesture.html">acceptGesture</a></li>
+          <li><a href="gestures/EagerGestureRecognizer/addAllowedPointer.html">addAllowedPointer</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/addAllowedPointerPanZoom.html">addAllowedPointerPanZoom</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/addPointer.html">addPointer</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/addPointerPanZoom.html">addPointerPanZoom</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/debugFillProperties.html">debugFillProperties</a></li>
+          <li><a href="gestures/EagerGestureRecognizer/didStopTrackingLastPointer.html">didStopTrackingLastPointer</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/dispose.html">dispose</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/getKindForPointer.html">getKindForPointer</a></li>
+          <li><a href="gestures/EagerGestureRecognizer/handleEvent.html">handleEvent</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/handleNonAllowedPointer.html">handleNonAllowedPointer</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/handleNonAllowedPointerPanZoom.html">handleNonAllowedPointerPanZoom</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/invokeCallback.html">invokeCallback</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/isPointerAllowed.html">isPointerAllowed</a></li>
+          <li class="inherited"><a href="gestures/GestureRecognizer/isPointerPanZoomAllowed.html">isPointerPanZoomAllowed</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/rejectGesture.html">rejectGesture</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/resolve.html">resolve</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/resolvePointer.html">resolvePointer</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/startTrackingPointer.html">startTrackingPointer</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/stopTrackingIfPointerNoLongerDown.html">stopTrackingIfPointerNoLongerDown</a></li>
+          <li class="inherited"><a href="gestures/OneSequenceGestureRecognizer/stopTrackingPointer.html">stopTrackingPointer</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="gestures/EagerGestureRecognizer-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

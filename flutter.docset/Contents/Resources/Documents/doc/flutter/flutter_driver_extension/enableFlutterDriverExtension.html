@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the enableFlutterDriverExtension function from the flutter_driver_extension library, for the Dart programming language."/>
+  <title>enableFlutterDriverExtension function - flutter_driver_extension library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_driver_extension/flutter_driver_extension-library.html">flutter_driver_extension</a></li>
+    <li class="self-crumb">enableFlutterDriverExtension function</li>
+  </ol>
+  <div class="self-name">enableFlutterDriverExtension</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter_driver/lib/src/extension/extension.dart#L221"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-16861"></a><a class="dashAnchor" name="//apple_ref/cpp/Function/enableFlutterDriverExtension"></a><span class="kind-function">enableFlutterDriverExtension</span> function 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype">void</span>
+<span class="name ">enableFlutterDriverExtension</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="enableFlutterDriverExtension-param-handler">{<span class="type-annotation"><a href="flutter_driver_extension/DataHandler.html">DataHandler</a>?</span> <span class="parameter-name">handler</span>, </span></li>
+<li><span class="parameter" id="enableFlutterDriverExtension-param-silenceErrors"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">silenceErrors</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="enableFlutterDriverExtension-param-enableTextEntryEmulation"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableTextEntryEmulation</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="enableFlutterDriverExtension-param-finders"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="flutter_driver_extension/FinderExtension-class.html">FinderExtension</a></span>&gt;</span>?</span> <span class="parameter-name">finders</span>, </span></li>
+<li><span class="parameter" id="enableFlutterDriverExtension-param-commands"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="flutter_driver_extension/CommandExtension-class.html">CommandExtension</a></span>&gt;</span>?</span> <span class="parameter-name">commands</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Enables Flutter Driver VM service extension.</p>
+<p>This extension is required for tests that use <code>package:flutter_driver</code> to
+drive applications from a separate process. In order to allow the driver
+to interact with the application, this method changes the behavior of the
+framework in several ways - including keyboard interaction and text
+editing. Applications intended for release should never include this
+method.</p>
+<p>Call this function prior to running your application, e.g. before you call
+<code>runApp</code>.</p>
+<p>Optionally you can pass a <a href="flutter_driver_extension/DataHandler.html">DataHandler</a> callback. It will be called if the
+test calls <a href="flutter_driver/FlutterDriver/requestData.html">FlutterDriver.requestData</a>.</p>
+<p><code>silenceErrors</code> will prevent exceptions from being logged. This is useful
+for tests where exceptions are expected. Defaults to false. Any errors
+will still be returned in the <code>response</code> field of the result JSON along
+with an <code>isError</code> boolean.</p>
+<p>The <code>enableTextEntryEmulation</code> parameter controls whether the application interacts
+with the system&#39;s text entry methods or a mocked out version used by Flutter Driver.
+If it is set to false, <a href="flutter_driver/FlutterDriver/enterText.html">FlutterDriver.enterText</a> will fail,
+but testing the application with real keyboard input is possible.
+This value may be updated during a test by calling <a href="flutter_driver/FlutterDriver/setTextEntryEmulation.html">FlutterDriver.setTextEntryEmulation</a>.</p>
+<p>The <code>finders</code> and <code>commands</code> parameters are optional and used to add custom
+finders or commands, as in the following example.</p>
+<pre class="language-dart"><code class="language-dart">void main() {
+  enableFlutterDriverExtension(
+    finders: &lt;FinderExtension&gt;[ SomeFinderExtension() ],
+    commands: &lt;CommandExtension&gt;[ SomeCommandExtension() ],
+  );
+
+  app.main();
+}
+</code></pre>
+<pre class="language-dart"><code class="language-dart">driver.sendCommand(SomeCommand(ByValueKey(&#39;Button&#39;), 7));
+</code></pre>
+<p>Note: SomeFinder and SomeFinderExtension must be placed in different files
+to avoid <code>dart:ui</code> import issue. Imports relative to <code>dart:ui</code> can&#39;t be
+accessed from host runner, where flutter runtime is not accessible.</p>
+<pre class="language-dart"><code class="language-dart">class SomeFinder extends SerializableFinder {
+  const SomeFinder(this.title);
+
+  final String title;
+
+  @override
+  String get finderType =&gt; &#39;SomeFinder&#39;;
+
+  @override
+  Map&lt;String, String&gt; serialize() =&gt; super.serialize()..addAll(&lt;String, String&gt;{
+    &#39;title&#39;: title,
+  });
+}
+</code></pre>
+<pre class="language-dart"><code class="language-dart">class SomeFinderExtension extends FinderExtension {
+
+ String get finderType =&gt; &#39;SomeFinder&#39;;
+
+ SerializableFinder deserialize(Map&lt;String, String&gt; params, DeserializeFinderFactory finderFactory) {
+   return SomeFinder(json[&#39;title&#39;]);
+ }
+
+ Finder createFinder(SerializableFinder finder, CreateFinderFactory finderFactory) {
+   Some someFinder = finder as SomeFinder;
+
+   return find.byElementPredicate((Element element) {
+     final Widget widget = element.widget;
+     if (element.widget is SomeWidget) {
+       return element.widget.title == someFinder.title;
+     }
+     return false;
+   });
+ }
+}
+</code></pre>
+<p>Note: SomeCommand, SomeResult and SomeCommandExtension must be placed in
+different files to avoid <code>dart:ui</code> import issue. Imports relative to <code>dart:ui</code>
+can&#39;t be accessed from host runner, where flutter runtime is not accessible.</p>
+<pre class="language-dart"><code class="language-dart">class SomeCommand extends CommandWithTarget {
+  SomeCommand(SerializableFinder finder, this.times, {Duration? timeout})
+      : super(finder, timeout: timeout);
+
+  SomeCommand.deserialize(Map&lt;String, String&gt; json, DeserializeFinderFactory finderFactory)
+      : times = int.parse(json[&#39;times&#39;]!),
+        super.deserialize(json, finderFactory);
+
+  @override
+  Map&lt;String, String&gt; serialize() {
+    return super.serialize()..addAll(&lt;String, String&gt;{&#39;times&#39;: &#39;$times&#39;});
+  }
+
+  @override
+  String get kind =&gt; &#39;SomeCommand&#39;;
+
+  final int times;
+}
+</code></pre>
+<pre class="language-dart"><code class="language-dart">class SomeCommandResult extends Result {
+  const SomeCommandResult(this.resultParam);
+
+  final String resultParam;
+
+  @override
+  Map&lt;String, dynamic&gt; toJson() {
+    return &lt;String, dynamic&gt;{
+      &#39;resultParam&#39;: resultParam,
+    };
+  }
+}
+</code></pre>
+<pre class="language-dart"><code class="language-dart">class SomeCommandExtension extends CommandExtension {
+  @override
+  String get commandKind =&gt; &#39;SomeCommand&#39;;
+
+  @override
+  Future&lt;Result&gt; call(Command command, WidgetController prober, CreateFinderFactory finderFactory, CommandHandlerFactory handlerFactory) async {
+    final SomeCommand someCommand = command as SomeCommand;
+
+    // Deserialize [Finder]:
+    final Finder finder = finderFactory.createFinder(stubCommand.finder);
+
+    // Wait for [Element]:
+    handlerFactory.waitForElement(finder);
+
+    // Alternatively, wait for [Element] absence:
+    handlerFactory.waitForAbsentElement(finder);
+
+    // Submit known [Command]s:
+    for (int index = 0; i &lt; someCommand.times; index++) {
+      await handlerFactory.handleCommand(Tap(someCommand.finder), prober, finderFactory);
+    }
+
+    // Alternatively, use [WidgetController]:
+    for (int index = 0; i &lt; stubCommand.times; index++) {
+      await prober.tap(finder);
+    }
+
+    return const SomeCommandResult(&#39;foo bar&#39;);
+  }
+
+  @override
+  Command deserialize(Map&lt;String, String&gt; params, DeserializeFinderFactory finderFactory, DeserializeCommandFactory commandFactory) {
+    return SomeCommand.deserialize(params, finderFactory);
+  }
+}
+</code></pre>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void enableFlutterDriverExtension({ DataHandler? handler, bool silenceErrors = false, bool enableTextEntryEmulation = true, List&lt;FinderExtension&gt;? finders, List&lt;CommandExtension&gt;? commands}) {
+  _DriverBinding(handler, silenceErrors, enableTextEntryEmulation, finders ?? &lt;FinderExtension&gt;[], commands ?? &lt;CommandExtension&gt;[]);
+  assert(WidgetsBinding.instance is _DriverBinding);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="flutter_driver_extension/flutter_driver_extension-library.html">flutter_driver_extension</a></li>
+  <li class="self-crumb">enableFlutterDriverExtension function</li>
+</ol>
+
+
+    <h5>flutter_driver_extension library</h5>
+    <ol>
+      <li class="section-title"><a href="flutter_driver_extension/flutter_driver_extension-library.html#classes">Classes</a></li>
+        <li><a href="flutter_driver_extension/CommandExtension-class.html">CommandExtension</a></li>
+        <li><a href="flutter_driver_extension/FinderExtension-class.html">FinderExtension</a></li>
+        <li><a href="flutter_driver_extension/FlutterDriverExtension-class.html">FlutterDriverExtension</a></li>
+
+
+      <li class="section-title"><a href="flutter_driver_extension/flutter_driver_extension-library.html#mixins">Mixins</a></li>
+        <li><a href="flutter_driver_extension/CommandHandlerFactory-mixin.html">CommandHandlerFactory</a></li>
+        <li><a href="flutter_driver_extension/CreateFinderFactory-mixin.html">CreateFinderFactory</a></li>
+        <li><a href="flutter_driver_extension/DeserializeCommandFactory-mixin.html">DeserializeCommandFactory</a></li>
+        <li><a href="flutter_driver_extension/DeserializeFinderFactory-mixin.html">DeserializeFinderFactory</a></li>
+
+
+
+      <li class="section-title"><a href="flutter_driver_extension/flutter_driver_extension-library.html#functions">Functions</a></li>
+        <li><a href="flutter_driver_extension/enableFlutterDriverExtension.html">enableFlutterDriverExtension</a></li>
+
+
+      <li class="section-title"><a href="flutter_driver_extension/flutter_driver_extension-library.html#typedefs">Typedefs</a></li>
+        <li><a href="flutter_driver_extension/CommandDeserializerCallback.html">CommandDeserializerCallback</a></li>
+        <li><a href="flutter_driver_extension/CommandHandlerCallback.html">CommandHandlerCallback</a></li>
+        <li><a href="flutter_driver_extension/DataHandler.html">DataHandler</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

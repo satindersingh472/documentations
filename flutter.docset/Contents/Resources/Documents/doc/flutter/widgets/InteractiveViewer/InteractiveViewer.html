@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the InteractiveViewer constructor from Class InteractiveViewer from the widgets library, for the Dart programming language."/>
+  <title>InteractiveViewer constructor - InteractiveViewer - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/InteractiveViewer-class.html">InteractiveViewer</a></li>
+    <li class="self-crumb">InteractiveViewer constructor</li>
+  </ol>
+  <div class="self-name">InteractiveViewer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/interactive_viewer.dart#L67"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-69987"></a><a class="dashAnchor" name="//apple_ref/cpp/Constructor/InteractiveViewer"></a><span class="kind-constructor">InteractiveViewer</span> constructor 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">InteractiveViewer</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
+<li><span class="parameter" id="-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a></span> <span class="parameter-name">clipBehavior</span> = <span class="default-value">Clip.hardEdge</span>, </span></li>
+<li><span class="parameter" id="-param-alignPanAxis"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use panAxis instead. &#39; &#39;This feature was deprecated after v3.3.0-0.5.pre.&#39;)</span> <span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">alignPanAxis</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="-param-panAxis"><span class="type-annotation"><a href="widgets/PanAxis.html">PanAxis</a></span> <span class="parameter-name">panAxis</span> = <span class="default-value">PanAxis.free</span>, </span></li>
+<li><span class="parameter" id="-param-boundaryMargin"><span class="type-annotation"><a href="painting/EdgeInsets-class.html">EdgeInsets</a></span> <span class="parameter-name">boundaryMargin</span> = <span class="default-value">EdgeInsets.zero</span>, </span></li>
+<li><span class="parameter" id="-param-constrained"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">constrained</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="-param-maxScale"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">maxScale</span> = <span class="default-value">2.5</span>, </span></li>
+<li><span class="parameter" id="-param-minScale"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">minScale</span> = <span class="default-value">0.8</span>, </span></li>
+<li><span class="parameter" id="-param-interactionEndFrictionCoefficient"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">interactionEndFrictionCoefficient</span> = <span class="default-value">_kDrag</span>, </span></li>
+<li><span class="parameter" id="-param-onInteractionEnd"><span class="type-annotation"><a href="gestures/GestureScaleEndCallback.html">GestureScaleEndCallback</a>?</span> <span class="parameter-name">onInteractionEnd</span>, </span></li>
+<li><span class="parameter" id="-param-onInteractionStart"><span class="type-annotation"><a href="gestures/GestureScaleStartCallback.html">GestureScaleStartCallback</a>?</span> <span class="parameter-name">onInteractionStart</span>, </span></li>
+<li><span class="parameter" id="-param-onInteractionUpdate"><span class="type-annotation"><a href="gestures/GestureScaleUpdateCallback.html">GestureScaleUpdateCallback</a>?</span> <span class="parameter-name">onInteractionUpdate</span>, </span></li>
+<li><span class="parameter" id="-param-panEnabled"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">panEnabled</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="-param-scaleEnabled"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">scaleEnabled</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="-param-scaleFactor"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">scaleFactor</span> = <span class="default-value">200.0</span>, </span></li>
+<li><span class="parameter" id="-param-transformationController"><span class="type-annotation"><a href="widgets/TransformationController-class.html">TransformationController</a>?</span> <span class="parameter-name">transformationController</span>, </span></li>
+<li><span class="parameter" id="-param-alignment"><span class="type-annotation"><a href="painting/Alignment-class.html">Alignment</a>?</span> <span class="parameter-name">alignment</span>, </span></li>
+<li><span class="parameter" id="-param-child"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">child</span>}</span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Create an InteractiveViewer.</p>
+<p>The <a href="widgets/InteractiveViewer/child.html">child</a> parameter must not be null.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">InteractiveViewer({
+  super.key,
+  this.clipBehavior = Clip.hardEdge,
+  @Deprecated(
+    &#39;Use panAxis instead. &#39;
+    &#39;This feature was deprecated after v3.3.0-0.5.pre.&#39;,
+  )
+  this.alignPanAxis = false,
+  this.panAxis = PanAxis.free,
+  this.boundaryMargin = EdgeInsets.zero,
+  this.constrained = true,
+  // These default scale values were eyeballed as reasonable limits for common
+  // use cases.
+  this.maxScale = 2.5,
+  this.minScale = 0.8,
+  this.interactionEndFrictionCoefficient = _kDrag,
+  this.onInteractionEnd,
+  this.onInteractionStart,
+  this.onInteractionUpdate,
+  this.panEnabled = true,
+  this.scaleEnabled = true,
+  this.scaleFactor = 200.0,
+  this.transformationController,
+  this.alignment,
+  required Widget this.child,
+}) : assert(alignPanAxis != null),
+     assert(panAxis != null),
+     assert(child != null),
+     assert(constrained != null),
+     assert(minScale != null),
+     assert(minScale &gt; 0),
+     assert(interactionEndFrictionCoefficient &gt; 0),
+     assert(minScale.isFinite),
+     assert(maxScale != null),
+     assert(maxScale &gt; 0),
+     assert(!maxScale.isNaN),
+     assert(maxScale &gt;= minScale),
+     assert(panEnabled != null),
+     assert(scaleEnabled != null),
+     // boundaryMargin must be either fully infinite or fully finite, but not
+     // a mix of both.
+     assert(
+       (boundaryMargin.horizontal.isInfinite
+         &amp;&amp; boundaryMargin.vertical.isInfinite) || (boundaryMargin.top.isFinite
+         &amp;&amp; boundaryMargin.right.isFinite &amp;&amp; boundaryMargin.bottom.isFinite
+         &amp;&amp; boundaryMargin.left.isFinite),
+     ),
+     builder = null;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="widgets/widgets-library.html">widgets</a></li>
+  <li><a href="widgets/InteractiveViewer-class.html">InteractiveViewer</a></li>
+  <li class="self-crumb">InteractiveViewer constructor</li>
+</ol>
+
+
+    <h5>InteractiveViewer class</h5>
+    <ol>
+
+        <li class="section-title"><a href="widgets/InteractiveViewer-class.html#constructors">Constructors</a></li>
+          <li><a href="widgets/InteractiveViewer/InteractiveViewer.html">InteractiveViewer</a></li>
+          <li><a href="widgets/InteractiveViewer/InteractiveViewer.builder.html">builder</a></li>
+
+
+        <li class="section-title">
+          <a href="widgets/InteractiveViewer-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="widgets/InteractiveViewer/alignment.html">alignment</a></li>
+          <li><a class="deprecated" href="widgets/InteractiveViewer/alignPanAxis.html">alignPanAxis</a></li>
+          <li><a href="widgets/InteractiveViewer/boundaryMargin.html">boundaryMargin</a></li>
+          <li><a href="widgets/InteractiveViewer/builder.html">builder</a></li>
+          <li><a href="widgets/InteractiveViewer/child.html">child</a></li>
+          <li><a href="widgets/InteractiveViewer/clipBehavior.html">clipBehavior</a></li>
+          <li><a href="widgets/InteractiveViewer/constrained.html">constrained</a></li>
+          <li class="inherited"><a href="widgets/Widget/hashCode.html">hashCode</a></li>
+          <li><a href="widgets/InteractiveViewer/interactionEndFrictionCoefficient.html">interactionEndFrictionCoefficient</a></li>
+          <li class="inherited"><a href="widgets/Widget/key.html">key</a></li>
+          <li><a href="widgets/InteractiveViewer/maxScale.html">maxScale</a></li>
+          <li><a href="widgets/InteractiveViewer/minScale.html">minScale</a></li>
+          <li><a href="widgets/InteractiveViewer/onInteractionEnd.html">onInteractionEnd</a></li>
+          <li><a href="widgets/InteractiveViewer/onInteractionStart.html">onInteractionStart</a></li>
+          <li><a href="widgets/InteractiveViewer/onInteractionUpdate.html">onInteractionUpdate</a></li>
+          <li><a href="widgets/InteractiveViewer/panAxis.html">panAxis</a></li>
+          <li><a href="widgets/InteractiveViewer/panEnabled.html">panEnabled</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="widgets/InteractiveViewer/scaleEnabled.html">scaleEnabled</a></li>
+          <li><a href="widgets/InteractiveViewer/scaleFactor.html">scaleFactor</a></li>
+          <li><a href="widgets/InteractiveViewer/transformationController.html">transformationController</a></li>
+
+        <li class="section-title"><a href="widgets/InteractiveViewer-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="widgets/StatefulWidget/createElement.html">createElement</a></li>
+          <li><a href="widgets/InteractiveViewer/createState.html">createState</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="widgets/Widget/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="widgets/InteractiveViewer-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="widgets/Widget/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="widgets/InteractiveViewer-class.html#static-methods">Static methods</a></li>
+          <li><a href="widgets/InteractiveViewer/getAxisAlignedBoundingBox.html">getAxisAlignedBoundingBox</a></li>
+          <li><a href="widgets/InteractiveViewer/getNearestPointInside.html">getNearestPointInside</a></li>
+          <li><a href="widgets/InteractiveViewer/getNearestPointOnLine.html">getNearestPointOnLine</a></li>
+          <li><a href="widgets/InteractiveViewer/pointIsInside.html">pointIsInside</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

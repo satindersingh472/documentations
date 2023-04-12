@@ -1,0 +1,597 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterEngineGroup Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/FlutterEngineGroup" class="dashAnchor"></a>
+    <a title="FlutterEngineGroup Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterEngineGroup Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterEngineGroup</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">FlutterEngineGroup</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">FlutterEngineGroup</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a collection of FlutterEngines who share resources which allows
+ them to be created with less time const and occupy less memory than just
+ creating multiple FlutterEngines.</p>
+
+<p>Deleting a FlutterEngineGroup doesn&rsquo;t invalidate existing FlutterEngines, but
+ it eliminates the possibility to create more FlutterEngines in that group.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This class is a work-in-progress and may change.
+
+</div><div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://github.com/flutter/flutter/issues/72009">https://github.com/flutter/flutter/issues/72009</a>
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngineGroup(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)FlutterEngineGroup(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngineGroup(im)initWithName:project:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithName:project:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngineGroup(im)initWithName:project:">-initWithName:<wbr/>project:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a new FlutterEngineGroup.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span>
+                             <span class="nf">project</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">project</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">project</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name that will present in the threads shared across the
+engines in this group.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>project</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> that all FlutterEngines in this group
+will be executing.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngineGroup(im)makeEngineWithEntrypoint:libraryURI:"></a>
+                    <a name="//apple_ref/objc/Method/-makeEngineWithEntrypoint:libraryURI:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngineGroup(im)makeEngineWithEntrypoint:libraryURI:">-makeEngineWithEntrypoint:<wbr/>libraryURI:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a running <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> that shares components with this group.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>FlutterEngineGroup</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">makeEngineWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span>
+                  <span class="nf">libraryURI</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">libraryURI</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makeEngine</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">libraryURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from a Dart library.  If this is
+FlutterDefaultDartEntrypoint (or nil); this will default to <code>main()</code>.  If it is not the app&rsquo;s
+main() function, that function must be decorated with <code>@pragma(vm:entry-point)</code> to ensure the
+method is not tree-shaken by the Dart compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>libraryURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URI of the Dart library which contains the entrypoint method.  IF nil,
+this will default to the same library as the <code>main()</code> function in the Dart program.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngineGroup(im)makeEngineWithEntrypoint:libraryURI:initialRoute:"></a>
+                    <a name="//apple_ref/objc/Method/-makeEngineWithEntrypoint:libraryURI:initialRoute:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngineGroup(im)makeEngineWithEntrypoint:libraryURI:initialRoute:">-makeEngineWithEntrypoint:<wbr/>libraryURI:<wbr/>initialRoute:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a running <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> that shares components with this group.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>FlutterEngineGroup</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">makeEngineWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span>
+                  <span class="nf">libraryURI</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">libraryURI</span>
+                <span class="nf">initialRoute</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialRoute</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makeEngine</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">libraryURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">initialRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from a Dart library.  If this is
+FlutterDefaultDartEntrypoint (or nil); this will default to <code>main()</code>.  If it is not the app&rsquo;s
+main() function, that function must be decorated with <code>@pragma(vm:entry-point)</code> to ensure the
+method is not tree-shaken by the Dart compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>libraryURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URI of the Dart library which contains the entrypoint method.  IF nil,
+this will default to the same library as the <code>main()</code> function in the Dart program.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initialRoute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the initial Flutter <code>Navigator</code> <code>Route</code> to load. If this is
+FlutterDefaultInitialRoute (or nil), it will default to the &ldquo;/&rdquo; route.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngineGroup(im)makeEngineWithOptions:"></a>
+                    <a name="//apple_ref/objc/Method/-makeEngineWithOptions:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngineGroup(im)makeEngineWithOptions:">-makeEngineWithOptions:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a running <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> that shares components with this group.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>FlutterEngineGroupOptions</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">makeEngineWithOptions</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makeEngine</span><span class="p">(</span><span class="n">with</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Options that control how a FlutterEngine should be created.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

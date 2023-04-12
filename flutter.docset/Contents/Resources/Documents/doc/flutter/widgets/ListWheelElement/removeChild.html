@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the removeChild method from the ListWheelElement class, for the Dart programming language."/>
+  <title>removeChild method - ListWheelElement class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/ListWheelElement-class.html">ListWheelElement</a></li>
+    <li class="self-crumb">removeChild method</li>
+  </ol>
+  <div class="self-name">removeChild</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart#L881"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-70171"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/removeChild"></a><span class="kind-method">removeChild</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">removeChild</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="removeChild-param-child"><span class="type-annotation"><a href="rendering/RenderBox-class.html">RenderBox</a></span> <span class="parameter-name">child</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Removes the child element corresponding with the given RenderBox.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+void removeChild(RenderBox child) {
+  final int index = renderObject.indexOf(child);
+  owner!.buildScope(this, () {
+    assert(_childElements.containsKey(index));
+    final Element? result = updateChild(_childElements[index], null, index);
+    assert(result == null);
+    _childElements.remove(index);
+    assert(!_childElements.containsKey(index));
+  });
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="widgets/widgets-library.html">widgets</a></li>
+  <li><a href="widgets/ListWheelElement-class.html">ListWheelElement</a></li>
+  <li class="self-crumb">removeChild method</li>
+</ol>
+
+
+    <h5>ListWheelElement class</h5>
+    <ol>
+
+        <li class="section-title"><a href="widgets/ListWheelElement-class.html#constructors">Constructors</a></li>
+          <li><a href="widgets/ListWheelElement/ListWheelElement.html">ListWheelElement</a></li>
+
+
+        <li class="section-title">
+          <a href="widgets/ListWheelElement-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="widgets/ListWheelElement/childCount.html">childCount</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/debugDoingBuild.html">debugDoingBuild</a></li>
+          <li class="inherited"><a href="widgets/Element/debugIsActive.html">debugIsActive</a></li>
+          <li class="inherited"><a href="widgets/Element/debugIsDefunct.html">debugIsDefunct</a></li>
+          <li class="inherited"><a href="widgets/Element/depth.html">depth</a></li>
+          <li class="inherited"><a href="widgets/Element/dirty.html">dirty</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="widgets/Element/mounted.html">mounted</a></li>
+          <li class="inherited"><a href="widgets/Element/owner.html">owner</a></li>
+          <li><a href="widgets/ListWheelElement/renderObject.html">renderObject</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="widgets/Element/size.html">size</a></li>
+          <li class="inherited"><a href="widgets/Element/slot.html">slot</a></li>
+          <li class="inherited"><a href="widgets/Element/widget.html">widget</a></li>
+
+        <li class="section-title"><a href="widgets/ListWheelElement-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="widgets/Element/activate.html">activate</a></li>
+          <li class="inherited"><a href="widgets/Element/attachNotificationTree.html">attachNotificationTree</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/attachRenderObject.html">attachRenderObject</a></li>
+          <li><a href="widgets/ListWheelElement/childExistsAt.html">childExistsAt</a></li>
+          <li><a href="widgets/ListWheelElement/createChild.html">createChild</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/deactivate.html">deactivate</a></li>
+          <li class="inherited"><a href="widgets/Element/deactivateChild.html">deactivateChild</a></li>
+          <li class="inherited"><a href="widgets/Element/debugDeactivated.html">debugDeactivated</a></li>
+          <li class="inherited"><a href="widgets/Element/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="widgets/Element/debugGetCreatorChain.html">debugGetCreatorChain</a></li>
+          <li class="inherited"><a href="widgets/Element/debugGetDiagnosticChain.html">debugGetDiagnosticChain</a></li>
+          <li class="inherited"><a href="widgets/Element/debugVisitOnstageChildren.html">debugVisitOnstageChildren</a></li>
+          <li class="inherited"><a href="widgets/Element/dependOnInheritedElement.html">dependOnInheritedElement</a></li>
+          <li class="inherited"><a href="widgets/Element/dependOnInheritedWidgetOfExactType.html">dependOnInheritedWidgetOfExactType</a></li>
+          <li class="inherited"><a href="widgets/Element/describeElement.html">describeElement</a></li>
+          <li class="inherited"><a href="widgets/Element/describeMissingAncestor.html">describeMissingAncestor</a></li>
+          <li class="inherited"><a href="widgets/Element/describeOwnershipChain.html">describeOwnershipChain</a></li>
+          <li class="inherited"><a href="widgets/Element/describeWidget.html">describeWidget</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/detachRenderObject.html">detachRenderObject</a></li>
+          <li class="inherited"><a href="widgets/Element/didChangeDependencies.html">didChangeDependencies</a></li>
+          <li class="inherited"><a href="widgets/Element/dispatchNotification.html">dispatchNotification</a></li>
+          <li class="inherited"><a href="widgets/Element/doesDependOnInheritedElement.html">doesDependOnInheritedElement</a></li>
+          <li class="inherited"><a href="widgets/Element/findAncestorRenderObjectOfType.html">findAncestorRenderObjectOfType</a></li>
+          <li class="inherited"><a href="widgets/Element/findAncestorStateOfType.html">findAncestorStateOfType</a></li>
+          <li class="inherited"><a href="widgets/Element/findAncestorWidgetOfExactType.html">findAncestorWidgetOfExactType</a></li>
+          <li class="inherited"><a href="widgets/Element/findRenderObject.html">findRenderObject</a></li>
+          <li class="inherited"><a href="widgets/Element/findRootAncestorStateOfType.html">findRootAncestorStateOfType</a></li>
+          <li><a href="widgets/ListWheelElement/forgetChild.html">forgetChild</a></li>
+          <li class="inherited"><a href="widgets/Element/getElementForInheritedWidgetOfExactType.html">getElementForInheritedWidgetOfExactType</a></li>
+          <li class="inherited"><a href="widgets/Element/inflateWidget.html">inflateWidget</a></li>
+          <li><a href="widgets/ListWheelElement/insertRenderObjectChild.html">insertRenderObjectChild</a></li>
+          <li class="inherited"><a href="widgets/Element/markNeedsBuild.html">markNeedsBuild</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/mount.html">mount</a></li>
+          <li><a href="widgets/ListWheelElement/moveRenderObjectChild.html">moveRenderObjectChild</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="widgets/ListWheelElement/performRebuild.html">performRebuild</a></li>
+          <li class="inherited"><a href="widgets/Element/reassemble.html">reassemble</a></li>
+          <li class="inherited"><a href="widgets/Element/rebuild.html">rebuild</a></li>
+          <li><a href="widgets/ListWheelElement/removeChild.html">removeChild</a></li>
+          <li><a href="widgets/ListWheelElement/removeRenderObjectChild.html">removeRenderObjectChild</a></li>
+          <li><a href="widgets/ListWheelElement/retrieveWidget.html">retrieveWidget</a></li>
+          <li class="inherited"><a href="widgets/Element/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="widgets/Element/toStringShort.html">toStringShort</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/unmount.html">unmount</a></li>
+          <li><a href="widgets/ListWheelElement/update.html">update</a></li>
+          <li><a href="widgets/ListWheelElement/updateChild.html">updateChild</a></li>
+          <li class="inherited"><a href="widgets/RenderObjectElement/updateChildren.html">updateChildren</a></li>
+          <li class="inherited"><a href="widgets/Element/updateSlotForChild.html">updateSlotForChild</a></li>
+          <li class="inherited"><a href="widgets/Element/visitAncestorElements.html">visitAncestorElements</a></li>
+          <li class="inherited"><a href="widgets/Element/visitChildElements.html">visitChildElements</a></li>
+          <li><a href="widgets/ListWheelElement/visitChildren.html">visitChildren</a></li>
+
+        <li class="section-title inherited"><a href="widgets/ListWheelElement-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="widgets/Element/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

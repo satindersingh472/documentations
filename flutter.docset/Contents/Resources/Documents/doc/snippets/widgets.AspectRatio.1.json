@@ -1,0 +1,13 @@
+{
+    "id": "widgets.AspectRatio.1",
+    "element": "AspectRatio",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 3335,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "This examples shows how AspectRatio sets width when its parent's width\nconstraint is infinite. Since its parent's allowed height is a fixed value,\nthe actual width is determined via the given AspectRatio.\n\nSince the height is fixed at 100.0 in this example and the aspect ratio is\nset to 16 / 9, the width should then be 100.0 / 9 * 16.",
+    "file": "widgets.AspectRatio.1.dart"
+}

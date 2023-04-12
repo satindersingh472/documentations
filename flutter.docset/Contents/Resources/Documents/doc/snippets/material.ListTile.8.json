@@ -1,0 +1,13 @@
+{
+    "id": "material.ListTile.8",
+    "element": "ListTile",
+    "sourcePath": "lib/src/material/list_tile.dart",
+    "sourceLine": 262,
+    "channel": "stable",
+    "serial": "8",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "Here is an example of an article list item with multiline titles and\nsubtitles. It utilizes [Row]s and [Column]s, as well as [Expanded] and\n[AspectRatio] widgets to organize its layout.\n\n![Custom list item b](https://flutter.github.io/assets-for-api-docs/assets/widgets/custom_list_item_b.png)",
+    "file": "material.ListTile.8.dart"
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the sendKeyUpEvent method from the WidgetController class, for the Dart programming language."/>
+  <title>sendKeyUpEvent method - WidgetController class - flutter_test library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+    <li><a href="flutter_test/WidgetController-class.html">WidgetController</a></li>
+    <li class="self-crumb">sendKeyUpEvent method</li>
+  </ol>
+  <div class="self-name">sendKeyUpEvent</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter_test/lib/src/controller.dart#L1411"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-34340"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/sendKeyUpEvent"></a><span class="kind-method">sendKeyUpEvent</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+<span class="name ">sendKeyUpEvent</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="sendKeyUpEvent-param-key"><span class="type-annotation"><a href="services/LogicalKeyboardKey-class.html">LogicalKeyboardKey</a></span> <span class="parameter-name">key</span>, </span></li>
+<li><span class="parameter" id="sendKeyUpEvent-param-platform">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">platform</span> = <span class="default-value">_defaultPlatform</span>, </span></li>
+<li><span class="parameter" id="sendKeyUpEvent-param-physicalKey"><span class="type-annotation"><a href="services/PhysicalKeyboardKey-class.html">PhysicalKeyboardKey</a>?</span> <span class="parameter-name">physicalKey</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Simulates sending a physical key up event through the system channel.</p>
+<p>This only simulates key up events coming from a physical keyboard,
+not from a soft keyboard.</p>
+<p>Specify <code>platform</code> as one of the platforms allowed in
+<a href="package-platform_platform/Platform/operatingSystem.html">platform.Platform.operatingSystem</a> to make the event appear to be from
+that type of system. Defaults to &#34;web&#34; on web, and &#34;android&#34; everywhere
+else. May not be null.</p>
+<p>Specify the <code>physicalKey</code> for the event to override what is included in
+the simulated event. If not specified, it uses a default from the US
+keyboard layout for the corresponding logical <code>key</code>.</p>
+<p>Whether the event is sent through <a href="services/RawKeyEvent-class.html">RawKeyEvent</a> or <a href="services/KeyEvent-class.html">KeyEvent</a> is
+controlled by <a href="services/debugKeyEventSimulatorTransitModeOverride.html">debugKeyEventSimulatorTransitModeOverride</a>.</p>
+<p>Returns true if the key event was handled by the framework.</p>
+<p>See also:</p>
+<ul>
+<li><a href="flutter_test/WidgetController/sendKeyDownEvent.html">sendKeyDownEvent</a> and <a href="flutter_test/WidgetController/sendKeyRepeatEvent.html">sendKeyRepeatEvent</a> to simulate the
+corresponding key down and repeat event.</li>
+<li><a href="flutter_test/WidgetController/sendKeyEvent.html">sendKeyEvent</a> to simulate both the key up and key down in the same call.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;bool&gt; sendKeyUpEvent(
+    LogicalKeyboardKey key, {
+      String platform = _defaultPlatform,
+      PhysicalKeyboardKey? physicalKey
+    }) async {
+  assert(platform != null);
+  // Internally wrapped in async guard.
+  return simulateKeyUpEvent(key, platform: platform, physicalKey: physicalKey);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+  <li><a href="flutter_test/WidgetController-class.html">WidgetController</a></li>
+  <li class="self-crumb">sendKeyUpEvent method</li>
+</ol>
+
+
+    <h5>WidgetController class</h5>
+    <ol>
+
+        <li class="section-title"><a href="flutter_test/WidgetController-class.html#constructors">Constructors</a></li>
+          <li><a href="flutter_test/WidgetController/WidgetController.html">WidgetController</a></li>
+
+
+        <li class="section-title">
+          <a href="flutter_test/WidgetController-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="flutter_test/WidgetController/allElements.html">allElements</a></li>
+          <li><a href="flutter_test/WidgetController/allRenderObjects.html">allRenderObjects</a></li>
+          <li><a href="flutter_test/WidgetController/allStates.html">allStates</a></li>
+          <li><a href="flutter_test/WidgetController/allWidgets.html">allWidgets</a></li>
+          <li><a href="flutter_test/WidgetController/binding.html">binding</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="flutter_test/WidgetController/layers.html">layers</a></li>
+          <li><a href="flutter_test/WidgetController/nextPointer.html">nextPointer</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="flutter_test/WidgetController/semantics.html">semantics</a></li>
+
+        <li class="section-title"><a href="flutter_test/WidgetController-class.html#instance-methods">Methods</a></li>
+          <li><a href="flutter_test/WidgetController/any.html">any</a></li>
+          <li><a href="flutter_test/WidgetController/createGesture.html">createGesture</a></li>
+          <li><a href="flutter_test/WidgetController/drag.html">drag</a></li>
+          <li><a href="flutter_test/WidgetController/dragFrom.html">dragFrom</a></li>
+          <li><a href="flutter_test/WidgetController/dragUntilVisible.html">dragUntilVisible</a></li>
+          <li><a href="flutter_test/WidgetController/element.html">element</a></li>
+          <li><a href="flutter_test/WidgetController/elementList.html">elementList</a></li>
+          <li><a href="flutter_test/WidgetController/ensureSemantics.html">ensureSemantics</a></li>
+          <li><a href="flutter_test/WidgetController/ensureVisible.html">ensureVisible</a></li>
+          <li><a href="flutter_test/WidgetController/firstElement.html">firstElement</a></li>
+          <li><a href="flutter_test/WidgetController/firstRenderObject.html">firstRenderObject</a></li>
+          <li><a href="flutter_test/WidgetController/firstState.html">firstState</a></li>
+          <li><a href="flutter_test/WidgetController/firstWidget.html">firstWidget</a></li>
+          <li><a href="flutter_test/WidgetController/fling.html">fling</a></li>
+          <li><a href="flutter_test/WidgetController/flingFrom.html">flingFrom</a></li>
+          <li><a href="flutter_test/WidgetController/getBottomLeft.html">getBottomLeft</a></li>
+          <li><a href="flutter_test/WidgetController/getBottomRight.html">getBottomRight</a></li>
+          <li><a href="flutter_test/WidgetController/getCenter.html">getCenter</a></li>
+          <li><a href="flutter_test/WidgetController/getRect.html">getRect</a></li>
+          <li><a href="flutter_test/WidgetController/getSemantics.html">getSemantics</a></li>
+          <li><a href="flutter_test/WidgetController/getSize.html">getSize</a></li>
+          <li><a href="flutter_test/WidgetController/getTopLeft.html">getTopLeft</a></li>
+          <li><a href="flutter_test/WidgetController/getTopRight.html">getTopRight</a></li>
+          <li><a href="flutter_test/WidgetController/handlePointerEventRecord.html">handlePointerEventRecord</a></li>
+          <li><a href="flutter_test/WidgetController/hitTestOnBinding.html">hitTestOnBinding</a></li>
+          <li><a href="flutter_test/WidgetController/layerListOf.html">layerListOf</a></li>
+          <li><a href="flutter_test/WidgetController/longPress.html">longPress</a></li>
+          <li><a href="flutter_test/WidgetController/longPressAt.html">longPressAt</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="flutter_test/WidgetController/press.html">press</a></li>
+          <li><a href="flutter_test/WidgetController/printToConsole.html">printToConsole</a></li>
+          <li><a href="flutter_test/WidgetController/pump.html">pump</a></li>
+          <li><a href="flutter_test/WidgetController/pumpAndSettle.html">pumpAndSettle</a></li>
+          <li><a href="flutter_test/WidgetController/renderObject.html">renderObject</a></li>
+          <li><a href="flutter_test/WidgetController/renderObjectList.html">renderObjectList</a></li>
+          <li><a href="flutter_test/WidgetController/scrollUntilVisible.html">scrollUntilVisible</a></li>
+          <li><a href="flutter_test/WidgetController/sendEventToBinding.html">sendEventToBinding</a></li>
+          <li><a href="flutter_test/WidgetController/sendKeyDownEvent.html">sendKeyDownEvent</a></li>
+          <li><a href="flutter_test/WidgetController/sendKeyEvent.html">sendKeyEvent</a></li>
+          <li><a href="flutter_test/WidgetController/sendKeyRepeatEvent.html">sendKeyRepeatEvent</a></li>
+          <li><a href="flutter_test/WidgetController/sendKeyUpEvent.html">sendKeyUpEvent</a></li>
+          <li><a href="flutter_test/WidgetController/startGesture.html">startGesture</a></li>
+          <li><a href="flutter_test/WidgetController/state.html">state</a></li>
+          <li><a href="flutter_test/WidgetController/stateList.html">stateList</a></li>
+          <li><a href="flutter_test/WidgetController/tap.html">tap</a></li>
+          <li><a href="flutter_test/WidgetController/tapAt.html">tapAt</a></li>
+          <li><a href="flutter_test/WidgetController/timedDrag.html">timedDrag</a></li>
+          <li><a href="flutter_test/WidgetController/timedDragFrom.html">timedDragFrom</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+          <li><a href="flutter_test/WidgetController/trackpadFling.html">trackpadFling</a></li>
+          <li><a href="flutter_test/WidgetController/trackpadFlingFrom.html">trackpadFlingFrom</a></li>
+          <li><a href="flutter_test/WidgetController/widget.html">widget</a></li>
+          <li><a href="flutter_test/WidgetController/widgetList.html">widgetList</a></li>
+
+        <li class="section-title inherited"><a href="flutter_test/WidgetController-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="flutter_test/WidgetController-class.html#static-properties">Static properties</a></li>
+          <li><a href="flutter_test/WidgetController/hitTestWarningShouldBeFatal.html">hitTestWarningShouldBeFatal</a></li>
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

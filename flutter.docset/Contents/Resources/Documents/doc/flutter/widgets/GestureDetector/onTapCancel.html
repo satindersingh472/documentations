@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the onTapCancel property from the GestureDetector class, for the Dart programming language."/>
+  <title>onTapCancel property - GestureDetector class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/GestureDetector-class.html">GestureDetector</a></li>
+    <li class="self-crumb">onTapCancel property</li>
+  </ol>
+  <div class="self-name">onTapCancel</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/gesture_detector.dart#L370"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-69620"></a><a class="dashAnchor" name="//apple_ref/cpp/Property/onTapCancel"></a><span class="kind-property">onTapCancel</span> property 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?
+          <span class="name ">onTapCancel</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>The pointer that previously triggered <a href="widgets/GestureDetector/onTapDown.html">onTapDown</a> will not end up causing
+a tap.</p>
+<p>This is called after <a href="widgets/GestureDetector/onTapDown.html">onTapDown</a>, and instead of <a href="widgets/GestureDetector/onTapUp.html">onTapUp</a> and <a href="widgets/GestureDetector/onTap.html">onTap</a>, if
+the tap gesture did not win.</p>
+<p>See also:</p>
+<ul>
+<li><a href="gestures/kPrimaryButton-constant.html">kPrimaryButton</a>, the button this callback responds to.</li>
+</ul>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final GestureTapCancelCallback? onTapCancel;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="widgets/widgets-library.html">widgets</a></li>
+  <li><a href="widgets/GestureDetector-class.html">GestureDetector</a></li>
+  <li class="self-crumb">onTapCancel property</li>
+</ol>
+
+
+    <h5>GestureDetector class</h5>
+    <ol>
+
+        <li class="section-title"><a href="widgets/GestureDetector-class.html#constructors">Constructors</a></li>
+          <li><a href="widgets/GestureDetector/GestureDetector.html">GestureDetector</a></li>
+
+
+        <li class="section-title">
+          <a href="widgets/GestureDetector-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="widgets/GestureDetector/behavior.html">behavior</a></li>
+          <li><a href="widgets/GestureDetector/child.html">child</a></li>
+          <li><a href="widgets/GestureDetector/dragStartBehavior.html">dragStartBehavior</a></li>
+          <li><a href="widgets/GestureDetector/excludeFromSemantics.html">excludeFromSemantics</a></li>
+          <li class="inherited"><a href="widgets/Widget/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="widgets/Widget/key.html">key</a></li>
+          <li><a href="widgets/GestureDetector/onDoubleTap.html">onDoubleTap</a></li>
+          <li><a href="widgets/GestureDetector/onDoubleTapCancel.html">onDoubleTapCancel</a></li>
+          <li><a href="widgets/GestureDetector/onDoubleTapDown.html">onDoubleTapDown</a></li>
+          <li><a href="widgets/GestureDetector/onForcePressEnd.html">onForcePressEnd</a></li>
+          <li><a href="widgets/GestureDetector/onForcePressPeak.html">onForcePressPeak</a></li>
+          <li><a href="widgets/GestureDetector/onForcePressStart.html">onForcePressStart</a></li>
+          <li><a href="widgets/GestureDetector/onForcePressUpdate.html">onForcePressUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onHorizontalDragCancel.html">onHorizontalDragCancel</a></li>
+          <li><a href="widgets/GestureDetector/onHorizontalDragDown.html">onHorizontalDragDown</a></li>
+          <li><a href="widgets/GestureDetector/onHorizontalDragEnd.html">onHorizontalDragEnd</a></li>
+          <li><a href="widgets/GestureDetector/onHorizontalDragStart.html">onHorizontalDragStart</a></li>
+          <li><a href="widgets/GestureDetector/onHorizontalDragUpdate.html">onHorizontalDragUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onLongPress.html">onLongPress</a></li>
+          <li><a href="widgets/GestureDetector/onLongPressCancel.html">onLongPressCancel</a></li>
+          <li><a href="widgets/GestureDetector/onLongPressDown.html">onLongPressDown</a></li>
+          <li><a href="widgets/GestureDetector/onLongPressEnd.html">onLongPressEnd</a></li>
+          <li><a href="widgets/GestureDetector/onLongPressMoveUpdate.html">onLongPressMoveUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onLongPressStart.html">onLongPressStart</a></li>
+          <li><a href="widgets/GestureDetector/onLongPressUp.html">onLongPressUp</a></li>
+          <li><a href="widgets/GestureDetector/onPanCancel.html">onPanCancel</a></li>
+          <li><a href="widgets/GestureDetector/onPanDown.html">onPanDown</a></li>
+          <li><a href="widgets/GestureDetector/onPanEnd.html">onPanEnd</a></li>
+          <li><a href="widgets/GestureDetector/onPanStart.html">onPanStart</a></li>
+          <li><a href="widgets/GestureDetector/onPanUpdate.html">onPanUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onScaleEnd.html">onScaleEnd</a></li>
+          <li><a href="widgets/GestureDetector/onScaleStart.html">onScaleStart</a></li>
+          <li><a href="widgets/GestureDetector/onScaleUpdate.html">onScaleUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPress.html">onSecondaryLongPress</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPressCancel.html">onSecondaryLongPressCancel</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPressDown.html">onSecondaryLongPressDown</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPressEnd.html">onSecondaryLongPressEnd</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPressMoveUpdate.html">onSecondaryLongPressMoveUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPressStart.html">onSecondaryLongPressStart</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryLongPressUp.html">onSecondaryLongPressUp</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryTap.html">onSecondaryTap</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryTapCancel.html">onSecondaryTapCancel</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryTapDown.html">onSecondaryTapDown</a></li>
+          <li><a href="widgets/GestureDetector/onSecondaryTapUp.html">onSecondaryTapUp</a></li>
+          <li><a href="widgets/GestureDetector/onTap.html">onTap</a></li>
+          <li><a href="widgets/GestureDetector/onTapCancel.html">onTapCancel</a></li>
+          <li><a href="widgets/GestureDetector/onTapDown.html">onTapDown</a></li>
+          <li><a href="widgets/GestureDetector/onTapUp.html">onTapUp</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPress.html">onTertiaryLongPress</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPressCancel.html">onTertiaryLongPressCancel</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPressDown.html">onTertiaryLongPressDown</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPressEnd.html">onTertiaryLongPressEnd</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPressMoveUpdate.html">onTertiaryLongPressMoveUpdate</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPressStart.html">onTertiaryLongPressStart</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryLongPressUp.html">onTertiaryLongPressUp</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryTapCancel.html">onTertiaryTapCancel</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryTapDown.html">onTertiaryTapDown</a></li>
+          <li><a href="widgets/GestureDetector/onTertiaryTapUp.html">onTertiaryTapUp</a></li>
+          <li><a href="widgets/GestureDetector/onVerticalDragCancel.html">onVerticalDragCancel</a></li>
+          <li><a href="widgets/GestureDetector/onVerticalDragDown.html">onVerticalDragDown</a></li>
+          <li><a href="widgets/GestureDetector/onVerticalDragEnd.html">onVerticalDragEnd</a></li>
+          <li><a href="widgets/GestureDetector/onVerticalDragStart.html">onVerticalDragStart</a></li>
+          <li><a href="widgets/GestureDetector/onVerticalDragUpdate.html">onVerticalDragUpdate</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="widgets/GestureDetector/supportedDevices.html">supportedDevices</a></li>
+
+        <li class="section-title"><a href="widgets/GestureDetector-class.html#instance-methods">Methods</a></li>
+          <li><a href="widgets/GestureDetector/build.html">build</a></li>
+          <li class="inherited"><a href="widgets/StatelessWidget/createElement.html">createElement</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li><a href="widgets/GestureDetector/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="foundation/Diagnosticable/toString.html">toString</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="widgets/Widget/toStringShort.html">toStringShort</a></li>
+
+        <li class="section-title inherited"><a href="widgets/GestureDetector-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="widgets/Widget/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

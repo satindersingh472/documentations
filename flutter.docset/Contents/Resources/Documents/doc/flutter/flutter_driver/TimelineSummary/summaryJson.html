@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the summaryJson property from the TimelineSummary class, for the Dart programming language."/>
+  <title>summaryJson property - TimelineSummary class - flutter_driver library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_driver/flutter_driver-library.html">flutter_driver</a></li>
+    <li><a href="flutter_driver/TimelineSummary-class.html">TimelineSummary</a></li>
+    <li class="self-crumb">summaryJson property</li>
+  </ol>
+  <div class="self-name">summaryJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter_driver/lib/src/driver/timeline_summary.dart#L228"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-16746"></a><a class="dashAnchor" name="//apple_ref/cpp/Property/summaryJson"></a><span class="kind-property">summaryJson</span> property 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+
+        
+<section id="getter">
+
+<section class="multi-line-signature">
+  
+  <span class="returntype"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  <span class="name ">summaryJson</span>
+  
+
+</section>
+
+
+<section class="desc markdown">
+  <p>Encodes this summary as JSON.</p>
+<p>Data ends with &#34;_time_millis&#34; means time in milliseconds and numbers in
+the &#34;frame_build_times&#34;, &#34;frame_rasterizer_times&#34;, &#34;frame_begin_times&#34; and
+&#34;frame_rasterizer_begin_times&#34; lists are in microseconds.</p>
+<ul>
+<li>&#34;average_frame_build_time_millis&#34;: Average amount of time spent per
+frame in the framework building widgets, updating layout, painting and
+compositing.
+See <a href="flutter_driver/TimelineSummary/computeAverageFrameBuildTimeMillis.html">computeAverageFrameBuildTimeMillis</a>.</li>
+<li>&#34;90th_percentile_frame_build_time_millis&#34; and
+&#34;99th_percentile_frame_build_time_millis&#34;: The p-th percentile frame
+rasterization time in milliseconds. 90 and 99-th percentile number is
+usually a better metric to estimate worse cases. See discussion in
+<a href="https://github.com/flutter/flutter/pull/19121#issuecomment-419520765">https://github.com/flutter/flutter/pull/19121#issuecomment-419520765</a>
+See <a href="flutter_driver/TimelineSummary/computePercentileFrameBuildTimeMillis.html">computePercentileFrameBuildTimeMillis</a>.</li>
+<li>&#34;worst_frame_build_time_millis&#34;: The longest frame build time.
+See <a href="flutter_driver/TimelineSummary/computeWorstFrameBuildTimeMillis.html">computeWorstFrameBuildTimeMillis</a>.</li>
+<li>&#34;missed_frame_build_budget_count&#39;: The number of frames that missed
+the <a href="flutter_driver/kBuildBudget-constant.html">kBuildBudget</a> and therefore are in the danger of missing frames.
+See <a href="flutter_driver/TimelineSummary/computeMissedFrameBuildBudgetCount.html">computeMissedFrameBuildBudgetCount</a>.</li>
+<li>&#34;average_frame_rasterizer_time_millis&#34;: Average amount of time spent
+per frame in the engine rasterizer.
+See <a href="flutter_driver/TimelineSummary/computeAverageFrameRasterizerTimeMillis.html">computeAverageFrameRasterizerTimeMillis</a>.</li>
+<li>&#34;90th_percentile_frame_rasterizer_time_millis&#34; and
+&#34;99th_percentile_frame_rasterizer_time_millis&#34;: The 90/99-th percentile
+frame rasterization time in milliseconds.
+See <a href="flutter_driver/TimelineSummary/computePercentileFrameRasterizerTimeMillis.html">computePercentileFrameRasterizerTimeMillis</a>.</li>
+<li>&#34;worst_frame_rasterizer_time_millis&#34;: The longest frame rasterization
+time.
+See <a href="flutter_driver/TimelineSummary/computeWorstFrameRasterizerTimeMillis.html">computeWorstFrameRasterizerTimeMillis</a>.</li>
+<li>&#34;missed_frame_rasterizer_budget_count&#34;: The number of frames that missed
+the <a href="flutter_driver/kBuildBudget-constant.html">kBuildBudget</a> on the raster thread and therefore are in the danger
+of missing frames.
+See <a href="flutter_driver/TimelineSummary/computeMissedFrameRasterizerBudgetCount.html">computeMissedFrameRasterizerBudgetCount</a>.</li>
+<li>&#34;frame_count&#34;: The total number of frames recorded in the timeline. This
+is also the length of the &#34;frame_build_times&#34; and the &#34;frame_begin_times&#34;
+lists.
+See <a href="flutter_driver/TimelineSummary/countFrames.html">countFrames</a>.</li>
+<li>&#34;frame_rasterizer_count&#34;: The total number of rasterizer cycles recorded
+in the timeline. This is also the length of the &#34;frame_rasterizer_times&#34;
+and the &#34;frame_rasterizer_begin_times&#34; lists.
+See <a href="flutter_driver/TimelineSummary/countRasterizations.html">countRasterizations</a>.</li>
+<li>&#34;frame_build_times&#34;: The build time of each frame, by tracking the
+<a href="flutter_driver/TimelineEvent-class.html">TimelineEvent</a> with name <a href="flutter_driver/kBuildFrameEventName-constant.html">kBuildFrameEventName</a>.</li>
+<li>&#34;frame_rasterizer_times&#34;: The rasterize time of each frame, by tracking
+the <a href="flutter_driver/TimelineEvent-class.html">TimelineEvent</a> with name <a href="flutter_driver/kRasterizeFrameEventName-constant.html">kRasterizeFrameEventName</a></li>
+<li>&#34;frame_begin_times&#34;: The build begin timestamp of each frame.</li>
+<li>&#34;frame_rasterizer_begin_times&#34;: The rasterize begin time of each frame.</li>
+<li>&#34;average_vsync_transitions_missed&#34;: Computes the average of the
+<code>vsync_transitions_missed</code> over the lag events.
+See <code>SceneDisplayLagSummarizer.computeAverageVsyncTransitionsMissed</code>.</li>
+<li>&#34;90th_percentile_vsync_transitions_missed&#34; and
+&#34;99th_percentile_vsync_transitions_missed&#34;: The 90/99-th percentile
+<code>vsync_transitions_missed</code> over the lag events.
+See <code>SceneDisplayLagSummarizer.computePercentileVsyncTransitionsMissed</code>.</li>
+<li>&#34;average_vsync_frame_lag&#34;: Computes the average of the time between
+platform vsync signal and the engine frame process start time.
+See <code>VsyncFrameLagSummarizer.computeAverageVsyncFrameLag</code>.</li>
+<li>&#34;90th_percentile_vsync_frame_lag&#34; and &#34;99th_percentile_vsync_frame_lag&#34;:
+The 90/99-th percentile delay between platform vsync signal and engine
+frame process start time.
+See <code>VsyncFrameLagSummarizer.computePercentileVsyncFrameLag</code>.</li>
+<li>&#34;average_layer_cache_count&#34;: The average of the values seen for the
+count of the engine layer cache entries.
+See <code>RasterCacheSummarizer.computeAverageLayerCount</code>.</li>
+<li>&#34;90th_percentile_layer_cache_count&#34; and
+&#34;99th_percentile_layer_cache_count&#34;: The 90/99-th percentile values seen
+for the count of the engine layer cache entries.
+See <code>RasterCacheSummarizer.computePercentileLayerCount</code>.</li>
+<li>&#34;worst_layer_cache_count&#34;: The worst (highest) value seen for the
+count of the engine layer cache entries.
+See <code>RasterCacheSummarizer.computeWorstLayerCount</code>.</li>
+<li>&#34;average_layer_cache_memory&#34;: The average of the values seen for the
+memory used for the engine layer cache entries, in megabytes.
+See <code>RasterCacheSummarizer.computeAverageLayerMemory</code>.</li>
+<li>&#34;90th_percentile_layer_cache_memory&#34; and
+&#34;99th_percentile_layer_cache_memory&#34;: The 90/99-th percentile values seen
+for the memory used for the engine layer cache entries.
+See <code>RasterCacheSummarizer.computePercentileLayerMemory</code>.</li>
+<li>&#34;worst_layer_cache_memory&#34;: The worst (highest) value seen for the
+memory used for the engine layer cache entries.
+See <code>RasterCacheSummarizer.computeWorstLayerMemory</code>.</li>
+<li>&#34;average_picture_cache_count&#34;: The average of the values seen for the
+count of the engine picture cache entries.
+See <code>RasterCacheSummarizer.computeAveragePictureCount</code>.</li>
+<li>&#34;90th_percentile_picture_cache_count&#34; and
+&#34;99th_percentile_picture_cache_count&#34;: The 90/99-th percentile values seen
+for the count of the engine picture cache entries.
+See <code>RasterCacheSummarizer.computePercentilePictureCount</code>.</li>
+<li>&#34;worst_picture_cache_count&#34;: The worst (highest) value seen for the
+count of the engine picture cache entries.
+See <code>RasterCacheSummarizer.computeWorstPictureCount</code>.</li>
+<li>&#34;average_picture_cache_memory&#34;: The average of the values seen for the
+memory used for the engine picture cache entries, in megabytes.
+See <code>RasterCacheSummarizer.computeAveragePictureMemory</code>.</li>
+<li>&#34;90th_percentile_picture_cache_memory&#34; and
+&#34;99th_percentile_picture_cache_memory&#34;: The 90/99-th percentile values seen
+for the memory used for the engine picture cache entries.
+See <code>RasterCacheSummarizer.computePercentilePictureMemory</code>.</li>
+<li>&#34;worst_picture_cache_memory&#34;: The worst (highest) value seen for the
+memory used for the engine picture cache entries.
+See <code>RasterCacheSummarizer.computeWorstPictureMemory</code>.</li>
+</ul>
+</section>
+
+
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Map&lt;String, dynamic&gt; get summaryJson {
+  final SceneDisplayLagSummarizer sceneDisplayLagSummarizer = _sceneDisplayLagSummarizer();
+  final VsyncFrameLagSummarizer vsyncFrameLagSummarizer = _vsyncFrameLagSummarizer();
+  final Map&lt;String, dynamic&gt; profilingSummary = _profilingSummarizer().summarize();
+  final RasterCacheSummarizer rasterCacheSummarizer = _rasterCacheSummarizer();
+  final GCSummarizer gcSummarizer = _gcSummarizer();
+  final RefreshRateSummary refreshRateSummary = RefreshRateSummary(vsyncEvents: _extractNamedEvents(kUIThreadVsyncProcessEvent));
+
+  final Map&lt;String, dynamic&gt; timelineSummary = &lt;String, dynamic&gt;{
+    &#39;average_frame_build_time_millis&#39;: computeAverageFrameBuildTimeMillis(),
+    &#39;90th_percentile_frame_build_time_millis&#39;: computePercentileFrameBuildTimeMillis(90.0),
+    &#39;99th_percentile_frame_build_time_millis&#39;: computePercentileFrameBuildTimeMillis(99.0),
+    &#39;worst_frame_build_time_millis&#39;: computeWorstFrameBuildTimeMillis(),
+    &#39;missed_frame_build_budget_count&#39;: computeMissedFrameBuildBudgetCount(),
+    &#39;average_frame_rasterizer_time_millis&#39;: computeAverageFrameRasterizerTimeMillis(),
+    &#39;90th_percentile_frame_rasterizer_time_millis&#39;: computePercentileFrameRasterizerTimeMillis(90.0),
+    &#39;99th_percentile_frame_rasterizer_time_millis&#39;: computePercentileFrameRasterizerTimeMillis(99.0),
+    &#39;worst_frame_rasterizer_time_millis&#39;: computeWorstFrameRasterizerTimeMillis(),
+    &#39;missed_frame_rasterizer_budget_count&#39;: computeMissedFrameRasterizerBudgetCount(),
+    &#39;frame_count&#39;: countFrames(),
+    &#39;frame_rasterizer_count&#39;: countRasterizations(),
+    &#39;new_gen_gc_count&#39;: newGenerationGarbageCollections(),
+    &#39;old_gen_gc_count&#39;: oldGenerationGarbageCollections(),
+    &#39;frame_build_times&#39;: _extractFrameDurations()
+        .map&lt;int&gt;((Duration duration) =&gt; duration.inMicroseconds)
+        .toList(),
+    &#39;frame_rasterizer_times&#39;: _extractGpuRasterizerDrawDurations()
+        .map&lt;int&gt;((Duration duration) =&gt; duration.inMicroseconds)
+        .toList(),
+    &#39;frame_begin_times&#39;: _extractBeginTimestamps(kBuildFrameEventName)
+        .map&lt;int&gt;((Duration duration) =&gt; duration.inMicroseconds)
+        .toList(),
+    &#39;frame_rasterizer_begin_times&#39;: _extractBeginTimestamps(kRasterizeFrameEventName)
+        .map&lt;int&gt;((Duration duration) =&gt; duration.inMicroseconds)
+        .toList(),
+    &#39;average_vsync_transitions_missed&#39;: sceneDisplayLagSummarizer.computeAverageVsyncTransitionsMissed(),
+    &#39;90th_percentile_vsync_transitions_missed&#39;: sceneDisplayLagSummarizer.computePercentileVsyncTransitionsMissed(90.0),
+    &#39;99th_percentile_vsync_transitions_missed&#39;: sceneDisplayLagSummarizer.computePercentileVsyncTransitionsMissed(99.0),
+    &#39;average_vsync_frame_lag&#39;: vsyncFrameLagSummarizer.computeAverageVsyncFrameLag(),
+    &#39;90th_percentile_vsync_frame_lag&#39;: vsyncFrameLagSummarizer.computePercentileVsyncFrameLag(90.0),
+    &#39;99th_percentile_vsync_frame_lag&#39;: vsyncFrameLagSummarizer.computePercentileVsyncFrameLag(99.0),
+    &#39;average_layer_cache_count&#39;: rasterCacheSummarizer.computeAverageLayerCount(),
+    &#39;90th_percentile_layer_cache_count&#39;: rasterCacheSummarizer.computePercentileLayerCount(90.0),
+    &#39;99th_percentile_layer_cache_count&#39;: rasterCacheSummarizer.computePercentileLayerCount(99.0),
+    &#39;worst_layer_cache_count&#39;: rasterCacheSummarizer.computeWorstLayerCount(),
+    &#39;average_layer_cache_memory&#39;: rasterCacheSummarizer.computeAverageLayerMemory(),
+    &#39;90th_percentile_layer_cache_memory&#39;: rasterCacheSummarizer.computePercentileLayerMemory(90.0),
+    &#39;99th_percentile_layer_cache_memory&#39;: rasterCacheSummarizer.computePercentileLayerMemory(99.0),
+    &#39;worst_layer_cache_memory&#39;: rasterCacheSummarizer.computeWorstLayerMemory(),
+    &#39;average_picture_cache_count&#39;: rasterCacheSummarizer.computeAveragePictureCount(),
+    &#39;90th_percentile_picture_cache_count&#39;: rasterCacheSummarizer.computePercentilePictureCount(90.0),
+    &#39;99th_percentile_picture_cache_count&#39;: rasterCacheSummarizer.computePercentilePictureCount(99.0),
+    &#39;worst_picture_cache_count&#39;: rasterCacheSummarizer.computeWorstPictureCount(),
+    &#39;average_picture_cache_memory&#39;: rasterCacheSummarizer.computeAveragePictureMemory(),
+    &#39;90th_percentile_picture_cache_memory&#39;: rasterCacheSummarizer.computePercentilePictureMemory(90.0),
+    &#39;99th_percentile_picture_cache_memory&#39;: rasterCacheSummarizer.computePercentilePictureMemory(99.0),
+    &#39;worst_picture_cache_memory&#39;: rasterCacheSummarizer.computeWorstPictureMemory(),
+    &#39;total_ui_gc_time&#39;: gcSummarizer.totalGCTimeMillis,
+    &#39;30hz_frame_percentage&#39;: refreshRateSummary.percentageOf30HzFrames,
+    &#39;60hz_frame_percentage&#39;: refreshRateSummary.percentageOf60HzFrames,
+    &#39;80hz_frame_percentage&#39;: refreshRateSummary.percentageOf80HzFrames,
+    &#39;90hz_frame_percentage&#39;: refreshRateSummary.percentageOf90HzFrames,
+    &#39;120hz_frame_percentage&#39;: refreshRateSummary.percentageOf120HzFrames,
+    &#39;illegal_refresh_rate_frame_count&#39;: refreshRateSummary.framesWithIllegalRefreshRate.length,
+  };
+
+  timelineSummary.addAll(profilingSummary);
+  return timelineSummary;
+}</code></pre>
+</section>
+
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="flutter_driver/flutter_driver-library.html">flutter_driver</a></li>
+  <li><a href="flutter_driver/TimelineSummary-class.html">TimelineSummary</a></li>
+  <li class="self-crumb">summaryJson property</li>
+</ol>
+
+
+    <h5>TimelineSummary class</h5>
+    <ol>
+
+        <li class="section-title"><a href="flutter_driver/TimelineSummary-class.html#constructors">Constructors</a></li>
+          <li><a href="flutter_driver/TimelineSummary/TimelineSummary.summarize.html">summarize</a></li>
+
+
+        <li class="section-title">
+          <a href="flutter_driver/TimelineSummary-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="flutter_driver/TimelineSummary/summaryJson.html">summaryJson</a></li>
+
+        <li class="section-title"><a href="flutter_driver/TimelineSummary-class.html#instance-methods">Methods</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computeAverageFrameBuildTimeMillis.html">computeAverageFrameBuildTimeMillis</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computeAverageFrameRasterizerTimeMillis.html">computeAverageFrameRasterizerTimeMillis</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computeMissedFrameBuildBudgetCount.html">computeMissedFrameBuildBudgetCount</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computeMissedFrameRasterizerBudgetCount.html">computeMissedFrameRasterizerBudgetCount</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computePercentileFrameBuildTimeMillis.html">computePercentileFrameBuildTimeMillis</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computePercentileFrameRasterizerTimeMillis.html">computePercentileFrameRasterizerTimeMillis</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computeWorstFrameBuildTimeMillis.html">computeWorstFrameBuildTimeMillis</a></li>
+          <li><a href="flutter_driver/TimelineSummary/computeWorstFrameRasterizerTimeMillis.html">computeWorstFrameRasterizerTimeMillis</a></li>
+          <li><a href="flutter_driver/TimelineSummary/countFrames.html">countFrames</a></li>
+          <li><a href="flutter_driver/TimelineSummary/countRasterizations.html">countRasterizations</a></li>
+          <li><a href="flutter_driver/TimelineSummary/newGenerationGarbageCollections.html">newGenerationGarbageCollections</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="flutter_driver/TimelineSummary/oldGenerationGarbageCollections.html">oldGenerationGarbageCollections</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+          <li><a class="deprecated" href="flutter_driver/TimelineSummary/writeSummaryToFile.html">writeSummaryToFile</a></li>
+          <li><a href="flutter_driver/TimelineSummary/writeTimelineToFile.html">writeTimelineToFile</a></li>
+
+        <li class="section-title inherited"><a href="flutter_driver/TimelineSummary-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

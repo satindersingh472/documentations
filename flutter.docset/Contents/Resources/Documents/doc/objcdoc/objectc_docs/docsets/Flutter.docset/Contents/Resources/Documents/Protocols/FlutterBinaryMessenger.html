@@ -1,0 +1,604 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterBinaryMessenger Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/FlutterBinaryMessenger" class="dashAnchor"></a>
+    <a title="FlutterBinaryMessenger Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterBinaryMessenger Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterBinaryMessenger</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">FlutterBinaryMessenger</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FlutterBinaryMessenger</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>A facility for communicating with the Flutter side using asynchronous message
+ passing with binary messages.</p>
+
+<p>Implementated by:</p>
+
+<ul>
+<li><code><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></code>, which supports communication using structured
+messages.</li>
+<li><code><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></code>, which supports communication using asynchronous
+method calls.</li>
+<li><code><a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a></code>, which supports commuication using event streams.</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterBinaryMessenger(im)makeBackgroundTaskQueue"></a>
+                    <a name="//apple_ref/objc/Method/-makeBackgroundTaskQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterBinaryMessenger(im)makeBackgroundTaskQueue">-makeBackgroundTaskQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSObject</span><span class="o">&lt;</span><span class="n">FlutterTaskQueue</span><span class="o">&gt;*</span><span class="p">)</span><span class="n">makeBackgroundTaskQueue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterBinaryMessenger(im)setMessageHandlerOnChannel:binaryMessageHandler:taskQueue:"></a>
+                    <a name="//apple_ref/objc/Method/-setMessageHandlerOnChannel:binaryMessageHandler:taskQueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterBinaryMessenger(im)setMessageHandlerOnChannel:binaryMessageHandler:taskQueue:">-setMessageHandlerOnChannel:<wbr/>binaryMessageHandler:<wbr/>taskQueue:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a></span><span class="p">)</span>
+    <span class="nf">setMessageHandlerOnChannel</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">channel</span>
+          <span class="nf">binaryMessageHandler</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a></span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">handler</span>
+                     <span class="nf">taskQueue</span><span class="p">:(</span><span class="n">NSObject</span><span class="o">&lt;</span><span class="n">FlutterTaskQueue</span><span class="o">&gt;*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">taskQueue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterBinaryMessenger(im)sendOnChannel:message:"></a>
+                    <a name="//apple_ref/objc/Method/-sendOnChannel:message:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterBinaryMessenger(im)sendOnChannel:message:">-sendOnChannel:<wbr/>message:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a binary message to the Flutter side on the specified channel, expecting
+ no reply.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendOnChannel</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">channel</span>
+              <span class="nf">message</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">message</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">onChannel</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterBinaryMessenger(im)sendOnChannel:message:binaryReply:"></a>
+                    <a name="//apple_ref/objc/Method/-sendOnChannel:message:binaryReply:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterBinaryMessenger(im)sendOnChannel:message:binaryReply:">-sendOnChannel:<wbr/>message:<wbr/>binaryReply:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a binary message to the Flutter side on the specified channel, expecting
+ an asynchronous reply.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendOnChannel</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">channel</span>
+              <span class="nf">message</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">message</span>
+          <span class="nf">binaryReply</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a></span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">onChannel</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="n">binaryReply</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A callback for receiving a reply.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterBinaryMessenger(im)setMessageHandlerOnChannel:binaryMessageHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-setMessageHandlerOnChannel:binaryMessageHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterBinaryMessenger(im)setMessageHandlerOnChannel:binaryMessageHandler:">-setMessageHandlerOnChannel:<wbr/>binaryMessageHandler:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a message handler for incoming binary messages from the Flutter side
+ on the specified channel.</p>
+
+<p>Replaces any existing handler. Use a <code>nil</code> handler for unregistering the
+ existing handler.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a></span><span class="p">)</span>
+    <span class="nf">setMessageHandlerOnChannel</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">channel</span>
+          <span class="nf">binaryMessageHandler</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a></span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">handler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setMessageHandlerOnChannel</span><span class="p">(</span><span class="n">_</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">binaryMessageHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An identifier that represents the connection that was just created to the channel.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterBinaryMessenger(im)cleanUpConnection:"></a>
+                    <a name="//apple_ref/objc/Method/-cleanUpConnection:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterBinaryMessenger(im)cleanUpConnection:">-cleanUpConnection:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clears out a channel&rsquo;s message handler if that handler is still the one that
+ was created as a result of
+ <code>setMessageHandlerOnChannel:binaryMessageHandler:</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">cleanUpConnection</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a></span><span class="p">)</span><span class="nv">connection</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cleanUpConnection</span><span class="p">(</span><span class="n">_</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result from <code>setMessageHandlerOnChannel:binaryMessageHandler:</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

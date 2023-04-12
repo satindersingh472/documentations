@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the computeDryLayout method from the RenderErrorBox class, for the Dart programming language."/>
+  <title>computeDryLayout method - RenderErrorBox class - rendering library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="rendering/rendering-library.html">rendering</a></li>
+    <li><a href="rendering/RenderErrorBox-class.html">RenderErrorBox</a></li>
+    <li class="self-crumb">computeDryLayout method</li>
+  </ol>
+  <div class="self-name">computeDryLayout</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/rendering/error.dart#L80"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-55355"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/computeDryLayout"></a><span class="kind-method">computeDryLayout</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="dart-ui/Size-class.html">Size</a></span>
+<span class="name ">computeDryLayout</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="computeDryLayout-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a></span> <span class="parameter-name">constraints</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Computes the value returned by <a href="rendering/RenderBox/getDryLayout.html">getDryLayout</a>. Do not call this
+function directly, instead, call <a href="rendering/RenderBox/getDryLayout.html">getDryLayout</a>.</p>
+<p>Override in subclasses that implement <a href="rendering/RenderBox/performLayout.html">performLayout</a> or <a href="rendering/RenderBox/performResize.html">performResize</a>
+or when setting <a href="rendering/RenderErrorBox/sizedByParent.html">sizedByParent</a> to true without overriding
+<a href="rendering/RenderBox/performResize.html">performResize</a>. This method should return the <a href="dart-ui/Size-class.html">Size</a> that this
+<a href="rendering/RenderBox-class.html">RenderBox</a> would like to be given the provided <a href="rendering/BoxConstraints-class.html">BoxConstraints</a>.</p>
+<p>The size returned by this method must match the <a href="rendering/RenderBox/size.html">size</a> that the
+<a href="rendering/RenderBox-class.html">RenderBox</a> will compute for itself in <a href="rendering/RenderBox/performLayout.html">performLayout</a> (or
+<a href="rendering/RenderBox/performResize.html">performResize</a>, if <a href="rendering/RenderErrorBox/sizedByParent.html">sizedByParent</a> is true).</p>
+<p>If this algorithm depends on the size of a child, the size of that child
+should be obtained using its <a href="rendering/RenderBox/getDryLayout.html">getDryLayout</a> method.</p>
+<p>This layout is called &#34;dry&#34; layout as opposed to the regular &#34;wet&#34; layout
+run performed by <a href="rendering/RenderBox/performLayout.html">performLayout</a> because it computes the desired size for
+the given constraints without changing any internal state.</p>
+<h3 id="when-the-size-cannot-be-known">When the size cannot be known</h3>
+<p>There are cases where render objects do not have an efficient way to
+compute their size without doing a full layout. For example, the size
+may depend on the baseline of a child (which is not available without
+doing a full layout), it may be computed by a callback about which the
+render object cannot reason, or the layout is so complex that it
+is simply impractical to calculate the size in an efficient way.</p>
+<p>In such cases, it may be impossible (or at least impractical) to actually
+return a valid answer. In such cases, the function should call
+<a href="rendering/RenderBox/debugCannotComputeDryLayout.html">debugCannotComputeDryLayout</a> from within an assert and return a dummy
+value of <code>const Size(0, 0)</code>.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Size computeDryLayout(BoxConstraints constraints) {
+  return constraints.constrain(const Size(_kMaxWidth, _kMaxHeight));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="rendering/rendering-library.html">rendering</a></li>
+  <li><a href="rendering/RenderErrorBox-class.html">RenderErrorBox</a></li>
+  <li class="self-crumb">computeDryLayout method</li>
+</ol>
+
+
+    <h5>RenderErrorBox class</h5>
+    <ol>
+
+        <li class="section-title"><a href="rendering/RenderErrorBox-class.html#constructors">Constructors</a></li>
+          <li><a href="rendering/RenderErrorBox/RenderErrorBox.html">RenderErrorBox</a></li>
+
+
+        <li class="section-title">
+          <a href="rendering/RenderErrorBox-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="rendering/RenderObject/alwaysNeedsCompositing.html">alwaysNeedsCompositing</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/attached.html">attached</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/constraints.html">constraints</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugCanParentUseSize.html">debugCanParentUseSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugCreator.html">debugCreator</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDisposed.html">debugDisposed</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisLayout.html">debugDoingThisLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisLayoutWithCallback.html">debugDoingThisLayoutWithCallback</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisPaint.html">debugDoingThisPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisResize.html">debugDoingThisResize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugLayer.html">debugLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsCompositedLayerUpdate.html">debugNeedsCompositedLayerUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsLayout.html">debugNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsPaint.html">debugNeedsPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugSemantics.html">debugSemantics</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/depth.html">depth</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hasSize.html">hasSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/isRepaintBoundary.html">isRepaintBoundary</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/layer.html">layer</a></li>
+          <li><a href="rendering/RenderErrorBox/message.html">message</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/needsCompositing.html">needsCompositing</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/owner.html">owner</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/paintBounds.html">paintBounds</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/parent.html">parent</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/parentData.html">parentData</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/semanticBounds.html">semanticBounds</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/size.html">size</a></li>
+          <li><a href="rendering/RenderErrorBox/sizedByParent.html">sizedByParent</a></li>
+
+        <li class="section-title"><a href="rendering/RenderErrorBox-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/adoptChild.html">adoptChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/applyPaintTransform.html">applyPaintTransform</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/assembleSemanticsNode.html">assembleSemanticsNode</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/attach.html">attach</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/clearSemantics.html">clearSemantics</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/computeDistanceToActualBaseline.html">computeDistanceToActualBaseline</a></li>
+          <li><a href="rendering/RenderErrorBox/computeDryLayout.html">computeDryLayout</a></li>
+          <li><a href="rendering/RenderErrorBox/computeMaxIntrinsicHeight.html">computeMaxIntrinsicHeight</a></li>
+          <li><a href="rendering/RenderErrorBox/computeMaxIntrinsicWidth.html">computeMaxIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/computeMinIntrinsicHeight.html">computeMinIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/computeMinIntrinsicWidth.html">computeMinIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugAdoptSize.html">debugAdoptSize</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugAssertDoesMeetConstraints.html">debugAssertDoesMeetConstraints</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugCannotComputeDryLayout.html">debugCannotComputeDryLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugHandleEvent.html">debugHandleEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaint.html">debugPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintBaselines.html">debugPaintBaselines</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintPointers.html">debugPaintPointers</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintSize.html">debugPaintSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugRegisterRepaintBoundaryPaint.html">debugRegisterRepaintBoundaryPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugResetSize.html">debugResetSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeApproximatePaintClip.html">describeApproximatePaintClip</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeForError.html">describeForError</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeSemanticsClip.html">describeSemanticsClip</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeSemanticsConfiguration.html">describeSemanticsConfiguration</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/detach.html">detach</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/dispose.html">dispose</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/dropChild.html">dropChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDistanceToActualBaseline.html">getDistanceToActualBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDistanceToBaseline.html">getDistanceToBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDryLayout.html">getDryLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMaxIntrinsicHeight.html">getMaxIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMaxIntrinsicWidth.html">getMaxIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMinIntrinsicHeight.html">getMinIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMinIntrinsicWidth.html">getMinIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/getTransformTo.html">getTransformTo</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/globalToLocal.html">globalToLocal</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/handleEvent.html">handleEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hitTest.html">hitTest</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hitTestChildren.html">hitTestChildren</a></li>
+          <li><a href="rendering/RenderErrorBox/hitTestSelf.html">hitTestSelf</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/invokeLayoutCallback.html">invokeLayoutCallback</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/layout.html">layout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/localToGlobal.html">localToGlobal</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsCompositedLayerUpdate.html">markNeedsCompositedLayerUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsCompositingBitsUpdate.html">markNeedsCompositingBitsUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/markNeedsLayout.html">markNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsLayoutForSizedByParentChange.html">markNeedsLayoutForSizedByParentChange</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsPaint.html">markNeedsPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsSemanticsUpdate.html">markNeedsSemanticsUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markParentNeedsLayout.html">markParentNeedsLayout</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="rendering/RenderErrorBox/paint.html">paint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/paintsChild.html">paintsChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/performLayout.html">performLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/performResize.html">performResize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/reassemble.html">reassemble</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/redepthChild.html">redepthChild</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/redepthChildren.html">redepthChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/replaceRootLayer.html">replaceRootLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialLayout.html">scheduleInitialLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialPaint.html">scheduleInitialPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialSemantics.html">scheduleInitialSemantics</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/sendSemanticsEvent.html">sendSemanticsEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/setupParentData.html">setupParentData</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/showOnScreen.html">showOnScreen</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toString.html">toString</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringShort.html">toStringShort</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/updateCompositedLayer.html">updateCompositedLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/visitChildren.html">visitChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/visitChildrenForSemantics.html">visitChildrenForSemantics</a></li>
+
+        <li class="section-title inherited"><a href="rendering/RenderErrorBox-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="rendering/RenderErrorBox-class.html#static-properties">Static properties</a></li>
+          <li><a href="rendering/RenderErrorBox/backgroundColor.html">backgroundColor</a></li>
+          <li><a href="rendering/RenderErrorBox/minimumWidth.html">minimumWidth</a></li>
+          <li><a href="rendering/RenderErrorBox/padding.html">padding</a></li>
+          <li><a href="rendering/RenderErrorBox/paragraphStyle.html">paragraphStyle</a></li>
+          <li><a href="rendering/RenderErrorBox/textStyle.html">textStyle</a></li>
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

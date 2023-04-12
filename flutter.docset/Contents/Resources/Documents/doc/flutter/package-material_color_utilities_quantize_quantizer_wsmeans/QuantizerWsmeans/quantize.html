@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the quantize method from the QuantizerWsmeans class, for the Dart programming language."/>
+  <title>quantize method - QuantizerWsmeans class - quantizer_wsmeans library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/package-material_color_utilities_quantize_quantizer_wsmeans-library.html">quantizer_wsmeans</a></li>
+    <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html">QuantizerWsmeans</a></li>
+    <li class="self-crumb">quantize static method</li>
+  </ol>
+  <div class="self-name">quantize</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-51990"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/quantize"></a><span class="kind-method">quantize</span> static method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="package-material_color_utilities_quantize_quantizer/QuantizerResult-class.html">QuantizerResult</a></span>
+<span class="name ">quantize</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="quantize-param-inputPixels"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">inputPixels</span>, </span></li>
+<li><span class="parameter" id="quantize-param-maxColors"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">maxColors</span>, </span></li>
+<li><span class="parameter" id="quantize-param-startingClusters">{<span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">startingClusters</span> = <span class="default-value">const []</span>, </span></li>
+<li><span class="parameter" id="quantize-param-pointProvider"><span class="type-annotation"><a href="package-material_color_utilities_quantize_point_provider/PointProvider-class.html">PointProvider</a></span> <span class="parameter-name">pointProvider</span> = <span class="default-value">const PointProviderLab()</span>, </span></li>
+<li><span class="parameter" id="quantize-param-maxIterations"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">maxIterations</span> = <span class="default-value">5</span>, </span></li>
+<li><span class="parameter" id="quantize-param-returnInputPixelToClusterPixel"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">returnInputPixelToClusterPixel</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static QuantizerResult quantize(
+  Iterable&lt;int&gt; inputPixels,
+  int maxColors, {
+  List&lt;int&gt; startingClusters = const [],
+  PointProvider pointProvider = const PointProviderLab(),
+  int maxIterations = 5,
+  bool returnInputPixelToClusterPixel = false,
+}) {
+  final pixelToCount = &lt;int, int&gt;{};
+  final points = &lt;List&lt;double&gt;&gt;[];
+  final pixels = &lt;int&gt;[];
+  var pointCount = 0;
+  inputPixels.forEach((inputPixel) {
+    final pixelCount = pixelToCount.update(inputPixel, (value) =&gt; value + 1,
+        ifAbsent: () =&gt; 1);
+    if (pixelCount == 1) {
+      pointCount++;
+      points.add(pointProvider.fromInt(inputPixel));
+      pixels.add(inputPixel);
+    }
+  });
+
+  final counts = List&lt;int&gt;.filled(pointCount, 0);
+  for (var i = 0; i &lt; pointCount; i++) {
+    final pixel = pixels[i];
+    final count = pixelToCount[pixel]!;
+    counts[i] = count;
+  }
+
+  var clusterCount = math.min(maxColors, pointCount);
+
+  final clusters =
+      startingClusters.map((e) =&gt; pointProvider.fromInt(e)).toList();
+  final additionalClustersNeeded = clusterCount - clusters.length;
+  if (additionalClustersNeeded &gt; 0) {
+    final random = math.Random(0x42688);
+    final indices = &lt;int&gt;[];
+    for (var i = 0; i &lt; additionalClustersNeeded; i++) {
+      // Use existing points rather than generating random centroids.
+      //
+      // KMeans is extremely sensitive to initial clusters. This quantizer
+      // is meant to be used with a Wu quantizer that provides initial
+      // centroids, but Wu is very slow on unscaled images and when extracting
+      // more than 256 colors.
+      //
+      // Here, we can safely assume that more than 256 colors were requested
+      // for extraction. Generating random centroids tends to lead to many
+      // &#34;empty&#34; centroids, as the random centroids are nowhere near any pixels
+      // in the image, and the centroids from Wu are very refined and close
+      // to pixels in the image.
+      //
+      // Rather than generate random centroids, we&#39;ll pick centroids that
+      // are actual pixels in the image, and avoid duplicating centroids.
+
+      var index = random.nextInt(points.length);
+      while (indices.contains(index)) {
+        index = random.nextInt(points.length);
+      }
+      indices.add(index);
+    }
+
+    indices.forEach((index) {
+      clusters.add(points[index]);
+    });
+  }
+  debugLog(
+    &#39;have ${clusters.length} starting clusters, ${points.length} points&#39;,
+  );
+  final clusterIndexRandom = math.Random(0x42688);
+  final clusterIndices =
+      List&lt;int&gt;.generate(pointCount, (index) =&gt; index % clusterCount);
+  final indexMatrix = List&lt;List&lt;int&gt;&gt;.generate(
+      clusterCount, (_) =&gt; List.filled(clusterCount, 0));
+
+  final distanceToIndexMatrix = List&lt;List&lt;DistanceAndIndex&gt;&gt;.generate(
+      clusterCount,
+      (index) =&gt; List&lt;DistanceAndIndex&gt;.generate(
+          clusterCount, (index) =&gt; DistanceAndIndex(0, index)));
+
+  final pixelCountSums = List&lt;int&gt;.filled(clusterCount, 0);
+  for (var iteration = 0; iteration &lt; maxIterations; iteration++) {
+    if (debug) {
+      for (var i = 0; i &lt; clusterCount; i++) {
+        pixelCountSums[i] = 0;
+      }
+      for (var i = 0; i &lt; pointCount; i++) {
+        final clusterIndex = clusterIndices[i];
+        final count = counts[i];
+        pixelCountSums[clusterIndex] += count;
+      }
+      var emptyClusters = 0;
+      for (var cluster = 0; cluster &lt; clusterCount; cluster++) {
+        if (pixelCountSums[cluster] == 0) {
+          emptyClusters++;
+        }
+      }
+      debugLog(
+        &#39;starting iteration ${iteration + 1}; $emptyClusters clusters are empty of $clusterCount&#39;,
+      );
+    }
+
+    var pointsMoved = 0;
+    for (var i = 0; i &lt; clusterCount; i++) {
+      for (var j = i + 1; j &lt; clusterCount; j++) {
+        final distance = pointProvider.distance(clusters[i], clusters[j]);
+        distanceToIndexMatrix[j][i].distance = distance;
+        distanceToIndexMatrix[j][i].index = i;
+        distanceToIndexMatrix[i][j].distance = distance;
+        distanceToIndexMatrix[i][j].index = j;
+      }
+      distanceToIndexMatrix[i].sort();
+      for (var j = 0; j &lt; clusterCount; j++) {
+        indexMatrix[i][j] = distanceToIndexMatrix[i][j].index;
+      }
+    }
+
+    for (var i = 0; i &lt; pointCount; i++) {
+      final point = points[i];
+      final previousClusterIndex = clusterIndices[i];
+      final previousCluster = clusters[previousClusterIndex];
+      final previousDistance = pointProvider.distance(point, previousCluster);
+      var minimumDistance = previousDistance;
+      var newClusterIndex = -1;
+      for (var j = 0; j &lt; clusterCount; j++) {
+        if (distanceToIndexMatrix[previousClusterIndex][j].distance &gt;=
+            4 * previousDistance) {
+          continue;
+        }
+        final distance = pointProvider.distance(point, clusters[j]);
+        if (distance &lt; minimumDistance) {
+          minimumDistance = distance;
+          newClusterIndex = j;
+        }
+      }
+      if (newClusterIndex != -1) {
+        pointsMoved++;
+        clusterIndices[i] = newClusterIndex;
+      }
+    }
+
+    if (pointsMoved == 0 &amp;&amp; iteration &gt; 0) {
+      debugLog(&#39;terminated after $iteration k-means iterations&#39;);
+      break;
+    }
+
+    debugLog(&#39;iteration ${iteration + 1} moved $pointsMoved&#39;);
+    final componentASums = List&lt;double&gt;.filled(clusterCount, 0);
+    final componentBSums = List&lt;double&gt;.filled(clusterCount, 0);
+    final componentCSums = List&lt;double&gt;.filled(clusterCount, 0);
+
+    for (var i = 0; i &lt; clusterCount; i++) {
+      pixelCountSums[i] = 0;
+    }
+    for (var i = 0; i &lt; pointCount; i++) {
+      final clusterIndex = clusterIndices[i];
+      final point = points[i];
+      final count = counts[i];
+      pixelCountSums[clusterIndex] += count;
+      componentASums[clusterIndex] += (point[0] * count);
+      componentBSums[clusterIndex] += (point[1] * count);
+      componentCSums[clusterIndex] += (point[2] * count);
+    }
+    for (var i = 0; i &lt; clusterCount; i++) {
+      final count = pixelCountSums[i];
+      if (count == 0) {
+        clusters[i] = [0.0, 0.0, 0.0];
+        continue;
+      }
+      final a = componentASums[i] / count;
+      final b = componentBSums[i] / count;
+      final c = componentCSums[i] / count;
+      clusters[i] = [a, b, c];
+    }
+  }
+
+  final clusterArgbs = &lt;int&gt;[];
+  final clusterPopulations = &lt;int&gt;[];
+  for (var i = 0; i &lt; clusterCount; i++) {
+    final count = pixelCountSums[i];
+    if (count == 0) {
+      continue;
+    }
+
+    final possibleNewCluster = pointProvider.toInt(clusters[i]);
+    if (clusterArgbs.contains(possibleNewCluster)) {
+      continue;
+    }
+
+    clusterArgbs.add(possibleNewCluster);
+    clusterPopulations.add(count);
+  }
+  debugLog(
+    &#39;kmeans finished and generated ${clusterArgbs.length} clusters; $clusterCount were requested&#39;,
+  );
+
+  final inputPixelToClusterPixel = &lt;int, int&gt;{};
+  if (returnInputPixelToClusterPixel) {
+    final stopwatch = Stopwatch()..start();
+    for (var i = 0; i &lt; pixels.length; i++) {
+      final inputPixel = pixels[i];
+      final clusterIndex = clusterIndices[i];
+      final cluster = clusters[clusterIndex];
+      final clusterPixel = pointProvider.toInt(cluster);
+      inputPixelToClusterPixel[inputPixel] = clusterPixel;
+    }
+    debugLog(
+      &#39;took ${stopwatch.elapsedMilliseconds} ms to create input to cluster map&#39;,
+    );
+  }
+
+  return QuantizerResult(
+    Map.fromIterables(clusterArgbs, clusterPopulations),
+    inputPixelToClusterPixel: inputPixelToClusterPixel,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/package-material_color_utilities_quantize_quantizer_wsmeans-library.html">quantizer_wsmeans</a></li>
+  <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html">QuantizerWsmeans</a></li>
+  <li class="self-crumb">quantize static method</li>
+</ol>
+
+
+    <h5>QuantizerWsmeans class</h5>
+    <ol>
+
+        <li class="section-title"><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html#constructors">Constructors</a></li>
+          <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans/QuantizerWsmeans.html">QuantizerWsmeans</a></li>
+
+
+        <li class="section-title inherited">
+          <a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title inherited"><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html#static-methods">Static methods</a></li>
+          <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans/debugLog.html">debugLog</a></li>
+          <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans/quantize.html">quantize</a></li>
+
+        <li class="section-title"><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans-class.html#constants">Constants</a></li>
+          <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/QuantizerWsmeans/debug-constant.html">debug</a></li>
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

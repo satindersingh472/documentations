@@ -1,0 +1,13 @@
+{
+    "id": "material.FloatingActionButton.2",
+    "element": "FloatingActionButton",
+    "sourcePath": "lib/src/material/floating_action_button.dart",
+    "sourceLine": 95,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows how to make an extended [FloatingActionButton] in a\n[Scaffold], with a pink [backgroundColor], a thumbs up [Icon] and a\n[Text] label that reads \"Approve\".\n\n![](https://flutter.github.io/assets-for-api-docs/assets/material/floating_action_button_label.png)",
+    "file": "material.FloatingActionButton.2.dart"
+}

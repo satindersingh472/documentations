@@ -1,0 +1,944 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterApplicationLifeCycleDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/FlutterApplicationLifeCycleDelegate" class="dashAnchor"></a>
+    <a title="FlutterApplicationLifeCycleDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterApplicationLifeCycleDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterApplicationLifeCycleDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">FlutterApplicationLifeCycleDelegate</span> <span class="o">&lt;</span><span class="n">UNUserNotificationCenterDelegate</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FlutterApplicationLifeCycleDelegate</span> <span class="p">:</span> <span class="kt">UNUserNotificationCenterDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Protocol for listener of events from the UIApplication, typically a FlutterPlugin.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didFinishLaunchingWithOptions:"></a>
+                    <a name="//apple_ref/objc/Method/-application:didFinishLaunchingWithOptions:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didFinishLaunchingWithOptions:">-application:<wbr/>didFinishLaunchingWithOptions:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">didFinishLaunchingWithOptions</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>NO</code> if this vetoes application launch.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:willFinishLaunchingWithOptions:"></a>
+                    <a name="//apple_ref/objc/Method/-application:willFinishLaunchingWithOptions:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:willFinishLaunchingWithOptions:">-application:<wbr/>willFinishLaunchingWithOptions:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">willFinishLaunchingWithOptions</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">willFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>NO</code> if this vetoes application launch.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationDidBecomeActive:"></a>
+                    <a name="//apple_ref/objc/Method/-applicationDidBecomeActive:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationDidBecomeActive:">-applicationDidBecomeActive:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidBecomeActive</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">applicationDidBecomeActive</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationWillResignActive:"></a>
+                    <a name="//apple_ref/objc/Method/-applicationWillResignActive:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationWillResignActive:">-applicationWillResignActive:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillResignActive</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">applicationWillResignActive</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationDidEnterBackground:"></a>
+                    <a name="//apple_ref/objc/Method/-applicationDidEnterBackground:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationDidEnterBackground:">-applicationDidEnterBackground:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationDidEnterBackground</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">applicationDidEnterBackground</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationWillEnterForeground:"></a>
+                    <a name="//apple_ref/objc/Method/-applicationWillEnterForeground:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationWillEnterForeground:">-applicationWillEnterForeground:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillEnterForeground</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">applicationWillEnterForeground</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationWillTerminate:"></a>
+                    <a name="//apple_ref/objc/Method/-applicationWillTerminate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)applicationWillTerminate:">-applicationWillTerminate:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applicationWillTerminate</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">applicationWillTerminate</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didRegisterUserNotificationSettings:"></a>
+                    <a name="//apple_ref/objc/Method/-application:didRegisterUserNotificationSettings:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didRegisterUserNotificationSettings:">-application:<wbr/>didRegisterUserNotificationSettings:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">didRegisterUserNotificationSettings</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">UIUserNotificationSettings</span> <span class="o">*</span><span class="p">)</span><span class="nv">notificationSettings</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didRegister</span> <span class="nv">notificationSettings</span><span class="p">:</span> <span class="kt">UIUserNotificationSettings</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didRegisterForRemoteNotificationsWithDeviceToken:"></a>
+                    <a name="//apple_ref/objc/Method/-application:didRegisterForRemoteNotificationsWithDeviceToken:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didRegisterForRemoteNotificationsWithDeviceToken:">-application:<wbr/>didRegisterForRemoteNotificationsWithDeviceToken:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">didRegisterForRemoteNotificationsWithDeviceToken</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didFailToRegisterForRemoteNotificationsWithError:"></a>
+                    <a name="//apple_ref/objc/Method/-application:didFailToRegisterForRemoteNotificationsWithError:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didFailToRegisterForRemoteNotificationsWithError:">-application:<wbr/>didFailToRegisterForRemoteNotificationsWithError:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">didFailToRegisterForRemoteNotificationsWithError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFailToRegisterForRemoteNotificationsWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didReceiveRemoteNotification:fetchCompletionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-application:didReceiveRemoteNotification:fetchCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didReceiveRemoteNotification:fetchCompletionHandler:">-application:<wbr/>didReceiveRemoteNotification:<wbr/>fetchCompletionHandler:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">didReceiveRemoteNotification</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">userInfo</span>
+          <span class="nf">fetchCompletionHandler</span><span class="p">:</span>
+              <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">UIBackgroundFetchResult</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didReceiveLocalNotification:"></a>
+                    <a name="//apple_ref/objc/Method/-application:didReceiveLocalNotification:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:didReceiveLocalNotification:">-application:<wbr/>didReceiveLocalNotification:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls all plugins registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">didReceiveLocalNotification</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UILocalNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">notification</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">notification</span><span class="p">:</span> <span class="kt">UILocalNotification</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:openURL:options:"></a>
+                    <a name="//apple_ref/objc/Method/-application:openURL:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:openURL:options:">-application:<wbr/>openURL:<wbr/>options:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+            <span class="nf">openURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+            <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">UIApplicationOpenURLOptionsKey</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
+                        <span class="n">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="kd">open</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">OpenURLOptionsKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:handleOpenURL:"></a>
+                    <a name="//apple_ref/objc/Method/-application:handleOpenURL:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:handleOpenURL:">-application:<wbr/>handleOpenURL:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+      <span class="nf">handleOpenURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">handleOpen</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:openURL:sourceApplication:annotation:"></a>
+                    <a name="//apple_ref/objc/Method/-application:openURL:sourceApplication:annotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:openURL:sourceApplication:annotation:">-application:<wbr/>openURL:<wbr/>sourceApplication:<wbr/>annotation:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+              <span class="nf">openURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+    <span class="nf">sourceApplication</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span>
+           <span class="nf">annotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="kd">open</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">sourceApplication</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">annotation</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:performActionForShortcutItem:completionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-application:performActionForShortcutItem:completionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:performActionForShortcutItem:completionHandler:">-application:<wbr/>performActionForShortcutItem:<wbr/>completionHandler:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">performActionForShortcutItem</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">UIApplicationShortcutItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">shortcutItem</span>
+               <span class="nf">completionHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">performActionFor</span> <span class="nv">shortcutItem</span><span class="p">:</span> <span class="kt">UIApplicationShortcutItem</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:handleEventsForBackgroundURLSession:completionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-application:handleEventsForBackgroundURLSession:completionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:handleEventsForBackgroundURLSession:completionHandler:">-application:<wbr/>handleEventsForBackgroundURLSession:<wbr/>completionHandler:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">handleEventsForBackgroundURLSession</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span>
+                      <span class="nf">completionHandler</span><span class="p">:</span>
+                          <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">handleEventsForBackgroundURLSession</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:performFetchWithCompletionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-application:performFetchWithCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:performFetchWithCompletionHandler:">-application:<wbr/>performFetchWithCompletionHandler:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">performFetchWithCompletionHandler</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">UIBackgroundFetchResult</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">performFetchWithCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:continueUserActivity:restorationHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-application:continueUserActivity:restorationHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)FlutterApplicationLifeCycleDelegate(im)application:continueUserActivity:restorationHandler:">-application:<wbr/>continueUserActivity:<wbr/>restorationHandler:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called if this has been registered for <code>UIApplicationDelegate</code> callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">application</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nf">continueUserActivity</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSUserActivity</span> <span class="o">*</span><span class="p">)</span><span class="nv">userActivity</span>
+      <span class="nf">restorationHandler</span><span class="p">:</span>
+          <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="nv">restorationHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="nv">userActivity</span><span class="p">:</span> <span class="kt">NSUserActivity</span><span class="p">,</span> <span class="nv">restorationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if this handles the request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

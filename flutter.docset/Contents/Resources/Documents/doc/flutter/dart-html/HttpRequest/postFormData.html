@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the postFormData method from the HttpRequest class, for the Dart programming language."/>
+  <title>postFormData method - HttpRequest class - dart:html library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-html/dart-html-library.html">dart:html</a></li>
+    <li><a href="dart-html/HttpRequest-class.html">HttpRequest</a></li>
+    <li class="self-crumb">postFormData static method</li>
+  </ol>
+  <div class="self-name">postFormData</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><a class="dashingAutolink" name="autolink-8948"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/postFormData"></a><span class="kind-method">postFormData</span> static method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-html/HttpRequest-class.html">HttpRequest</a></span>&gt;</span></span>
+<span class="name ">postFormData</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="postFormData-param-url"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">url</span>, </span></li>
+<li><span class="parameter" id="postFormData-param-data"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">data</span>, </span></li>
+<li><span class="parameter" id="postFormData-param-withCredentials">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">withCredentials</span>, </span></li>
+<li><span class="parameter" id="postFormData-param-responseType"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">responseType</span>, </span></li>
+<li><span class="parameter" id="postFormData-param-requestHeaders"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">requestHeaders</span>, </span></li>
+<li><span class="parameter" id="postFormData-param-onProgress"><span class="type-annotation">void</span> <span class="parameter-name">onProgress</span>(<ol class="parameter-list"><li><span class="parameter" id="onProgress-param-e"><span class="type-annotation"><a href="dart-html/ProgressEvent-class.html">ProgressEvent</a></span> <span class="parameter-name">e</span></span></li>
+</ol>
+)?}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Makes a server POST request with the specified data encoded as form data.</p>
+<p>This is roughly the POST equivalent of <a href="dart-html/HttpRequest/getString.html">getString</a>. This method is similar
+to sending a <a href="dart-html/FormData-class.html">FormData</a> object with broader browser support but limited to
+String values.</p>
+<p>If <code>data</code> is supplied, the key/value pairs are URI encoded with
+<a href="dart-core/Uri/encodeQueryComponent.html">Uri.encodeQueryComponent</a> and converted into an HTTP query string.</p>
+<p>Unless otherwise specified, this method appends the following header:</p>
+<pre class="language-dart"><code>Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+</code></pre>
+<p>Here&#39;s an example of using this method:</p>
+<pre class="language-dart"><code>var data = { &#39;firstName&#39; : &#39;John&#39;, &#39;lastName&#39; : &#39;Doe&#39; };
+HttpRequest.postFormData(&#39;/send&#39;, data).then((HttpRequest resp) {
+  // Do something with the response.
+});
+</code></pre>
+<p>See also:</p>
+<ul>
+<li><a href="dart-html/HttpRequest/request.html">request</a></li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static Future&lt;HttpRequest&gt; postFormData(String url, Map&lt;String, String&gt; data,
+    {bool? withCredentials,
+    String? responseType,
+    Map&lt;String, String&gt;? requestHeaders,
+    void onProgress(ProgressEvent e)?}) {
+  var parts = [];
+  data.forEach((key, value) {
+    parts.add(&#39;${Uri.encodeQueryComponent(key)}=&#39;
+        &#39;${Uri.encodeQueryComponent(value)}&#39;);
+  });
+  var formData = parts.join(&#39;&amp;&#39;);
+
+  if (requestHeaders == null) {
+    requestHeaders = &lt;String, String&gt;{};
+  }
+  requestHeaders.putIfAbsent(&#39;Content-Type&#39;,
+      () =&gt; &#39;application/x-www-form-urlencoded; charset=UTF-8&#39;);
+
+  return request(url,
+      method: &#39;POST&#39;,
+      withCredentials: withCredentials,
+      responseType: responseType,
+      requestHeaders: requestHeaders,
+      sendData: formData,
+      onProgress: onProgress);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="dart-html/dart-html-library.html">dart:html</a></li>
+  <li><a href="dart-html/HttpRequest-class.html">HttpRequest</a></li>
+  <li class="self-crumb">postFormData static method</li>
+</ol>
+
+
+    <h5>HttpRequest class</h5>
+    <ol>
+
+        <li class="section-title"><a href="dart-html/HttpRequest-class.html#constructors">Constructors</a></li>
+          <li><a href="dart-html/HttpRequest/HttpRequest.html">HttpRequest</a></li>
+
+
+        <li class="section-title">
+          <a href="dart-html/HttpRequest-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="dart-html/EventTarget/on.html">on</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onAbort.html">onAbort</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onError.html">onError</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onLoad.html">onLoad</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onLoadEnd.html">onLoadEnd</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onLoadStart.html">onLoadStart</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onProgress.html">onProgress</a></li>
+          <li><a href="dart-html/HttpRequest/onReadyStateChange.html">onReadyStateChange</a></li>
+          <li class="inherited"><a href="dart-html/HttpRequestEventTarget/onTimeout.html">onTimeout</a></li>
+          <li><a href="dart-html/HttpRequest/readyState.html">readyState</a></li>
+          <li><a href="dart-html/HttpRequest/response.html">response</a></li>
+          <li><a href="dart-html/HttpRequest/responseHeaders.html">responseHeaders</a></li>
+          <li><a href="dart-html/HttpRequest/responseText.html">responseText</a></li>
+          <li><a href="dart-html/HttpRequest/responseType.html">responseType</a></li>
+          <li><a href="dart-html/HttpRequest/responseUrl.html">responseUrl</a></li>
+          <li><a href="dart-html/HttpRequest/responseXml.html">responseXml</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="dart-html/HttpRequest/status.html">status</a></li>
+          <li><a href="dart-html/HttpRequest/statusText.html">statusText</a></li>
+          <li><a href="dart-html/HttpRequest/timeout.html">timeout</a></li>
+          <li><a href="dart-html/HttpRequest/upload.html">upload</a></li>
+          <li><a href="dart-html/HttpRequest/withCredentials.html">withCredentials</a></li>
+
+        <li class="section-title"><a href="dart-html/HttpRequest-class.html#instance-methods">Methods</a></li>
+          <li><a href="dart-html/HttpRequest/abort.html">abort</a></li>
+          <li class="inherited"><a href="dart-html/EventTarget/addEventListener.html">addEventListener</a></li>
+          <li class="inherited"><a href="dart-html/EventTarget/dispatchEvent.html">dispatchEvent</a></li>
+          <li><a href="dart-html/HttpRequest/getAllResponseHeaders.html">getAllResponseHeaders</a></li>
+          <li><a href="dart-html/HttpRequest/getResponseHeader.html">getResponseHeader</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="dart-html/HttpRequest/open.html">open</a></li>
+          <li><a href="dart-html/HttpRequest/overrideMimeType.html">overrideMimeType</a></li>
+          <li class="inherited"><a href="dart-html/EventTarget/removeEventListener.html">removeEventListener</a></li>
+          <li><a href="dart-html/HttpRequest/send.html">send</a></li>
+          <li><a href="dart-html/HttpRequest/setRequestHeader.html">setRequestHeader</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="dart-html/HttpRequest-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="dart-html/HttpRequest-class.html#static-properties">Static properties</a></li>
+          <li><a href="dart-html/HttpRequest/supportsCrossOrigin.html">supportsCrossOrigin</a></li>
+          <li><a href="dart-html/HttpRequest/supportsLoadEndEvent.html">supportsLoadEndEvent</a></li>
+          <li><a href="dart-html/HttpRequest/supportsOverrideMimeType.html">supportsOverrideMimeType</a></li>
+          <li><a href="dart-html/HttpRequest/supportsProgressEvent.html">supportsProgressEvent</a></li>
+
+        <li class="section-title"><a href="dart-html/HttpRequest-class.html#static-methods">Static methods</a></li>
+          <li><a href="dart-html/HttpRequest/getString.html">getString</a></li>
+          <li><a href="dart-html/HttpRequest/postFormData.html">postFormData</a></li>
+          <li><a href="dart-html/HttpRequest/request.html">request</a></li>
+          <li><a href="dart-html/HttpRequest/requestCrossOrigin.html">requestCrossOrigin</a></li>
+
+        <li class="section-title"><a href="dart-html/HttpRequest-class.html#constants">Constants</a></li>
+          <li><a href="dart-html/HttpRequest/DONE-constant.html">DONE</a></li>
+          <li><a href="dart-html/HttpRequest/HEADERS_RECEIVED-constant.html">HEADERS_RECEIVED</a></li>
+          <li><a href="dart-html/HttpRequest/LOADING-constant.html">LOADING</a></li>
+          <li><a href="dart-html/HttpRequest/OPENED-constant.html">OPENED</a></li>
+          <li><a href="dart-html/HttpRequest/readyStateChangeEvent-constant.html">readyStateChangeEvent</a></li>
+          <li><a href="dart-html/HttpRequest/UNSENT-constant.html">UNSENT</a></li>
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

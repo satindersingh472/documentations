@@ -1,0 +1,1675 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the TestWindow class from the flutter_test library, for the Dart programming language."/>
+  <title>TestWindow class - flutter_test library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+    <li class="self-crumb">TestWindow class</li>
+  </ol>
+  <div class="self-name">TestWindow</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter_test/lib/src/window.dart#L54"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-34270"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/TestWindow"></a><span class="kind-class">TestWindow</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p><a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a> that wraps another <a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a> and
+allows faking of some properties for testing purposes.</p>
+<p>Tests for certain widgets, e.g., <a href="material/MaterialApp-class.html">MaterialApp</a>, might require faking certain
+properties of a <a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a>. <a href="flutter_test/TestWindow-class.html">TestWindow</a> facilitates the
+faking of these properties by overriding the properties of a real
+<a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a> with desired fake values. The binding used within
+tests, <a href="flutter_test/TestWidgetsFlutterBinding-class.html">TestWidgetsFlutterBinding</a>, contains a <a href="flutter_test/TestWindow-class.html">TestWindow</a> that is used by
+all tests.</p>
+<h2 id="sample-code">Sample Code</h2>
+<p>A test can utilize a <a href="flutter_test/TestWindow-class.html">TestWindow</a> in the following way:</p>
+<pre class="language-dart"><code class="language-dart">testWidgets(&#39;your test name here&#39;, (WidgetTester tester) async {
+  // Retrieve the TestWidgetsFlutterBinding.
+  final TestWidgetsFlutterBinding testBinding = tester.binding;
+
+  // Fake the desired properties of the TestWindow. All code running
+  // within this test will perceive the following fake text scale
+  // factor as the real text scale factor of the window.
+  testBinding.window.textScaleFactorFakeValue = 2.5;
+
+  // Test code that depends on text scale factor here.
+});
+</code></pre>
+<p>The <a href="flutter_test/TestWidgetsFlutterBinding-class.html">TestWidgetsFlutterBinding</a> is recreated for each test and
+therefore any fake values defined in one test will not persist
+to the next.</p>
+<p>If a test needs to override a real <a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a> property and
+then later return to using the real <a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a> property,
+<a href="flutter_test/TestWindow-class.html">TestWindow</a> provides methods to clear each individual test value, e.g.,
+<a class="deprecated" href="flutter_test/TestWindow/clearLocaleTestValue.html">clearLocaleTestValue()</a>.</p>
+<p>To clear all fake test values in a <a href="flutter_test/TestWindow-class.html">TestWindow</a>, consider using
+<a href="flutter_test/TestWindow/clearAllTestValues.html">clearAllTestValues()</a>.</p>
+<p>See also:</p>
+<ul>
+<li><a href="flutter_test/TestPlatformDispatcher-class.html">TestPlatformDispatcher</a>, which wraps a <a href="dart-ui/PlatformDispatcher-class.html">PlatformDispatcher</a> for
+testing purposes and is used by the <a href="flutter_test/TestWindow/platformDispatcher.html">platformDispatcher</a> property of
+this class.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a></li>
+    </ul>
+  </dd>
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="TestWindow" class="callable">
+          <span class="name"><a href="flutter_test/TestWindow/TestWindow.html">TestWindow</a></span><span class="signature">(<span class="parameter" id="-param-window">{<span>required</span> <span class="type-annotation"><a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a></span> <span class="parameter-name">window</span>}</span>)</span>
+        </dt>
+        <dd>
+          Constructs a <a href="flutter_test/TestWindow-class.html">TestWindow</a> that defers all behavior to the given
+<a href="dart-ui/SingletonFlutterWindow-class.html">dart:ui.SingletonFlutterWindow</a> unless explicitly overridden for test purposes.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="accessibilityFeatures" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/accessibilityFeatures.html">accessibilityFeatures</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/AccessibilityFeatures-class.html">AccessibilityFeatures</a></span> 
+
+</dt>
+<dd>
+  Additional accessibility features that may be enabled by the platform.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="accessibilityFeaturesTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/accessibilityFeaturesTestValue.html">accessibilityFeaturesTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/AccessibilityFeatures-class.html">AccessibilityFeatures</a></span> 
+
+</dt>
+<dd>
+  Hides the real accessibility features and reports the given
+<a class="deprecated" href="flutter_test/TestWindow/accessibilityFeaturesTestValue.html">accessibilityFeaturesTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="alwaysUse24HourFormat" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/alwaysUse24HourFormat.html">alwaysUse24HourFormat</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  The setting indicating whether time should always be shown in the 24-hour
+format.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="alwaysUse24HourFormatTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/alwaysUse24HourFormatTestValue.html">alwaysUse24HourFormatTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Hides the real clock format and reports the given
+<a class="deprecated" href="flutter_test/TestWindow/alwaysUse24HourFormatTestValue.html">alwaysUse24HourFormatTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="brieflyShowPassword" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/brieflyShowPassword.html">brieflyShowPassword</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether briefly displaying the characters as you type in obscured text
+fields is enabled in system settings.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="brieflyShowPasswordTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/brieflyShowPasswordTestValue.html">brieflyShowPasswordTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Hides the real <a href="flutter_test/TestWindow/brieflyShowPassword.html">brieflyShowPassword</a> and reports the given
+<code>brieflyShowPasswordTestValue</code> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="defaultRouteName" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/defaultRouteName.html">defaultRouteName</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The route or path that the embedder requested when the application was
+launched.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="defaultRouteNameTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/defaultRouteNameTestValue.html">defaultRouteNameTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Hides the real default route name and reports the given
+<a class="deprecated" href="flutter_test/TestWindow/defaultRouteNameTestValue.html">defaultRouteNameTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="devicePixelRatio" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/devicePixelRatio.html">devicePixelRatio</a></span>
+  <span class="signature">&rarr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The number of device pixels for each logical pixel for the screen this
+view is displayed on.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="devicePixelRatioTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/devicePixelRatioTestValue.html">devicePixelRatioTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  Hides the real device pixel ratio and reports the given <code>devicePixelRatio</code>
+instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="displayFeatures" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/displayFeatures.html">displayFeatures</a></span>
+  <span class="signature">&rarr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-ui/DisplayFeature-class.html">DisplayFeature</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Areas of the display that are obstructed by hardware features.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="displayFeaturesTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/displayFeaturesTestValue.html">displayFeaturesTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-ui/DisplayFeature-class.html">DisplayFeature</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Hides the real displayFeatures and reports the given <a href="flutter_test/TestWindow/displayFeaturesTestValue.html">displayFeaturesTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="frameData" class="property inherited">
+  <span class="name"><a href="dart-ui/SingletonFlutterWindow/frameData.html">frameData</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/FrameData-class.html">FrameData</a></span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="dart-ui/FrameData-class.html">FrameData</a> object for the current frame.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="initialLifecycleState" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/initialLifecycleState.html">initialLifecycleState</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The lifecycle state immediately after dart isolate initialization.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="initialLifecycleStateTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/initialLifecycleStateTestValue.html">initialLifecycleStateTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Sets a faked initialLifecycleState for testing.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="locale" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/locale.html">locale</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/Locale-class.html">Locale</a></span> 
+
+</dt>
+<dd>
+  The system-reported default locale of the device.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="locales" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/locales.html">locales</a></span>
+  <span class="signature">&rarr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-ui/Locale-class.html">Locale</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The full system-reported supported locales of the device.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="localesTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/localesTestValue.html">localesTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-ui/Locale-class.html">Locale</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Hides the real locales and reports the given <a class="deprecated" href="flutter_test/TestWindow/localesTestValue.html">localesTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="localeTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/localeTestValue.html">localeTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/Locale-class.html">Locale</a></span> 
+
+</dt>
+<dd>
+  Hides the real locale and reports the given <a class="deprecated" href="flutter_test/TestWindow/localeTestValue.html">localeTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="nativeSpellCheckServiceDefined" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/nativeSpellCheckServiceDefined.html">nativeSpellCheckServiceDefined</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the spell check service is supported on the current platform.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="nativeSpellCheckServiceDefinedTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/nativeSpellCheckServiceDefinedTestValue.html">nativeSpellCheckServiceDefinedTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="onAccessibilityFeaturesChanged" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onAccessibilityFeaturesChanged.html">onAccessibilityFeaturesChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked when the value of <a href="flutter_test/TestWindow/accessibilityFeatures.html">accessibilityFeatures</a> changes.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onBeginFrame" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onBeginFrame.html">onBeginFrame</a></span>
+  <span class="signature">&harr; <a href="dart-ui/FrameCallback.html">FrameCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked to notify the window that it is an appropriate
+time to provide a scene using the <a href="dart-ui/SceneBuilder-class.html">SceneBuilder</a> API and the <a href="flutter_test/TestWindow/render.html">render</a>
+method.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onDrawFrame" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onDrawFrame.html">onDrawFrame</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked for each frame after <a href="flutter_test/TestWindow/onBeginFrame.html">onBeginFrame</a> has
+completed and after the microtask queue has been drained.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onFrameDataChanged" class="property inherited">
+  <span class="name"><a href="dart-ui/SingletonFlutterWindow/onFrameDataChanged.html">onFrameDataChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  A callback that is invoked when the window updates the <a href="dart-ui/FrameData-class.html">FrameData</a>.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onKeyData" class="property inherited">
+  <span class="name"><a href="dart-ui/SingletonFlutterWindow/onKeyData.html">onKeyData</a></span>
+  <span class="signature">&harr; <a href="dart-ui/KeyDataCallback.html">KeyDataCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  A callback that is invoked when key data is available.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onLocaleChanged" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onLocaleChanged.html">onLocaleChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked whenever <a href="flutter_test/TestWindow/locale.html">locale</a> changes value.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onMetricsChanged" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onMetricsChanged.html">onMetricsChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked whenever the <a href="flutter_test/TestWindow/devicePixelRatio.html">devicePixelRatio</a>,
+<a href="flutter_test/TestWindow/physicalSize.html">physicalSize</a>, <a href="flutter_test/TestWindow/padding.html">padding</a>, <a href="flutter_test/TestWindow/viewInsets.html">viewInsets</a>, <a href="dart-ui/PlatformDispatcher/views.html">PlatformDispatcher.views</a>, or
+<a href="flutter_test/TestWindow/systemGestureInsets.html">systemGestureInsets</a> values change.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onPlatformBrightnessChanged" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onPlatformBrightnessChanged.html">onPlatformBrightnessChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked whenever <a href="flutter_test/TestWindow/platformBrightness.html">platformBrightness</a> changes value.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onPlatformMessage" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/onPlatformMessage.html">onPlatformMessage</a></span>
+  <span class="signature">&harr; <a href="dart-ui/PlatformMessageCallback.html">PlatformMessageCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called whenever this window receives a message from a platform-specific
+plugin.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onPointerDataPacket" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onPointerDataPacket.html">onPointerDataPacket</a></span>
+  <span class="signature">&harr; <a href="dart-ui/PointerDataPacketCallback.html">PointerDataPacketCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked when pointer data is available.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onReportTimings" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onReportTimings.html">onReportTimings</a></span>
+  <span class="signature">&harr; <a href="dart-ui/TimingsCallback.html">TimingsCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked to report the <a href="dart-ui/FrameTiming-class.html">FrameTiming</a> of recently
+rasterized frames.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onSemanticsAction" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onSemanticsAction.html">onSemanticsAction</a></span>
+  <span class="signature">&harr; <a href="dart-ui/SemanticsActionCallback.html">SemanticsActionCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked whenever the user requests an action to be
+performed.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onSemanticsEnabledChanged" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onSemanticsEnabledChanged.html">onSemanticsEnabledChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked when the value of <a href="flutter_test/TestWindow/semanticsEnabled.html">semanticsEnabled</a> changes.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onSystemFontFamilyChanged" class="property inherited">
+  <span class="name"><a href="dart-ui/SingletonFlutterWindow/onSystemFontFamilyChanged.html">onSystemFontFamilyChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  A callback that is invoked whenever <a href="dart-ui/SingletonFlutterWindow/systemFontFamily.html">systemFontFamily</a> changes value.
+  <div class="features"><span class="feature">read / write</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onTextScaleFactorChanged" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/onTextScaleFactorChanged.html">onTextScaleFactorChanged</a></span>
+  <span class="signature">&harr; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  A callback that is invoked whenever <a href="flutter_test/TestWindow/textScaleFactor.html">textScaleFactor</a> changes value.
+  <div class="features"><span class="feature">read / write</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/padding.html">padding</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  The number of physical pixels on each side of the display rectangle into
+which the view can render, but which may be partially obscured by system
+UI (such as the system notification area), or physical intrusions in
+the display (e.g. overscan regions on television screens or phone sensor
+housings).
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="paddingTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/paddingTestValue.html">paddingTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  Hides the real padding and reports the given <a href="flutter_test/TestWindow/paddingTestValue.html">paddingTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="physicalGeometry" class="property inherited">
+  <span class="name"><a href="dart-ui/FlutterView/physicalGeometry.html">physicalGeometry</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/Rect-class.html">Rect</a></span> 
+
+</dt>
+<dd class="inherited">
+  The dimensions and location of the rectangle into which the scene rendered
+in this view will be drawn on the screen, in physical pixels.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="physicalSize" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/physicalSize.html">physicalSize</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/Size-class.html">Size</a></span> 
+
+</dt>
+<dd>
+  The dimensions of the rectangle into which the scene rendered in this view
+will be drawn on the screen, in physical pixels.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="physicalSizeTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/physicalSizeTestValue.html">physicalSizeTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/Size-class.html">Size</a></span> 
+
+</dt>
+<dd>
+  Hides the real physical size and reports the given <a href="flutter_test/TestWindow/physicalSizeTestValue.html">physicalSizeTestValue</a>
+instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="platformBrightness" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/platformBrightness.html">platformBrightness</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/Brightness.html">Brightness</a></span> 
+
+</dt>
+<dd>
+  The setting indicating the current brightness mode of the host platform.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="platformBrightnessTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/platformBrightnessTestValue.html">platformBrightnessTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/Brightness.html">Brightness</a></span> 
+
+</dt>
+<dd>
+  Hides the real text scale factor and reports the given
+<a class="deprecated" href="flutter_test/TestWindow/platformBrightnessTestValue.html">platformBrightnessTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="platformDispatcher" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/platformDispatcher.html">platformDispatcher</a></span>
+  <span class="signature">&rarr; <a href="flutter_test/TestPlatformDispatcher-class.html">TestPlatformDispatcher</a></span> 
+
+</dt>
+<dd>
+  The platform dispatcher that this view is registered with, and gets its
+information from.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="semanticsEnabled" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/semanticsEnabled.html">semanticsEnabled</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the user has requested that <a href="flutter_test/TestWindow/updateSemantics.html">updateSemantics</a> be called when
+the semantic contents of window changes.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="semanticsEnabledTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/semanticsEnabledTestValue.html">semanticsEnabledTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Hides the real semantics enabled and reports the given
+<a class="deprecated" href="flutter_test/TestWindow/semanticsEnabledTestValue.html">semanticsEnabledTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="systemFontFamily" class="property inherited">
+  <span class="name"><a href="dart-ui/SingletonFlutterWindow/systemFontFamily.html">systemFontFamily</a></span>
+  <span class="signature">&rarr; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The setting indicating the system font of the host platform.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="systemGestureInsets" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/systemGestureInsets.html">systemGestureInsets</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  The number of physical pixels on each side of the display rectangle into
+which the view can render, but where the operating system will consume
+input gestures for the sake of system navigation.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="systemGestureInsetsTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/systemGestureInsetsTestValue.html">systemGestureInsetsTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  Hides the real system gesture insets and reports the given <a href="flutter_test/TestWindow/systemGestureInsetsTestValue.html">systemGestureInsetsTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="textScaleFactor" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/textScaleFactor.html">textScaleFactor</a></span>
+  <span class="signature">&rarr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The system-reported text scale.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="textScaleFactorTestValue" class="property">
+  <span class="name"><a class="deprecated" href="flutter_test/TestWindow/textScaleFactorTestValue.html">textScaleFactorTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  Hides the real text scale factor and reports the given
+<a class="deprecated" href="flutter_test/TestWindow/textScaleFactorTestValue.html">textScaleFactorTestValue</a> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="viewConfiguration" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/viewConfiguration.html">viewConfiguration</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/ViewConfiguration-class.html">ViewConfiguration</a></span> 
+
+</dt>
+<dd>
+  The configuration of this view.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="viewConfigurationTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/viewConfigurationTestValue.html">viewConfigurationTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/ViewConfiguration-class.html">ViewConfiguration</a>?</span> 
+
+</dt>
+<dd>
+  Hide the real view configuration and report the provided <code>value</code> instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="viewInsets" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/viewInsets.html">viewInsets</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  The number of physical pixels on each side of the display rectangle into
+which the view can render, but over which the operating system will likely
+place system UI, such as the keyboard, that fully obscures any content.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="viewInsetsTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/viewInsetsTestValue.html">viewInsetsTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  Hides the real view insets and reports the given <a href="flutter_test/TestWindow/viewInsetsTestValue.html">viewInsetsTestValue</a>
+instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+        <dt id="viewPadding" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/viewPadding.html">viewPadding</a></span>
+  <span class="signature">&rarr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  The number of physical pixels on each side of the display rectangle into
+which the view can render, but which may be partially obscured by system
+UI (such as the system notification area), or physical intrusions in
+the display (e.g. overscan regions on television screens or phone sensor
+housings).
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="viewPaddingTestValue" class="property">
+  <span class="name"><a href="flutter_test/TestWindow/viewPaddingTestValue.html">viewPaddingTestValue</a></span>
+  <span class="signature">&larr; <a href="dart-ui/WindowPadding-class.html">WindowPadding</a></span> 
+
+</dt>
+<dd>
+  Hides the real view padding and reports the given <a href="flutter_test/TestWindow/paddingTestValue.html">paddingTestValue</a>
+instead.
+  <div class="features"><span class="feature">write-only</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="clearAccessibilityFeaturesTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearAccessibilityFeaturesTestValue.html">clearAccessibilityFeaturesTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test accessibility features and returns to using the
+real accessibility features.
+  
+
+</dd>
+
+        <dt id="clearAllTestValues" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearAllTestValues.html">clearAllTestValues</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Delete any test value properties that have been set on this <a href="flutter_test/TestWindow-class.html">TestWindow</a>
+as well as its <a href="flutter_test/TestWindow/platformDispatcher.html">platformDispatcher</a>.
+  
+
+</dd>
+
+        <dt id="clearAlwaysUse24HourTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearAlwaysUse24HourTestValue.html">clearAlwaysUse24HourTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test clock format and returns to using the real clock
+format.
+  
+
+</dd>
+
+        <dt id="clearDefaultRouteNameTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearDefaultRouteNameTestValue.html">clearDefaultRouteNameTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test default route name and returns to using the real
+default route name.
+  
+
+</dd>
+
+        <dt id="clearDevicePixelRatioTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearDevicePixelRatioTestValue.html">clearDevicePixelRatioTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test device pixel ratio and returns to using the real
+device pixel ratio.
+  
+
+</dd>
+
+        <dt id="clearDisplayFeaturesTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearDisplayFeaturesTestValue.html">clearDisplayFeaturesTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test padding and returns to using the real padding.
+  
+
+</dd>
+
+        <dt id="clearLocalesTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearLocalesTestValue.html">clearLocalesTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test locales and returns to using the real locales.
+  
+
+</dd>
+
+        <dt id="clearLocaleTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearLocaleTestValue.html">clearLocaleTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test locale and returns to using the real locale.
+  
+
+</dd>
+
+        <dt id="clearPaddingTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearPaddingTestValue.html">clearPaddingTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test padding and returns to using the real padding.
+  
+
+</dd>
+
+        <dt id="clearPhysicalSizeTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearPhysicalSizeTestValue.html">clearPhysicalSizeTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test physical size and returns to using the real
+physical size.
+  
+
+</dd>
+
+        <dt id="clearPlatformBrightnessTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearPlatformBrightnessTestValue.html">clearPlatformBrightnessTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test platform brightness and returns to using the
+real platform brightness.
+  
+
+</dd>
+
+        <dt id="clearSemanticsEnabledTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearSemanticsEnabledTestValue.html">clearSemanticsEnabledTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test semantics enabled and returns to using the real
+semantics enabled.
+  
+
+</dd>
+
+        <dt id="clearSystemGestureInsetsTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearSystemGestureInsetsTestValue.html">clearSystemGestureInsetsTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test system gesture insets and returns to using the real system gesture insets.
+  
+
+</dd>
+
+        <dt id="clearTextScaleFactorTestValue" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="flutter_test/TestWindow/clearTextScaleFactorTestValue.html">clearTextScaleFactorTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test text scale factor and returns to using the real
+text scale factor.
+  
+
+</dd>
+
+        <dt id="clearViewInsetsTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearViewInsetsTestValue.html">clearViewInsetsTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test view insets and returns to using the real view
+insets.
+  
+
+</dd>
+
+        <dt id="clearViewPaddingTestValue" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/clearViewPaddingTestValue.html">clearViewPaddingTestValue</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Deletes any existing test view padding and returns to using the real
+viewPadding.
+  
+
+</dd>
+
+        <dt id="computePlatformResolvedLocale" class="callable inherited">
+  <span class="name"><a href="dart-ui/SingletonFlutterWindow/computePlatformResolvedLocale.html">computePlatformResolvedLocale</a></span><span class="signature">(<wbr/><span class="parameter" id="computePlatformResolvedLocale-param-supportedLocales"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr/><span class="type-parameter"><a href="dart-ui/Locale-class.html">Locale</a></span>&gt;</span></span> <span class="parameter-name">supportedLocales</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-ui/Locale-class.html">Locale</a>?</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Performs the platform-native locale resolution.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  This gives us some grace time when the dart:ui side adds something to
+<a href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a>, and makes things easier when we do rolls to give
+us time to catch up.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="render" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/render.html">render</a></span><span class="signature">(<wbr/><span class="parameter" id="render-param-scene"><span class="type-annotation"><a href="dart-ui/Scene-class.html">Scene</a></span> <span class="parameter-name">scene</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Updates the view&#39;s rendering on the GPU with the newly provided <a href="dart-ui/Scene-class.html">Scene</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="scheduleFrame" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/scheduleFrame.html">scheduleFrame</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Requests that, at the next appropriate opportunity, the <a href="flutter_test/TestWindow/onBeginFrame.html">onBeginFrame</a> and
+<a href="flutter_test/TestWindow/onDrawFrame.html">onDrawFrame</a> callbacks be invoked.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="sendPlatformMessage" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/sendPlatformMessage.html">sendPlatformMessage</a></span><span class="signature">(<wbr/><span class="parameter" id="sendPlatformMessage-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="sendPlatformMessage-param-data"><span class="type-annotation"><a href="dart-typed_data/ByteData-class.html">ByteData</a>?</span> <span class="parameter-name">data</span>, </span><span class="parameter" id="sendPlatformMessage-param-callback"><span class="type-annotation"><a href="dart-ui/PlatformMessageResponseCallback.html">PlatformMessageResponseCallback</a>?</span> <span class="parameter-name">callback</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sends a message to a platform-specific plugin.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="setIsolateDebugName" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/setIsolateDebugName.html">setIsolateDebugName</a></span><span class="signature">(<wbr/><span class="parameter" id="setIsolateDebugName-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Set the debug name associated with this platform dispatcher&#39;s root
+isolate.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateSemantics" class="callable">
+  <span class="name"><a href="flutter_test/TestWindow/updateSemantics.html">updateSemantics</a></span><span class="signature">(<wbr/><span class="parameter" id="updateSemantics-param-update"><span class="type-annotation"><a href="dart-ui/SemanticsUpdate-class.html">SemanticsUpdate</a></span> <span class="parameter-name">update</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Change the retained semantics data about this <a href="dart-ui/FlutterView-class.html">FlutterView</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-34271"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+  <li class="self-crumb">TestWindow class</li>
+</ol>
+
+
+    <h5>flutter_test library</h5>
+    <ol>
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#classes">Classes</a></li>
+        <li><a href="flutter_test/AccessibilityGuideline-class.html">AccessibilityGuideline</a></li>
+        <li><a href="flutter_test/AnimationSheetBuilder-class.html">AnimationSheetBuilder</a></li>
+        <li><a href="flutter_test/AutomatedTestWidgetsFlutterBinding-class.html">AutomatedTestWidgetsFlutterBinding</a></li>
+        <li><a href="flutter_test/CapturedAccessibilityAnnouncement-class.html">CapturedAccessibilityAnnouncement</a></li>
+        <li><a href="flutter_test/ChainedFinder-class.html">ChainedFinder</a></li>
+        <li><a href="flutter_test/CommonFinders-class.html">CommonFinders</a></li>
+        <li><a href="flutter_test/ComparisonResult-class.html">ComparisonResult</a></li>
+        <li><a href="package-matcher_matcher/CustomMatcher-class.html">CustomMatcher</a></li>
+        <li><a href="flutter_test/CustomMinimumContrastGuideline-class.html">CustomMinimumContrastGuideline</a></li>
+        <li><a href="flutter_test/DefaultTestVariant-class.html">DefaultTestVariant</a></li>
+        <li><a href="flutter_test/DefaultWebGoldenComparator-class.html">DefaultWebGoldenComparator</a></li>
+        <li><a href="package-matcher_matcher/Description-class.html">Description</a></li>
+        <li><a href="flutter_test/Evaluation-class.html">Evaluation</a></li>
+        <li><a href="test_api.fake/Fake-class.html">Fake</a></li>
+        <li><a href="flutter_test/FakeAccessibilityFeatures-class.html">FakeAccessibilityFeatures</a></li>
+        <li><a href="flutter_test/Finder-class.html">Finder</a></li>
+        <li><a href="flutter_test/FrameTimingSummarizer-class.html">FrameTimingSummarizer</a></li>
+        <li><a href="dart-async/Future-class.html">Future</a></li>
+        <li><a href="flutter_test/GoldenFileComparator-class.html">GoldenFileComparator</a></li>
+        <li><a href="flutter_test/KeyEventSimulator-class.html">KeyEventSimulator</a></li>
+        <li><a href="flutter_test/KeySimulatorTransitModeVariant-class.html">KeySimulatorTransitModeVariant</a></li>
+        <li><a href="flutter_test/LabeledTapTargetGuideline-class.html">LabeledTapTargetGuideline</a></li>
+        <li><a href="flutter_test/LiveTestWidgetsFlutterBinding-class.html">LiveTestWidgetsFlutterBinding</a></li>
+        <li><a href="flutter_test/LiveWidgetController-class.html">LiveWidgetController</a></li>
+        <li><a href="flutter_test/LocalFileComparator-class.html">LocalFileComparator</a></li>
+        <li><a href="package-matcher_matcher/Matcher-class.html">Matcher</a></li>
+        <li><a href="flutter_test/MatchesGoldenFile-class.html">MatchesGoldenFile</a></li>
+        <li><a href="flutter_test/MatchFinder-class.html">MatchFinder</a></li>
+        <li><a href="flutter_test/MinimumTapTargetGuideline-class.html">MinimumTapTargetGuideline</a></li>
+        <li><a href="flutter_test/MinimumTextContrastGuideline-class.html">MinimumTextContrastGuideline</a></li>
+        <li><a href="dart-ui/Offset-class.html">Offset</a></li>
+        <li><a href="test_api.scaffolding/OnPlatform-class.html">OnPlatform</a></li>
+        <li><a href="flutter_test/PointerEventRecord-class.html">PointerEventRecord</a></li>
+        <li><a href="test_api.scaffolding/Retry-class.html">Retry</a></li>
+        <li><a href="flutter_test/SemanticsController-class.html">SemanticsController</a></li>
+        <li><a href="rendering/SemanticsHandle-class.html">SemanticsHandle</a></li>
+        <li><a href="test_api.scaffolding/Skip-class.html">Skip</a></li>
+        <li><a href="package-test_api_expect/StreamMatcher-class.html">StreamMatcher</a></li>
+        <li><a href="package-matcher_matcher/StringDescription-class.html">StringDescription</a></li>
+        <li><a href="test_api.scaffolding/Tags-class.html">Tags</a></li>
+        <li><a href="flutter_test/TargetPlatformVariant-class.html">TargetPlatformVariant</a></li>
+        <li><a href="flutter_test/TestAsyncUtils-class.html">TestAsyncUtils</a></li>
+        <li><a href="flutter_test/TestDefaultBinaryMessenger-class.html">TestDefaultBinaryMessenger</a></li>
+        <li><a href="flutter_test/TestGesture-class.html">TestGesture</a></li>
+        <li><a href="test_api.scaffolding/TestOn-class.html">TestOn</a></li>
+        <li><a href="flutter_test/TestPlatformDispatcher-class.html">TestPlatformDispatcher</a></li>
+        <li><a href="flutter_test/TestPointer-class.html">TestPointer</a></li>
+        <li><a href="flutter_test/TestRestorationData-class.html">TestRestorationData</a></li>
+        <li><a href="flutter_test/TestRestorationManager-class.html">TestRestorationManager</a></li>
+        <li><a href="flutter_test/TestTextInput-class.html">TestTextInput</a></li>
+        <li><a href="flutter_test/TestVariant-class.html">TestVariant</a></li>
+        <li><a href="flutter_test/TestViewConfiguration-class.html">TestViewConfiguration</a></li>
+        <li><a href="flutter_test/TestVSync-class.html">TestVSync</a></li>
+        <li><a href="flutter_test/TestWidgetsFlutterBinding-class.html">TestWidgetsFlutterBinding</a></li>
+        <li><a href="flutter_test/TestWindow-class.html">TestWindow</a></li>
+        <li><a href="services/TextEditingValue-class.html">TextEditingValue</a></li>
+        <li><a class="deprecated" href="test_api/Throws-class.html">Throws</a></li>
+        <li><a href="test_api.scaffolding/Timeout-class.html">Timeout</a></li>
+        <li><a href="flutter_test/TrivialComparator-class.html">TrivialComparator</a></li>
+        <li><a href="package-matcher_matcher/TypeMatcher-class.html">TypeMatcher</a></li>
+        <li><a href="flutter_test/ValueVariant-class.html">ValueVariant</a></li>
+        <li><a href="flutter_test/WebGoldenComparator-class.html">WebGoldenComparator</a></li>
+        <li><a href="flutter_test/WidgetController-class.html">WidgetController</a></li>
+        <li><a href="flutter_test/WidgetTester-class.html">WidgetTester</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#extensions">Extensions</a></li>
+        <li><a href="flutter_test/TestBasicMessageChannelExtension.html">TestBasicMessageChannelExtension</a></li>
+        <li><a href="flutter_test/TestBinaryMessengerExtension.html">TestBinaryMessengerExtension</a></li>
+        <li><a href="flutter_test/TestMethodChannelExtension.html">TestMethodChannelExtension</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#mixins">Mixins</a></li>
+        <li><a href="flutter_test/LocalComparisonOutput-mixin.html">LocalComparisonOutput</a></li>
+        <li><a href="flutter_test/TestDefaultBinaryMessengerBinding-mixin.html">TestDefaultBinaryMessengerBinding</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#constants">Constants</a></li>
+        <li><a href="flutter_test/androidTapTargetGuideline-constant.html">androidTapTargetGuideline</a></li>
+        <li><a href="package-matcher_matcher/anything-constant.html">anything</a></li>
+        <li><a href="flutter_test/canCaptureImage-constant.html">canCaptureImage</a></li>
+        <li><a href="flutter_test/clipsWithBoundingRect-constant.html">clipsWithBoundingRect</a></li>
+        <li><a href="flutter_test/find-constant.html">find</a></li>
+        <li><a href="flutter_test/findsNothing-constant.html">findsNothing</a></li>
+        <li><a href="flutter_test/findsOneWidget-constant.html">findsOneWidget</a></li>
+        <li><a href="flutter_test/findsWidgets-constant.html">findsWidgets</a></li>
+        <li><a href="flutter_test/hasAGoodToStringDeep-constant.html">hasAGoodToStringDeep</a></li>
+        <li><a href="flutter_test/hasNoImmediateClip-constant.html">hasNoImmediateClip</a></li>
+        <li><a href="flutter_test/hasOneLineDescription-constant.html">hasOneLineDescription</a></li>
+        <li><a href="flutter_test/iOSTapTargetGuideline-constant.html">iOSTapTargetGuideline</a></li>
+        <li><a href="package-matcher_matcher/isArgumentError-constant.html">isArgumentError</a></li>
+        <li><a href="flutter_test/isBrowser-constant.html">isBrowser</a></li>
+        <li><a class="deprecated" href="package-matcher_matcher/isCastError-constant.html">isCastError</a></li>
+        <li><a href="package-matcher_matcher/isConcurrentModificationError-constant.html">isConcurrentModificationError</a></li>
+        <li><a href="package-matcher_matcher/isCyclicInitializationError-constant.html">isCyclicInitializationError</a></li>
+        <li><a href="package-matcher_matcher/isEmpty-constant.html">isEmpty</a></li>
+        <li><a href="package-matcher_matcher/isException-constant.html">isException</a></li>
+        <li><a href="package-matcher_matcher/isFalse-constant.html">isFalse</a></li>
+        <li><a href="package-matcher_matcher/isFormatException-constant.html">isFormatException</a></li>
+        <li><a href="flutter_test/isInCard-constant.html">isInCard</a></li>
+        <li><a href="package-matcher_matcher/isList-constant.html">isList</a></li>
+        <li><a href="package-matcher_matcher/isMap-constant.html">isMap</a></li>
+        <li><a href="package-matcher_matcher/isNaN-constant.html">isNaN</a></li>
+        <li><a href="package-matcher_matcher/isNegative-constant.html">isNegative</a></li>
+        <li><a href="package-matcher_matcher/isNonNegative-constant.html">isNonNegative</a></li>
+        <li><a href="package-matcher_matcher/isNonPositive-constant.html">isNonPositive</a></li>
+        <li><a href="package-matcher_matcher/isNonZero-constant.html">isNonZero</a></li>
+        <li><a href="package-matcher_matcher/isNoSuchMethodError-constant.html">isNoSuchMethodError</a></li>
+        <li><a href="package-matcher_matcher/isNotEmpty-constant.html">isNotEmpty</a></li>
+        <li><a href="flutter_test/isNotInCard-constant.html">isNotInCard</a></li>
+        <li><a href="package-matcher_matcher/isNotNaN-constant.html">isNotNaN</a></li>
+        <li><a href="package-matcher_matcher/isNotNull-constant.html">isNotNull</a></li>
+        <li><a href="package-matcher_matcher/isNull-constant.html">isNull</a></li>
+        <li><a href="package-matcher_matcher/isNullThrownError-constant.html">isNullThrownError</a></li>
+        <li><a href="flutter_test/isOffstage-constant.html">isOffstage</a></li>
+        <li><a href="flutter_test/isOnstage-constant.html">isOnstage</a></li>
+        <li><a href="package-matcher_matcher/isPositive-constant.html">isPositive</a></li>
+        <li><a href="package-matcher_matcher/isRangeError-constant.html">isRangeError</a></li>
+        <li><a href="package-matcher_matcher/isStateError-constant.html">isStateError</a></li>
+        <li><a href="package-matcher_matcher/isTrue-constant.html">isTrue</a></li>
+        <li><a href="package-matcher_matcher/isUnimplementedError-constant.html">isUnimplementedError</a></li>
+        <li><a href="package-matcher_matcher/isUnsupportedError-constant.html">isUnsupportedError</a></li>
+        <li><a href="package-matcher_matcher/isZero-constant.html">isZero</a></li>
+        <li><a href="flutter_test/kDebugWarning-constant.html">kDebugWarning</a></li>
+        <li><a href="flutter_test/kDragSlopDefault-constant.html">kDragSlopDefault</a></li>
+        <li><a href="flutter_test/labeledTapTargetGuideline-constant.html">labeledTapTargetGuideline</a></li>
+        <li><a href="package-matcher_matcher/returnsNormally-constant.html">returnsNormally</a></li>
+        <li><a href="flutter_test/textContrastGuideline-constant.html">textContrastGuideline</a></li>
+        <li><a class="deprecated" href="test_api/throws-constant.html">throws</a></li>
+        <li><a href="package-test_api_expect/throwsArgumentError-constant.html">throwsArgumentError</a></li>
+        <li><a href="package-test_api_expect/throwsConcurrentModificationError-constant.html">throwsConcurrentModificationError</a></li>
+        <li><a href="package-test_api_expect/throwsCyclicInitializationError-constant.html">throwsCyclicInitializationError</a></li>
+        <li><a href="package-test_api_expect/throwsException-constant.html">throwsException</a></li>
+        <li><a href="package-test_api_expect/throwsFormatException-constant.html">throwsFormatException</a></li>
+        <li><a href="package-test_api_expect/throwsNoSuchMethodError-constant.html">throwsNoSuchMethodError</a></li>
+        <li><a href="package-test_api_expect/throwsNullThrownError-constant.html">throwsNullThrownError</a></li>
+        <li><a href="package-test_api_expect/throwsRangeError-constant.html">throwsRangeError</a></li>
+        <li><a href="package-test_api_expect/throwsStateError-constant.html">throwsStateError</a></li>
+        <li><a href="package-test_api_expect/throwsUnimplementedError-constant.html">throwsUnimplementedError</a></li>
+        <li><a href="package-test_api_expect/throwsUnsupportedError-constant.html">throwsUnsupportedError</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#properties">Properties</a></li>
+        <li><a href="flutter_test/autoUpdateGoldenFiles.html">autoUpdateGoldenFiles</a></li>
+        <li><a href="package-test_api_expect/completes.html">completes</a></li>
+        <li><a href="package-test_api_expect/doesNotComplete.html">doesNotComplete</a></li>
+        <li><a href="package-test_api_expect/emitsDone.html">emitsDone</a></li>
+        <li><a href="flutter_test/goldenFileComparator.html">goldenFileComparator</a></li>
+        <li><a href="flutter_test/isAssertionError.html">isAssertionError</a></li>
+        <li><a href="flutter_test/isFlutterError.html">isFlutterError</a></li>
+        <li><a href="flutter_test/isLinux.html">isLinux</a></li>
+        <li><a href="flutter_test/isMacOS.html">isMacOS</a></li>
+        <li><a href="flutter_test/isWindows.html">isWindows</a></li>
+        <li><a href="flutter_test/kBuildBudget.html">kBuildBudget</a></li>
+        <li><a href="package-test_api_expect/neverCalled.html">neverCalled</a></li>
+        <li><a href="flutter_test/reportTestException.html">reportTestException</a></li>
+        <li><a href="flutter_test/throwsAssertionError.html">throwsAssertionError</a></li>
+        <li><a href="flutter_test/throwsFlutterError.html">throwsFlutterError</a></li>
+        <li><a href="flutter_test/webGoldenComparator.html">webGoldenComparator</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#functions">Functions</a></li>
+        <li><a href="package-matcher_matcher/addStateInfo.html">addStateInfo</a></li>
+        <li><a href="test_api.scaffolding/addTearDown.html">addTearDown</a></li>
+        <li><a href="package-matcher_matcher/allOf.html">allOf</a></li>
+        <li><a href="package-matcher_matcher/anyElement.html">anyElement</a></li>
+        <li><a href="package-matcher_matcher/anyOf.html">anyOf</a></li>
+        <li><a href="flutter_test/benchmarkWidgets.html">benchmarkWidgets</a></li>
+        <li><a href="flutter_test/captureImage.html">captureImage</a></li>
+        <li><a href="flutter_test/clipsWithBoundingRRect.html">clipsWithBoundingRRect</a></li>
+        <li><a href="flutter_test/clipsWithShapeBorder.html">clipsWithShapeBorder</a></li>
+        <li><a href="package-matcher_matcher/closeTo.html">closeTo</a></li>
+        <li><a href="package-matcher_matcher/collapseWhitespace.html">collapseWhitespace</a></li>
+        <li><a href="flutter_test/collectAllElementsFrom.html">collectAllElementsFrom</a></li>
+        <li><a href="flutter_test/compareLists.html">compareLists</a></li>
+        <li><a href="package-test_api_expect/completion.html">completion</a></li>
+        <li><a href="package-matcher_matcher/contains.html">contains</a></li>
+        <li><a href="package-matcher_matcher/containsAll.html">containsAll</a></li>
+        <li><a href="package-matcher_matcher/containsAllInOrder.html">containsAllInOrder</a></li>
+        <li><a href="package-matcher_matcher/containsPair.html">containsPair</a></li>
+        <li><a href="flutter_test/containsSemantics.html">containsSemantics</a></li>
+        <li><a href="package-matcher_matcher/containsValue.html">containsValue</a></li>
+        <li><a href="flutter_test/coversSameAreaAs.html">coversSameAreaAs</a></li>
+        <li><a href="flutter_test/createTestImage.html">createTestImage</a></li>
+        <li><a href="flutter_test/doesNotMeetGuideline.html">doesNotMeetGuideline</a></li>
+        <li><a href="package-test_api_expect/emits.html">emits</a></li>
+        <li><a href="package-test_api_expect/emitsAnyOf.html">emitsAnyOf</a></li>
+        <li><a href="package-test_api_expect/emitsError.html">emitsError</a></li>
+        <li><a href="package-test_api_expect/emitsInAnyOrder.html">emitsInAnyOrder</a></li>
+        <li><a href="package-test_api_expect/emitsInOrder.html">emitsInOrder</a></li>
+        <li><a href="package-test_api_expect/emitsThrough.html">emitsThrough</a></li>
+        <li><a href="package-matcher_matcher/endsWith.html">endsWith</a></li>
+        <li><a href="package-matcher_matcher/equals.html">equals</a></li>
+        <li><a href="package-matcher_matcher/equalsIgnoringCase.html">equalsIgnoringCase</a></li>
+        <li><a href="flutter_test/equalsIgnoringHashCodes.html">equalsIgnoringHashCodes</a></li>
+        <li><a href="package-matcher_matcher/equalsIgnoringWhitespace.html">equalsIgnoringWhitespace</a></li>
+        <li><a href="package-matcher_matcher/escape.html">escape</a></li>
+        <li><a href="package-matcher_matcher/everyElement.html">everyElement</a></li>
+        <li><a href="flutter_test/expect.html">expect</a></li>
+        <li><a class="deprecated" href="test_api/expectAsync.html">expectAsync</a></li>
+        <li><a href="package-test_api_expect/expectAsync0.html">expectAsync0</a></li>
+        <li><a href="package-test_api_expect/expectAsync1.html">expectAsync1</a></li>
+        <li><a href="package-test_api_expect/expectAsync2.html">expectAsync2</a></li>
+        <li><a href="package-test_api_expect/expectAsync3.html">expectAsync3</a></li>
+        <li><a href="package-test_api_expect/expectAsync4.html">expectAsync4</a></li>
+        <li><a href="package-test_api_expect/expectAsync5.html">expectAsync5</a></li>
+        <li><a href="package-test_api_expect/expectAsync6.html">expectAsync6</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil0.html">expectAsyncUntil0</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil1.html">expectAsyncUntil1</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil2.html">expectAsyncUntil2</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil3.html">expectAsyncUntil3</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil4.html">expectAsyncUntil4</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil5.html">expectAsyncUntil5</a></li>
+        <li><a href="package-test_api_expect/expectAsyncUntil6.html">expectAsyncUntil6</a></li>
+        <li><a href="flutter_test/expectLater.html">expectLater</a></li>
+        <li><a href="flutter_test/expectSync.html">expectSync</a></li>
+        <li><a href="package-test_api_expect/fail.html">fail</a></li>
+        <li><a href="flutter_test/findsAtLeastNWidgets.html">findsAtLeastNWidgets</a></li>
+        <li><a href="flutter_test/findsNWidgets.html">findsNWidgets</a></li>
+        <li><a href="package-matcher_matcher/greaterThan.html">greaterThan</a></li>
+        <li><a href="package-matcher_matcher/greaterThanOrEqualTo.html">greaterThanOrEqualTo</a></li>
+        <li><a href="flutter_test/group.html">group</a></li>
+        <li><a href="package-matcher_matcher/hasLength.html">hasLength</a></li>
+        <li><a href="package-matcher_matcher/inClosedOpenRange.html">inClosedOpenRange</a></li>
+        <li><a href="package-matcher_matcher/inExclusiveRange.html">inExclusiveRange</a></li>
+        <li><a href="package-matcher_matcher/inInclusiveRange.html">inInclusiveRange</a></li>
+        <li><a href="package-matcher_matcher/inOpenClosedRange.html">inOpenClosedRange</a></li>
+        <li><a href="package-matcher_matcher/isA.html">isA</a></li>
+        <li><a href="package-matcher_matcher/isIn.html">isIn</a></li>
+        <li><a href="flutter_test/isInstanceOf.html">isInstanceOf</a></li>
+        <li><a href="flutter_test/isMethodCall.html">isMethodCall</a></li>
+        <li><a href="package-matcher_matcher/isNot.html">isNot</a></li>
+        <li><a href="flutter_test/isSameColorAs.html">isSameColorAs</a></li>
+        <li><a href="package-matcher_matcher/lessThan.html">lessThan</a></li>
+        <li><a href="package-matcher_matcher/lessThanOrEqualTo.html">lessThanOrEqualTo</a></li>
+        <li><a href="test_api.scaffolding/markTestSkipped.html">markTestSkipped</a></li>
+        <li><a href="package-matcher_matcher/matches.html">matches</a></li>
+        <li><a href="flutter_test/matchesGoldenFile.html">matchesGoldenFile</a></li>
+        <li><a href="flutter_test/matchesReferenceImage.html">matchesReferenceImage</a></li>
+        <li><a href="flutter_test/matchesSemantics.html">matchesSemantics</a></li>
+        <li><a href="flutter_test/matrixMoreOrLessEquals.html">matrixMoreOrLessEquals</a></li>
+        <li><a href="package-test_api_expect/mayEmit.html">mayEmit</a></li>
+        <li><a href="package-test_api_expect/mayEmitMultiple.html">mayEmitMultiple</a></li>
+        <li><a href="flutter_test/meetsGuideline.html">meetsGuideline</a></li>
+        <li><a href="flutter_test/moreOrLessEquals.html">moreOrLessEquals</a></li>
+        <li><a href="package-test_api_expect/neverEmits.html">neverEmits</a></li>
+        <li><a href="flutter_test/nonconst.html">nonconst</a></li>
+        <li><a href="flutter_test/offsetMoreOrLessEquals.html">offsetMoreOrLessEquals</a></li>
+        <li><a href="package-matcher_matcher/orderedEquals.html">orderedEquals</a></li>
+        <li><a href="package-matcher_matcher/pairwiseCompare.html">pairwiseCompare</a></li>
+        <li><a href="package-matcher_matcher/predicate.html">predicate</a></li>
+        <li><a href="test_api.scaffolding/printOnFailure.html">printOnFailure</a></li>
+        <li><a href="package-test_api_expect/prints.html">prints</a></li>
+        <li><a href="package-test_api_hooks/pumpEventQueue.html">pumpEventQueue</a></li>
+        <li><a href="flutter_test/rectMoreOrLessEquals.html">rectMoreOrLessEquals</a></li>
+        <li><a href="test_api/registerException.html">registerException</a></li>
+        <li><a href="flutter_test/rendersOnPhysicalModel.html">rendersOnPhysicalModel</a></li>
+        <li><a href="flutter_test/rendersOnPhysicalShape.html">rendersOnPhysicalShape</a></li>
+        <li><a href="flutter_test/reportExpectCall.html">reportExpectCall</a></li>
+        <li><a href="package-matcher_matcher/same.html">same</a></li>
+        <li><a href="flutter_test/setUp.html">setUp</a></li>
+        <li><a href="flutter_test/setUpAll.html">setUpAll</a></li>
+        <li><a href="flutter_test/simulateKeyDownEvent.html">simulateKeyDownEvent</a></li>
+        <li><a href="flutter_test/simulateKeyRepeatEvent.html">simulateKeyRepeatEvent</a></li>
+        <li><a href="flutter_test/simulateKeyUpEvent.html">simulateKeyUpEvent</a></li>
+        <li><a href="test_api.scaffolding/spawnHybridCode.html">spawnHybridCode</a></li>
+        <li><a href="test_api.scaffolding/spawnHybridUri.html">spawnHybridUri</a></li>
+        <li><a href="package-matcher_matcher/startsWith.html">startsWith</a></li>
+        <li><a href="package-matcher_matcher/stringContainsInOrder.html">stringContainsInOrder</a></li>
+        <li><a href="flutter_test/tearDown.html">tearDown</a></li>
+        <li><a href="flutter_test/tearDownAll.html">tearDownAll</a></li>
+        <li><a href="flutter_test/test.html">test</a></li>
+        <li><a href="flutter_test/testWidgets.html">testWidgets</a></li>
+        <li><a href="package-test_api_expect/throwsA.html">throwsA</a></li>
+        <li><a href="package-matcher_matcher/unorderedEquals.html">unorderedEquals</a></li>
+        <li><a href="package-matcher_matcher/unorderedMatches.html">unorderedMatches</a></li>
+        <li><a href="flutter_test/within.html">within</a></li>
+        <li><a href="package-matcher_matcher/wrapMatcher.html">wrapMatcher</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#enums">Enums</a></li>
+        <li><a href="flutter_test/EnginePhase.html">EnginePhase</a></li>
+        <li><a href="flutter_test/LiveTestWidgetsFlutterBindingFramePolicy.html">LiveTestWidgetsFlutterBindingFramePolicy</a></li>
+        <li><a href="flutter_test/TestBindingEventSource.html">TestBindingEventSource</a></li>
+        <li><a href="services/TextInputAction.html">TextInputAction</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#typedefs">Typedefs</a></li>
+        <li><a href="flutter_test/AllMessagesHandler.html">AllMessagesHandler</a></li>
+        <li><a href="flutter_test/AnyDistanceFunction.html">AnyDistanceFunction</a></li>
+        <li><a href="flutter_test/DistanceFunction.html">DistanceFunction</a></li>
+        <li><a href="flutter_test/ElementPredicate.html">ElementPredicate</a></li>
+        <li><a class="deprecated" href="test_api/ErrorFormatter.html">ErrorFormatter</a></li>
+        <li><a href="flutter_test/EventDispatcher.html">EventDispatcher</a></li>
+        <li><a href="package-test_api_expect/Func0.html">Func0</a></li>
+        <li><a href="package-test_api_expect/Func1.html">Func1</a></li>
+        <li><a href="package-test_api_expect/Func2.html">Func2</a></li>
+        <li><a href="package-test_api_expect/Func3.html">Func3</a></li>
+        <li><a href="package-test_api_expect/Func4.html">Func4</a></li>
+        <li><a href="package-test_api_expect/Func5.html">Func5</a></li>
+        <li><a href="package-test_api_expect/Func6.html">Func6</a></li>
+        <li><a href="flutter_test/HitTester.html">HitTester</a></li>
+        <li><a href="flutter_test/TestExceptionReporter.html">TestExceptionReporter</a></li>
+        <li><a href="flutter_test/WidgetPredicate.html">WidgetPredicate</a></li>
+        <li><a href="flutter_test/WidgetTesterCallback.html">WidgetTesterCallback</a></li>
+
+      <li class="section-title"><a href="flutter_test/flutter_test-library.html#exceptions">Exceptions</a></li>
+        <li><a href="package-test_api_hooks/TestFailure-class.html">TestFailure</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="flutter_test/TestWindow-class.html#constructors">Constructors</a></li>
+          <li><a href="flutter_test/TestWindow/TestWindow.html">TestWindow</a></li>
+
+
+        <li class="section-title">
+          <a href="flutter_test/TestWindow-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="flutter_test/TestWindow/accessibilityFeatures.html">accessibilityFeatures</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/accessibilityFeaturesTestValue.html">accessibilityFeaturesTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/alwaysUse24HourFormat.html">alwaysUse24HourFormat</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/alwaysUse24HourFormatTestValue.html">alwaysUse24HourFormatTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/brieflyShowPassword.html">brieflyShowPassword</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/brieflyShowPasswordTestValue.html">brieflyShowPasswordTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/defaultRouteName.html">defaultRouteName</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/defaultRouteNameTestValue.html">defaultRouteNameTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/devicePixelRatio.html">devicePixelRatio</a></li>
+          <li><a href="flutter_test/TestWindow/devicePixelRatioTestValue.html">devicePixelRatioTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/displayFeatures.html">displayFeatures</a></li>
+          <li><a href="flutter_test/TestWindow/displayFeaturesTestValue.html">displayFeaturesTestValue</a></li>
+          <li class="inherited"><a href="dart-ui/SingletonFlutterWindow/frameData.html">frameData</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="flutter_test/TestWindow/initialLifecycleState.html">initialLifecycleState</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/initialLifecycleStateTestValue.html">initialLifecycleStateTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/locale.html">locale</a></li>
+          <li><a href="flutter_test/TestWindow/locales.html">locales</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/localesTestValue.html">localesTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/localeTestValue.html">localeTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/nativeSpellCheckServiceDefined.html">nativeSpellCheckServiceDefined</a></li>
+          <li><a href="flutter_test/TestWindow/nativeSpellCheckServiceDefinedTestValue.html">nativeSpellCheckServiceDefinedTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/onAccessibilityFeaturesChanged.html">onAccessibilityFeaturesChanged</a></li>
+          <li><a href="flutter_test/TestWindow/onBeginFrame.html">onBeginFrame</a></li>
+          <li><a href="flutter_test/TestWindow/onDrawFrame.html">onDrawFrame</a></li>
+          <li class="inherited"><a href="dart-ui/SingletonFlutterWindow/onFrameDataChanged.html">onFrameDataChanged</a></li>
+          <li class="inherited"><a href="dart-ui/SingletonFlutterWindow/onKeyData.html">onKeyData</a></li>
+          <li><a href="flutter_test/TestWindow/onLocaleChanged.html">onLocaleChanged</a></li>
+          <li><a href="flutter_test/TestWindow/onMetricsChanged.html">onMetricsChanged</a></li>
+          <li><a href="flutter_test/TestWindow/onPlatformBrightnessChanged.html">onPlatformBrightnessChanged</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/onPlatformMessage.html">onPlatformMessage</a></li>
+          <li><a href="flutter_test/TestWindow/onPointerDataPacket.html">onPointerDataPacket</a></li>
+          <li><a href="flutter_test/TestWindow/onReportTimings.html">onReportTimings</a></li>
+          <li><a href="flutter_test/TestWindow/onSemanticsAction.html">onSemanticsAction</a></li>
+          <li><a href="flutter_test/TestWindow/onSemanticsEnabledChanged.html">onSemanticsEnabledChanged</a></li>
+          <li class="inherited"><a href="dart-ui/SingletonFlutterWindow/onSystemFontFamilyChanged.html">onSystemFontFamilyChanged</a></li>
+          <li><a href="flutter_test/TestWindow/onTextScaleFactorChanged.html">onTextScaleFactorChanged</a></li>
+          <li><a href="flutter_test/TestWindow/padding.html">padding</a></li>
+          <li><a href="flutter_test/TestWindow/paddingTestValue.html">paddingTestValue</a></li>
+          <li class="inherited"><a href="dart-ui/FlutterView/physicalGeometry.html">physicalGeometry</a></li>
+          <li><a href="flutter_test/TestWindow/physicalSize.html">physicalSize</a></li>
+          <li><a href="flutter_test/TestWindow/physicalSizeTestValue.html">physicalSizeTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/platformBrightness.html">platformBrightness</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/platformBrightnessTestValue.html">platformBrightnessTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/platformDispatcher.html">platformDispatcher</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="flutter_test/TestWindow/semanticsEnabled.html">semanticsEnabled</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/semanticsEnabledTestValue.html">semanticsEnabledTestValue</a></li>
+          <li class="inherited"><a href="dart-ui/SingletonFlutterWindow/systemFontFamily.html">systemFontFamily</a></li>
+          <li><a href="flutter_test/TestWindow/systemGestureInsets.html">systemGestureInsets</a></li>
+          <li><a href="flutter_test/TestWindow/systemGestureInsetsTestValue.html">systemGestureInsetsTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/textScaleFactor.html">textScaleFactor</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/textScaleFactorTestValue.html">textScaleFactorTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/viewConfiguration.html">viewConfiguration</a></li>
+          <li><a href="flutter_test/TestWindow/viewConfigurationTestValue.html">viewConfigurationTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/viewInsets.html">viewInsets</a></li>
+          <li><a href="flutter_test/TestWindow/viewInsetsTestValue.html">viewInsetsTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/viewPadding.html">viewPadding</a></li>
+          <li><a href="flutter_test/TestWindow/viewPaddingTestValue.html">viewPaddingTestValue</a></li>
+
+        <li class="section-title"><a href="flutter_test/TestWindow-class.html#instance-methods">Methods</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearAccessibilityFeaturesTestValue.html">clearAccessibilityFeaturesTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearAllTestValues.html">clearAllTestValues</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearAlwaysUse24HourTestValue.html">clearAlwaysUse24HourTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearDefaultRouteNameTestValue.html">clearDefaultRouteNameTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearDevicePixelRatioTestValue.html">clearDevicePixelRatioTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearDisplayFeaturesTestValue.html">clearDisplayFeaturesTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearLocalesTestValue.html">clearLocalesTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearLocaleTestValue.html">clearLocaleTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearPaddingTestValue.html">clearPaddingTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearPhysicalSizeTestValue.html">clearPhysicalSizeTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearPlatformBrightnessTestValue.html">clearPlatformBrightnessTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearSemanticsEnabledTestValue.html">clearSemanticsEnabledTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearSystemGestureInsetsTestValue.html">clearSystemGestureInsetsTestValue</a></li>
+          <li><a class="deprecated" href="flutter_test/TestWindow/clearTextScaleFactorTestValue.html">clearTextScaleFactorTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearViewInsetsTestValue.html">clearViewInsetsTestValue</a></li>
+          <li><a href="flutter_test/TestWindow/clearViewPaddingTestValue.html">clearViewPaddingTestValue</a></li>
+          <li class="inherited"><a href="dart-ui/SingletonFlutterWindow/computePlatformResolvedLocale.html">computePlatformResolvedLocale</a></li>
+          <li><a href="flutter_test/TestWindow/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="flutter_test/TestWindow/render.html">render</a></li>
+          <li><a href="flutter_test/TestWindow/scheduleFrame.html">scheduleFrame</a></li>
+          <li><a href="flutter_test/TestWindow/sendPlatformMessage.html">sendPlatformMessage</a></li>
+          <li><a href="flutter_test/TestWindow/setIsolateDebugName.html">setIsolateDebugName</a></li>
+          <li class="inherited"><a href="dart-core/Object/toString.html">toString</a></li>
+          <li><a href="flutter_test/TestWindow/updateSemantics.html">updateSemantics</a></li>
+
+        <li class="section-title inherited"><a href="flutter_test/TestWindow-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

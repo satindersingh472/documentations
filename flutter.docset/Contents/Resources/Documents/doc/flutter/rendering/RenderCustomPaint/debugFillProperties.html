@@ -1,0 +1,512 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the debugFillProperties method from the RenderCustomPaint class, for the Dart programming language."/>
+  <title>debugFillProperties method - RenderCustomPaint class - rendering library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="rendering/rendering-library.html">rendering</a></li>
+    <li><a href="rendering/RenderCustomPaint-class.html">RenderCustomPaint</a></li>
+    <li class="self-crumb">debugFillProperties method</li>
+  </ol>
+  <div class="self-name">debugFillProperties</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/rendering/custom_paint.dart#L1038"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-55212"></a><a class="dashAnchor" name="//apple_ref/cpp/Method/debugFillProperties"></a><span class="kind-method">debugFillProperties</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">debugFillProperties</span>(<wbr/><ol class="parameter-list"><li><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Add additional properties associated with the node.</p>
+<p>Use the most specific <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> existing subclass to describe
+each property instead of the <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> base class. There are
+only a small number of <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> subclasses each covering a
+common use case. Consider what values a property is relevant for users
+debugging as users debugging large trees are overloaded with information.
+Common named parameters in <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> subclasses help filter when
+and how properties are displayed.</p>
+<p><code>defaultValue</code>, <code>showName</code>, <code>showSeparator</code>, and <code>level</code> keep string
+representations of diagnostics terse and hide properties when they are not
+very useful.</p>
+<ul>
+<li>Use <code>defaultValue</code> any time the default value of a property is
+uninteresting. For example, specify a default value of null any time
+a property being null does not indicate an error.</li>
+<li>Avoid specifying the <code>level</code> parameter unless the result you want
+cannot be achieved by using the <code>defaultValue</code> parameter or using
+the <a href="foundation/ObjectFlagProperty-class.html">ObjectFlagProperty</a> class to conditionally display the property
+as a flag.</li>
+<li>Specify <code>showName</code> and <code>showSeparator</code> in rare cases where the string
+output would look clumsy if they were not set.
+<pre class="language-dart"><code class="language-dart">DiagnosticsProperty&lt;Object&gt;(&#39;child(3, 4)&#39;, null, ifNull: &#39;is null&#39;, showSeparator: false).toString()
+</code></pre>Shows using <code>showSeparator</code> to get output <code>child(3, 4) is null</code> which
+is more polished than <code>child(3, 4): is null</code>.
+<pre class="language-dart"><code class="language-dart">DiagnosticsProperty&lt;IconData&gt;(&#39;icon&#39;, icon, ifNull: &#39;&lt;empty&gt;&#39;, showName: false).toString()
+</code></pre>Shows using <code>showName</code> to omit the property name as in this context the
+property name does not add useful information.</li>
+</ul>
+<p><code>ifNull</code>, <code>ifEmpty</code>, <code>unit</code>, and <code>tooltip</code> make property
+descriptions clearer. The examples in the code sample below illustrate
+good uses of all of these parameters.</p>
+<h2 id="diagnosticsproperty-subclasses-for-primitive-types">DiagnosticsProperty subclasses for primitive types</h2>
+<ul>
+<li><a href="foundation/StringProperty-class.html">StringProperty</a>, which supports automatically enclosing a <a href="dart-core/String-class.html">String</a>
+value in quotes.</li>
+<li><a href="foundation/DoubleProperty-class.html">DoubleProperty</a>, which supports specifying a unit of measurement for
+a <a href="dart-core/double-class.html">double</a> value.</li>
+<li><a href="foundation/PercentProperty-class.html">PercentProperty</a>, which clamps a <a href="dart-core/double-class.html">double</a> to between 0 and 1 and
+formats it as a percentage.</li>
+<li><a href="foundation/IntProperty-class.html">IntProperty</a>, which supports specifying a unit of measurement for an
+<a href="dart-core/int-class.html">int</a> value.</li>
+<li><a href="foundation/FlagProperty-class.html">FlagProperty</a>, which formats a <a href="dart-core/bool-class.html">bool</a> value as one or more flags.
+Depending on the use case it is better to format a bool as
+<code>DiagnosticsProperty&lt;bool&gt;</code> instead of using <a href="foundation/FlagProperty-class.html">FlagProperty</a> as the
+output is more verbose but unambiguous.</li>
+</ul>
+<h2 id="other-important-diagnosticsproperty-variants">Other important <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> variants</h2>
+<ul>
+<li><a href="foundation/EnumProperty-class.html">EnumProperty</a>, which provides terse descriptions of enum values
+working around limitations of the <code>toString</code> implementation for Dart
+enum types.</li>
+<li><a href="foundation/IterableProperty-class.html">IterableProperty</a>, which handles iterable values with display
+customizable depending on the <a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a> used.</li>
+<li><a href="foundation/ObjectFlagProperty-class.html">ObjectFlagProperty</a>, which provides terse descriptions of whether a
+property value is present or not. For example, whether an <code>onClick</code>
+callback is specified or an animation is in progress.</li>
+<li><a href="painting/ColorProperty-class.html">ColorProperty</a>, which must be used if the property value is
+a <a href="dart-ui/Color-class.html">Color</a> or one of its subclasses.</li>
+<li><a href="widgets/IconDataProperty-class.html">IconDataProperty</a>, which must be used if the property value
+is of type <a href="widgets/IconData-class.html">IconData</a>.</li>
+</ul>
+<p>If none of these subclasses apply, use the <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a>
+constructor or in rare cases create your own <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a>
+subclass as in the case for <a href="painting/TransformProperty-class.html">TransformProperty</a> which handles <a href="vector_math_64/Matrix4-class.html">Matrix4</a>
+that represent transforms. Generally any property value with a good
+<code>toString</code> method implementation works fine using <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a>
+directly.</p>
+<p>
+<a name="diagnostics.Diagnosticable.debugFillProperties.1"></a>
+</p><div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+This example shows best practices for implementing <a href="rendering/RenderCustomPaint/debugFillProperties.html">debugFillProperties</a>
+illustrating use of all common <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> subclasses and all
+common <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> parameters.
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard" onmouseenter="fixHref(this, &#39;diagnostics.Diagnosticable.debugFillProperties.1&#39;);" onclick="fixHref(this, &#39;diagnostics.Diagnosticable.debugFillProperties.1&#39;); copyStringToClipboard(this.href);" href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard" onclick="copyTextToClipboard(findSiblingWithId(this, &#39;sample-code&#39;));">
+      <i class="material-icons copy-image">assignment</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">class ExampleObject extends ExampleSuperclass {
+
+  // ...various members and properties...
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    // Always add properties from the base class first.
+    super.debugFillProperties(properties);
+
+    // Omit the property name &#39;message&#39; when displaying this String property
+    // as it would just add visual noise.
+    properties.add(StringProperty(&#39;message&#39;, message, showName: false));
+
+    properties.add(DoubleProperty(&#39;stepWidth&#39;, stepWidth));
+
+    // A scale of 1.0 does nothing so should be hidden.
+    properties.add(DoubleProperty(&#39;scale&#39;, scale, defaultValue: 1.0));
+
+    // If the hitTestExtent matches the paintExtent, it is just set to its
+    // default value so is not relevant.
+    properties.add(DoubleProperty(&#39;hitTestExtent&#39;, hitTestExtent, defaultValue: paintExtent));
+
+    // maxWidth of double.infinity indicates the width is unconstrained and
+    // so maxWidth has no impact.
+    properties.add(DoubleProperty(&#39;maxWidth&#39;, maxWidth, defaultValue: double.infinity));
+
+    // Progress is a value between 0 and 1 or null. Showing it as a
+    // percentage makes the meaning clear enough that the name can be
+    // hidden.
+    properties.add(PercentProperty(
+      &#39;progress&#39;,
+      progress,
+      showName: false,
+      ifNull: &#39;&lt;indeterminate&gt;&#39;,
+    ));
+
+    // Most text fields have maxLines set to 1.
+    properties.add(IntProperty(&#39;maxLines&#39;, maxLines, defaultValue: 1));
+
+    // Specify the unit as otherwise it would be unclear that time is in
+    // milliseconds.
+    properties.add(IntProperty(&#39;duration&#39;, duration.inMilliseconds, unit: &#39;ms&#39;));
+
+    // Tooltip is used instead of unit for this case as a unit should be a
+    // terse description appropriate to display directly after a number
+    // without a space.
+    properties.add(DoubleProperty(
+      &#39;device pixel ratio&#39;,
+      ui.window.devicePixelRatio,
+      tooltip: &#39;physical pixels per logical pixel&#39;,
+    ));
+
+    // Displaying the depth value would be distracting. Instead only display
+    // if the depth value is missing.
+    properties.add(ObjectFlagProperty&lt;int&gt;(&#39;depth&#39;, depth, ifNull: &#39;no depth&#39;));
+
+    // bool flag that is only shown when the value is true.
+    properties.add(FlagProperty(&#39;using primary controller&#39;, value: primary));
+
+    properties.add(FlagProperty(
+      &#39;isCurrent&#39;,
+      value: isCurrent,
+      ifTrue: &#39;active&#39;,
+      ifFalse: &#39;inactive&#39;,
+    ));
+
+    properties.add(DiagnosticsProperty&lt;bool&gt;(&#39;keepAlive&#39;, keepAlive));
+
+    // FlagProperty could have also been used in this case.
+    // This option results in the text &#34;obscureText: true&#34; instead
+    // of &#34;obscureText&#34; which is a bit more verbose but a bit clearer.
+    properties.add(DiagnosticsProperty&lt;bool&gt;(&#39;obscureText&#39;, obscureText, defaultValue: false));
+
+    properties.add(EnumProperty&lt;TextAlign&gt;(&#39;textAlign&#39;, textAlign, defaultValue: null));
+    properties.add(EnumProperty&lt;ImageRepeat&gt;(&#39;repeat&#39;, repeat, defaultValue: ImageRepeat.noRepeat));
+
+    // Warn users when the widget is missing but do not show the value.
+    properties.add(ObjectFlagProperty&lt;Widget&gt;(&#39;widget&#39;, widget, ifNull: &#39;no widget&#39;));
+
+    properties.add(IterableProperty&lt;BoxShadow&gt;(
+      &#39;boxShadow&#39;,
+      boxShadow,
+      defaultValue: null,
+      style: style,
+    ));
+
+    // Getting the value of size throws an exception unless hasSize is true.
+    properties.add(DiagnosticsProperty&lt;Size&gt;.lazy(
+      &#39;size&#39;,
+      () =&gt; size,
+      description: &#39;${ hasSize ? size : &#34;MISSING&#34; }&#39;,
+    ));
+
+    // If the `toString` method for the property value does not provide a
+    // good terse description, write a DiagnosticsProperty subclass as in
+    // the case of TransformProperty which displays a nice debugging view
+    // of a Matrix4 that represents a transform.
+    properties.add(TransformProperty(&#39;transform&#39;, transform));
+
+    // If the value class has a good `toString` method, use
+    // DiagnosticsProperty&lt;YourValueType&gt;. Specifying the value type ensures
+    // that debugging tools always know the type of the field and so can
+    // provide the right UI affordances. For example, in this case even
+    // if color is null, a debugging tool still knows the value is a Color
+    // and can display relevant color related UI.
+    properties.add(DiagnosticsProperty&lt;Color&gt;(&#39;color&#39;, color));
+
+    // Use a custom description to generate a more terse summary than the
+    // `toString` method on the map class.
+    properties.add(DiagnosticsProperty&lt;Map&lt;Listenable, VoidCallback&gt;&gt;(
+      &#39;handles&#39;,
+      handles,
+      description: handles != null
+        ? &#39;${handles!.length} active client${ handles!.length == 1 ? &#34;&#34; : &#34;s&#34; }&#39;
+        : null,
+      ifNull: &#39;no notifications ever received&#39;,
+      showName: false,
+    ));
+  }
+}</code></pre>
+  </div>
+</div>
+<p></p>
+<p>Used by <a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a> and <a href="rendering/RenderObject/toString.html">toString</a>.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  super.debugFillProperties(properties);
+  properties.add(MessageProperty(&#39;painter&#39;, &#39;$painter&#39;));
+  properties.add(MessageProperty(&#39;foregroundPainter&#39;, &#39;$foregroundPainter&#39;, level: foregroundPainter != null ? DiagnosticLevel.info : DiagnosticLevel.fine));
+  properties.add(DiagnosticsProperty&lt;Size&gt;(&#39;preferredSize&#39;, preferredSize, defaultValue: Size.zero));
+  properties.add(DiagnosticsProperty&lt;bool&gt;(&#39;isComplex&#39;, isComplex, defaultValue: false));
+  properties.add(DiagnosticsProperty&lt;bool&gt;(&#39;willChange&#39;, willChange, defaultValue: false));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="rendering/rendering-library.html">rendering</a></li>
+  <li><a href="rendering/RenderCustomPaint-class.html">RenderCustomPaint</a></li>
+  <li class="self-crumb">debugFillProperties method</li>
+</ol>
+
+
+    <h5>RenderCustomPaint class</h5>
+    <ol>
+
+        <li class="section-title"><a href="rendering/RenderCustomPaint-class.html#constructors">Constructors</a></li>
+          <li><a href="rendering/RenderCustomPaint/RenderCustomPaint.html">RenderCustomPaint</a></li>
+
+
+        <li class="section-title">
+          <a href="rendering/RenderCustomPaint-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="rendering/RenderObject/alwaysNeedsCompositing.html">alwaysNeedsCompositing</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/attached.html">attached</a></li>
+          <li class="inherited"><a href="rendering/RenderObjectWithChildMixin/child.html">child</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/constraints.html">constraints</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugCanParentUseSize.html">debugCanParentUseSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugCreator.html">debugCreator</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDisposed.html">debugDisposed</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisLayout.html">debugDoingThisLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisLayoutWithCallback.html">debugDoingThisLayoutWithCallback</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisPaint.html">debugDoingThisPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugDoingThisResize.html">debugDoingThisResize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugLayer.html">debugLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsCompositedLayerUpdate.html">debugNeedsCompositedLayerUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsLayout.html">debugNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugNeedsPaint.html">debugNeedsPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugSemantics.html">debugSemantics</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/depth.html">depth</a></li>
+          <li><a href="rendering/RenderCustomPaint/foregroundPainter.html">foregroundPainter</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hasSize.html">hasSize</a></li>
+          <li><a href="rendering/RenderCustomPaint/isComplex.html">isComplex</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/isRepaintBoundary.html">isRepaintBoundary</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/layer.html">layer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/needsCompositing.html">needsCompositing</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/owner.html">owner</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/paintBounds.html">paintBounds</a></li>
+          <li><a href="rendering/RenderCustomPaint/painter.html">painter</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/parent.html">parent</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/parentData.html">parentData</a></li>
+          <li><a href="rendering/RenderCustomPaint/preferredSize.html">preferredSize</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/semanticBounds.html">semanticBounds</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/size.html">size</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/sizedByParent.html">sizedByParent</a></li>
+          <li><a href="rendering/RenderCustomPaint/willChange.html">willChange</a></li>
+
+        <li class="section-title"><a href="rendering/RenderCustomPaint-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/adoptChild.html">adoptChild</a></li>
+          <li class="inherited"><a href="rendering/RenderProxyBoxMixin/applyPaintTransform.html">applyPaintTransform</a></li>
+          <li><a href="rendering/RenderCustomPaint/assembleSemanticsNode.html">assembleSemanticsNode</a></li>
+          <li><a href="rendering/RenderCustomPaint/attach.html">attach</a></li>
+          <li><a href="rendering/RenderCustomPaint/clearSemantics.html">clearSemantics</a></li>
+          <li class="inherited"><a href="rendering/RenderProxyBoxMixin/computeDistanceToActualBaseline.html">computeDistanceToActualBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderProxyBoxMixin/computeDryLayout.html">computeDryLayout</a></li>
+          <li><a href="rendering/RenderCustomPaint/computeMaxIntrinsicHeight.html">computeMaxIntrinsicHeight</a></li>
+          <li><a href="rendering/RenderCustomPaint/computeMaxIntrinsicWidth.html">computeMaxIntrinsicWidth</a></li>
+          <li><a href="rendering/RenderCustomPaint/computeMinIntrinsicHeight.html">computeMinIntrinsicHeight</a></li>
+          <li><a href="rendering/RenderCustomPaint/computeMinIntrinsicWidth.html">computeMinIntrinsicWidth</a></li>
+          <li><a href="rendering/RenderCustomPaint/computeSizeForNoChild.html">computeSizeForNoChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugAdoptSize.html">debugAdoptSize</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugAssertDoesMeetConstraints.html">debugAssertDoesMeetConstraints</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugCannotComputeDryLayout.html">debugCannotComputeDryLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObjectWithChildMixin/debugDescribeChildren.html">debugDescribeChildren</a></li>
+          <li><a href="rendering/RenderCustomPaint/debugFillProperties.html">debugFillProperties</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugHandleEvent.html">debugHandleEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaint.html">debugPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintBaselines.html">debugPaintBaselines</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintPointers.html">debugPaintPointers</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugPaintSize.html">debugPaintSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/debugRegisterRepaintBoundaryPaint.html">debugRegisterRepaintBoundaryPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/debugResetSize.html">debugResetSize</a></li>
+          <li class="inherited"><a href="rendering/RenderObjectWithChildMixin/debugValidateChild.html">debugValidateChild</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeApproximatePaintClip.html">describeApproximatePaintClip</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeForError.html">describeForError</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/describeSemanticsClip.html">describeSemanticsClip</a></li>
+          <li><a href="rendering/RenderCustomPaint/describeSemanticsConfiguration.html">describeSemanticsConfiguration</a></li>
+          <li><a href="rendering/RenderCustomPaint/detach.html">detach</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/dispose.html">dispose</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/dropChild.html">dropChild</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDistanceToActualBaseline.html">getDistanceToActualBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDistanceToBaseline.html">getDistanceToBaseline</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getDryLayout.html">getDryLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMaxIntrinsicHeight.html">getMaxIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMaxIntrinsicWidth.html">getMaxIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMinIntrinsicHeight.html">getMinIntrinsicHeight</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/getMinIntrinsicWidth.html">getMinIntrinsicWidth</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/getTransformTo.html">getTransformTo</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/globalToLocal.html">globalToLocal</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/handleEvent.html">handleEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/hitTest.html">hitTest</a></li>
+          <li><a href="rendering/RenderCustomPaint/hitTestChildren.html">hitTestChildren</a></li>
+          <li><a href="rendering/RenderCustomPaint/hitTestSelf.html">hitTestSelf</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/invokeLayoutCallback.html">invokeLayoutCallback</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/layout.html">layout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/localToGlobal.html">localToGlobal</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsCompositedLayerUpdate.html">markNeedsCompositedLayerUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsCompositingBitsUpdate.html">markNeedsCompositingBitsUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/markNeedsLayout.html">markNeedsLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsLayoutForSizedByParentChange.html">markNeedsLayoutForSizedByParentChange</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsPaint.html">markNeedsPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markNeedsSemanticsUpdate.html">markNeedsSemanticsUpdate</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/markParentNeedsLayout.html">markParentNeedsLayout</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="rendering/RenderCustomPaint/paint.html">paint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/paintsChild.html">paintsChild</a></li>
+          <li><a href="rendering/RenderCustomPaint/performLayout.html">performLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderBox/performResize.html">performResize</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/reassemble.html">reassemble</a></li>
+          <li class="inherited"><a href="foundation/AbstractNode/redepthChild.html">redepthChild</a></li>
+          <li class="inherited"><a href="rendering/RenderObjectWithChildMixin/redepthChildren.html">redepthChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/replaceRootLayer.html">replaceRootLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialLayout.html">scheduleInitialLayout</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialPaint.html">scheduleInitialPaint</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/scheduleInitialSemantics.html">scheduleInitialSemantics</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/sendSemanticsEvent.html">sendSemanticsEvent</a></li>
+          <li class="inherited"><a href="rendering/RenderProxyBoxMixin/setupParentData.html">setupParentData</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/showOnScreen.html">showOnScreen</a></li>
+          <li class="inherited"><a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toString.html">toString</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringDeep.html">toStringDeep</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringShallow.html">toStringShallow</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/toStringShort.html">toStringShort</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/updateCompositedLayer.html">updateCompositedLayer</a></li>
+          <li class="inherited"><a href="rendering/RenderObjectWithChildMixin/visitChildren.html">visitChildren</a></li>
+          <li class="inherited"><a href="rendering/RenderObject/visitChildrenForSemantics.html">visitChildrenForSemantics</a></li>
+
+        <li class="section-title inherited"><a href="rendering/RenderCustomPaint-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>

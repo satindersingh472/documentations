@@ -1,0 +1,1400 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/FlutterViewController" class="dashAnchor"></a>
+    <a title="FlutterViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">FlutterViewController</span>
+    <span class="p">:</span> <span class="nc">UIViewController</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span><span class="p">,</span> <span class="n">UIGestureRecognizerDelegate</span><span class="o">&gt;</span>
+<span class="cp">#else
+</span><span class="k">@interface</span> <span class="nc">FlutterViewController</span> <span class="p">:</span> <span class="nc">UIViewController</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span><span class="o">&gt;</span>
+<span class="cp">#endif
+</span>
+<span class="cm">/**
+ * Initializes this FlutterViewController with the specified `FlutterEngine`.
+ *
+ * The initialized viewcontroller will attach itself to the engine as part of this process.
+ *
+ * @param engine The `FlutterEngine` instance to attach to. Cannot be nil.
+ * @param nibName The NIB name to initialize this UIViewController with.
+ * @param nibBundle The NIB bundle.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithEngine</span><span class="p">:(</span><span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span><span class="o">*</span><span class="p">)</span><span class="nv">engine</span>
+                       <span class="nf">nibName</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">nibName</span>
+                        <span class="nf">bundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span><span class="o">*</span><span class="p">)</span><span class="nv">nibBundle</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Initializes a new FlutterViewController and `FlutterEngine` with the specified
+ * `FlutterDartProject`.
+ *
+ * This will implicitly create a new `FlutterEngine` which is retrievable via the `engine` property
+ * after initialization.
+ *
+ * @param project The `FlutterDartProject` to initialize the `FlutterEngine` with.
+ * @param nibName The NIB name to initialize this UIViewController with.
+ * @param nibBundle The NIB bundle.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithProject</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="o">*</span><span class="p">)</span><span class="nv">project</span>
+                        <span class="nf">nibName</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">nibName</span>
+                         <span class="nf">bundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span><span class="o">*</span><span class="p">)</span><span class="nv">nibBundle</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Initializes a new FlutterViewController and `FlutterEngine` with the specified
+ * `FlutterDartProject` and `initialRoute`.
+ *
+ * This will implicitly create a new `FlutterEngine` which is retrievable via the `engine` property
+ * after initialization.
+ *
+ * @param project The `FlutterDartProject` to initialize the `FlutterEngine` with.
+ * @param initialRoute The initial `Navigator` route to load.
+ * @param nibName The NIB name to initialize this UIViewController with.
+ * @param nibBundle The NIB bundle.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithProject</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="o">*</span><span class="p">)</span><span class="nv">project</span>
+                   <span class="nf">initialRoute</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">initialRoute</span>
+                        <span class="nf">nibName</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">nibName</span>
+                         <span class="nf">bundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span><span class="o">*</span><span class="p">)</span><span class="nv">nibBundle</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Initializer that is called from loading a FlutterViewController from a XIB.
+ *
+ * See also:
+ * https://developer.apple.com/documentation/foundation/nscoding/1416145-initwithcoder?language=objc
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCoder</span><span class="p">:(</span><span class="n">NSCoder</span><span class="o">*</span><span class="p">)</span><span class="nv">aDecoder</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Registers a callback that will be invoked when the Flutter view has been rendered.
+ * The callback will be fired only once.
+ *
+ * Replaces an existing callback. Use a `nil` callback to unregister the existing one.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setFlutterViewDidRenderCallback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Returns the file name for the given asset.
+ * The returned file name can be used to access the asset in the application&#39;s
+ * main bundle.
+ *
+ * @param asset The name of the asset. The name can be hierarchical.
+ * @return The file name to be used for lookup in the main bundle.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">lookupKeyForAsset</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">asset</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Returns the file name for the given asset which originates from the specified
+ * package.
+ * The returned file name can be used to access the asset in the application&#39;s
+ * main bundle.
+ *
+ * @param asset The name of the asset. The name can be hierarchical.
+ * @param package The name of the package from which the asset originates.
+ * @return The file name to be used for lookup in the main bundle.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">lookupKeyForAsset</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">asset</span> <span class="nf">fromPackage</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">package</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Deprecated API to set initial route.
+ *
+ * Attempts to set the first route that the Flutter app shows if the Flutter
+ * runtime hasn&#39;t yet started. The default is &#34;/&#34;.
+ *
+ * This method must be called immediately after `initWithProject` and has no
+ * effect when using `initWithEngine` if the `FlutterEngine` has already been
+ * run.
+ *
+ * Setting this after the Flutter started running has no effect. See `pushRoute`
+ * and `popRoute` to change the route after Flutter started running.
+ *
+ * This is deprecated because it needs to be called at the time of initialization
+ * and thus should just be in the `initWithProject` initializer. If using
+ * `initWithEngine`, the initial route should be set on the engine&#39;s
+ * initializer.
+ *
+ * @param route The name of the first route to show.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setInitialRoute</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">route</span>
+    <span class="n">FLUTTER_DEPRECATED</span><span class="p">(</span><span class="s">&#34;Use FlutterViewController initializer to specify initial route&#34;</span><span class="p">);</span>
+
+<span class="cm">/**
+ * Instructs the Flutter Navigator (if any) to go back.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">popRoute</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Instructs the Flutter Navigator (if any) to push a route on to the navigation
+ * stack.
+ *
+ * @param route The name of the route to push to the navigation stack.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushRoute</span><span class="p">:(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">route</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The `FlutterPluginRegistry` used by this FlutterViewController.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span><span class="o">&gt;</span><span class="p">)</span><span class="n">pluginRegistry</span><span class="p">;</span>
+
+<span class="cm">/**
+ * A wrapper around UIAccessibilityIsVoiceOverRunning().
+ *
+ * As a C function, UIAccessibilityIsVoiceOverRunning() cannot be mocked in testing. Mock
+ * this class method to testing features depends on UIAccessibilityIsVoiceOverRunning().
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isUIAccessibilityIsVoiceOverRunning</span><span class="p">;</span>
+
+<span class="cm">/**
+ * True if at least one frame has rendered and the ViewController has appeared.
+ *
+ * This property is reset to false when the ViewController disappears. It is
+ * guaranteed to only alternate between true and false for observers.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isDisplayingFlutterUI</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">displayingFlutterUI</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Specifies the view to use as a splash screen. Flutter&#39;s rendering is asynchronous, so the first
+ * frame rendered by the Flutter application might not immediately appear when the Flutter view is
+ * initially placed in the view hierarchy. The splash screen view will be used as
+ * a replacement until the first frame is rendered.
+ *
+ * The view used should be appropriate for multiple sizes; an autoresizing mask to
+ * have a flexible width and height will be applied automatically.
+ *
+ * Set to nil to remove the splash screen view.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIView</span><span class="o">*</span> <span class="n">splashScreenView</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Attempts to set the `splashScreenView` property from the `UILaunchStoryboardName` from the
+ * main bundle&#39;s `Info.plist` file.  This method will not change the value of `splashScreenView`
+ * if it cannot find a default one from a storyboard or nib.
+ *
+ * @return `YES` if successful, `NO` otherwise.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">loadDefaultSplashScreenView</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Controls whether the created view will be opaque or not.
+ *
+ * Default is `YES`.  Note that setting this to `NO` may negatively impact performance
+ * when using hardware acceleration, and toggling this will trigger a re-layout of the
+ * view.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isViewOpaque</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">viewOpaque</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The `FlutterEngine` instance for this view controller. This could be the engine this
+ * `FlutterViewController` is initialized with or a new `FlutterEngine` implicitly created if
+ * no engine was supplied during initialization.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span><span class="o">*</span> <span class="n">engine</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The `FlutterBinaryMessenger` associated with this FlutterViewController (used for communicating
+ * with channels).
+ *
+ * This is just a convenient way to get the |FlutterEngine|&#39;s binary messenger.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></span><span class="o">&gt;*</span> <span class="n">binaryMessenger</span><span class="p">;</span>
+
+<span class="cm">/**
+ * If the `FlutterViewController` creates a `FlutterEngine`, this property
+ * determines if that `FlutterEngine` has `allowHeadlessExecution` set.
+ *
+ * The intention is that this is used with the XIB.  Otherwise, a
+ * `FlutterEngine` can just be sent to the init methods.
+ *
+ * See also: `-[FlutterEngine initWithName:project:allowHeadlessExecution:]`
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">engineAllowHeadlessExecution</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">FlutterViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span><span class="p">,</span> <span class="kt">UIGestureRecognizerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)initWithEngine:nibName:bundle:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithEngine:nibName:bundle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)initWithEngine:nibName:bundle:">-initWithEngine:<wbr/>nibName:<wbr/>bundle:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes this FlutterViewController with the specified <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code>.</p>
+
+<p>The initialized viewcontroller will attach itself to the engine as part of this process.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithEngine</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">engine</span>
+                               <span class="nf">nibName</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">nibName</span>
+                                <span class="nf">bundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">nibBundle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">engine</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span><span class="p">,</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">bundle</span> <span class="nv">nibBundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>engine</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> instance to attach to. Cannot be nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nibName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NIB name to initialize this UIViewController with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nibBundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NIB bundle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)initWithProject:nibName:bundle:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithProject:nibName:bundle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)initWithProject:nibName:bundle:">-initWithProject:<wbr/>nibName:<wbr/>bundle:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new FlutterViewController and <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> with the specified
+ <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code>.</p>
+
+<p>This will implicitly create a new <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> which is retrievable via the <code><a href="../Classes/FlutterViewController.html#/c:objc(cs)FlutterViewController(py)engine">engine</a></code> property
+ after initialization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithProject</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">project</span>
+                                <span class="nf">nibName</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">nibName</span>
+                                 <span class="nf">bundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">nibBundle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">project</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="p">?,</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">bundle</span> <span class="nv">nibBundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>project</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> to initialize the <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nibName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NIB name to initialize this UIViewController with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nibBundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NIB bundle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)initWithProject:initialRoute:nibName:bundle:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithProject:initialRoute:nibName:bundle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)initWithProject:initialRoute:nibName:bundle:">-initWithProject:<wbr/>initialRoute:<wbr/>nibName:<wbr/>bundle:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new FlutterViewController and <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> with the specified
+ <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> and <code>initialRoute</code>.</p>
+
+<p>This will implicitly create a new <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> which is retrievable via the <code><a href="../Classes/FlutterViewController.html#/c:objc(cs)FlutterViewController(py)engine">engine</a></code> property
+ after initialization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithProject</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">project</span>
+                           <span class="nf">initialRoute</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialRoute</span>
+                                <span class="nf">nibName</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">nibName</span>
+                                 <span class="nf">bundle</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">nibBundle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">project</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="p">?,</span> <span class="nv">initialRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">bundle</span> <span class="nv">nibBundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>project</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> to initialize the <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initialRoute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The initial <code>Navigator</code> route to load.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nibName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NIB name to initialize this UIViewController with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nibBundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The NIB bundle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)initWithCoder:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCoder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)initWithCoder:">-initWithCoder:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializer that is called from loading a FlutterViewController from a XIB.</p>
+
+<p>See also:
+ <a href="https://developer.apple.com/documentation/foundation/nscoding/1416145-initwithcoder?language=objc">https://developer.apple.com/documentation/foundation/nscoding/1416145-initwithcoder?language=objc</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCoder</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSCoder</span> <span class="o">*</span><span class="p">)</span><span class="nv">aDecoder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)setFlutterViewDidRenderCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-setFlutterViewDidRenderCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)setFlutterViewDidRenderCallback:">-setFlutterViewDidRenderCallback:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a callback that will be invoked when the Flutter view has been rendered.
+ The callback will be fired only once.</p>
+
+<p>Replaces an existing callback. Use a <code>nil</code> callback to unregister the existing one.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setFlutterViewDidRenderCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setFlutterViewDidRenderCallback</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)lookupKeyForAsset:"></a>
+                    <a name="//apple_ref/objc/Method/-lookupKeyForAsset:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)lookupKeyForAsset:">-lookupKeyForAsset:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the file name for the given asset.
+ The returned file name can be used to access the asset in the application&rsquo;s
+ main bundle.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">lookupKeyForAsset</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">asset</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">lookupKey</span><span class="p">(</span><span class="n">forAsset</span> <span class="nv">asset</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>asset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the asset. The name can be hierarchical.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The file name to be used for lookup in the main bundle.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)lookupKeyForAsset:fromPackage:"></a>
+                    <a name="//apple_ref/objc/Method/-lookupKeyForAsset:fromPackage:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)lookupKeyForAsset:fromPackage:">-lookupKeyForAsset:<wbr/>fromPackage:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the file name for the given asset which originates from the specified
+ package.
+ The returned file name can be used to access the asset in the application&rsquo;s
+ main bundle.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">lookupKeyForAsset</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">asset</span>
+                            <span class="nf">fromPackage</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">package</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">lookupKey</span><span class="p">(</span><span class="n">forAsset</span> <span class="nv">asset</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">fromPackage</span> <span class="nv">package</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>asset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the asset. The name can be hierarchical.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>package</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the package from which the asset originates.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The file name to be used for lookup in the main bundle.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)setInitialRoute:"></a>
+                    <a name="//apple_ref/objc/Method/-setInitialRoute:" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)FlutterViewController(im)setInitialRoute:">-setInitialRoute:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use FlutterViewController initializer to specify initial route</p>
+
+                      </div>
+                      <div class="abstract">
+                        <p>Deprecated API to set initial route.</p>
+
+<p>Attempts to set the first route that the Flutter app shows if the Flutter
+ runtime hasn&rsquo;t yet started. The default is &ldquo;/&rdquo;.</p>
+
+<p>This method must be called immediately after <code>initWithProject</code> and has no
+ effect when using <code>initWithEngine</code> if the <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> has already been
+ run.</p>
+
+<p>Setting this after the Flutter started running has no effect. See <code>pushRoute</code>
+ and <code>popRoute</code> to change the route after Flutter started running.</p>
+
+<p>This is deprecated because it needs to be called at the time of initialization
+ and thus should just be in the <code>initWithProject</code> initializer. If using
+ <code>initWithEngine</code>, the initial route should be set on the engine&rsquo;s
+ initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setInitialRoute</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">route</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setInitialRoute</span><span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the first route to show.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)popRoute"></a>
+                    <a name="//apple_ref/objc/Method/-popRoute" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)popRoute">-popRoute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instructs the Flutter Navigator (if any) to go back.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">popRoute</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">popRoute</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)pushRoute:"></a>
+                    <a name="//apple_ref/objc/Method/-pushRoute:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)pushRoute:">-pushRoute:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instructs the Flutter Navigator (if any) to push a route on to the navigation
+ stack.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushRoute</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">route</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pushRoute</span><span class="p">(</span><span class="n">_</span> <span class="nv">route</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the route to push to the navigation stack.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)pluginRegistry"></a>
+                    <a name="//apple_ref/objc/Method/-pluginRegistry" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)pluginRegistry">-pluginRegistry</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></code> used by this FlutterViewController.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span><span class="o">&gt;</span><span class="p">)</span><span class="n">pluginRegistry</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pluginRegistry</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(cm)isUIAccessibilityIsVoiceOverRunning"></a>
+                    <a name="//apple_ref/objc/Method/+isUIAccessibilityIsVoiceOverRunning" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(cm)isUIAccessibilityIsVoiceOverRunning">+isUIAccessibilityIsVoiceOverRunning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A wrapper around UIAccessibilityIsVoiceOverRunning().</p>
+
+<p>As a C function, UIAccessibilityIsVoiceOverRunning() cannot be mocked in testing. Mock
+ this class method to testing features depends on UIAccessibilityIsVoiceOverRunning().</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isUIAccessibilityIsVoiceOverRunning</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">isUIAccessibilityIsVoiceOverRunning</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(py)displayingFlutterUI"></a>
+                    <a name="//apple_ref/objc/Property/displayingFlutterUI" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(py)displayingFlutterUI">displayingFlutterUI</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if at least one frame has rendered and the ViewController has appeared.</p>
+
+<p>This property is reset to false when the ViewController disappears. It is
+ guaranteed to only alternate between true and false for observers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isDisplayingFlutterUI</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">displayingFlutterUI</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDisplayingFlutterUI</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(py)splashScreenView"></a>
+                    <a name="//apple_ref/objc/Property/splashScreenView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(py)splashScreenView">splashScreenView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the view to use as a splash screen. Flutter&rsquo;s rendering is asynchronous, so the first
+ frame rendered by the Flutter application might not immediately appear when the Flutter view is
+ initially placed in the view hierarchy. The splash screen view will be used as
+ a replacement until the first frame is rendered.</p>
+
+<p>The view used should be appropriate for multiple sizes; an autoresizing mask to
+ have a flexible width and height will be applied automatically.</p>
+
+<p>Set to nil to remove the splash screen view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">splashScreenView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">splashScreenView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(im)loadDefaultSplashScreenView"></a>
+                    <a name="//apple_ref/objc/Method/-loadDefaultSplashScreenView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(im)loadDefaultSplashScreenView">-loadDefaultSplashScreenView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to set the <code><a href="../Classes/FlutterViewController.html#/c:objc(cs)FlutterViewController(py)splashScreenView">splashScreenView</a></code> property from the <code>UILaunchStoryboardName</code> from the
+ main bundle&rsquo;s <code>Info.plist</code> file.  This method will not change the value of <code><a href="../Classes/FlutterViewController.html#/c:objc(cs)FlutterViewController(py)splashScreenView">splashScreenView</a></code>
+ if it cannot find a default one from a storyboard or nib.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">loadDefaultSplashScreenView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadDefaultSplashScreenView</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code> if successful, <code>NO</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(py)viewOpaque"></a>
+                    <a name="//apple_ref/objc/Property/viewOpaque" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(py)viewOpaque">viewOpaque</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Controls whether the created view will be opaque or not.</p>
+
+<p>Default is <code>YES</code>.  Note that setting this to <code>NO</code> may negatively impact performance
+ when using hardware acceleration, and toggling this will trigger a re-layout of the
+ view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isViewOpaque</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">viewOpaque</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isViewOpaque</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(py)engine"></a>
+                    <a name="//apple_ref/objc/Property/engine" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(py)engine">engine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> instance for this view controller. This could be the engine this
+<code>FlutterViewController</code> is initialized with or a new <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> implicitly created if
+no engine was supplied during initialization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">engine</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterEngine.html">FlutterEngine</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(py)binaryMessenger"></a>
+                    <a name="//apple_ref/objc/Property/binaryMessenger" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(py)binaryMessenger">binaryMessenger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></code> associated with this FlutterViewController (used for communicating
+ with channels).</p>
+
+<p>This is just a convenient way to get the |FlutterEngine|&lsquo;s binary messenger.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">binaryMessenger</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">binaryMessenger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterViewController(py)engineAllowHeadlessExecution"></a>
+                    <a name="//apple_ref/objc/Property/engineAllowHeadlessExecution" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterViewController(py)engineAllowHeadlessExecution">engineAllowHeadlessExecution</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the <code>FlutterViewController</code> creates a <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code>, this property
+ determines if that <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> has <code>allowHeadlessExecution</code> set.</p>
+
+<p>The intention is that this is used with the XIB.  Otherwise, a
+ <code><a href="../Classes/FlutterEngine.html">FlutterEngine</a></code> can just be sent to the init methods.</p>
+
+<p>See also: <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)initWithName:project:allowHeadlessExecution:">-[FlutterEngine initWithName:project:allowHeadlessExecution:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">engineAllowHeadlessExecution</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">engineAllowHeadlessExecution</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

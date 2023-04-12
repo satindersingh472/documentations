@@ -1,0 +1,1734 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>FlutterEngine Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css"/>
+    <meta charset="utf-8"/>
+    <script src="../js/jquery.min.js" defer=""></script>
+    <script src="../js/jazzy.js" defer=""></script>
+    
+    <script src="../js/lunr.min.js" defer=""></script>
+    <script src="../js/typeahead.jquery.js" defer=""></script>
+    <script src="../js/jazzy.search.js" defer=""></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/FlutterEngine" class="dashAnchor"></a>
+    <a title="FlutterEngine Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Flutter 1.0.0 Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/flutter"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fapi.flutter.dev%2Fobjc%2Fdocsets%2FFlutter.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead=""/>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Flutter Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlutterEngine Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterAppDelegate.html">FlutterAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterBinaryCodec">FlutterBinaryCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackCache.html">FlutterCallbackCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterCallbackInformation.html">FlutterCallbackInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterDartProject.html">FlutterDartProject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngine.html">FlutterEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroup.html">FlutterEngineGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEngineGroupOptions.html">FlutterEngineGroupOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterError.html">FlutterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterEventChannel.html">FlutterEventChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterHeadlessDartRunner.html">FlutterHeadlessDartRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMessageCodec">FlutterJSONMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterJSONMethodCodec">FlutterJSONMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodCall.html">FlutterMethodCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterPluginAppLifeCycleDelegate.html">FlutterPluginAppLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStandardBigInteger">FlutterStandardBigInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMessageCodec.html">FlutterStandardMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardMethodCodec.html">FlutterStandardMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReader.html">FlutterStandardReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardReaderWriter.html">FlutterStandardReaderWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardTypedData.html">FlutterStandardTypedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterStandardWriter.html">FlutterStandardWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)FlutterStringCodec">FlutterStringCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlutterViewController.html">FlutterViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultDartEntrypoint">FlutterDefaultDartEntrypoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterDefaultInitialRoute">FlutterDefaultInitialRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterEndOfEventStream">FlutterEndOfEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterMethodNotImplemented">FlutterMethodNotImplemented</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlutterStandardDataType.html">FlutterStandardDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterAppLifeCycleProvider.html">FlutterAppLifeCycleProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterApplicationLifeCycleDelegate.html">FlutterApplicationLifeCycleDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMessageCodec.html">FlutterMessageCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterMethodCodec.html">FlutterMethodCodec</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformView.html">FlutterPlatformView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlatformViewFactory.html">FlutterPlatformViewFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPlugin.html">FlutterPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistrar.html">FlutterPluginRegistrar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterStreamHandler.html">FlutterStreamHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTexture.html">FlutterTexture</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessageHandler">FlutterBinaryMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryMessengerConnection">FlutterBinaryMessengerConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterBinaryMessenger.h@T@FlutterBinaryReply">FlutterBinaryReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterEventSink">FlutterEventSink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterHeadlessDartRunner.h@T@FlutterHeadlessDartRunnerCallback">FlutterHeadlessDartRunnerCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMessageHandler">FlutterMessageHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterMethodCallHandler">FlutterMethodCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions/FlutterPlatformViewGestureRecognizersBlockingPolicy.html">FlutterPlatformViewGestureRecognizersBlockingPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterPlugin.h@T@FlutterPluginRegistrantCallback">FlutterPluginRegistrantCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterReply">FlutterReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:FlutterChannels.h@T@FlutterResult">FlutterResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlutterEngine</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">FlutterEngine</span>
+    <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">FlutterEngine</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/FlutterTextureRegistry.html">FlutterTextureRegistry</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/FlutterPluginRegistry.html">FlutterPluginRegistry</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>The FlutterEngine class coordinates a single instance of execution for a
+ <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code>.  It may have zero or one <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> at a
+ time, which can be specified via <code>-setViewController:</code>.
+ <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code>&lsquo;s <code>initWithEngine</code> initializer will automatically call
+ <code>-setViewController:</code> for itself.</p>
+
+<p>A FlutterEngine can be created independently of a <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> for
+ headless execution.  It can also persist across the lifespan of multiple
+ <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> instances to maintain state and/or asynchronous tasks
+ (such as downloading a large file).</p>
+
+<p>A FlutterEngine can also be used to prewarm the Dart execution environment and reduce the
+ latency of showing the Flutter screen when a <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> is created and presented.
+ See <a href="http://flutter.dev/docs/development/add-to-app/performance">http://flutter.dev/docs/development/add-to-app/performance</a> for more details on loading
+ performance.</p>
+
+<p>Alternatively, you can simply create a new <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> with only a
+ <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code>. That <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> will internally manage its
+ own instance of a FlutterEngine, but will not guarantee survival of the engine
+ beyond the life of the ViewController.</p>
+
+<p>A newly initialized FlutterEngine will not actually run a Dart Isolate until
+ either <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or <code>-runWithEntrypoint:libraryURI</code> is invoked.
+ One of these methods must be invoked before calling <code>-setViewController:</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default initializer for a FlutterEngine.</p>
+
+<p>Threads created by this FlutterEngine will appear as &ldquo;FlutterEngine #&rdquo; in
+ Instruments. The prefix can be customized using <code>initWithName</code>.</p>
+
+<p>The engine will execute the project located in the bundle with the identifier
+ &ldquo;io.flutter.flutter.app&rdquo; (the default for Flutter projects).</p>
+
+<p>A newly initialized engine will not run until either <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or
+ <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:">-runWithEntrypoint:libraryURI:</a></code> is called.</p>
+
+<p>FlutterEngine created with this method will have allowHeadlessExecution set to <code>YES</code>.
+ This means that the engine will continue to run regardless of whether a <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code>
+ is attached to it or not, until <code>-destroyContext:</code> is called or the process finishes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)initWithName:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithName:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)initWithName:">-initWithName:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize this FlutterEngine.</p>
+
+<p>The engine will execute the project located in the bundle with the identifier
+ &ldquo;io.flutter.flutter.app&rdquo; (the default for Flutter projects).</p>
+
+<p>A newly initialized engine will not run until either <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or
+ <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:">-runWithEntrypoint:libraryURI:</a></code> is called.</p>
+
+<p>FlutterEngine created with this method will have allowHeadlessExecution set to <code>YES</code>.
+ This means that the engine will continue to run regardless of whether a <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code>
+ is attached to it or not, until <code>-destroyContext:</code> is called or the process finishes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">labelPrefix</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">name</span> <span class="nv">labelPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>labelPrefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The label prefix used to identify threads for this instance. Should
+be unique across FlutterEngine instances, and is used in instrumentation to label
+the threads used by this FlutterEngine.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)initWithName:project:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithName:project:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)initWithName:project:">-initWithName:<wbr/>project:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize this FlutterEngine with a <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code>.</p>
+
+<p>If the FlutterDartProject is not specified, the FlutterEngine will attempt to locate
+ the project in a default location (the flutter_assets folder in the iOS application
+ bundle).</p>
+
+<p>A newly initialized engine will not run the <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> until either
+ <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:">-runWithEntrypoint:libraryURI:</a></code> is called.</p>
+
+<p>FlutterEngine created with this method will have allowHeadlessExecution set to <code>YES</code>.
+ This means that the engine will continue to run regardless of whether a <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code>
+ is attached to it or not, until <code>-destroyContext:</code> is called or the process finishes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">labelPrefix</span>
+                             <span class="nf">project</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">project</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">name</span> <span class="nv">labelPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">project</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>labelPrefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The label prefix used to identify threads for this instance. Should
+be unique across FlutterEngine instances, and is used in instrumentation to label
+the threads used by this FlutterEngine.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>project</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> to run.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)initWithName:project:allowHeadlessExecution:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithName:project:allowHeadlessExecution:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)initWithName:project:allowHeadlessExecution:">-initWithName:<wbr/>project:<wbr/>allowHeadlessExecution:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize this FlutterEngine with a <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code>.</p>
+
+<p>If the FlutterDartProject is not specified, the FlutterEngine will attempt to locate
+ the project in a default location (the flutter_assets folder in the iOS application
+ bundle).</p>
+
+<p>A newly initialized engine will not run the <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> until either
+ <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:">-runWithEntrypoint:libraryURI:</a></code> is called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">labelPrefix</span>
+                             <span class="nf">project</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">project</span>
+              <span class="nf">allowHeadlessExecution</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowHeadlessExecution</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">name</span> <span class="nv">labelPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">project</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="p">?,</span> <span class="nv">allowHeadlessExecution</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>labelPrefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The label prefix used to identify threads for this instance. Should
+be unique across FlutterEngine instances, and is used in instrumentation to label
+the threads used by this FlutterEngine.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>project</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> to run.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowHeadlessExecution</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether or not to allow this instance to continue
+running after passing a nil <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> to <code>-setViewController:</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)initWithName:project:allowHeadlessExecution:restorationEnabled:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithName:project:allowHeadlessExecution:restorationEnabled:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)initWithName:project:allowHeadlessExecution:restorationEnabled:">-initWithName:<wbr/>project:<wbr/>allowHeadlessExecution:<wbr/>restorationEnabled:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize this FlutterEngine with a <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code>.</p>
+
+<p>If the FlutterDartProject is not specified, the FlutterEngine will attempt to locate
+ the project in a default location (the flutter_assets folder in the iOS application
+ bundle).</p>
+
+<p>A newly initialized engine will not run the <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> until either
+ <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:">-runWithEntrypoint:libraryURI:</a></code> is called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">labelPrefix</span>
+                             <span class="nf">project</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">project</span>
+              <span class="nf">allowHeadlessExecution</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowHeadlessExecution</span>
+                  <span class="nf">restorationEnabled</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">restorationEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">name</span> <span class="nv">labelPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">project</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></span><span class="p">?,</span> <span class="nv">allowHeadlessExecution</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">restorationEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>labelPrefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The label prefix used to identify threads for this instance. Should
+be unique across FlutterEngine instances, and is used in instrumentation to label
+the threads used by this FlutterEngine.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>project</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/FlutterDartProject.html">FlutterDartProject</a></code> to run.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowHeadlessExecution</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether or not to allow this instance to continue
+running after passing a nil <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> to <code>-setViewController:</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>restorationEnabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether state restoration is enabled. When true, the framework will
+wait for the attached view controller to provide restoration data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)run"></a>
+                    <a name="//apple_ref/objc/Method/-run" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)run">-run</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a Dart program on an Isolate from the main Dart library (i.e. the library that
+ contains <code>main()</code>), using <code>main()</code> as the entrypoint (the default for Flutter projects),
+ and using &ldquo;/&rdquo; (the default route) as the initial route.</p>
+
+<p>The first call to this method will create a new Isolate. Subsequent calls will return
+ immediately and have no effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">run</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">run</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the call succeeds in creating and running a Flutter Engine instance; NO otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)runWithEntrypoint:"></a>
+                    <a name="//apple_ref/objc/Method/-runWithEntrypoint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a Dart program on an Isolate from the main Dart library (i.e. the library that
+ contains <code>main()</code>), using &ldquo;/&rdquo; (the default route) as the initial route.</p>
+
+<p>The first call to this method will create a new Isolate. Subsequent calls will return
+ immediately and have no effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">runWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from the same Dart
+library that contains the app&rsquo;s main() function.  If this is FlutterDefaultDartEntrypoint (or
+nil) it will default to <code>main()</code>.  If it is not the app&rsquo;s main() function, that function must
+be decorated with <code>@pragma(vm:entry-point)</code> to ensure the method is not tree-shaken by the Dart
+compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the call succeeds in creating and running a Flutter Engine instance; NO otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)runWithEntrypoint:initialRoute:"></a>
+                    <a name="//apple_ref/objc/Method/-runWithEntrypoint:initialRoute:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:initialRoute:">-runWithEntrypoint:<wbr/>initialRoute:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a Dart program on an Isolate from the main Dart library (i.e. the library that
+ contains <code>main()</code>).</p>
+
+<p>The first call to this method will create a new Isolate. Subsequent calls will return
+ immediately and have no effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">runWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span>
+             <span class="nf">initialRoute</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialRoute</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">initialRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from the same Dart
+library that contains the app&rsquo;s main() function.  If this is FlutterDefaultDartEntrypoint (or
+nil), it will default to <code>main()</code>.  If it is not the app&rsquo;s main() function, that function must
+be decorated with <code>@pragma(vm:entry-point)</code> to ensure the method is not tree-shaken by the Dart
+compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initialRoute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the initial Flutter <code>Navigator</code> <code>Route</code> to load. If this is
+FlutterDefaultInitialRoute (or nil), it will default to the &ldquo;/&rdquo; route.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the call succeeds in creating and running a Flutter Engine instance; NO otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:"></a>
+                    <a name="//apple_ref/objc/Method/-runWithEntrypoint:libraryURI:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:">-runWithEntrypoint:<wbr/>libraryURI:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a Dart program on an Isolate using the specified entrypoint and Dart library,
+ which may not be the same as the library containing the Dart program&rsquo;s <code>main()</code> function.</p>
+
+<p>The first call to this method will create a new Isolate. Subsequent calls will return
+ immediately and have no effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">runWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span>
+               <span class="nf">libraryURI</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">uri</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">libraryURI</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from a Dart library.  If this is
+FlutterDefaultDartEntrypoint (or nil); this will default to <code>main()</code>.  If it is not the app&rsquo;s
+main() function, that function must be decorated with <code>@pragma(vm:entry-point)</code> to ensure the
+method is not tree-shaken by the Dart compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uri</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URI of the Dart library which contains the entrypoint method
+(example &ldquo;package:foo_package/main.dart&rdquo;).  If nil, this will default to
+the same library as the <code>main()</code> function in the Dart program.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the call succeeds in creating and running a Flutter Engine instance; NO otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:initialRoute:"></a>
+                    <a name="//apple_ref/objc/Method/-runWithEntrypoint:libraryURI:initialRoute:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:initialRoute:">-runWithEntrypoint:<wbr/>libraryURI:<wbr/>initialRoute:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a Dart program on an Isolate using the specified entrypoint and Dart library,
+ which may not be the same as the library containing the Dart program&rsquo;s <code>main()</code> function.</p>
+
+<p>The first call to this method will create a new Isolate. Subsequent calls will return
+ immediately and have no effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">runWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span>
+               <span class="nf">libraryURI</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">libraryURI</span>
+             <span class="nf">initialRoute</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialRoute</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">libraryURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">initialRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from a Dart library.  If this is
+FlutterDefaultDartEntrypoint (or nil); this will default to <code>main()</code>.  If it is not the app&rsquo;s
+main() function, that function must be decorated with <code>@pragma(vm:entry-point)</code> to ensure the
+method is not tree-shaken by the Dart compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>libraryURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URI of the Dart library which contains the entrypoint
+method (example &ldquo;package:foo_package/main.dart&rdquo;).  If nil, this will
+default to the same library as the <code>main()</code> function in the Dart program.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initialRoute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the initial Flutter <code>Navigator</code> <code>Route</code> to load. If this is
+FlutterDefaultInitialRoute (or nil), it will default to the &ldquo;/&rdquo; route.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the call succeeds in creating and running a Flutter Engine instance; NO otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:initialRoute:entrypointArgs:"></a>
+                    <a name="//apple_ref/objc/Method/-runWithEntrypoint:libraryURI:initialRoute:entrypointArgs:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:libraryURI:initialRoute:entrypointArgs:">-runWithEntrypoint:<wbr/>libraryURI:<wbr/>initialRoute:<wbr/>entrypointArgs:<wbr/></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs a Dart program on an Isolate using the specified entrypoint and Dart library,
+ which may not be the same as the library containing the Dart program&rsquo;s <code>main()</code> function.</p>
+
+<p>The first call to this method will create a new Isolate. Subsequent calls will return
+ immediately and have no effect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">runWithEntrypoint</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypoint</span>
+               <span class="nf">libraryURI</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">libraryURI</span>
+             <span class="nf">initialRoute</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialRoute</span>
+           <span class="nf">entrypointArgs</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">entrypointArgs</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">withEntrypoint</span> <span class="nv">entrypoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">libraryURI</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">initialRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">entrypointArgs</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a top-level function from a Dart library.  If this is
+FlutterDefaultDartEntrypoint (or nil); this will default to <code>main()</code>.  If it is not the app&rsquo;s
+main() function, that function must be decorated with <code>@pragma(vm:entry-point)</code> to ensure the
+method is not tree-shaken by the Dart compiler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>libraryURI</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URI of the Dart library which contains the entrypoint
+method (example &ldquo;package:foo_package/main.dart&rdquo;).  If nil, this will
+default to the same library as the <code>main()</code> function in the Dart program.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initialRoute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the initial Flutter <code>Navigator</code> <code>Route</code> to load. If this is
+FlutterDefaultInitialRoute (or nil), it will default to the &ldquo;/&rdquo; route.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entrypointArgs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Arguments passed as a list of string to Dart&rsquo;s entrypoint function.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the call succeeds in creating and running a Flutter Engine instance; NO otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)destroyContext"></a>
+                    <a name="//apple_ref/objc/Method/-destroyContext" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)destroyContext">-destroyContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Destroy running context for an engine.</p>
+
+<p>This method can be used to force the FlutterEngine object to release all resources.
+ After sending this message, the object will be in an unusable state until it is deallocated.
+ Accessing properties or sending messages to it will result in undefined behavior or runtime
+ errors.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">destroyContext</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">destroyContext</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(im)ensureSemanticsEnabled"></a>
+                    <a name="//apple_ref/objc/Method/-ensureSemanticsEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(im)ensureSemanticsEnabled">-ensureSemanticsEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ensures that Flutter will generate a semantics tree.</p>
+
+<p>This is enabled by default if certain accessibility services are turned on by
+ the user, or when using a Simulator. This method allows a user to turn
+ semantics on when they would not ordinarily be generated and the performance
+ overhead is not a concern, e.g. for UI testing. Note that semantics should
+ never be programmatically turned off, as it would potentially disable
+ accessibility services an end user has requested.</p>
+
+<p>This method must only be called after launching the engine via
+ <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or <code>-runWithEntryPoint:libraryURI</code>.</p>
+
+<p>Although this method returns synchronously, it does not guarantee that a
+ semantics tree is actually available when the method returns. It
+ synchronously ensures that the next frame the Flutter framework creates will
+ have a semantics tree.</p>
+
+<p>You can subscribe to semantics updates via <code>NSNotificationCenter</code> by adding
+ an observer for the name <code><a href="../Constants.html#/c:@FlutterSemanticsUpdateNotification">FlutterSemanticsUpdateNotification</a></code>.  The <code>object</code>
+ parameter will be the <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> associated with the semantics
+ update.  This will asynchronously fire after a semantics tree has actually
+ built (which may be some time after the frame has been rendered).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">ensureSemanticsEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">ensureSemanticsEnabled</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)viewController"></a>
+                    <a name="//apple_ref/objc/Property/viewController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)viewController">viewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> for this instance.  The FlutterEngine must be
+ running (e.g. a successful call to <code><a href="../Classes/FlutterEngine.html#/c:objc(cs)FlutterEngine(im)runWithEntrypoint:">-runWithEntrypoint:</a></code> or <code>-runWithEntrypoint:libraryURI</code>)
+ before calling this method. Callers may pass nil to remove the viewController
+ and have the engine run headless in the current process.</p>
+
+<p>A FlutterEngine can only have one <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> at a time. If there is
+ already a <code><a href="../Classes/FlutterViewController.html">FlutterViewController</a></code> associated with this instance, this method will replace
+ the engine&rsquo;s current viewController with the newly specified one.</p>
+
+<p>Setting the viewController will signal the engine to start animations and drawing, and unsetting
+ it will signal the engine to stop animations and drawing.  However, neither will impact the state
+ of the Dart program&rsquo;s execution.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterViewController.html">FlutterViewController</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">viewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterViewController.html">FlutterViewController</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)localizationChannel"></a>
+                    <a name="//apple_ref/objc/Property/localizationChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)localizationChannel">localizationChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></code> used for localization related platform messages, such as
+ setting the locale.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="o">*</span><span class="n">localizationChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">localizationChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)navigationChannel"></a>
+                    <a name="//apple_ref/objc/Property/navigationChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)navigationChannel">navigationChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></code> used for navigation related platform messages.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://api.flutter.dev/flutter/services/SystemChannels/navigation-constant.html">Navigation
+Channel</a>
+
+</div><div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://api.flutter.dev/flutter/widgets/Navigator-class.html">Navigator Widget</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">navigationChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">navigationChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)restorationChannel"></a>
+                    <a name="//apple_ref/objc/Property/restorationChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)restorationChannel">restorationChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></code> used for restoration related platform messages.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://api.flutter.dev/flutter/services/SystemChannels/restoration-constant.html">Restoration
+Channel</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">restorationChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">restorationChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)platformChannel"></a>
+                    <a name="//apple_ref/objc/Property/platformChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)platformChannel">platformChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></code> used for core platform messages, such as
+ information about the screen orientation.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">platformChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">platformChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)textInputChannel"></a>
+                    <a name="//apple_ref/objc/Property/textInputChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)textInputChannel">textInputChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></code> used to communicate text input events to the
+ Dart Isolate.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://api.flutter.dev/flutter/services/SystemChannels/textInput-constant.html">Text Input
+Channel</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">textInputChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">textInputChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterMethodChannel.html">FlutterMethodChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)lifecycleChannel"></a>
+                    <a name="//apple_ref/objc/Property/lifecycleChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)lifecycleChannel">lifecycleChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></code> used to communicate app lifecycle events
+ to the Dart Isolate.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://api.flutter.dev/flutter/services/SystemChannels/lifecycle-constant.html">Lifecycle
+Channel</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">lifecycleChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lifecycleChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)systemChannel"></a>
+                    <a name="//apple_ref/objc/Property/systemChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)systemChannel">systemChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></code> used for communicating system events, such as
+ memory pressure events.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <a href="https://api.flutter.dev/flutter/services/SystemChannels/system-constant.html">System
+Channel</a>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">systemChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">systemChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)settingsChannel"></a>
+                    <a name="//apple_ref/objc/Property/settingsChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)settingsChannel">settingsChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></code> used for communicating user settings such as
+ clock format and text scale.</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">settingsChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">settingsChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)keyEventChannel"></a>
+                    <a name="//apple_ref/objc/Property/keyEventChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)keyEventChannel">keyEventChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></code> used for communicating key events
+ from physical keyboards</p>
+
+<p>Can be nil after <code>destroyContext</code> is called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">keyEventChannel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">keyEventChannel</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlutterBasicMessageChannel.html">FlutterBasicMessageChannel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)observatoryUrl"></a>
+                    <a name="//apple_ref/objc/Property/observatoryUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)observatoryUrl">observatoryUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>NSURL</code> of the observatory for the service isolate.</p>
+
+<p>This is only set in debug and profile runtime modes, and only after the
+ observatory service is ready. In release mode or before the observatory has
+ started, it returns <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">observatoryUrl</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">observatoryUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)binaryMessenger"></a>
+                    <a name="//apple_ref/objc/Property/binaryMessenger" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)binaryMessenger">binaryMessenger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></code> associated with this FlutterEngine (used for communicating with
+channels).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">binaryMessenger</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">binaryMessenger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FlutterBinaryMessenger.html">FlutterBinaryMessenger</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)isolateId"></a>
+                    <a name="//apple_ref/objc/Property/isolateId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)isolateId">isolateId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The UI Isolate ID of the engine.</p>
+
+<p>This property will be nil if the engine is not running.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">isolateId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isolateId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FlutterEngine(py)isGpuDisabled"></a>
+                    <a name="//apple_ref/objc/Property/isGpuDisabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FlutterEngine(py)isGpuDisabled">isGpuDisabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not GPU calls are allowed.</p>
+
+<p>Typically this is set when the app is backgrounded and foregrounded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isGpuDisabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isGpuDisabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://flutter.io" target="_blank" rel="external noopener">Flutter</a>. All rights reserved. (Last updated: 2023-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  
+
+</body></html>

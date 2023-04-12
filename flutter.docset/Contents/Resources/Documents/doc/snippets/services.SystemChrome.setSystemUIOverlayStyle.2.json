@@ -1,0 +1,13 @@
+{
+    "id": "services.SystemChrome.setSystemUIOverlayStyle.2",
+    "element": "SystemChrome.setSystemUIOverlayStyle",
+    "sourcePath": "lib/src/services/system_chrome.dart",
+    "sourceLine": 580,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "services",
+    "copyright": null,
+    "description": "The following example creates a widget that changes the status bar color\nto a random value on Android.",
+    "file": "services.SystemChrome.setSystemUIOverlayStyle.2.dart"
+}

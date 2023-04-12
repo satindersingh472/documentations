@@ -1,0 +1,675 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+  <meta name="description" content="API docs for the CompoundAnimation class from the animation library, for the Dart programming language."/>
+  <title>CompoundAnimation class - animation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../"/>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1"/>
+  <link rel="stylesheet" href="static-assets/styles.css?v1"/>
+  <link rel="icon" href="static-assets/favicon.png?v1"/>
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css"/>
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet"/>
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67589403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="animation/animation-library.html">animation</a></li>
+    <li class="self-crumb">CompoundAnimation<span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span> abstract class</li>
+  </ol>
+  <div class="self-name">CompoundAnimation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme"/>
+      <span class="material-symbols-outlined">
+        brightness_4
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/animation/animations.dart#L640"><span class="material-symbols-outlined">description</span></a></div>
+<h1><a class="dashingAutolink" name="autolink-140"></a><a class="dashAnchor" name="//apple_ref/cpp/Class/CompoundAnimation%3CT%3E"></a><span class="kind-class">CompoundAnimation&lt;<wbr/><span class="type-parameter">T</span>&gt;</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An interface for combining multiple Animations. Subclasses need only
+implement the <code>value</code> getter to control how the child animations are
+combined. Can be chained to combine more than 2 animations.</p>
+<p>For example, to create an animation that is the sum of two others, subclass
+this class and define <code>T get value = first.value + second.value;</code></p>
+<p>By default, the <a href="animation/CompoundAnimation/status.html">status</a> of a <a href="animation/CompoundAnimation-class.html">CompoundAnimation</a> is the status of the
+<a href="animation/CompoundAnimation/next.html">next</a> animation if <a href="animation/CompoundAnimation/next.html">next</a> is moving, and the status of the <a href="animation/CompoundAnimation/first.html">first</a>
+animation otherwise.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/Listenable-class.html">Listenable</a></li>
+        <li><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span></li>
+      <li>CompoundAnimation</li>
+    </ul>
+  </dd>
+
+        
+        
+  <dt>Mixed in types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="animation/AnimationLazyListenerMixin-mixin.html">AnimationLazyListenerMixin</a></li>
+        <li><a href="animation/AnimationLocalListenersMixin-mixin.html">AnimationLocalListenersMixin</a></li>
+        <li><a href="animation/AnimationLocalStatusListenersMixin-mixin.html">AnimationLocalStatusListenersMixin</a></li>
+    </ul>
+  </dd>
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="animation/AnimationMax-class.html">AnimationMax</a></li>
+          <li><a href="animation/AnimationMean-class.html">AnimationMean</a></li>
+          <li><a href="animation/AnimationMin-class.html">AnimationMin</a></li>
+        </ul></dd>
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CompoundAnimation" class="callable">
+          <span class="name"><a href="animation/CompoundAnimation/CompoundAnimation.html">CompoundAnimation</a></span><span class="signature">(<span class="parameter" id="-param-first">{<span>required</span> <span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">first</span>, </span><span class="parameter" id="-param-next"><span>required</span> <span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">next</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a CompoundAnimation. Both arguments must be non-null. Either can
+be a CompoundAnimation itself to combine multiple animations.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="first" class="property">
+  <span class="name"><a href="animation/CompoundAnimation/first.html">first</a></span>
+  <span class="signature">&rarr; <a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The first sub-animation. Its status takes precedence if neither are
+animating.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&rarr; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isCompleted" class="property inherited">
+  <span class="name"><a href="animation/Animation/isCompleted.html">isCompleted</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether this animation is stopped at the end.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isDismissed" class="property inherited">
+  <span class="name"><a href="animation/Animation/isDismissed.html">isDismissed</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether this animation is stopped at the beginning.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isListening" class="property inherited">
+  <span class="name"><a href="animation/AnimationLazyListenerMixin/isListening.html">isListening</a></span>
+  <span class="signature">&rarr; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether there are any listeners.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="next" class="property">
+  <span class="name"><a href="animation/CompoundAnimation/next.html">next</a></span>
+  <span class="signature">&rarr; <a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The second sub-animation.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&rarr; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="status" class="property">
+  <span class="name"><a href="animation/CompoundAnimation/status.html">status</a></span>
+  <span class="signature">&rarr; <a href="animation/AnimationStatus.html">AnimationStatus</a></span> 
+
+</dt>
+<dd>
+  Gets the status of this animation based on the <a href="animation/CompoundAnimation/first.html">first</a> and <a href="animation/CompoundAnimation/next.html">next</a> status.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="value" class="property inherited">
+  <span class="name"><a href="animation/Animation/value.html">value</a></span>
+  <span class="signature">&rarr; T</span> 
+
+</dt>
+<dd class="inherited">
+  The current value of the animation.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addListener" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalListenersMixin/addListener.html">addListener</a></span><span class="signature">(<wbr/><span class="parameter" id="addListener-param-listener"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls the listener every time the value of the animation changes.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="addStatusListener" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalStatusListenersMixin/addStatusListener.html">addStatusListener</a></span><span class="signature">(<wbr/><span class="parameter" id="addStatusListener-param-listener"><span class="type-annotation"><a href="animation/AnimationStatusListener.html">AnimationStatusListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls listener every time the status of the animation changes.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="clearListeners" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalListenersMixin/clearListeners.html">clearListeners</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Removes all listeners added with <a href="animation/AnimationLocalListenersMixin/addListener.html">addListener</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="clearStatusListeners" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalStatusListenersMixin/clearStatusListeners.html">clearStatusListeners</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Removes all listeners added with <a href="animation/AnimationLocalStatusListenersMixin/addStatusListener.html">addStatusListener</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="didRegisterListener" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLazyListenerMixin/didRegisterListener.html">didRegisterListener</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls <a href="animation/CompoundAnimation/didStartListening.html">didStartListening</a> every time a registration of a listener causes
+an empty list of listeners to become non-empty.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="didStartListening" class="callable">
+  <span class="name"><a href="animation/CompoundAnimation/didStartListening.html">didStartListening</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called when the number of listeners changes from zero to one.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="didStopListening" class="callable">
+  <span class="name"><a href="animation/CompoundAnimation/didStopListening.html">didStopListening</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called when the number of listeners changes from one to zero.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="didUnregisterListener" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLazyListenerMixin/didUnregisterListener.html">didUnregisterListener</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls <a href="animation/CompoundAnimation/didStopListening.html">didStopListening</a> when an only remaining listener is unregistered,
+thus making the list empty.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="drive" class="callable inherited">
+  <span class="name"><a href="animation/Animation/drive.html">drive</a></span><span class="signature">&lt;<wbr/><span class="type-parameter">U</span>&gt;</span><span class="signature">(<wbr/><span class="parameter" id="drive-param-child"><span class="type-annotation"><a href="animation/Animatable-class.html">Animatable</a><span class="signature">&lt;<wbr/><span class="type-parameter">U</span>&gt;</span></span> <span class="parameter-name">child</span></span>)
+    <span class="returntype parameter">&rarr; <a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr/><span class="type-parameter">U</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Chains a <a href="animation/Tween-class.html">Tween</a> (or <a href="animation/CurveTween-class.html">CurveTween</a>) to this <a href="animation/Animation-class.html">Animation</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr/><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&rarr; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="notifyListeners" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalListenersMixin/notifyListeners.html">notifyListeners</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls all the listeners.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="notifyStatusListeners" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalStatusListenersMixin/notifyStatusListeners.html">notifyStatusListeners</a></span><span class="signature">(<wbr/><span class="parameter" id="notifyStatusListeners-param-status"><span class="type-annotation"><a href="animation/AnimationStatus.html">AnimationStatus</a></span> <span class="parameter-name">status</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls all the status listeners.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeListener" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalListenersMixin/removeListener.html">removeListener</a></span><span class="signature">(<wbr/><span class="parameter" id="removeListener-param-listener"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Stop calling the listener every time the value of the animation changes.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeStatusListener" class="callable inherited">
+  <span class="name"><a href="animation/AnimationLocalStatusListenersMixin/removeStatusListener.html">removeStatusListener</a></span><span class="signature">(<wbr/><span class="parameter" id="removeStatusListener-param-listener"><span class="type-annotation"><a href="animation/AnimationStatusListener.html">AnimationStatusListener</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&rarr; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Stops calling the listener every time the status of the animation changes.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="animation/CompoundAnimation/toString.html">toString</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toStringDetails" class="callable inherited">
+  <span class="name"><a href="animation/Animation/toStringDetails.html">toStringDetails</a></span><span class="signature">(<wbr/>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Provides a string describing the status of this object, but not including
+information about the object itself.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor inherited" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <a class="dashingAutolink" name="autolink-141"></a><a class="dashAnchor" name="//apple_ref/cpp/Operator/%3D%3D%28Object%20other%29%0A%20%20%20%20%E2%86%92%20bool"></a><dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr/><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&rarr; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled="" class="form-control typeahead" placeholder="Loading search..."/>
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="index.html">Flutter</a></li>
+  <li><a href="animation/animation-library.html">animation</a></li>
+  <li class="self-crumb">CompoundAnimation<span class="signature">&lt;<wbr/><span class="type-parameter">T</span>&gt;</span> abstract class</li>
+</ol>
+
+
+    <h5>animation library</h5>
+    <ol>
+      <li class="section-title"><a href="animation/animation-library.html#classes">Classes</a></li>
+        <li><a href="animation/AlwaysStoppedAnimation-class.html">AlwaysStoppedAnimation</a></li>
+        <li><a href="animation/Animatable-class.html">Animatable</a></li>
+        <li><a href="animation/Animation-class.html">Animation</a></li>
+        <li><a href="animation/AnimationController-class.html">AnimationController</a></li>
+        <li><a href="animation/AnimationMax-class.html">AnimationMax</a></li>
+        <li><a href="animation/AnimationMean-class.html">AnimationMean</a></li>
+        <li><a href="animation/AnimationMin-class.html">AnimationMin</a></li>
+        <li><a href="animation/CatmullRomCurve-class.html">CatmullRomCurve</a></li>
+        <li><a href="animation/CatmullRomSpline-class.html">CatmullRomSpline</a></li>
+        <li><a href="dart-ui/Color-class.html">Color</a></li>
+        <li><a href="animation/ColorTween-class.html">ColorTween</a></li>
+        <li><a href="animation/CompoundAnimation-class.html">CompoundAnimation</a></li>
+        <li><a href="animation/ConstantTween-class.html">ConstantTween</a></li>
+        <li><a href="animation/Cubic-class.html">Cubic</a></li>
+        <li><a href="animation/Curve-class.html">Curve</a></li>
+        <li><a href="animation/Curve2D-class.html">Curve2D</a></li>
+        <li><a href="animation/Curve2DSample-class.html">Curve2DSample</a></li>
+        <li><a href="animation/CurvedAnimation-class.html">CurvedAnimation</a></li>
+        <li><a href="animation/Curves-class.html">Curves</a></li>
+        <li><a href="animation/CurveTween-class.html">CurveTween</a></li>
+        <li><a href="animation/ElasticInCurve-class.html">ElasticInCurve</a></li>
+        <li><a href="animation/ElasticInOutCurve-class.html">ElasticInOutCurve</a></li>
+        <li><a href="animation/ElasticOutCurve-class.html">ElasticOutCurve</a></li>
+        <li><a href="animation/FlippedCurve-class.html">FlippedCurve</a></li>
+        <li><a href="animation/FlippedTweenSequence-class.html">FlippedTweenSequence</a></li>
+        <li><a href="animation/Interval-class.html">Interval</a></li>
+        <li><a href="animation/IntTween-class.html">IntTween</a></li>
+        <li><a href="dart-ui/Offset-class.html">Offset</a></li>
+        <li><a href="animation/ParametricCurve-class.html">ParametricCurve</a></li>
+        <li><a href="animation/ProxyAnimation-class.html">ProxyAnimation</a></li>
+        <li><a href="dart-ui/Rect-class.html">Rect</a></li>
+        <li><a href="animation/RectTween-class.html">RectTween</a></li>
+        <li><a href="animation/ReverseAnimation-class.html">ReverseAnimation</a></li>
+        <li><a href="animation/ReverseTween-class.html">ReverseTween</a></li>
+        <li><a href="animation/SawTooth-class.html">SawTooth</a></li>
+        <li><a href="physics/Simulation-class.html">Simulation</a></li>
+        <li><a href="dart-ui/Size-class.html">Size</a></li>
+        <li><a href="animation/SizeTween-class.html">SizeTween</a></li>
+        <li><a href="physics/SpringDescription-class.html">SpringDescription</a></li>
+        <li><a href="animation/StepTween-class.html">StepTween</a></li>
+        <li><a href="animation/ThreePointCubic-class.html">ThreePointCubic</a></li>
+        <li><a href="animation/Threshold-class.html">Threshold</a></li>
+        <li><a href="scheduler/TickerFuture-class.html">TickerFuture</a></li>
+        <li><a href="scheduler/TickerProvider-class.html">TickerProvider</a></li>
+        <li><a href="animation/TrainHoppingAnimation-class.html">TrainHoppingAnimation</a></li>
+        <li><a href="animation/Tween-class.html">Tween</a></li>
+        <li><a href="animation/TweenSequence-class.html">TweenSequence</a></li>
+        <li><a href="animation/TweenSequenceItem-class.html">TweenSequenceItem</a></li>
+
+
+      <li class="section-title"><a href="animation/animation-library.html#mixins">Mixins</a></li>
+        <li><a href="animation/AnimationEagerListenerMixin-mixin.html">AnimationEagerListenerMixin</a></li>
+        <li><a href="animation/AnimationLazyListenerMixin-mixin.html">AnimationLazyListenerMixin</a></li>
+        <li><a href="animation/AnimationLocalListenersMixin-mixin.html">AnimationLocalListenersMixin</a></li>
+        <li><a href="animation/AnimationLocalStatusListenersMixin-mixin.html">AnimationLocalStatusListenersMixin</a></li>
+        <li><a href="animation/AnimationWithParentMixin-mixin.html">AnimationWithParentMixin</a></li>
+
+      <li class="section-title"><a href="animation/animation-library.html#constants">Constants</a></li>
+        <li><a href="animation/kAlwaysCompleteAnimation-constant.html">kAlwaysCompleteAnimation</a></li>
+        <li><a href="animation/kAlwaysDismissedAnimation-constant.html">kAlwaysDismissedAnimation</a></li>
+
+
+
+      <li class="section-title"><a href="animation/animation-library.html#enums">Enums</a></li>
+        <li><a href="animation/AnimationBehavior.html">AnimationBehavior</a></li>
+        <li><a href="animation/AnimationStatus.html">AnimationStatus</a></li>
+
+      <li class="section-title"><a href="animation/animation-library.html#typedefs">Typedefs</a></li>
+        <li><a href="animation/AnimatableCallback.html">AnimatableCallback</a></li>
+        <li><a href="animation/AnimationStatusListener.html">AnimationStatusListener</a></li>
+        <li><a href="animation/ValueListenableTransformer.html">ValueListenableTransformer</a></li>
+        <li><a href="dart-ui/VoidCallback.html">VoidCallback</a></li>
+
+      <li class="section-title"><a href="animation/animation-library.html#exceptions">Exceptions</a></li>
+        <li><a href="scheduler/TickerCanceled-class.html">TickerCanceled</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="animation/CompoundAnimation-class.html#constructors">Constructors</a></li>
+          <li><a href="animation/CompoundAnimation/CompoundAnimation.html">CompoundAnimation</a></li>
+
+
+        <li class="section-title">
+          <a href="animation/CompoundAnimation-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="animation/CompoundAnimation/first.html">first</a></li>
+          <li class="inherited"><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="animation/Animation/isCompleted.html">isCompleted</a></li>
+          <li class="inherited"><a href="animation/Animation/isDismissed.html">isDismissed</a></li>
+          <li class="inherited"><a href="animation/AnimationLazyListenerMixin/isListening.html">isListening</a></li>
+          <li><a href="animation/CompoundAnimation/next.html">next</a></li>
+          <li class="inherited"><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="animation/CompoundAnimation/status.html">status</a></li>
+          <li class="inherited"><a href="animation/Animation/value.html">value</a></li>
+
+        <li class="section-title"><a href="animation/CompoundAnimation-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalListenersMixin/addListener.html">addListener</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalStatusListenersMixin/addStatusListener.html">addStatusListener</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalListenersMixin/clearListeners.html">clearListeners</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalStatusListenersMixin/clearStatusListeners.html">clearStatusListeners</a></li>
+          <li class="inherited"><a href="animation/AnimationLazyListenerMixin/didRegisterListener.html">didRegisterListener</a></li>
+          <li><a href="animation/CompoundAnimation/didStartListening.html">didStartListening</a></li>
+          <li><a href="animation/CompoundAnimation/didStopListening.html">didStopListening</a></li>
+          <li class="inherited"><a href="animation/AnimationLazyListenerMixin/didUnregisterListener.html">didUnregisterListener</a></li>
+          <li class="inherited"><a href="animation/Animation/drive.html">drive</a></li>
+          <li class="inherited"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalListenersMixin/notifyListeners.html">notifyListeners</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalStatusListenersMixin/notifyStatusListeners.html">notifyStatusListeners</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalListenersMixin/removeListener.html">removeListener</a></li>
+          <li class="inherited"><a href="animation/AnimationLocalStatusListenersMixin/removeStatusListener.html">removeStatusListener</a></li>
+          <li><a href="animation/CompoundAnimation/toString.html">toString</a></li>
+          <li class="inherited"><a href="animation/Animation/toStringDetails.html">toStringDetails</a></li>
+
+        <li class="section-title inherited"><a href="animation/CompoundAnimation-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+
+
+
+
+</body></html>
